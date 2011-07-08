@@ -5,7 +5,7 @@ File Operations
 Commands under this category were designed to handle files and are particularly useful to create the base structure of your project or add additional features that you need.
 
 List of available functions
- * [ScriptSyntaxFileOpeerations#FileCopy]
+ * [#FileCopy]
  * [ScriptSyntaxFileOpeerations#FileDelete]
  * FileRename
  * FileCreateBlank
