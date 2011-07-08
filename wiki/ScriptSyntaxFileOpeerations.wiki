@@ -1,9 +1,12 @@
-=File Operations=
+<wiki:toc max_depth="4" />
+
+File Operations
+
 Commands under this category were designed to handle files and are particularly useful to create the base structure of your project or add additional features that you need.
 
 List of available functions
- * [FileCopy]
- * FileDelete
+ * [ScriptSyntaxFileOpeerations#FileCopy]
+ * [ScriptSyntaxFileOpeerations#FileDelete]
  * FileRename
  * FileCreateBlank
  * FileByteExtract
@@ -19,7 +22,7 @@ List of available functions
 
 ----
 
-=FileCopy=
+= {{{FileCopy}}} =
 
 *{{{FileCopy,<FromFile>,<ToDir>}}}*
 
@@ -63,7 +66,8 @@ On this example FileCopy will copy all text files (*.txt) from MyPath and it's s
 
 ----
 
-=FileDelete==
+={{{FileDelete}}}==
+
 *{{{FileDelete,<FileToDelete> }}}*
 This command will delete files. It uses Win32 API as a silent operation deleting all files that match the search criteria. You can view the result of this operation on the respective log entry. Beware that all deleted files are immediately removed instead of moved to the recycle bin.
 
