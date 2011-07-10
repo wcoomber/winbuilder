@@ -1,4 +1,4 @@
-=Add_Pin ( Win 7 Projects Only )=
+=!Add_Pin ( Win 7 Projects Only )=
 
 ==Syntax==
 {{{
@@ -7,8 +7,8 @@ Add_Pin,Type,[Order],Path,[Title],[WorkFolder],[Parameters],[Icon],[StartMode],[
 
 ==Parameters==
 ||1||Type||Defines the type of the pin i.e. where the pin appears.||
-|| || ||*StartMenu* = Pinned item will appear in the start menu||
-|| || ||*TaskBar* = Pinned item will appear on the taskbar||
+|| || ||*!StartMenu* = Pinned item will appear in the start menu||
+|| || ||*!TaskBar* = Pinned item will appear on the taskbar||
 ||2||Order||Specifies the order of the icons in the specified pinning area. If a script overwrites a previously defined Type with the same Order, than you will get a warning in log. _*Note:* most Windows 7 projects use a separate script to define all the items to be pinned so this is not a problem in practice._||
 || || ||*0-9* = This defines the initial order of the icons that are shown in the selected area. It can be changed at run time by drag and drop.||
 || || ||*Auto* = The first available place in the selected area is automaticaly found. This is the default action if the parameter is not specified.||
