@@ -1,4 +1,4 @@
-=!AddToPEShell ( Vista / Win7 Projects only )=
+=AddToPEShell ( Vista / Win7 Projects only )=
 
 ==Syntax==
 {{{AddToPeShell,Title,Path,Default}}}
