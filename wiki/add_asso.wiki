@@ -1,4 +1,4 @@
-=Add_Asso=
+=!Add_Asso=
 
 ==Syntax==
 {{{Add_Asso,Extension,[Type],[Title],[Filename],[Option],[UseRegAddBoot]}}}
