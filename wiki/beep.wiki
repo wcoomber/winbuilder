@@ -1,10 +1,18 @@
-Beep
+=Beep=
 
-Beep,<Action> This is a very simple command that will use the default sound profile used on your machine to beep messages that requires the attention of the user. 
+==Syntax==
+{{{
+Beep,<Action>
+}}}
+This is a very simple command that will use the default sound profile used on your machine to beep messages that requires the attention of the user. Based on the profile, different sounds may be produced. 
 
-Action can be one of the following values
+The selected *Action* can be one of the following values
  * Ok
  * Error
  * Asterisk
  * Confirmation
-== Syntax example: == beep,ok 
+
+== Example == 
+{{{
+beep,ok 
+}}}
