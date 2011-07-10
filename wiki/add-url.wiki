@@ -1,0 +1,29 @@
+
+Add,URL
+==Syntax==
+Add,Url,[Type],<FileName>,<WebAddress>,[IconFile],[IconIndex],[HotKey]
+==Parameters==
+1UrlSelects common API function to execute. In this case its Add_URL. Its a mystery why Add_URL was not added to the common API.2TypeOptional parameter specifying target directory where the URL file link will be created. Assuming favorites is chosen as the target directory then the links will automatically appear in the IE favorites menu. There is no current mechanism to create links that will appear in other browser's bookmarks menu.FavoritesURL link will be created in the IE favorites folder.LinksURL link will be created in the IE Links folder.StartMenuURL link will be created in the StartMenu folder.StartMenuRootURL link will be created in the root of the Start Menu.DesktopURL link will be created on the desktop.PathURL link will be created in the path specified in the path part of the FileName parameter.3FileNameFile name of the URL link file that will be created.4WebAddressWeb Address associated with the URL link.5IconFileOptional parameter specifying full path of icon file to be associated with the URL link file. Can be specified as UrlDLL to reference the url.dll system file.6IconIndexOptional parameter specifying the icon index from the IconFile. If not specified then the first icon in the specified file will be used.7HotKeyOptional parameter specifying the hotkey used to launch the URL by the default browser. Hotkeys are specified using the text form of the key seperated by + e.g. CTRL+ALT+A.Remarks
+Creates URL file links for default browser.
+==Example==
+ 
+Create in Favorites Folder:
+Add,Url,,Google.url,http://www.google.com
+Add,Url,Favorites,"My Folder\Google.url",http://www.google.com
+Add,Url,,Google.url,http://www.google.com,UrlDLL
+Add,Url,,Google.url,http://www.google.com,#$psystemroot#$p\system32\blabla.ico
+ 
+Create in Links Folder
+Add,Url,Links,Google.url,http://www.google.com
+ 
+Create in Start Meni
+Add,Url,StartMenu,Google.url,http://www.google.com
+ 
+Create in Start Menu root folder:
+Add,Url,StartMenuRoot,Google.url,http://www.google.com
+ 
+Create on Desktop:
+Add,Url,Desktop,Google.url,http://www.google.com
+ 
+Create in specified folder:
+Add,Url,Path,%target_win%\Google.url,http://www.google.com

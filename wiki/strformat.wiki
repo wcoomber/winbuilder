@@ -1,0 +1,189 @@
+StrFormat INC/DEC/MULT/DIV
+
+StrFormat,<Action>,<%var%>,<n> This option is used to modify the value of a given number based on the arithmetic operation you select. It's also important to specify the value to use to perform this operation (only positive values). The result is outputted to the used variable (%var%), negative numbers are supported by this variable value.
+ 
+List of possible Action values
+ * inc - increase (%var% + n)
+ * dec - decrease (%var% - n)
+ * mult - multiply (%var%  * n )
+ * div - division (%var% / n)
+
+n is the last parameter on this command and should always be a numeric value.
+
+== Syntax example: ==
+StrFormat,Inc,%LoopAgain%,5
+
+In this example we have a variable called %LoopAgain% with a value of 10. Once we increase the value of this value with the last parameter of this command we will get the same variable %LoopAgain% with a value of 15. This same example applies for all other available actions.
+
+
+StrFormat FILENAME/PATH/EXT
+
+StrFormat,<Action>,<Filename>,<%VarResult%> This option is used to extract specific information from the given text related to filenames.
+ 
+List of possible Action values
+ * Filename - returns the filename portion (no path)
+ * Path - gives the path of the given text
+ * Ext - outputs only the extension of the filename
+
+== Syntax example: ==
+StrFormat,filename,c:\myPath\myFile.txt,%myVar%
+
+This example will output to %myVar% a value of myFile.txt
+
+WB076 added: The command now also can extract path, filename and extensions from URLs
+
+== Syntax example: == Set,%DownloadURL1%,http://live.sysinternals.com/Bginfo.exe
+StrFormat,PATH,%DownloadURL1%,%var1%
+StrFormat,FILENAME,%DownloadURL1%,%var2%
+StrFormat,EXT,%DownloadURL1%,%var3%
+In this example we extract path, filename and extension from an URL with result
+
+%var1%=http://live.sysinternals.com/
+%var2%=Bginfo.exe
+%var3%=.exe 
+
+StrFormat BYTES
+
+StrFormat,bytes,<%VarResult%> This option is used to convert a specific number of bytes from the given text. to a human readable format. Any amount of bytes specified will be converted to Kb, Mb, Gb and Tb.
+
+== Syntax example: ==
+StrFormat,bytes,1440000,%myVar%
+
+In this example %myVar% will output a value of 1,44Mb 
+
+StrFormat DATE
+
+StrFormat,Date,<%var%>,<yyyy-mmm-dd hh:nn am/pm> This option is used to retrieve the current hour and date and output it to a variable using the format you prefer.
+ * yyyy - year in 4 digit
+ * mmm - 3 initial letters of the month
+ * dd - day number
+ * hh - hour number
+ * nn - minute number
+ * am/pm indicates to use 12 hours cycle instead of 24 hours 
+The last parameter will define the way how these values will be written to your variable. You can omit values that aren't needed and even add custom text inside.
+
+== Syntax example: ==
+StrFormat,date,%myVar%,yyyy-mmm-dd
+
+In this example %myVar% will output the current year, month and day - for example: 2007-jun-07
+
+
+StrFormat CEIL/FLOOR
+
+StrFormat,<Action>,<%var%>,<%size%>
+size may be:
+number (e.g. 512)
+character ‘k’ meaning 1024 (= kilobyte)
+character ‘m’ meaning 1024  * 1024  (= megabyte)
+List of possible Action values
+ * Ceil
+ * Floor
+
+== Syntax example: == Set,%var%,37
+Set,%size%,10
+StrFormat,CEIL,%Var%,%size%
+In this given example we are rounding up the value of %var% to the next multiple of %size%. The result is filled into %var% with the value of 40.
+
+
+StrFormat LTRIM/RTRIM/CTRIM/NTRIM
+
+StrFormat,<Action>,<%string%>,<CharsToTrim>,<%var%>
+List of possible Action values
+ * LTrim
+ * RTrim
+ * CTrim
+ * NTrim
+== Syntax example: == Set,%string%,tomorrow
+StrFormat,LTRIM,%string%,3,%var%
+In this example we have a given string tomorrow  and we trim 3 chars from the left. The remaining rest is filled into %var% with value orrow.
+The same syntax applies for StrFormat,RTRIM trimming 3 chars from the right resulting as tomor.
+
+Set,%string%,Programs\
+StrFormat,CTRIM,%string%,\,%var%
+This option is used to trim the first and/or the last char of a given string if the char to trim is matching with the first and/or the last char of the string.
+If the char does not exist the string remains unchanged.
+In this example we trim the backslash of given string Programs\ with result Programs.
+
+StrFormat,NTRIM,pTextBox12,%var%
+This option is used to trim numbers from the end of a string.
+It can be used to extract the class name from interface components.
+Here %var% will contain: pTextBox
+
+
+StrFormat LEFT/RIGHT
+
+StrFormat,<Action>,<%string%>,<CharsToObtain>,<%var%>
+List of possible Action values
+ * Left
+ * Right
+== Syntax example: == Set,%string%,tomorrow
+StrFormat,LEFT,%string%,3,%var%
+In this example we have a given string tomorrow  and we want to get 3 chars from the left filled into %var% with value  tom.
+The same syntax applies for StrFormat,RIGHT with result row.
+
+
+StrFormat MID
+
+StrFormat,MID,<%string%>,<PositionOfFirstChar>,<CharsToObtain>,<%var%>
+== Syntax example: == Set,%string%,tomorrow
+StrFormat,MID,%string%,3,4,%var%
+In this example we have a given string tomorrow  and we want to get 4 chars beginning with the third char. The result is filled into %var% with value  morr.
+
+
+StrFormat REPLACE
+
+StrFormat,REPLACE,<%string%>,<CharsToReplace>,<ReplacementChars>,<%VarResult%>
+== Syntax example: == Set,%a%,BROWN
+Set,%b%,yellow
+Set,%source%,”The quick brown fox jumps over the lazy dog”
+StrFormat,REPLACE,%source%,%a%,%b%,%VarResult%
+StrFormat,REPLACEX,%source%,%a%,%b%,%VarResultSens%
+In the first example we replace (case insensitive) brown by yellow resulting as new string in %VarResult%:
+The quick yellow fox jumps over the lazy dog
+In the second example there is nothing replaced, because uppercase brown is not found, resulting the original string in %VarResultSens%:
+The quick brown fox jumps over the lazy dog
+
+
+StrFormat SPLIT
+
+StrFormat,SPLIT,<%string%>,<DelimiterChar>,<Index>,<%VarResult%> (Index=0 --> number of items)
+
+== Syntax example: == Set,%source%,”The quick brown fox jumps over the lazy dog”
+StrFormat,SPLIT,%source%,#$s,0,%count%
+Loop,%ScriptFile%,Section,1,%count%
+
+[Section]
+StrFormat,SPLIT,%source%,#$s,#c,%VarResult% In this example we split the string “The quick brown fox jumps over the lazy dog” using the delimiter space (#$s) and get the single words in the separate loop passes.
+
+
+StrFormat SHORTPATH/LONGPATH
+
+StrFormat,<Action>,<%string%>,<%VarResult%>
+List of possible Action values
+ * ShortPath
+ * LongPath
+This will return the DOS 8.3 path ot the NT style path.
+
+StrFormat CHARTOOEM/OEMTOCHAR
+
+StrFormat,<Action>,<%string%>,<%VarResult%>
+List of possible Action values
+ * CharToOEM
+ * OemToChar
+== Syntax example: == StrFormat,CHARTOOEM,'aüöäasf',%var1%
+StrFormat,OEMTOCHAR,%var1%,%var2%
+In this example we change the german umlauts 'aüöäasf' (ANSI charset) into %var1% with result 'a?”„asf' (DOS charset) and
+%var1% into new %var2% with result 'aüöäasf'.
+StrFormat LEN
+
+StrFormat,LEN,<%string%>,<%VarResult%>
+== Syntax example: == StrFormat,LEN,"Hello World",%var1% Returns 11 into %var1%
+
+
+StrFormat POS
+
+StrFormat,POS,<String>,<SubString>,<%VarResult%>
+== Syntax example: == StrFormat,POS,”Hello World”,orl,%VarResult%
+In this example we verify the position of (case insensitive) 'orl' in 'Hello World' with result 8.
+StrFormat,POSX,”HELLO World”,l,%VarResult%
+In this example we verify the position of lowercase 'l' in 'HELLO World' with result 10. 

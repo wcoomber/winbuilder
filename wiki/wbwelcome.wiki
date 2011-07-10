@@ -1,0 +1,35 @@
+Welcome to the help pages of WinBuilder!
+
+Inside this manual you'll find details and quick start guides related to wb. If you haven't found enough information to answer your questions, please let us know what you think needs to be changed or added to make this manual easier to understand. You are kindly invited to place your comments here.
+
+Starting up is easy and you can do it in 3 steps
+1. Start WinBuilder.exe from an empty folder.
+2. Get your fresh projects using the Download Center.
+3. Select the project you want to build and click play.
+
+Please follow the Step-by-Step installation description recommended  here
+
+
+Contents 
+* Overview
+* Installing
+* Compatibility
+* Tools
+* Scripts 
+* ==Syntax==
+* Syntax added in version 080
+* Interface
+* Application scripts
+* Projects 
+* VistaPE
+* LiveXP
+* nativeEx
+* NativePE
+* picoXP
+* MobileOS
+* ReactOS
+* Bugs
+* License
+* About WinBuilder
+
+

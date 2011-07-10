@@ -1,0 +1,17 @@
+DirCopy
+
+DirCopy,<FromDir>,<ToDir> 
+This command will copy a folder and respective sub folders from a given source to a specified destination. It uses Win32 API as a silent operation overwriting any previously existent folder.
+
+== Syntax example: ==
+DirCopy,c:\MyPath,c:\AnotherPath
+
+In this example DirCopy will copy the complete directory MyPath to AnotherPath
+
+DirCopy,c:\MyPath\*.*,c:\AnotherPath
+
+In this example DirCopy will copy all files and directories inside MyPath to AnotherPath
+
+
+WB078 added:
+The optional parameter SHOW can be added. That will open the Windows internal progress window.

@@ -1,0 +1,10 @@
+RegImport
+
+RegImport,<RegFileToImport> 
+This command will import an external registry file (*.reg) to your local registry system.
+
+It will use as parameter the  filename to read values from.
+
+== Syntax example: ==
+RegImport,c:\myFile.reg 
+In this example we add the values from myFile.reg onto the registry system

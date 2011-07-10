@@ -1,0 +1,11 @@
+DirDelete
+
+DirDelete,<DirToDelete> 
+This command will delete a folder and respective files and folders inside. It uses Win32 API as a silent operation to delete the specified folder. Beware that deleted folders are not recoverable from the recycle bin.
+
+== Syntax example: ==
+DirDelete,c:\MyPath
+
+In this example DirDelete will remove MyPath
+WB076 added:
+The optional parameter FAST can be added. That will rename the directory to a random name, and then delete in the background.

@@ -1,0 +1,31 @@
+Run / Exec
+
+Run,%ScriptFile%,<Section>[,parameters]
+Exec,%ScriptFile%,<Section>[,parameters] This command is used to run the commands found in a section inside a script file. You can run sections from any script including the script from where run is originally called. Use %scriptFile% as a parameter to call another section found inside the same script.
+By default this command willl use the same variables available in the original script from where it was 
+called. If you wish to load the variables from the external script then you should use Exec.
+== Syntax example: ==
+run,%scriptfile%,mySection 
+In this example we run a section called mySection inside the same script file Parameters support
+This command also allows you to use parameters - this is a very useful feature to create a section that works based on these variables and this way avoid the need to add very long similar lines of code.
+
+Inside each section that is called by run you can use the respective parameters which are numbered from #1 to #9
+
+This means that you can use a Run,%scriptfile%,mysection,"Hello World!" 
+And inside the [mysection] of the same script you can use a command like echo,#1 to display "Hello World!" on your log. 
+WB078 added: If a 'Run' has more than 9 parameters, they can be accessed by two new commands:
+
+GetParam,Index,%Var% writes parameter #index into %var%
+PackParam,Start,%Var% packs all parameters beginning with <start> into %var%, each enclosed in quotes, and separated by comma, like: "param4","param5",... 
+
+PackParam optionally has an additional argument. 
+PackParam,Start,%Var%,%Num%. It writes the number of arguments into %Num%.
+%Num% is always the number of ALL arguments, independent from Start The parameters can be declared as "OUT" variables, that means when returning from "Run", they will be updated with the actual value.
+
+== Syntax example: == Run,%scriptfile%,mySection,%first%,OUT:%second%,%third%
+After returning from the "Run", %first% and %third% are unchanged, regardless whether inside the "Run" #1 and / or #3 are changed.
+
+%second% will get the actual value of #2 when "Run" is finished. 
+Exec   This command has a very similar behavior to the one described by the run command. It will additionally add all the variables found inside the [variables] section. Identical variables found on the new script will overwrite the older ones.
+
+The "OUT" mechanism is not supported by EXEC. 

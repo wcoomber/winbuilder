@@ -1,0 +1,7 @@
+TxtDelEmptyLines 
+
+TXTDelEmptyLines,<Filename> 
+With a similar function to the above detailed command, this function will remove all empty lines from a given text file.
+
+== Syntax example: ==
+TXTdelEmptyLines,C:\myFile.txt

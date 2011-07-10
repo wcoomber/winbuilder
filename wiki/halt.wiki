@@ -1,0 +1,8 @@
+Halt
+
+Halt,<reason>
+This command will force the overall project to terminate. 
+
+Reason is a small text message that is displayed in the log where you can specify the reason why Halt was called.
+
+== Syntax example: == Halt,"Incompatible Source" 

@@ -1,0 +1,179 @@
+If Clauses 
+
+In .script language you can use If clauses to ease your life when running a script and to be able to evaluate certain conditions. 
+
+If a condition is true when you test it with the IF command then a command will be executed.
+
+General format: If,<condition>,<command>
+WB076 added second, optional line: Else,<command>
+
+If a condition is false when you test it with the IF command then the second command will be executed.
+
+<command> can be
+ * Any valid script command
+    WB076 added:
+ * A command block
+
+List of available IF conditions
+ * ExistFile
+ * ExistDir
+ * ExistSection
+ * NotExistFile
+ * NotExistDir
+ * NotExistSection
+ * Equal
+ * Smaller
+ * Bigger
+ * NotEqual
+ * Ping
+ * Online
+ * License
+ * NotLicense
+
+WB076 added: 
+ *  ExistRegSection
+ *  ExistRegKey
+ *  ExistVar
+ *  Not
+ *  Question
+
+IF Exist.. or IF NotExist..
+
+If,<test>,<FilenameOrDirectory>,<Command> 
+You can use this test to determine if a file or directory exists in a given location. If this test is true, then a Command is executed.
+
+When testing sections, you need to add the filename and then the section name.
+
+Available tests
+ * ExistFile
+ * ExistDir
+ * ExistSection
+ * NotExistFile
+ * NotExistDir
+ * NotExistSection
+
+
+== Syntax example: ==
+If,NotExistFile,c:\myFile.txt,FileCreateBlank,c:\myFile.txt
+In this given example we are testing if c:\myFile.txt does not exist. If this condition is true, then FileCreateBlank,c:\myFile.txt will be executed
+
+IF Equal, Smaller, Bigger, NotEqual
+
+If,<%var%>,<test>,<value>,<Command> 
+This set of IF clauses will test number values
+
+Available tests
+ * Equal
+ * Smaller
+ * Bigger
+ * NotEqual
+
+WB078 added:
+ * EqualX (compares case sensitive)
+
+== Syntax example: ==
+If,%myVariable%,Equal,10,FileCreateBlank,c:\myFile.txt
+In this given example we are testing if %myVariable% is equal to 10. If this condition is true then FileCreateBlank,c:\myFile.txt will be executed
+
+IF Ping
+
+If,ping,<xxx.xxx.xxx.xxx>,<Command> 
+Ping will test if a given IP is valid and run a command if this test is true.
+
+== Syntax example: ==
+If,ping,10.111.8.1,FileCreateBlank,c:\myFile.txt
+In this given example we are pinging a machine on the network. If this condition is true then FileCreateBlank,c:\myFile.txt will be executed. WB078 added:
+Host domain name accepted
+
+== Syntax example: ==
+If,ping,winbuilder.net,FileCreateBlank,c:\myFile.txt
+
+IF Online
+
+If,online,<Command> 
+Ping will test if the computer is online and run a command if this test is true.
+
+== Syntax example: ==
+If,online,FileCreateBlank,c:\myFile.txt
+In this given example we are checking if a machine is connected on a network. If this condition is true then FileCreateBlank,c:\myFile.txt will be executed.
+
+IF License/NotLicense
+
+If,License,<textfilename>,<Command> 
+This command was added to be used as tool to accept a license agreement whenever needed. It will open a special tab where the user has the option to read the terms of the license and then press a button corresponding to his decision to agree or not with the displayed terms.
+
+TextFilename is the text file that will be displayed on the license window.
+
+The option License runs a command when the user agrees with the license conditions and NotLicense will run a command if the user doesn't agree.
+
+== Syntax example: ==
+If,NotLicense,c:\myEULA.txt,halt,"User doesn't agree with license."
+This example will present the contents of myEula.txt - in case the user doesn't agree with this license the project build will be aborted.
+
+
+IF ExistRegSection
+
+If,ExistRegSection,<HKEY>,<Section>,<Command>
+== Syntax example: ==
+If,ExistRegSection,HKLM,SOFTWARE\Classes\xyz,RegRead,HKLM,SOFTWARE\Classes\xyz,Language,%var%
+This command will read the value of HKLM\SOFTWARE\Classes\xyz,Language, if RegSection HKLM\SOFTWARE\Classes\xyz  does exist.
+
+
+IF ExistRegKey
+
+If,ExistRegKey,<HKEY>,<Section>,<Key>,<Command>
+== Syntax example: ==
+If,ExistRegKey,HKLM,SOFTWARE\Classes\xyz,Language,RegRead,HKLM,SOFTWARE\Classes\xyz,Language,%var%
+This command will read the value of HKLM\SOFTWARE\Classes\xyz,Language, if RegKey HKLM\SOFTWARE\Classes\xyz,Language  does exist.
+
+
+IF ExistVar/NotExistVar
+
+If,ExistVar,<%var%>,<Command>
+If,NotExistVar,<%var%>,<Command>
+== Syntax example: == Set,%var%,NIL
+If,ExistDir,C:\Program Files\IrfanView,Set,%Var%,1
+If,ExistVar,%var%,Message,"'%var%' does exist",Information 
+In this given example we’ll check if the program path C:\Program Files\IrfanView does exist, if it’s true the value of %Var% will be set to 1. Then we’ll check if %Var% does exist, if it’s true a message windows with text ‘1’ does exist appears.
+
+
+IF Not
+
+If,Not,<Condition>,<Command>
+== Syntax example: == If,Not,%var1%,EQUAL,%var2%,FileCreateBlank,C:\myFile.txt
+In this given example the file c:\myFile.txt will be created if value of %var1% is different to value of %var2%.
+
+Note:
+If,Not,%var1%,EQUAL,%var2%,command is equivalent to If,%var1%,NOTEQUAL,%var2%,command
+The current NOTEQUAL, NOTEXISTDIR, ... commands are still processes because of compatibility reasons.
+But before processing they are internally changed into If,Not,...
+Therefore:
+If,NOT,%var%,NOTEQUAL,%test%,command is equivalent to If,%var1%,EQUAL,%var2%,command
+
+
+If Question
+
+If,QUESTION,<Question>,<Command>
+As question, also all strings defined in the language files can be used like variables, identified by their ID number $#nnnn.
+
+== Syntax example: == If,QUESTION,$#1541?,command (The question mark is part of the TEXT, not part of the ID!)
+
+The resulting dialog box shows in case of default language (English):
+Save changes to disk?
+In case of e.g. italian language:
+Salva cambiamenti al disco?
+WB076 added:
+
+Usually the question dialog waits for ever for the user's input.
+You can cause to close it after a timeout, by adding the timeout (in seconds) and a default answer (Yes / No) as last arguments. If,QUESTION,"Exit Script?",Exit,"User decided",10,yes
+
+
+Else
+
+If,<Condition>,<Command>
+Else,<Command>
+The Else command must follow the If command immediately.
+
+== Syntax example: == If,Not,ExistFile,C:\myFile.txt,FileCreateBlank,C:\myFile.txt
+Else,Message,"File already exists",INFORMATION
+In this given example we are testing if c:\myFile.txt does not exist. If this is true, then FileCreateBlank,c:\myFile.txt will be executed, otherwise a message windows with text File already exists appears.

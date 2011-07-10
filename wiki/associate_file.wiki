@@ -1,0 +1,28 @@
+
+associate_file
+==Syntax==
+Associate_File,Extension,[Type],[Filename],[Option],[UseRegAddBoot]
+==Parameters==
+1ExtensionFile extension to be associated2TypeSet the type of the association. If not specified defaults to Open.Open= Launch the associated applicationEdit= Launch the associated editor and opens the document for editingIcon= Associate an icon with the extension3 FilenameFile to be associated. May be defaulted or may be a file name or full path. If it's not specified then it defaults to:
+ 
+%PE_Programs%\%programFolder%\%programExe%
+ 
+If only the file name is specified then the path is assumed to be:
+ 
+%PE_Programs%\%programFolder% 4OptionThis is optionally used to specify the DefaultIcon index. If the icon is contained with the program exe then this can be used with Open or Edit. Otherwise the Icon type can be used to specify an external DefaultIcon.5UseRegAddBootDefaults to False. If set to True then RegAddBoot is used to create the association.Remarks
+This function is called to associate a file extension with an application.
+Tips
+This function will mount and unmount the appropriate registry hive each time its called. If many associations are being created then its more efficient to use Add_Asso instead. 
+==Example==
+This sets notepad.exe as the program to open files with extension ext using icon with index 153 from shell32.dll for the association.
+Associate_File,Ext,Open,%SystemRoot%\system32\notepad.exe
+Associate_File,Ext,Icon,%SystemRoot%\System32\Shell32.dll,-153
+ 
+If your scripts defines the variables %ProgramFolder% and %ProgramEXE% then the above ==Example== can be replaced with:
+[Variables]
+%ProgramTitle%=Notepad
+%ProgramEXE%=Notepad.exe
+%ProgramFolder%=%SystemRoot%\System32
+[Process]
+Associate_File,Ext
+ 

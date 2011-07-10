@@ -1,0 +1,16 @@
+Begin
+  <command>
+  <command>   ...   <command>
+End <command>  can be any valid script command.
+Because <command> can also be an If, nested command blocks are possible.
+
+== Syntax example: == If,%OSName%,Equal,xp,Begin
+  If,%SP%,NotEqual,sp3,Begin
+    If,%pCheckBox1%,Equal,True,Run,%ScriptFile%,Process-KB893803
+  End
+  Else,Begin
+    Set,%hotfix%,1
+    Run,%ScriptFile%,Process-Copy
+  End
+End
+Else,...

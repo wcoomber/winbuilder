@@ -1,0 +1,92 @@
+
+Welcome to the help pages of WinBuilder!
+
+
+Contents 
+
+* Welcome
+* Welcome
+* Overview
+* Installing
+* Compatibility
+* Scripts
+* Tools
+* Bugs
+* License
+
+* Scripts
+* Scripts
+* Application Scripts
+* Escape Character Usage
+* Interface
+* Link Files
+* ==Syntax==
+* Winbuilder 080 ==Syntax==
+* Winbuilder 082 ==Syntax==
+* Variables
+
+* Script Command Categories
+* Attachments
+* File Operations
+* IF Clauses
+* INI Manipulation
+* Miscellaneous Commands
+* Network Tools
+* Registry Handling
+* Retrieve Functions
+* String Format
+* Text Files
+
+* Common API
+* _Calculate
+* Add_Asso
+* Add,DesktopIni
+* Add_Pin
+* Add,Shortcut
+* Add,URL
+* AddAutoRun
+* AddPostConfig
+* AddPreConfig
+* AddToPEShell
+* Arch
+* Ask_License
+* associate_file
+* Add_Asso
+* Add_Shortcut
+* CopyProgram
+* Hive_Load
+* Hive_Unload
+* Not_Compatible
+* Process_Log
+* ReadENV
+* Reg_Add
+* Reg_Del
+* Reg_Import
+* RegAddBoot
+* Register_File
+* Require_File
+* Require_FileQ
+* RequireSysFile
+* RunFromCD
+* RunFromRam
+* ScriptInterface,Read
+* ScriptInterface,State
+* ScriptInterface,Write
+* Select_Case
+* Unpack
+
+* VistaPE API
+* VistaPE API
+
+* Projects
+* Projects
+* LiveXP
+* MobileOS
+* NativePE
+* NativeEx
+* PicoXP
+* ReactOS
+* VistaPE
+* VistaPE-CAPI
+* Win7PE
+* Win7RescuePE

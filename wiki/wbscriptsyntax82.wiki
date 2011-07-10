@@ -1,0 +1,128 @@
+Script Syntax 082
+
+Contents
+* Compatibility
+* ==Syntax==
+* Back to index
+ 
+ 
+Compatibility
+
+This page describes new functionality introduced with WinBuilder 082.
+Older WinBuilder versions cannot work with this functionality.
+Here you can download WinBuilder 082.
+
+==Syntax==
+
+
+Changes to .script commands can be grouped under the following categories
+* File handling
+* Miscellaneous commands
+
+File Handling
+
+Commands under this category were designed to handle files and are particularly useful to create the base structure of your project or add additional features that you need. 
+
+List of changed functions
+* FileDelete - New optional Nowarn, Norec parameter added
+
+FileDelete
+
+FileDelete,<FileToDelete>,{Nowarn},{Norec}
+
+This command will delete files. It uses Win32 API as a silent operation deleting all files that match the search criteria. You can view the result of this operation on the respective log entry. Beware that all deleted files are immediately removed instead of moved to the recycle bin.
+
+FileDelete supports wildcards ( *.* )
+If wild cards are specified then, unless Norec is specified, any files matching the wild card will also be deleted in subdirectories of the specified directory. 
+If Norec is specified then only matching files in the specified directory will be deleted.
+By default if the specified file does not exist or if no files match the wild card then a warning will be logged in the log file. 
+If NoWarn is specified then this warning log is suppressed.
+The optional Nowarn and Norec parameters can be specified in any order.
+== Syntax example: ==
+FileDelete,c:\MyPath\*.txt,NoWarn,Norec
+
+In this example FileDelete will delete all text files (*.txt) from the MyPath directory only. If no files are found no warning will be added to the log file.
+
+
+Miscellaneous Commands
+Under this category you find the commands which aren't grouped under any specific category but are still quite used on most scripting tasks.
+* Exit - exits processing in the current script ( optional Nowarn parameter added )
+* System,Comp80 - sets winbuilder 80 compatibility
+* System,HasUAC - sets a variable indicating if Vista / Win7 UAC is enabled
+* System,IsTerminal - sets a variable indicating if running under terminal server ( remote desktop ) 
+* System,Log - controls logging to log file
+
+Exit
+
+Exit,<exit message>,{Nowarn}
+
+This command will force the script to be finished and will make the process continue to the next script on the list.
+Exit message is a small text message that is displayed on the log where you can specify the reason why Exit was called.
+Usually the Exit command is called after an unexpected problem, and in the log there is a warning icon.
+But there are conditions, where the exit is intended, and a warning icon would confuse the user. If the NOWARN option is specified then an information icon is associated with the message in the log.
+
+== Syntax example: == 
+Exit,"Script is disabled for this source",Nowarn
+
+
+
+System,Comp80
+
+System,Comp80,{on|off}
+
+Use this command to force compatability with winbuilder version 80. WB 082 is in some situations incompatible with WB 080
+With System,Comp80,ON or System,Comp80,OFF you can make the current WB script processing (mostly) compatible to the processing of WB 080.
+When starting WB 082, by default the compatibility is switched off.
+If compatability is set to off then scripts are processed 2 to 3 times faster.
+
+== Syntax example: == 
+System,Comp80,off
+
+
+
+System,HasUAC
+
+System,HasUAC,<%var%> 
+
+This command will set the variable to true if Vista / Win 7 UAC ( User Account Control ) is enabled. This can cause problems to some projects.
+
+== Syntax example: ==
+System,HasUAC,%var%
+If,%var%,Equal,True,begin
+    Message,"Error: UAC is enabled. This may cause problems when building.",INFORMATION,15
+    Halt,"Error: UAC is anabled. This may cause problems when building. "
+End
+
+
+
+System,IsTerminal
+
+System,IsTerminal,<%var%>
+
+This command will set the variable to true if winbuilder is being run inder terminal server ( remote desktop ). This can cause problems to some projects.
+
+== Syntax example: ==
+System,IsTerminal,%var%
+If,%var%,Equal,True,begin
+     Message,"Error: It seems you are working in a Terminalserver session. This might cause unexpected problems. ",INFORMATION,15
+     Echo,"Error: It seems you are working in a Terminalserver session. This might cause unexpected problems."
+End 
+
+
+
+System,Log
+
+System,Log,{on|off} 
+
+When in your project a certain function is used many, many times, it usually expands the log.html into many unnecessary lines.
+This command stops / restarts log to log.html
+
+== Syntax example: ==
+System,Log,off
+
+Log Of Changes
+Changes in script language can be followed in each newer WinBuilder beta discussion where changes to the script code are suggested and debugged by other members.
+Projects also follow their own script rules and these methods can change occasionally, whenever in doubt you should post your questions in each project forum discussion.
+
+
+Please let us know if this page is not complete or if you still haven't found needed information.

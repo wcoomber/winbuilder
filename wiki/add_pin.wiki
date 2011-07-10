@@ -1,0 +1,32 @@
+
+Add_Pin ( Win 7 Projects Only )
+==Syntax==
+Add_Pin,Type,[Order],Path,[Title],[WorkFolder],[Parameters],[Icon],[StartMode],[ToolTipText] 
+==Parameters==
+1TypeDefines the type of the pin i.e. where the pin appears.StartMenuPinned item will appear in the start menuTaskBarPinned item will appear on the taskbar2OrderSpecifies the order of the icons in the specified pinning area.
+
+If a script overwrites  a previously defined Type with the  same Order, than you will get a warning in log. Note most Windows 7 projects use a seperate script to define all the items to be pinned so this is not a problem in practice.0-9This defines the initial order of the icons that are shown in the selected area. It can be changed at run time by drag and drop.AutoThe first available place in the selected area is automaticaly found. This is the default action if the parameter is not specified.3 PathThis should either be left blank or the full path to the item to be pinned should be specified. This can either be the installed path of the file or the installed path of a shortcut file ( .lnk file ) in the user profile. Logical names can be used to reference areas in the user profile i.e. %Start_Menu, $Quick_Launch, $Desktop.
+ 
+==Example==s: 
+#$pSystemRoot#$p\calc.exe
+$Start_Menu\Programs\Network\PENetwork.lnk
+$Quick_Launch\PENetwork.lnk
+$Desktop\My Computer.lnk
+ 
+If blank it defaults to %PE_Programs%\%ProgramFolder%\%ProgramEXE%.4TitleThis specifies the title to associate with the shortcut created by the pinning process. If not specified then %ProgramTitle% is used.5WorkFolderOptional parameter defining the current directory for the pinned program   (default value = same Folder as the program set in parameter 3)6ParametersOptional parameter defining any command line parameters for the pinned program.7IconOptional parameter defining which icon to use on the automatically created shortcut file. (No need to give path if IconFile is in same folder as the program set in parameter 3).(Path\) IconFileFile containing icon. Can be an ico, exe, or a dll file. First available icon in file will be associated with the shortcut file(Path\) IconFile#$cIndex
+ File containing icon. Can be an ico, exe, or a dll file. Icon with specified index will be associated with the shortcut file8StartModeOptional parameter specifying how the window of the launched program should be shown. Note that the launched program can override this. Can also include an appended string indicating what hotkey is used to launch the program ( add #$c between the start mode and the hotkey ). Hotkeys are specified using the text form of the key seperated by + e.g. CTRL+ALT+A.1Program is shown in normal mode. The default if the parameter is not specified.2Program is shown minimized. 3Program is shown maximized. 9ToolTipTextText to display when cursor is on the pinned icon of the program.
+Remarks
+1) Not all files can be pinned
+2) Links (.lnk) pointing to .cpl files can not be pinned
+3) Files located on removable devices (CD UFD etc.) can not be pinned.
+4) The name of pin is automatically set based on the .lnk name or program name.
+4) maximum 10 items per type can be pinned. (10 start menu+10 taskbar)
+==Example==s
+ 
+Add_Pin
+Add_Pin,StartMenu
+Add_Pin,Taskbar
+Add_Pin,Taskbar,,#$pSystemRoot#$p\calc.exe
+Add_Pin,StartMenu,,"$Desktop\My Computer.lnk"
+Add_Pin,StartMenu,,%PE_Programs%\%ProgramFolder%\MyTool_To_Pin.exe,"My Pinned Tool"
+ 

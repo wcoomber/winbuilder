@@ -1,0 +1,14 @@
+Message
+
+Message,<message>,<Action> This command will pop a small text window displaying the contents of your message. The additional action parameter will allow you to customize the icon displayed along with the message box.
+
+Action can have of the following values
+ * Information
+ * Confirmation
+ * Error
+ * Warning
+== Syntax example: == message,"Script has been completed!",Information 
+WB076 added:
+Usually the message dialog waits for ever for the user's ok.
+You can cause to close it after a timeout, by adding the timeout (in seconds) as last argument.
+message,"Script has been completed!",Information,10 

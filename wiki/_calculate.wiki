@@ -1,0 +1,17 @@
+
+_Calculate
+==Syntax==
+_Calculate,AutoIT Command(expression),ReturnVar
+==Parameters==
+1AutoIT Command(expression)AutoIt command to execute1ReturnVarThis is the name of the variable to receive the return value of the AutoIt command. It must be specified without the %Remarks
+This API function is called to execute an AutoIT command that returns a value. It will download sCalculate to the winbuilder tools directory if it does not already exist and use it to execute the AutoIT command. 
+Tips
+Always use simple quote in the command expression ,use [#$c] in place of [,] and use %ReturnVar% (with %) as result in your code . See AutoIT doc.
+ 
+==Example==
+This will show a simple message box with Abort / Retry / Ignore buttons for 5 seconds
+_Calculate,MsgBox(2#$c'Test Calculate'#$c'Choice:'#$c5),Choice
+ 
+This will display an input box to ask the user to enter a string.
+_Calculate,InputBox('Question'#$c 'Where were you born?'#$c 'Planet Earth'#$c ''#$c -1#$c -1#$c -1#$c -1),Answer
+ 

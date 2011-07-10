@@ -1,0 +1,11 @@
+ExtractAndRun
+
+ExtractAndRun,<%ScriptFile%>,<Folder>,<Filename>[,<parameters>] 
+This command will run a file that is attached inside a script file.
+Optional run parameters can be defined. They must not contain spaces, quotes or commas. Use the escapes #$s, #$q, #$c instead.
+
+It is usefull when you only wish to run a file for a very specific purpose and this way avoid having to add extra commands to extract run and then delete the file from a temporary location when it is no longer needed.
+
+== Syntax example: ==
+ExtractAndRun,C:\myFile.script,Folder,myApp.exe 
+Using this syntax we will extract myApp.exe to a temporary location and then delete this file when it has finished running.

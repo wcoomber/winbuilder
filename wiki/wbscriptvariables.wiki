@@ -1,0 +1,174 @@
+Script Variables 
+Contents 
+* Overview
+* Usage
+* FAQ
+* Bugs
+
+
+
+
+Overview 
+
+Variables are expressions that you can use to store a value that can be changed as needed.
+
+These variables can be used to avoid fixed settings and keep the script language as dynamic as possible. This also makes your script become portable and work under any path or quickly change script settings when needed.
+
+We can group variable into 3 categories, Fixed, Custom, and Runtime, each one having a specific sequence which we detail over the next chapter.
+
+Usage 
+Variables are meant to be used inside your commands while your script is running. 
+
+They allow you to make changes at a global level. Changing the value of single variable can change the way how the whole project is built.
+
+When a project starts to run - a list of variables is created using this specific order level
+1. Fixed variables
+2. Custom Variables
+3. Runtime variables
+
+If needed, we can overwrite a variable with a new value, meaning for example that a fixed variable can start with a value which can later be changed if we add a variable with the same name on our script, overriding the previous fixed value. 
+
+This is only valid while this script is running and these changes will be removed when running another script.
+
+These explanations may seem complicated now but it's simple to understand once you follow each one of the chapters below. You don't have to worry much about this information until you decide to begin coding your own scripts in a more efficient way. In either case, it will be detailed here should you need it one day.
+
+
+Fixed Variables 
+
+
+These variables are created by default just before a project start to run.
+
+WinBuilder retrieves information found inside your Operating System and a few others definitions related to your project settings. 
+
+Date related (output present date settings)
+* %day%
+* %Month% 
+* %Year%
+
+User environment variables 
+* %TempDir% - path to the temporary folder
+* %ProgramFilesDir% - path to localized "Program Files"
+* %Username% - extracts current logged User name
+* %UserProfile% - contains the path to the User Profile folder
+* %WindowsDir% - path to your Windows directory
+* %WindowsSystemDir% - in most cases pointing to your windows system32 folder
+
+WinBuilder specific
+* %BaseDir% - folder from where WinBuilder.exe is running
+* %tools% - path where the common Tools folder can be found
+* %version% - current version of WinBuilder
+
+Project specific
+* %SourceDir% - path to use as source for your project
+* %TargetDir% - work folder that will have the project build files
+* %ISOfile% - filename of the image to be created
+* %ISOdir% - path of %ISOfile%
+* %ProjectDir% - path to the respective project folder
+
+
+Custom Variables 
+
+
+These are additional variables that can be added by script authors.
+
+
+How to create them?
+
+Place a section called [variables] and write your variables in INI style. It is obligatory to use the percentage (%) for labeling it as a variable.
+
+Example
+
+[variables]
+%workdir%=c:\myPath
+%project_title%="My Boot Disk"
+
+For this example we are creating two variables, available while the script is running, which can be used inside script commands.
+
+
+Macros 
+
+
+Macros are defined in the [Variables] section, too.
+
+Unlike Variables they do not have the percentage (%) as label.
+And they can only be used at the begin of a script command line.
+
+They are used to substitute often used script command line starts.
+
+Example
+
+[Process]
+FileCopy,%source_sys%\aclui.dll,%target_sys%
+FileCopy,%source_sys%\user32.dll,%target_sys%
+...
+FileCopy,%source_sys%\kernel.dll,%target_sys%
+
+Can be replaced by:
+
+[variables]
+Copy=Run,%ScriptFile%,DoCopy,%source_sys%,%target_sys%
+
+[DoCopy]
+FileCopy,#1\#3,#2
+
+[Process]
+Copy,aclui.dll
+Copy,user32.dll
+...
+Copy,kernel.dll
+
+
+This [variables] section can be placed in 3 different files, each one with a different scale of availability. 
+* System - variables placed inside WinBuilder.ini are available for all projects and scripts
+* Project - variables inside script.project are available for all scripts
+* Script - placed inside the script that is running (also called as "local variables") are valid until the script is concluded.
+
+
+
+
+
+Runtime Variables 
+
+
+These are the type of variables that are created while the script is running. This means that you can create your own local variables whenever needed.
+
+To specifically create new variables you can use  these script commands:
+* set
+* addvariables
+
+
+There's a small trick that you can also use to create new runtime variables. Whenever you use any command that uses a variable to store the result a new variable will be added to the list if it didn't existed before.
+
+Applies to:
+* strformat 
+* if
+* retrieve
+* iniread
+* regread.
+
+
+One last detail - the run command also uses runtime variables that we can use to pass parameters to another section. These variables use numbers from #1 to #9. You should always check the values that are being used in each of these variables to ensure that everything works as you expect.
+
+
+Frequently Asked Questions 
+Q: I'm still a bit confused, how can I understand this better?
+A: Look inside a project folder and open up the script.project file with notepad to view good examples. This also applies to WinBuilder.ini (same folder as WinBuilder.exe) and to your script files.
+
+Q: I'm doing my own script - how can I know if the value of my variables is right?
+A: Use commands to output show the variables on the log. Echo,%myVar% is a good example to help in this case.
+
+Q: I know that we don't need to %% on each variable we create - are there any restrictions about what I can and cannot use?
+A: You should only be careful to choose titles that aren't confused with other commands or variables, try using distinct titles that identify the variable purpose.
+
+Q: Also heard that variables can replace commands, is this true?
+A: Variables can't directly replace commands but can be used to run sections with new specific functions. Look on the script applications page for details about this sort of use.
+
+
+
+Bugs 
+
+There are a few known issues with variables that you should be aware.
+* Adding too many variables on the list will start decreasing performance of the script processing because of the quantity of text to analyse and translate - recommended to keep variables list on local scripts and projects as minimum as possible.
+* If the value of a variable A depends on the value of variable B and you decide to change the value of variable B - your variable A will not be updated and will still use the original value of variable B. This was a quick method done to improve speed and should be corrected soon. In the meantime you can call system,refreshvars to refresh all variables and use updated values.
+
+Please let us know if this page is not complete or if you still haven't found needed information.

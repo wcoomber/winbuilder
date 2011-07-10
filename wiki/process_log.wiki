@@ -1,0 +1,9 @@
+
+Process_Log
+==Syntax==
+Process_Log
+Remarks
+Used to log version info and current time a script is run into the project.info file
+==Example==
+Process_Log
+

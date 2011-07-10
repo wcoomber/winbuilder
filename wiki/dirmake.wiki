@@ -1,0 +1,9 @@
+DirMake
+
+DirMake,<NewDir> 
+This command will create a new folder as you specify.
+
+== Syntax example: ==
+FileCreate,c:\MyPath
+
+In this example FileCreate will add a new directory called MyPath 

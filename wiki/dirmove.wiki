@@ -1,0 +1,11 @@
+DirMove
+
+DirMove,<MoveDir>,<ToDir> 
+This command will move a folder and respective sub folders from a given source to a specified destination. It uses Win32 API as a silent operation overwriting any previously existent folder.
+
+The previous location ceases to exist with this folder being found under the new location
+
+== Syntax example: ==
+DirMove,c:\MyPath,c:\AnotherPath
+
+In this example DirMove will move MyPath to AnotherPath 

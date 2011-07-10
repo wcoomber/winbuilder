@@ -1,0 +1,11 @@
+SET
+
+Set,<%Variable%>,<NewValue> 
+With this command we can change the value of a variable
+If more variables are linked to this variable, then you might need to call
+System,RefreshVars to ensure that all variables get refreshed values and work properly. == Syntax example: == Set,%workdir%,c:\myPath 
+
+WB076 added:
+A new variable handling makes System,RefreshVars unnecessary. Usually the variables definition has a lifetime of the current script.
+
+You can make it valid for the rest of the actual Build by adding a ',GLOBAL' and valid for ever (write into script.projects) by adding a ',PERMANENT. 

@@ -1,0 +1,9 @@
+About WinBuilder 
+
+
+Wb was coded with the intention of creating a flexible boot disk tool with an easy to use interface. All projects available today were only made possible due to the long and constant help of people who believe and keep struggling to make this sort of solutions freely available for everyone else enjoy.
+
+If you found our work useful, why not drop a quick visit to the good folks in our community and say hello
+
+Thank you for using wb.
+Please let us know if this page is not complete or in case you still haven't found needed information.

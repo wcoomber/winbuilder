@@ -1,0 +1,30 @@
+Loop
+
+Loop,%ScriptFile%,<Section>,<start>,<end>
+Section in %Scripfile% is repeatedly executed with a counter between start and end value. The loop can be prematurely exited by Loop,BREAK 
+
+== Syntax example: == Set,%Result%,?
+Loop,%ScriptFile%,Try-OEM,0,100,SourceDisksFiles,VBoxUSB.sys
+Echo,%Result%
+
+[Try-OEM]
+Set,%file%,C:\Windows\inf\oem#c.inf
+If,ExistFile,%file%,IniRead,%file%,#1,#2,%Var%
+If,-%var%,NotEqual,-,Set,%Result%,%file%
+If,%Result%,NotEqual,?,Loop,BREAK
+This code is searching in all oem.inf files in path C:\Windows\inf (oem0.inf up to oem100.inf) for entry VBoxUSB.sys in section [SourceDisksFiles].
+If it’s found the oem.inf file name is set as result and the loop ends.
+NOTE:
+oem.inf files are always beginning with ZERO (=oem0.inf)!
+
+Loop statement can run between characters, e.g. drive letters
+
+== Syntax example: == Set,%a_searchFile%,”Program Files\IrfanView\i_view32.exe”
+Loop,%ScriptFile%,Try,a,z
+If,EXISTFILE,%pstart%,ShellExecute,OPEN,%pstart%
+
+[try]
+Set,%pstart%,#c:\%a_searchFile%
+If,EXISTFILE,%pstart%,Loop,BREAK
+In this example the Loop statement is looking for the EXE-file on all drive letters from A: to Z:.
+If the EXE-file is found it will be executed.

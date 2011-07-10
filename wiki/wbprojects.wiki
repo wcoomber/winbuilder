@@ -1,0 +1,28 @@
+Running your first project
+
+
+Click on the root item of each project to view how it should be used. 
+In most projects you just need to click the Play button (blue triangle) and a wizard will ask you for the project source files location and continue the project build.
+
+
+Whenever you need to change this default location, you can click on the "Paths" tab and modify as needed. 
+
+Please read here  to view the pages that detail how to use each project so that you can understand more about the needed conditions to build your project.
+
+
+Available Projects 
+
+Projects are the way to build a specific boot disk and you should always read the information page of each project you intend to use before you start building a project.
+
+Specific details are included to help you use compatible sources and learn how to debug some common issues that might sometimes appear. If you still have any doubts about how to proceed that are not covered in this manual, you're invited to ask for help on our community forums.
+* VistaPE
+* LiveXP
+* nativeEx
+* NativePE
+* picoXP
+* MobileOS
+* ReactOS
+
+Special project settings
+
+Please note that some projects may require specific conditions to be properly executed such as VistaPE which requires being used exclusively on NTFS partitions to properly handle WIM images,  please read the specific project page to view more details.

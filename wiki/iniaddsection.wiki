@@ -1,0 +1,11 @@
+IniAddSection
+
+IniAddSection,<Filename>,<Section> 
+This command will add a new section inside the file you select.
+
+If this section already exists - no action will take place otherwise it will create a new empty section in the respective text file.
+
+
+== Syntax example: ==
+IniAddSection,C:\myFile.ini,mySection 
+In this example we're adding a new section. 

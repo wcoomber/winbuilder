@@ -1,0 +1,10 @@
+Beep
+
+Beep,<Action> This is a very simple command that will use the default sound profile used on your machine to beep messages that requires the attention of the user. 
+
+Action can be one of the following values
+ * Ok
+ * Error
+ * Asterisk
+ * Confirmation
+== Syntax example: == beep,ok 

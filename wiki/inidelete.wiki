@@ -1,0 +1,8 @@
+IniDelete
+
+IniDelete,<Filename>,<Section>,<Key> 
+This command will delete the key from a section inside a file that you specify.
+
+== Syntax example: ==
+IniDelete,C:\myFile.ini,mySection,myKey 
+In this example the specified key and respective value will both be deleted

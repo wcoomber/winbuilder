@@ -1,0 +1,50 @@
+
+Compatibility 
+
+WinBuilder.exe is supported on Microsoft Windows 95/98/ME, Microsoft Windows NT4/2000/XP/2003 and Microsoft Windows Vista.
+
+It will require Internet Explorer (5.0 and above) to be installed on your machine to properly acess these help pages and use the Web tab.
+
+It won't require any .NET framework or any similar component. It is mostly a standalone application without special external dependencies. (you can even disable the whole network access and IE won't be needed at all).
+
+WinBuilder itself can run quite happily both on FAT32 or NTFS partitions.
+
+
+
+Vista support
+
+Under this OS it will be necessary in most cases to disable UAC (User Account Control) to allow creation of the needed registry hives when building a new boot disk. Unfortunately, Vista disables by default any atempt to access the registry even when running under the administrator level account.
+
+This is not a default requirement for all projects - only for those who require the load hive functionality
+
+
+
+Bugs 
+
+WinBuilder is a tool in progress and there are always bugs being reported and properly solved, we always appreciate your feedback and reports in case a bug is found.
+
+Bugs can be divided in two types: WinBuilder or Project.
+1. WinBuilder - Visit this page and check if you're using the latest version - report here if you need. It's always good to use the latest versions since they contain several improvements at each time a new version is released.
+ 
+2. Project related - Each project has a specific forum where all related issues and fixes can be found, please visit the respective forum page for more details.
+
+In both cases, when reporting for a bug it is recommended that your search the forums to check if any other person has already posted a similar report and post a comment in the respective thread. Your feedback will help others who may be able to assist in quickly finding a solution.
+
+
+
+AntiVirus debugging
+
+It was ocasionally reported by a few users that some AntiVirus can interfer while scripts are copying or deleting files. It's advisable to temporarily disable the anti-virus only when debugging while the building process is running to check for possible causes that keep your project from being concluded as expected.
+
+Under normal circunstances there is no need to disable your Antivirus.
+Please be aware that antivirus programs will scan any files being copied which may impede performance.
+
+
+
+
+
+
+
+
+
+

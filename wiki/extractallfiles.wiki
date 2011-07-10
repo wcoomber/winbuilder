@@ -1,0 +1,10 @@
+ExtractAllFiles
+
+ExtractAllFiles,<%ScriptFile%>,<Folder>,<DirToExtract> 
+This command will extract all files from a given folder inside a script.
+
+Uses the same syntax as the ExtractFile command that extracts a single file, but with the advantage that you can extract all files from a folder without needing to specify any filenames. 
+
+== Syntax example: ==
+ExtractAllFiles,C:\myFile.script,Folder,c:\ 
+Using this example we will extract all files found inside a folder in a given script file to c:\
