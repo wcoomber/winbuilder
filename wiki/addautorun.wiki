@@ -18,7 +18,7 @@ AddAutoRun,[Title],[FileName],[Parameters],[StartMode]
 ==Remarks==
 This is used to configure a program to automatically run when PE boots. This adds an entry to the autorun section in the %PE_CFG% configuration file. 
 
-This file is processed at boot time by the vpeldr / win7peldr programs. The only difference between this and AddPostConfig is the position in the startup sequence when the entry is run. This runs before the hardware detection is run and device drivers are installed.
+This file is processed at boot time by the vpeldr / win7peldr programs. The only difference between this and [addpostconfig AddPostConfig] is the position in the startup sequence when the entry is run. This runs before the hardware detection is run and device drivers are installed.
 
 ==Example==
 This example shows how to automatically start a service at boot time. In this example the lanman service will be started. The loader program will wait for the service to start and hide the console window that otherwise would be shown.
