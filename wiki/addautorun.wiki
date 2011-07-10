@@ -1,7 +1,9 @@
 =!AddAutoRun ( Vista / Win7 projects only )=
 
 ==Syntax==
-{{{AddAutoRun,[Title],[FileName],[Parameters],[StartMode]}}}
+{{{
+AddAutoRun,[Title],[FileName],[Parameters],[StartMode]
+}}}
 
 ==Parameters==
 ||1||Title||Title to associate with the program to be automatically run at boot time. This defaults to %ProgramTitle%.||
