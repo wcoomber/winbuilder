@@ -1,11 +1,16 @@
-DirDelete
+=DirDelete=
 
-DirDelete,<DirToDelete> 
+==Syntax==
+{{{
+DirDelete,<DirToDelete>[,FAST]
+}}}
+
 This command will delete a folder and respective files and folders inside. It uses Win32 API as a silent operation to delete the specified folder. Beware that deleted folders are not recoverable from the recycle bin.
 
-== Syntax example: ==
+== Example: ==
+{{{
 DirDelete,c:\MyPath
+}}}
 
-In this example DirDelete will remove MyPath
-WB076 added:
-The optional parameter FAST can be added. That will rename the directory to a random name, and then delete in the background.
+==Remarks==
+WB076 added the optional *`FAST`* parameter. When used, Winbuilder will rename the directory to a random name, and then execute the delete process in the background.  This can improve performance when removing directories that have a large number of files in them.
