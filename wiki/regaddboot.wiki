@@ -1,4 +1,4 @@
-=RegAddBoot=
+=!RegAddBoot=
 
 ==Syntax==
 {{{
