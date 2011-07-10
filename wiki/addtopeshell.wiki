@@ -1,7 +1,9 @@
-=AddToPEShell ( Vista / Win7 Projects only )=
+=!AddToPEShell ( Vista / Win7 Projects only )=
 
 ==Syntax==
-{{{AddToPeShell,Title,Path,Default}}}
+{{{
+AddToPeShell,Title,Path,Default
+}}}
 
 ==Parameters==
 ||1||Title||Title of shell program in PEShell shell program list. This defaults to %ProgramTitle%.||
@@ -13,4 +15,6 @@ This command is used to add a shell program to PEShell ( e.g. explorer etc ). Cu
 
 ==Example==
 This adds explorer.exe as the default shell to PEShell.
+{{{
 AddToPEShell,Explorer,explorer.exe,True
+}}}
