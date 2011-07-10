@@ -19,9 +19,9 @@ If the source type is x86 then the only source architecture that is supported is
 
 For a project to support this command two project variables must be defined:
 
- %SourceArch% - architecture type of the source
+ %!SourceArch% - architecture type of the source
 
- %TargetWOW64% - this by default is the same as %SourceArch%. If the project contains support for wow64 then it will be set by the wow64 script to x86.
+ %TargetWOW64% - this by default is the same as %!SourceArch%. If the project contains support for wow64 then it will be set by the wow64 script to x86.
 
 If a script contains both x64 and x86 executables and / or dlls embedded in the script then its recommended that they be embedded in a folder named x86 or x64 so that a command like the following can be used:
 
