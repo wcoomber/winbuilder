@@ -4,7 +4,7 @@
 {{{
 DirCopy,<FromDir>,<ToDir>[,SHOW]
 }}}
-This command will copy a folder and respective sub folders from a given source to a specified destination. It uses Win32 API as a silent operation overwriting any previously existent folder.
+This command will copy a folder and respective sub folders from a given source to a specified destination. It uses the Win32 API, and will overwrite any previously existing folder.  The default is to do this operation without opening any visible command window.
 
 ==Example ==
 In this example !DirCopy will copy the complete directory !MyPath to !AnotherPath
