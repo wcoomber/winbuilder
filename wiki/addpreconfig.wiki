@@ -1,4 +1,4 @@
-=AddPreConfig ( Vista / Win7 projects only )=
+=!AddPreConfig ( Vista / Win7 projects only )=
 
 ==Syntax==
 {{{
