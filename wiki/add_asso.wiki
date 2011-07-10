@@ -1,7 +1,9 @@
 =!Add_Asso=
 
 ==Syntax==
-{{{Add_Asso,Extension,[Type],[Title],[Filename],[Option],[UseRegAddBoot]}}}
+{{{
+Add_Asso,Extension,[Type],[Title],[Filename],[Option],[UseRegAddBoot]
+}}}
 
 ==Parameters==
 
