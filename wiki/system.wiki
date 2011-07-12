@@ -1,96 +1,186 @@
-System
+=System=
 
-System,<Action> This command is used to perform some program internal actions and refresh values that were modified during the script execution. It will set a flag that reminds the program to perform the specified action once the project is completed.
-Action can have of the following values
- * ReScanScripts - will repeat the procedure to find and categorize scripts displayed on the main window. Useful for cases when new custom scripts are created while building a project.
- * RefreshInterface - mostly used on buttons to refresh the script interface with changes, avoiding to make the user re-select again to refresh values.
- * RefreshVars -  if a variable is changed this action performs updating needed for variables that are dependent upon other variables (unnecessary and removed since WB076)
+{{{
+System,<Action>
+}}} 
 
-WB076 added:
- * FileRedirect - processed in 64bit systems only
- * RegRedirect - processed in  64bit systems only
- * GetFreeSpace
- * GetFreeDrive
- * ErrorOff
- * OnScriptExit
- * OnBuildExit
- * RebuildVars
- * GetEnv
- * IsAdmin
- * Cursor
- * SaveLog
- * Split==Parameters==
+This command is used to perform some program internal actions and refresh values that were modified during the script execution. 
+It can also set a flag that reminds the program to perform the specified action once the project is completed. Action can have of the following values
+
+ * [system#ReScanScripts ReScanScripts ]
+ * [system#RefreshInterface RefreshInterface] 
+ * [system#RefreshVars RefreshVars] 
+
+*WB076 added:*
+
+ * [system#FileRedirect FileRedirect] - processed in 64bit systems only
+ * [system#RegRedirect RegRedirect] - processed inï¿½ 64bit systems only
+ * [system#GetFreeSpace GetFreeSpace]
+ * [system#GetFreeDrive GetFreeDrive]
+ * [system#ErrorOff ErrorOff]
+ * [system#OnScriptExit OnScriptExit]
+ * [system#OnBuildExit OnBuildExit]
+ * [system#RebuildVars RebuildVars]
+ * [system#GetEnv GetEnv]
+ * [system#IsAdmin IsAdmin]
+ * [system#Cursor Cursor]
+ * [system#SaveLog SaveLog]
+ * [system#SPLITPARAMETERS SplitParameters]
+
+=Parameters / Sub Commands=
+
+==ReScanScripts==
+{{{
+System,ReScanScripts
+}}}
+This will repeat the procedure to find and categorize scripts displayed on the main window. Useful for cases when new custom scripts are created while building a project.
+
+[system#system Return to Top of Page]
+
+----
+
+==RefreshInterface==
+{{{
+System,RefreshInterface
+}}}
+Mostly used on buttons to refresh the script interface with changes, avoiding to make the user re-select again to refresh values.
+
+[system#system Return to Top of Page]
+
+----
 
 
 
-System,FILEREDIRECT
+==RefreshVars==
+{{{
+System,RefreshVars
+}}}
+If a variable is changed this action performs updating needed for variables that are dependent upon other variables (unnecessary and removed since WB076)
+
+[system#system Return to Top of Page]
+
+----
+
+
+
+==FILEREDIRECT==
+{{{
 System,FILEREDIRECT,{ON|OFF}
+}}}
+Maybe necessary when !WinBuilder is running on a 64bit system. Some directory calls are getting redirected by the OS to avoid possible conflicts. Using a 32bit system this command is without effect. 
 
-== Syntax example: == System,FILEREDIRECT,OFF
+=== Example: ===
+{{{
+System,FILEREDIRECT,OFF
 ShellExecute,Hide,"cmd.exe","/c imdisk -d -m %FreeLetter%"
 System,FILEREDIRECT,ON 
-Maybe necessary when WinBuilder is running on a 64bit system. Some directory calls are getting redirected by the OS  to avoid possible conflicts.
-Using a 32bit system this command is without effect. 
+}}}
+
+[system#system Return to Top of Page]
+
+----
 
 
-System,REGREDIRECT
+
+==REGREDIRECT==
+{{{
 System,REGREDIRECT,{64|32|OFF}
-
-== Syntax example: == System,REGREDIRECT,64
-RegRead,HKLM,”SOFTWARE\Sun\xVM VirtualBox",InstallDir,%VBPath%
-System,REGREDIRECT,OFF
-
-Maybe necessary when WinBuilder is running on a 64bit system. Some registry calls are getting redirected by the OS to avoid possible conflicts.
+}}}
+Maybe necessary when !WinBuilder is running on a 64bit system. Some registry calls are getting redirected by the OS to avoid possible conflicts.
  * 64 causes next accesses to the 64 bit entries.
  * 32 causes next accesses to the 32 bit node.
  * OFF causes Host OS decision
 Every definition is valid from "now" to "ever"
 Using a 32bit system this command is without effect. 
 
+=== Example: === 
+{{{
+System,REGREDIRECT,64
+RegRead,HKLM,ï¿½SOFTWARE\Sun\xVM VirtualBox",InstallDir,%VBPath%
+System,REGREDIRECT,OFF
+}}}
 
-System,GetFreeSpace
+[system#system Return to Top of Page]
+
+----
+
+
+
+
+==GetFreeSpace==
+{{{
 System,GETFREESPACE,<Path>,<%var%>
-Returns the free space of Path's drive in megabytes
-(megaybtes = free bytes / 1024 / 1024) 
+}}}
+Returns the free space of Path's drive in megabytes and puts result into %var%
+(megaybtes = free bytes / 1024 * 1024)
 
-== Syntax example: == System,GETFREESPACE,%BaseDir%,%var%
+=== Example: === 
+{{{
+System,GETFREESPACE,%BaseDir%,%var%
 System,GETFREESPACE,C:,%var%
 System,GETFREESPACE,C,%var% Result:
-%var% indicates the free space of %BaseDir% or of “C:”
+}}}
+
+[system#system Return to Top of Page]
+
+----
 
 
-System,GetFreeDrive
+
+==GetFreeDrive==
+{{{
 System,GetFreeDrive,<%var%>
-This command returns the highest available free drive letter, mostly “Z:”
+}}}
+This command returns the highest available free drive letter, Usually the "Z:" drive
+
+[system#system Return to Top of Page]
+
+----
 
 
-System,ERROROFF
+==ERROROFF==
+{{{
 System,ERROROFF[,lines] 
-This command causes that a script processing error is not marked as error and therefore the program continues.
+}}}
+This command causes that a script processing error is not marked as an error and therefore !Winbuilder will continue to process the scripts.
+
 By default this functionality is valid for the next script line. That can be changed by defining the optional number of lines.
 
-== Syntax example: == System,ERROROFF
+=== Example: === 
+{{{
+System,ERROROFF
 RegRead,HKLM,"CurrentControlSet\Services\Eventlog\Application\VMware Virtual Mount Service Extended",EventMessageFile,%VMtmp%
 If,NOT,EXISTVAR,%VMtmp%,Begin
 System,ERROROFF,2
 RegRead,HKCR,Wow6432Node\Applications\vmware-mount.exe\shell\Mount\command,,%VMtmp%
 If,NOT,EXISTVAR,%VMtmp%,RegRead,HKCR,Applications\vmware-mount.exe\shell\Mount\command,,%VMtmp% 
+}}}
 
-System,ONSCRIPTEXIT
+[system#system Return to Top of Page]
+
+----
+
+
+==ONSCRIPTEXIT==
+{{{
 System,ONSCRIPTEXIT,<Command> 
+}}}
 This statement can be written anywhere inside the running part of a script.
 It will be executed after the last script's statement has been executed.
 
 If command is 'Run' as parameter #1 the 'type' of the exit is passed
- * DONE               normal finish
- * STOP                the user clicked the STOP button
- * ERROR              the script has been finished because of an error
- * COMMAND        the script has been finished because of a System,Halt or System,Exit command
- * EXCEPTION      a system exception occurred during process, e.g. 'index out of bounds'
-== Syntax example: ==
-System,ONSCRIPTEXIT,Message,"Everything Done!",INFORMATION 
+ * DONE - normal finish
+ * STOP - the user clicked the STOP button
+ * ERROR - the script has been finished because of an error
+ * COMMAND - the script has been finished because of a System,Halt or System,Exit command
+ * EXCEPTION - a system exception occurred during process, e.g. 'index out of bounds'
 
-== Syntax example: ==
+=== Example: ===
+{{{
+System,ONSCRIPTEXIT,Message,"Everything Done!",INFORMATION 
+}}}
+
+{{{
 System,ONSCRIPTEXIT,Run,%ScriptFile%,MYEXIT
 // force an error:
 FileCopy,y,x
@@ -100,60 +190,112 @@ If,#1,EQUAL,ERROR,Beep,ERROR
 If,#1,EQUAL,STOP,Beep,WARNING
 If,#1,EQUAL,DONE,Beep,OK
 If,#1,EQUAL,COMMAND,Beep,CONFIRMATION 
+}}}
 
+[system#system Return to Top of Page]
 
-System,ONBUILDEXIT
+----
+
+==ONBUILDEXIT==
+{{{
 System,ONBuildEXIT,Command
-This statement can be written anywhere inside the running part of a script.
-Always the last executed statement is valid.
-So different scripts can define different actions or deactivate with System,ONBUILDEXIT
-It will be executed after the last script in the project has been processed. More examples in System,ONSCRIPTEXIT
+}}}
+This statement can be written anywhere inside the running part of a script. Always the last executed statement is valid.
+So different scripts can define different actions or deactivate with {{{System,ONBUILDEXIT}}}
+
+It will be executed after the last script in the project has been processed. More examples in [ONSCRIPTEXIT System,ONSCRIPTEXIT]
 
 
+[system#system Return to Top of Page]
+
+----
+
+==REBUILDVARS==
+{{{
 System,REBUILDVARS
+}}}
 This is a successor of System,RefreshVars, which since WB076 in most cases is not more necessary.
-== Syntax example: == Set,%First%,first
+
+=== Example: === 
+{{{
+Set,%First%,first
 Set,%Result%,"Here is %first%"
 Echo,Value of #$pResult#$p is: %Result%
 // >> Here is first
 Set,%First%,second
 Echo,Value of #$pResult#$p is: %Result%
-//  >> Here is first
+// >> Here is first
 System,RebuildVars
 Echo,Value of #$pResult#$p is: %Result%
 // >> Here is second 
+}}}
 
+[system#system Return to Top of Page]
 
-System,GETENV
+----
+
+==GETENV==
+{{{
 System,GETENV,<EnvironmentVariable>,%var%
-<EnvironmentVariable> must not be enclosed in percent!
+}}}
+Gets the value of a system ENV variable - NOTE, the name of the {{{<EnvironmentVariable>}}} *must not* be enclosed in percent!
 
-== Syntax example: == System,GETENV,Temp,%var%
+=== Example: === 
+{{{
+System,GETENV,Temp,%var%
 Echo,%var%
+}}}
 
+[system#system Return to Top of Page]
 
-System,ISADMIN
+----
+
+==ISADMIN==
+{{{
 System,ISADMIN,%var%
-Sets %var% to True or False, depending on whether WinBuilder has been started by an admin.
+}}}
+Sets %var% to True or False, depending on whether !WinBuilder has been started by an admin.
 
 
-System,Cursor
+[system#system Return to Top of Page]
+
+----
+
+==Cursor==
+{{{
 System,CURSOR,{WAIT|NORMAL}
-Sets  the system cursor as hourglass or the default cursor.
+}}}
+Sets the system cursor as hourglass or the default cursor.
 
 
-System,SAVELOG
+[system#system Return to Top of Page]
+
+----
+
+==SAVELOG==
+{{{
 System,SAVELOG,<OutputFile>
-Saves the actual accumulated log to <OutputFile>. <OutputFile> should have the extention '.html'.
-Usefull for debugginp purposes:
-When a build reproducable hangs in a certain script, you can save the log before or in the beginning of this script.
+}}}
+Saves the actual accumulated log to `<OutputFile>`. `<OutputFile>` should have the extention '.html' (since !Winbuilder writes out the log in html syntax for easy viewing in a web browser - i.e. uses color coding as well as internal page links to provide navigation.
+
+Usefull for debugginp purposes - i.e. When a build creates a reproducible hang in a certain script, you can save the log before or in the beginning of this script.
 
 
-System,SPLIT==Parameters==
+[system#system Return to Top of Page]
+
+----
+
+==SPLITPARAMETERS==
+{{{
 System,SPLITPARAMETERS,{ON|OFF}
-Splits in a 'Run' or 'Exec' command a single parameter which contains commas, into severel parameters.
+}}}
+Splits in a 'Run' or 'Exec' command a single parameter which contains commas, into several parameters.
 
-The System,SPLITPARAMETERS,ON command can be given once in the project, e.g. in [Process] of script.project, and is then valid for the complete project (or until it is switched off by System,SPLITPARAMETERS,OFF, and then switched on again, and ....) == Syntax example: == [process]
+The {{{System,SPLITPARAMETERS,ON}}} command can be given once in the project, e.g. in [Process] of script.project, and is then valid for the complete project (or until it is switched off by a {{{System,SPLITPARAMETERS,OFF}}} command.  It can then be switched on again later, and off, and so on ....) 
+
+=== Example: === 
+{{{
+[process]
 Set,%List%,"a,b,c"
 Run,%ScriptFile%,Test,%List%
 System,SPLITPARAMETERS,ON
@@ -163,7 +305,11 @@ System,SPLITPARAMETERS,OFF
 [Test]
 Echo,#1
 Echo,#2
-Echo,#3 Log result:
+Echo,#3
+}}}
+
+This creates a log file result:
+{{{
 Processing section: [process] 
 File [%BaseDir%\Projects\win7_pe\CodeBox.txt] Version [1]
 SetVar - Sucessfuly changed the value of [%List%] to: [a#$cb#$cc]
@@ -181,3 +327,8 @@ b
 c
 Run - Processed section [Test] in file: [%BaseDir%\Projects\win7_pe\CodeBox.txt]
 System,SplitParameters,OFF
+}}}
+
+[system#system Return to Top of Page]
+
+----
