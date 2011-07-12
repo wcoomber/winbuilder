@@ -13,7 +13,7 @@ It can also set a flag that reminds the program to perform the specified action 
 
 *WB076 added:*
 
- * [system#FileRedirect FileRedirect] - processed in 64bit systems only
+ * [system#fileredirect FileRedirect] - processed in 64bit systems only
  * [system#RegRedirect RegRedirect] - processed in� 64bit systems only
  * [system#GetFreeSpace GetFreeSpace]
  * [system#GetFreeDrive GetFreeDrive]
