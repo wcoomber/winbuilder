@@ -1,7 +1,15 @@
-Exit
+=Exit=
 
+==Syntax==
+{{{
 Exit,<exit message> 
-This command will force the script to be finished and will make the process continue to the next script on the list.
-Exit message is a small text message that is displayed on the log where you can specify the reason why Exit was called.
+}}}
 
-== Syntax example: == Exit,"File was not found" 
+This command will force the script to be finished and will make the process continue to the next script on the list.
+
+The "Exit message" is a small text message that is displayed on the log where you can specify the reason why Exit was called.
+
+== Example: == 
+{{{
+Exit,"File was not found" 
+}}}
