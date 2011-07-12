@@ -14,11 +14,10 @@ The command uses Win32 API as a silent operation overwriting any previously exis
 ==WB076 added:==
 FileCopy of a single file gives a warning in the log, if the destination file already exists.
 
-==*WB078 added:==
-If there is a parameter _{{{PRESERVE}}}_ added, FileCopy of a single file does not overwrite an existing file. A warning is still given.
-The warning can be suppressed by an additional parameter _{{{NOWARN}}}_
-
-The parameters PRESERVE, and NOWARN can be used simultaneously. The order does not matter.
+==WB078 added:==
+ * If the parameter _{{{PRESERVE}}}_ is added to the command, the !FileCopy of a single file does not overwrite an existing file. A warning is still given. 
+ * The warning can be suppressed by an additional parameter _{{{NOWARN}}}_
+ * The parameters PRESERVE, and NOWARN can be used simultaneously. The order does not matter.
 
 ==Example: ==
 {{{
@@ -26,11 +25,9 @@ FileCopy,c:\MyPath\myText.txt,c:\AnotherPath,PRESERVE
 }}}
 
 ==Wildcards==
-FileCopy supports wildcards like {{{*. * , win*.dll}}}. If used, then the command will copy all suited files and respective sub folders from a given source to a specified destination directory.
-
-When using wildcars the warning mechanism is switched off.
-
-Trying to copy wildcard source to a single destination file raises an error.
+ * FileCopy supports wildcards like {{{*. * , win*.dll}}}. If used, then the command will copy all suited files and respective sub folders from a given source to a specified destination directory.
+ * When using wildcars the warning mechanism is switched off.
+ * Trying to copy wildcard source to a single destination file raises an error.
 
 ==WB078 added:==
 When using wildcards, optional parameters can be defined: 
