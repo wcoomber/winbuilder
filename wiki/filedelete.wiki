@@ -6,10 +6,10 @@ FileDelete,<FileToDelete>
 }}}
 This command will delete files. It uses Win32 API as a silent operation deleting all files that match the search criteria. You can view the result of this operation on the respective log entry. Beware that all deleted files are immediately removed instead of moved to the recycle bin.
 
-Note: FileDelete supports using wildcards ( {{{*. *}}} ) 
+Note: !FileDelete supports using wildcards ( {{{*. *}}} ) 
 
 == Example: ==
-In this example FileDelete will delete all text files ({{{*.txt}}}) from MyPath
+In this example !FileDelete will delete all text files ({{{*.txt}}}) from {{{c:\MyPath}}}
 {{{
 FileDelete,c:\MyPath\*.txt
 }}}
