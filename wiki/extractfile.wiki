@@ -1,4 +1,4 @@
-=ExtractFile=
+=!ExtractFile=
 
 ==Syntax==
 {{{
