@@ -1,6 +1,14 @@
-Echo 
+=!Echo =
 
+==Syntax==
+{{{
 echo,<message> 
-This is a very simple command that will output your message to the processing window while the script is running. This message will only disappear until another message is displayed or the script finishes. These messages are also stored in the log and are used to inform the user about operations being performed by the script. 
+}}}
+This is a very simple command that will output your message to the processing window while the script is running. This message will only disappear when another message is displayed or the script finishes. 
 
-== Syntax example: == echo,"Hello World!" 
+These messages are also stored in the log and are used to inform the user about operations being performed by the script. 
+
+== Example: == 
+{{{
+echo,"Hello World!" 
+}}}
