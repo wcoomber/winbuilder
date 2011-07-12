@@ -7,7 +7,7 @@ System,<Action>
 This command is used to perform some program internal actions and refresh values that were modified during the script execution. 
 It can also set a flag that reminds the program to perform the specified action once the project is completed. Action can have of the following values
 
- * [system#ReScanScripts ReScanScripts ]
+ * [system#ReScanScripts ReScanScripts]
  * [system#RefreshInterface RefreshInterface] 
  * [system#RefreshVars RefreshVars] 
 
@@ -29,7 +29,7 @@ It can also set a flag that reminds the program to perform the specified action 
 
 =Parameters / Sub Commands=
 
-== ReScanScripts ==
+==ReScanScripts==
 {{{
 System,ReScanScripts
 }}}
