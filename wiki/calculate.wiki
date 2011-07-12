@@ -6,7 +6,7 @@ _Calculate,AutoIT Command(expression),ReturnVar
 }}}
 
 ==Parameters==
-||1||!AutoIT Command(expression)||!AutoIt command to execute||
+||1||!AutoIt Command(expression)||!AutoIt command to execute||
 ||2||!ReturnVar||This is the name of the variable to receive the return value of the !AutoIt command. It must be specified without the %||
 
 ==Remarks==
