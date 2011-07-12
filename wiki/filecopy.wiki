@@ -1,6 +1,9 @@
 = {{{FileCopy}}} =
 
-== {{{FileCopy,<FromFile>,<ToDir>}}}==
+==Syntax==
+{{{
+FileCopy,<FromFile>,<ToDir>
+}}}
 
 This command will copy a single source file to a specified destination.
 If the destination is a folder name, the file is copied there.
@@ -8,32 +11,38 @@ If the destination is a file name, the file is copied into the destination folde
 
 The command uses Win32 API as a silent operation overwriting any previously existent files. You can view the result of this operation on the respective log entry.
 
-*WB076 added:*
+==WB076 added:==
 FileCopy of a single file gives a warning in the log, if the destination file already exists.
 
-*WB078 added:*
+==*WB078 added:==
 If there is a parameter _{{{PRESERVE}}}_ added, FileCopy of a single file does not overwrite an existing file. A warning is still given.
 The warning can be suppressed by an additional parameter _{{{NOWARN}}}_
 
 The parameters PRESERVE, and NOWARN can be used simultaneously. The order does not matter.
 
-====== Syntax example: ======
+==Example: ==
+{{{
 FileCopy,c:\MyPath\myText.txt,c:\AnotherPath,PRESERVE 
+}}}
 
-====Wildcards====
-FileCopy supports wildcards like *. * , win*.dll.
+==Wildcards==
+FileCopy supports wildcards like {{{*. * , win*.dll}}}. If used, then the command will copy all suited files and respective sub folders from a given source to a specified destination directory.
 
-Then the command will copy all suited files and respective sub folders from a given source to a specified destination directory.
-In case of using wildcars the warning mechanism is switched off.
+When using wildcars the warning mechanism is switched off.
 
-Trying do copy wildcard source to a destination file raises an error.
+Trying to copy wildcard source to a single destination file raises an error.
 
-*WB078 added:*
-In case of wildcards optionally parameters can be defined: SHOW: The progressbar shows single file processing, and the actual copied file name is shown. NOREC: Only all suited files of the initial folder are copied. No recursion into subdirectories.
+==WB078 added:==
+When using wildcards, optional parameters can be defined: 
+ * *SHOW:* - The progressbar shows single file processing, and the actual copied file name is shown. 
+ * *NOREC:* - Only all suited files of the initial folder are copied. No recursion into subdirectories.
 
 The parameters SHOW  and NOREC can be used simultaneously. The order does not matter.
 
-====== Syntax example: ======
-FileCopy,c:\MyPath\*.txt,c:\AnotherPath
+== Example: ==
+
 
 On this example FileCopy will copy all text files (*.txt) from MyPath and it's subdirectories to AnotherPath 
+{{{
+FileCopy,c:\MyPath\*.txt,c:\AnotherPath
+}}}
