@@ -13,7 +13,9 @@ _Calculate,AutoIT Command(expression),ReturnVar
 This API function is called to execute an !AutoIT command that returns a value. It will download sCalculate to the winbuilder tools directory if it does not already exist and use it to execute the !AutoIT command. 
 
 ==Tips==
-Always use simple quote in the command expression ,use {{{[#$c]}}} in place of {{{[,]}}} and use the variable synatax (i.e. {{{%ReturnVar%}}}  - with the {{{%}}}) to access the return result in your code. See AutoIT docs at http://www.autoitscript.com/autoit3/docs/ for more information.
+ * Always use simple quote in the command expression - i.e. use {{{[#$c]}}} in place of {{{[,]}}} 
+ * Use the variable synatax (i.e. {{{%ReturnVar%}}}  with the {{{%}}}) to access the return result in your code. 
+ * See !AutoIT docs at http://www.autoitscript.com/autoit3/docs/ for more information.
 
 ==Example==
 This will show a simple message box with Abort / Retry / Ignore buttons for 5 seconds
