@@ -1,0 +1,18 @@
+=FileCreateBlank=
+
+==Syntax==
+{{{
+FileCreateBlank,<NewFile> 
+}}}
+This command simply creates a new empty file with the filename you specify. If a file with the same filename already exists it will be overwritten.
+
+==WB078 added:==
+ * FileCreateBlank gives a warning in the log, if the destination file already exists.
+ * If there is a parameter PRESERVE added, FileCreateBlank does not truncate an existing file. A warning is still given
+ * The warning can be suppressed by an additional parameter NOWARN
+ * The parameters PRESERVE, and NOWARN can be used simultaneously. The order does not matter.
+
+== Example: ==
+{{{
+FileCreateBlank,c:\MyPath\MyNewFile.txt
+}}}
