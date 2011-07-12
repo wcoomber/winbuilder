@@ -22,10 +22,10 @@ It can also set a flag that reminds the program to perform the specified action 
  * [system#OnBuildExit OnBuildExit]
  * [system#RebuildVars RebuildVars]
  * [system#GetEnv GetEnv]
- * [system#IsAdmin IsAdmin]
+ * [system#ISADMIN IsAdmin]
  * [system#Cursor Cursor]
- * [system#SaveLog SaveLog]
- * [system#SplitParametrs SplitParameters]
+ * [system#SAVELOG SaveLog]
+ * [system#SPLITPARAMETERS SplitParameters]
 
 =Parameters / Sub Commands=
 
