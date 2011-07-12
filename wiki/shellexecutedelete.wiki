@@ -28,5 +28,3 @@ ShellExecuteDelete,hide,foo.exe
 
 == See Also ==
  * [shellexecute ShellExecute] - has a similar behavior but does not delete the executable
-
- * [shellexecuteex ShellExecuteEx]- has a similar behavior but won't wait for the application to be finished and will continue with the script processing right after launching the target filename.
