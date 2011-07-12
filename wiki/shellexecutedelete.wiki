@@ -1,4 +1,4 @@
-=ShellExecuteDelete=
+=!ShellExecuteDelete=
 
 ==Syntax==
 {{{
