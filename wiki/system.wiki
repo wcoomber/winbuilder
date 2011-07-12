@@ -35,7 +35,7 @@ System,ReScanScripts
 }}}
 This will repeat the procedure to find and categorize scripts displayed on the main window. Useful for cases when new custom scripts are created while building a project.
 
-[system#system Return to Top of Page]
+[system Return to Top of Page]
 
 ----
 
@@ -45,7 +45,7 @@ System,RefreshInterface
 }}}
 Mostly used on buttons to refresh the script interface with changes, avoiding to make the user re-select again to refresh values.
 
-[system#system Return to Top of Page]
+[system to Top of Page]
 
 ----
 
@@ -57,7 +57,7 @@ System,RefreshVars
 }}}
 If a variable is changed this action performs updating needed for variables that are dependent upon other variables (unnecessary and removed since WB076)
 
-[system#system Return to Top of Page]
+[system Return to Top of Page]
 
 ----
 
@@ -76,7 +76,7 @@ ShellExecute,Hide,"cmd.exe","/c imdisk -d -m %FreeLetter%"
 System,FILEREDIRECT,ON 
 }}}
 
-[system#system Return to Top of Page]
+[system Return to Top of Page]
 
 ----
 
@@ -100,7 +100,7 @@ RegRead,HKLM,�SOFTWARE\Sun\xVM VirtualBox",InstallDir,%VBPath%
 System,REGREDIRECT,OFF
 }}}
 
-[system#system Return to Top of Page]
+[system Return to Top of Page]
 
 ----
 
@@ -121,7 +121,7 @@ System,GETFREESPACE,C:,%var%
 System,GETFREESPACE,C,%var% Result:
 }}}
 
-[system#system Return to Top of Page]
+[system Return to Top of Page]
 
 ----
 
@@ -133,7 +133,7 @@ System,GetFreeDrive,<%var%>
 }}}
 This command returns the highest available free drive letter, Usually the "Z:" drive
 
-[system#system Return to Top of Page]
+[system Return to Top of Page]
 
 ----
 
@@ -156,7 +156,7 @@ RegRead,HKCR,Wow6432Node\Applications\vmware-mount.exe\shell\Mount\command,,%VMt
 If,NOT,EXISTVAR,%VMtmp%,RegRead,HKCR,Applications\vmware-mount.exe\shell\Mount\command,,%VMtmp% 
 }}}
 
-[system#system Return to Top of Page]
+[system Return to Top of Page]
 
 ----
 
@@ -192,7 +192,7 @@ If,#1,EQUAL,DONE,Beep,OK
 If,#1,EQUAL,COMMAND,Beep,CONFIRMATION 
 }}}
 
-[system#system Return to Top of Page]
+[system Return to Top of Page]
 
 ----
 
@@ -206,7 +206,7 @@ So different scripts can define different actions or deactivate with {{{System,O
 It will be executed after the last script in the project has been processed. More examples in [ONSCRIPTEXIT System,ONSCRIPTEXIT]
 
 
-[system#system Return to Top of Page]
+[system Return to Top of Page]
 
 ----
 
@@ -230,7 +230,7 @@ Echo,Value of #$pResult#$p is: %Result%
 // >> Here is second 
 }}}
 
-[system#system Return to Top of Page]
+[system Return to Top of Page]
 
 ----
 
@@ -246,7 +246,7 @@ System,GETENV,Temp,%var%
 Echo,%var%
 }}}
 
-[system#system Return to Top of Page]
+[system Return to Top of Page]
 
 ----
 
@@ -257,7 +257,7 @@ System,ISADMIN,%var%
 Sets %var% to True or False, depending on whether !WinBuilder has been started by an admin.
 
 
-[system#system Return to Top of Page]
+[system Return to Top of Page]
 
 ----
 
@@ -268,7 +268,7 @@ System,CURSOR,{WAIT|NORMAL}
 Sets the system cursor as hourglass or the default cursor.
 
 
-[system#system Return to Top of Page]
+[system Return to Top of Page]
 
 ----
 
@@ -281,7 +281,7 @@ Saves the actual accumulated log to `<OutputFile>`. `<OutputFile>` should have t
 Usefull for debugginp purposes - i.e. When a build creates a reproducible hang in a certain script, you can save the log before or in the beginning of this script.
 
 
-[system#system Return to Top of Page]
+[system Return to Top of Page]
 
 ----
 
@@ -329,6 +329,6 @@ Run - Processed section [Test] in file: [%BaseDir%\Projects\win7_pe\CodeBox.txt]
 System,SplitParameters,OFF
 }}}
 
-[system#system Return to Top of Page]
+[system Return to Top of Page]
 
 ----
