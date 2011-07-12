@@ -1,4 +1,4 @@
-=FileRename=
+=!FileRename=
 
 ==Syntax==
 {{{
