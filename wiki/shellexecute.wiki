@@ -1,24 +1,32 @@
-ShellExecute / ShellExecuteEx / ShellExecuteDelete
+=ShellExecute=
 
+==Syntax==
+{{{
 ShellExecute,<Action>,<Filename>[,Parameters][,StartDir]
-ShellExecuteEx,<Action>,<Filename>[,Parameters][,StartDir] This function will launch a file using the settings you specify. Action is the specific method you wish to use to start the external file. By default "Open" is the most used one. Possible action values
- * Open - will open the file using the default associated application
- * Hide - will also open the file, but it will be launched in hidden mode (not user viewable)
- * Print - print a file using the default printer
- * Explore - open an explorer window (used to display the contents of folders)
+}}}
 
-Filename is the complete filename to where the file can be found, you can omit the dir part if this file can be found on the system paths.
+This function will launch a file using the settings you specify. 
+ * Action is the specific method you wish to use to start the external file. If not specified, the default "Open" Will be used. Possible action values are:
+   * Open - will open the file using the default associated application
+   * Hide - will also open the file, but it will be launched in hidden mode (not user viewable)
+   * Print - print a file using the default printer
+   * Explore - open an explorer window (used to display the contents of folders) 
 
-Parameters (optional) are the set of switches that you can pass along as command line parameters when executing the file.
+ * Filename is the complete filename to where the file can be found, you can omit the dir part if this file can be found on the system paths.
 
-StartDir (optional) is the location that you wish to specify as your default work directory.
+ * Parameters (optional) are the set of switches that you can pass along as command line parameters when executing the file.
 
+ * !StartDir (optional) is the location that you wish to specify as your default work directory.
 
-The script will wait (pause) for the launched file or application to be closed before continuing processing the remaining commands.
+The script will wait (pause) for the launched file or application to be closed before continuing to process the remaining commands.
 
+== Example: == 
+In this exampleï¿½we can open a new console window (cmd.exe) 
+{{{
+ShellExecute,open,cmd.exe 
+}}}
 
-ShellExecuteDelete - has a similar behavior but will delete the application after it has been finished.
+== See Also ==
+ * ShellExecuteDelete - has a similar behavior but will delete the application after it has been finished.
 
-ShellExecuteEx - has a similar behavior but won't wait for the application to be finished and will continue with the script processing right after launching the target filename.
-
-== Syntax example: == ShellExecute,open,cmd.exe In this example we can open a new console window (cmd.exe) 
+ * ShellExecuteEx - has a similar behavior but won't wait for the application to be finished and will continue with the script processing right after launching the target filename.
