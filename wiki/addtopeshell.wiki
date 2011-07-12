@@ -6,8 +6,8 @@ AddToPeShell,Title,Path,Default
 }}}
 
 ==Parameters==
-||1||Title||Title of shell program in PEShell shell program list. This defaults to %ProgramTitle%.||
-||2||Path||Filename and optional path of program to be run. This defaults to %PE_Programs%\%ProgramFolder%\%ProgramExe%.||
+||1||Title||Title of shell program in PEShell shell program list. This defaults to {{{%ProgramTitle%}}}.||
+||2||Path||Filename and optional path of program to be run. This defaults to {{{%PE_Programs%\%ProgramFolder%\%ProgramExe%}}}.||
 ||3||Default||Indicates if the shell is the default shell - PEShell will automatically select the default shell after the timeout period.||
 
 ==Remarks==
