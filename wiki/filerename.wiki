@@ -1,0 +1,12 @@
+=FileRename=
+
+==Syntax==
+{{{
+FileRename,<OldFilename>,<NewFilename> 
+}}}
+This command will rename a single file
+
+== Example: ==
+{{{
+FileRename,c:\MyPath\myTextFile.txt,c:\MyPath\myOldTextFile.txt
+}}}
