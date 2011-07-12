@@ -208,7 +208,7 @@ It will be executed after the last script in the project has been processed. Mor
 
 ----
 
-==!ReBuildVars==
+==!RebuildVars==
 {{{
 System,REBUILDVARS
 }}}
