@@ -1,4 +1,4 @@
-=ShellExecute=
+=!ShellExecute=
 
 ==Syntax==
 {{{
@@ -21,7 +21,7 @@ This function will launch a file using the settings you specify.
 The script will wait (pause) for the launched file or application to be closed before continuing to process the remaining commands.
 
 == Example: == 
-In this example�we can open a new console window (cmd.exe) 
+In this example we can open a new console window (cmd.exe) 
 {{{
 ShellExecute,open,cmd.exe 
 }}}
