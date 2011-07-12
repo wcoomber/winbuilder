@@ -23,7 +23,7 @@ If the target filename folder doesn't exist, it will be created. If a file alrea
 
 == Example: == 
 
-In this example we download the file iview423.zip from server foo.com to the folder c:\IrfanView\iview423.zip
+In this example we download the file iview423.zip from server foo.com to the folder {{{c:\IrfanView\iview423.zip}}}
  * only if MD5sum is fd490d07cc236cb44ef29abfd9daf13d
  * with a question dialog's text string displaying 'ZIP-file'
  * and automatically accept the dialog (i.e. timeout) after 10 seconds
