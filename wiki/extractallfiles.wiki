@@ -1,4 +1,4 @@
-=ExtractAllFiles=
+=!ExtractAllFiles=
 
 ==Syntax==
 {{{
