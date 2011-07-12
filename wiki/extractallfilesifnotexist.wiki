@@ -1,6 +1,9 @@
-ExtractAllFilesIfNotExist
+=ExtractAllFilesIfNotExist=
 
+==Syntax==
+{{{
 ExtractAllFilesIfNotExist,<%ScriptFile%>,<Folder>,<DirToExtract> 
-This command uses the same syntax with the difference that it will  only extract files from a section in a given script if they aren't already found in DirToExtract
+}}}
+This command uses the same syntax as [extractallfiles ExtractAllFiles] with the difference that it will _*only*_ extract files from a folder of the specified script if they aren't already found in {{{DirToExtract}}}
 
-It was added to support cases where it is required to download only newer files and keep the older ones unchanged
+It was added to support cases where it is required to extract only newer files and keep the older ones unchanged
