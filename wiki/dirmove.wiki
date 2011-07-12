@@ -10,7 +10,6 @@ This command will move a folder and respective sub folders from a given source t
 The previous location ceases to exist with this folder being found under the new location
 
 == Syntax example: ==
-In this example DirMove will move MyPath to AnotherPath 
 {{{
 DirMove,c:\MyPath,c:\AnotherPath
 }}}
