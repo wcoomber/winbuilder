@@ -12,5 +12,5 @@ This command will delete a folder and respective files and folders inside. It us
 DirDelete,c:\MyPath
 }}}
 
-==Remarks==
-WB076 added the optional *`FAST`* parameter. When used, Winbuilder will rename the directory to a random name, and then execute the delete process in the background.  This can improve performance when removing directories that have a large number of files in them.
+==WB076==
+Added the optional *`FAST`* parameter. When used, Winbuilder will rename the directory to a random name, and then execute the delete process in the background.  This can improve performance when removing directories that have a large number of files in them.
