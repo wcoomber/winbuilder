@@ -97,7 +97,7 @@ Unpack Archive.7z from section Doc to Program Files\%!ProgramFolder%\Help (but d
 Unpack,Doc,,Archive.7z,,%ProgramFolder%\Help
 }}}
 
-Unpack an Archive SFX (prog.exe) from section Folder to Program Files\%!ProgramFolder% ( after [prog.exe] is extracted, it is run with the parameter [-y] and then deleted)
+Unpack an Archive SFX ({{{prog.exe}}}) from section Folder to Program Files\%!ProgramFolder% ( after {{{prog.exe}}} is extracted, it is run with the parameter {{{-y}}} and then deleted)
 {{{
 Unpack,,prog.exe,-y
 }}}
@@ -123,7 +123,7 @@ Unpack Archive.7z from %!ScriptFile% from section Doc to Program Files\%!Program
 Unpack,,-Archive,Doc,Archive.7z,%Target_Prog%\%ProgramFolder%\Help
 }}}
 
-Unpack an Archive SFX (prog.exe) from %!ScriptFile% from section Folder to Program Files\!%ProgramFolder% ( after [prog.exe] is extracted, it is run with the parameter [-y] and then deleted)
+Unpack an Archive SFX ({{{prog.exe}}}) from %!ScriptFile% from section Folder to Program Files\%!ProgramFolder% ( after {{{prog.exe}}} is extracted, it is run with the parameter {{{-y}}} and then deleted)
 {{{
 Unpack,,SFX,,prog.exe
 }}}
@@ -133,19 +133,19 @@ Unpack one file(myfont.ttf) from %!ScriptFile% from section Fonts to I386\Fonts 
 Unpack,,One,Fonts,myfont.ttf,%Target_Win%\Fonts
 }}}
 
-UnZip an Archive from %!ScriptDir%\Test.7z to Program Files\%!ProgramFolder%
+!UnZip an Archive from %!ScriptDir%\Test.7z to Program Files\%!ProgramFolder%
 {{{
 Unpack,%ScriptDir%\Test.7z,UnZip
 }}}
 
-Download an archive from http://www.mysite.com/test.7z to Program Files\%!ProgramFolder% and delete test.7z after UnZip it
+Download an archive from {{{http://www.mysite.com/test.7z}}} to Program Files\%!ProgramFolder% and delete test.7z after !UnZip it
 {{{
 Unpack,http://www.mysite.com/test.7z,URL
 }}}
 
-Download an archive from http://www.mysite.com/test.7z to %!GlobalTemplates%\Apps\%!ProgramFolder%
+Download an archive from {{{http://www.mysite.com/test.7z}}} to %!GlobalTemplates%\Apps\%!ProgramFolder%
 but only if not exist test.7z in %!GlobalTemplates%\Apps\%!ProgramFolder%
-and UnZip test.7z from %!GlobalTemplates%\Apps\%!ProgramFolder% to I386\System32 or Windows\System32 (test.7z is not deleted)
+and !UnZip test.7z from %!GlobalTemplates%\Apps\%!ProgramFolder% to I386\System32 or Windows\System32 (test.7z is not deleted)
 {{{
 Unpack,http://www.mysite.com/test.7z,-URL,%Target_Sys%,%GlobalTemplates%\Apps\%ProgramFolder%
 }}}
