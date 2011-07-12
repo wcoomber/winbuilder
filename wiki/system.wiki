@@ -29,7 +29,7 @@ It can also set a flag that reminds the program to perform the specified action 
 
 =Parameters / Sub Commands=
 
-==ReScanScripts==
+==!ReScanScripts==
 {{{
 System,ReScanScripts
 }}}
@@ -39,7 +39,7 @@ This will repeat the procedure to find and categorize scripts displayed on the m
 
 ----
 
-==RefreshInterface==
+==!RefreshInterface==
 {{{
 System,RefreshInterface
 }}}
