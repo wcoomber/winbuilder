@@ -1,12 +1,21 @@
+=Hive_Unload=
 
-Hive_Unload
 ==Syntax==
+{{{
 Hive_Unload,Hive
+}}}
 ==Parameters==
-1HiveName of the registry hive to unloadDefaultThis is the current user hive ( HKCU ). Can also use HKCU or User.SoftwareThis is the software hive ( HKLM\Software ). Can also use HKU or Machine.SystemThis is the system hive ( HKLM\System ). Can also use HKLM.Remarks
-This command will unload an external registry hive that was previously loaded into your local registry system with Hive_Load. 
+||Hive||Name of the registry hive to unload||
+|| ||*Default* - This is the current user hive ( HKCU ). Can also use *HKCU* or *User*.||
+|| ||*Software* - This is the software hive ( HKLM\Software ). Can also use *HKU* or *Machine*.||
+|| ||*System* - This is the system hive ( HKLM\System ). Can also use *HKLM*.||
+
+==Remarks==
+This command will unload an external registry hive that was previously loaded into your local registry system with [hive_load Hive_Load]. 
+
 ==Example==
 This installs the snapman filter driver.
+{{{
 Hive_Load,System
 reg_add,0x7,"%reg%\ControlSet001\Control\Class\{4D36E967-E325-11CE-BFC1-08002BE10318}","UpperFilters","PartMgr","snapman"
 reg_add,0x7,"%reg%\ControlSet001\Control\Class\{71A27CDD-812A-11D0-BEC7-08002BE2092F}","UpperFilters","snapman"
@@ -15,3 +24,4 @@ reg_add,0x1,"%reg%\ControlSet001\Services\snapman","ImagePath","system32\DRIVERS
 reg_add,0x4,"%reg%\ControlSet001\Services\snapman","Start","0"
 reg_add,0x4,"%reg%\ControlSet001\Services\snapman","Type","1"
 Hive_Unload,System
+}}}
