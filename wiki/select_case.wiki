@@ -7,15 +7,15 @@ Select_Case,Var,ListVar1,[ListVar2],[Separator]
 
 ==Parameters==
 ||1||Var||Variable to test||
-||2||ListVar1||List of possible value that Var set in parameter 1 should be equal , separated by a "|" ||
-||3||ListVar2||Second list of value separated by a "|" (should have same number of variables than ListVar1 set in parameter 2)||
+||2||!ListVar1||List of possible value that Var set in parameter 1 should be equal , separated by a "|" ||
+||3||!ListVar2||Second list of value separated by a "|" (should have same number of variables than ListVar1 set in parameter 2)||
 ||4||Separator||Set this parameter to 1 if you want use a comma "," as separator rather the default separator "|"||
 
 ==Return Value==
 
 Always return the variable %Case% as result
- * If parameter 3 is empty %Case% return the position of Var in ListVar1 set in parameter 2 (0 if not found)
- * If parameter 3 is not empty %Case% return one variable of ListVar2, corresponding of the position of Var in ListVar1 set in parameter 2 (" " empty if not found)
+ * If parameter 3 is empty %Case% return the position of Var in !ListVar1 set in parameter 2 (0 if not found)
+ * If parameter 3 is not empty %Case% return one variable of !ListVar2, corresponding of the position of Var in ListVar1 set in parameter 2 (" " empty if not found)
 
 ==Example == 
 
