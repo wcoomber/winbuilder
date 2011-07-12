@@ -7,8 +7,6 @@ DirMake,<NewDir>
 This command will create a new folder as you specify.
 
 == Example: ==
-
-In this example FileCreate will add a new directory called MyPath 
 {{{
 FileCreate,c:\MyPath
 }}}
