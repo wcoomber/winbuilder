@@ -1,4 +1,4 @@
-=WebGet=
+=!WebGet=
 
 ==Syntax==
 {{{
