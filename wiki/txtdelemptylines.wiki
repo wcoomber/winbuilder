@@ -1,7 +1,12 @@
-TxtDelEmptyLines 
+=TxtDelEmptyLines =
 
+==Syntax ==
+{{{
 TXTDelEmptyLines,<Filename> 
-With a similar function to the above detailed command, this function will remove all empty lines from a given text file.
+}}}
+This function will remove all empty lines from a given text file.
 
-== Syntax example: ==
+== Example: ==
+{{{
 TXTdelEmptyLines,C:\myFile.txt
+}}}
