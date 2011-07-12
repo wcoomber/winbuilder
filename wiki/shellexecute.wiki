@@ -27,6 +27,6 @@ ShellExecute,open,cmd.exe
 }}}
 
 == See Also ==
- * ShellExecuteDelete - has a similar behavior but will delete the application after it has been finished.
+ * [shellexecutedelete ShellExecuteDelete] - has a similar behavior but will delete the application after it has been finished.
 
- * ShellExecuteEx - has a similar behavior but won't wait for the application to be finished and will continue with the script processing right after launching the target filename.
+ * [shellexecuteex ShellExecuteEx] - has a similar behavior but won't wait for the application to be finished and will continue with the script processing right after launching the target filename.
