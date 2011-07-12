@@ -1,4 +1,4 @@
-=DirMake=
+=!DirMake=
 
 ==Syntax==
 {{{
