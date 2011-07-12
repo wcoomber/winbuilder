@@ -1,39 +1,15 @@
-={{{FileDelete}}}==
+=!FileDelete=
 
-*{{{FileDelete,<FileToDelete> }}}*
+==Syntax==
+{{{
+FileDelete,<FileToDelete> 
+}}}
 This command will delete files. It uses Win32 API as a silent operation deleting all files that match the search criteria. You can view the result of this operation on the respective log entry. Beware that all deleted files are immediately removed instead of moved to the recycle bin.
 
-FileDelete supports wildcards ( *. * ) 
+Note: FileDelete supports using wildcards ( {{{*. *}}} ) 
 
-== Syntax example: ==
+== Example: ==
+In this example FileDelete will delete all text files ({{{*.txt}}}) from MyPath
+{{{
 FileDelete,c:\MyPath\*.txt
-
-In this example FileDelete will delete all text files (*.txt) from MyPath
-
-FileRename
-
-FileRename,<OldFilename>,<NewFilename> 
-This command will rename a single file
-
-== Syntax example: ==
-FileRename,c:\MyPath\myTextFile.txt,c:\MyPath\myOldTextFile.txt
-
-In this example FileRename will rename c:\MyPath\myTextFile.txt to another filename as myOldTextFile.txt 
-
-FileCreateBlank
-
-FileCreateBlank,<NewFile> 
-This command simply creates a new empty file with the filename you specify. If a file with the same filename already exists it will be overwritten.
-
-
-WB078 added:
-FileCreateBlank gives a warning in the log, if the destination file already exists.
-If there is a parameter PRESERVE added, FileCreateBlank does not truncate an existing file. A warning is still given
-The warning can be suppressed by an additional parameter NOWARN
-
-The parameters PRESERVE, and NOWARN can be used simultaneously. The order does not matter.
-
-== Syntax example: ==
-FileCreateBlank,c:\MyPath\MyNewFile.txt
-
-In this example FileCreateBlank will create an empty file called MyNewFile.txt 
+}}}
