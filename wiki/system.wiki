@@ -29,7 +29,7 @@ It can also set a flag that reminds the program to perform the specified action 
 
 =Parameters / Sub Commands=
 
-==ReScanScripts==
+== ReScanScripts ==
 {{{
 System,ReScanScripts
 }}}
