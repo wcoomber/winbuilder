@@ -1,4 +1,4 @@
-=TxtDelEmptyLines =
+=!TxtDelEmptyLines =
 
 ==Syntax ==
 {{{
