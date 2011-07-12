@@ -13,8 +13,8 @@ It can also set a flag that reminds the program to perform the specified action 
 
 *WB076 added:*
 
- * [system#fileredirect FileRedirect] - processed in 64bit systems only
- * [system#RegRedirect RegRedirect] - processed in� 64bit systems only
+ * [system#FileRedirect FileRedirect] - processed in 64bit systems only
+ * [system#RegRedirect RegRedirect] - processed in 64bit systems only
  * [system#GetFreeSpace GetFreeSpace]
  * [system#GetFreeDrive GetFreeDrive]
  * [system#ErrorOff ErrorOff]
@@ -22,10 +22,10 @@ It can also set a flag that reminds the program to perform the specified action 
  * [system#OnBuildExit OnBuildExit]
  * [system#RebuildVars RebuildVars]
  * [system#GetEnv GetEnv]
- * [system#ISADMIN IsAdmin]
+ * [system#IsAdmin IsAdmin]
  * [system#Cursor Cursor]
- * [system#SAVELOG SaveLog]
- * [system#SPLITPARAMETERS SplitParameters]
+ * [system#SaveLog SaveLog]
+ * [system#SplitParameters SplitParameters]
 
 =Parameters / Sub Commands=
 
@@ -51,7 +51,7 @@ Mostly used on buttons to refresh the script interface with changes, avoiding to
 
 
 
-==RefreshVars==
+==!RefreshVars==
 {{{
 System,RefreshVars
 }}}
@@ -63,7 +63,7 @@ If a variable is changed this action performs updating needed for variables that
 
 
 
-==FILEREDIRECT==
+==!FileRedirect==
 {{{
 System,FILEREDIRECT,{ON|OFF}
 }}}
@@ -82,7 +82,7 @@ System,FILEREDIRECT,ON
 
 
 
-==REGREDIRECT==
+==!RegRedirect==
 {{{
 System,REGREDIRECT,{64|32|OFF}
 }}}
@@ -105,9 +105,7 @@ System,REGREDIRECT,OFF
 ----
 
 
-
-
-==GetFreeSpace==
+==!GetFreeSpace==
 {{{
 System,GETFREESPACE,<Path>,<%var%>
 }}}
@@ -127,7 +125,7 @@ System,GETFREESPACE,C,%var% Result:
 
 
 
-==GetFreeDrive==
+==!GetFreeDrive==
 {{{
 System,GetFreeDrive,<%var%>
 }}}
@@ -138,7 +136,7 @@ This command returns the highest available free drive letter, Usually the "Z:" d
 ----
 
 
-==ERROROFF==
+==!ErrorOff==
 {{{
 System,ERROROFF[,lines] 
 }}}
@@ -161,7 +159,7 @@ If,NOT,EXISTVAR,%VMtmp%,RegRead,HKCR,Applications\vmware-mount.exe\shell\Mount\c
 ----
 
 
-==ONSCRIPTEXIT==
+==!OnScriptExit==
 {{{
 System,ONSCRIPTEXIT,<Command> 
 }}}
@@ -196,9 +194,9 @@ If,#1,EQUAL,COMMAND,Beep,CONFIRMATION
 
 ----
 
-==ONBUILDEXIT==
+==!OnBuildExit==
 {{{
-System,ONBuildEXIT,Command
+System,OnBuildEXIT,Command
 }}}
 This statement can be written anywhere inside the running part of a script. Always the last executed statement is valid.
 So different scripts can define different actions or deactivate with {{{System,ONBUILDEXIT}}}
@@ -210,7 +208,7 @@ It will be executed after the last script in the project has been processed. Mor
 
 ----
 
-==REBUILDVARS==
+==!ReBuildVars==
 {{{
 System,REBUILDVARS
 }}}
@@ -234,7 +232,7 @@ Echo,Value of #$pResult#$p is: %Result%
 
 ----
 
-==GETENV==
+==!GetEnv==
 {{{
 System,GETENV,<EnvironmentVariable>,%var%
 }}}
@@ -250,7 +248,7 @@ Echo,%var%
 
 ----
 
-==ISADMIN==
+==!IsAdmin==
 {{{
 System,ISADMIN,%var%
 }}}
@@ -272,7 +270,7 @@ Sets the system cursor as hourglass or the default cursor.
 
 ----
 
-==SAVELOG==
+==!SaveLog==
 {{{
 System,SAVELOG,<OutputFile>
 }}}
@@ -285,7 +283,7 @@ Usefull for debugginp purposes - i.e. When a build creates a reproducible hang i
 
 ----
 
-==SPLITPARAMETERS==
+==!SplitParameters==
 {{{
 System,SPLITPARAMETERS,{ON|OFF}
 }}}
