@@ -16,7 +16,7 @@ This command will load an external registry hive into your local registry system
 
 ==Tips==
  * The user should always place a [hive_unload Hive_Unload] call after all the other registry calls for this hive.
- * The user should never reference {{{CurrentControlSet}}}'. Always use {{{ControlSet001}}}.
+ * The user should never reference {{{CurrentControlSet}}}. Always use {{{ControlSet001}}}.
 
 ==Example==
 This installs the snapman filter driver.
