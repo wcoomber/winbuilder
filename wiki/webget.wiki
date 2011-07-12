@@ -15,7 +15,7 @@ MD5 check is an additional parameter that can be added to ensure that your file 
  * This is an optional parameter, only needed for cases when it is important to only accept a file that passes on this download integrity test. 
  * If a file fails this test it won't be copied over to the final destination as !FileOnDisk. 
 
-The optional parameters of *{{{Ask}}}* and *{{{Timeout}}}* are only used if enabled, _and if enabled_, will display a question dialog box, and wait for a response.  This can be used to let the user skip over a download operation.
+The optional parameters of *{{{Ask}}}* and *{{{Timeout}}}* are only used _*if enabled*_, and if enabled, will display a question dialog box, and wait for a response.  This can be used to let the user skip over a download operation.
  * To use this feature, the line "Ask before !WebGet" in the Winbuilder Tab TOOLS\OPTIONS has to be checked.
  * To use optional timeout, the line "Use Timeout when asking" in the Winbuilder Tab TOOLS\OPTIONS has to be checked.
 
