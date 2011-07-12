@@ -1,27 +1,33 @@
-WebGet / WebGetIfnotExist
+=WebGet=
 
-WebGet,<FileToDownload>,<FileOnDisk>[,MD5]
-WebGetIfNotExist,<FileToDownload>,<FileOnDisk>[,MD5] 
+==Syntax==
+{{{
+WebGet,<FileToDownload>,<FileOnDisk>[,MD5][,Ask][,Timeout]]
+}}}
 
-WB076 added: 
-WebGet,<FileToDownload>,<FileOnDisk>[,MD5][,Comment][,Timeout]]
-WebGetIfNotExist,<FileToDownload>,<FileOnDisk>[,MD5][,Comment][,Timeout]] 
+Use this function to download files from a network server to the local machine. 
+ * It is assumed that both machines (local and remote) are prepared for this operation.
+ * No checks are done to ensure that the local machine is online or that is has enough disk space to download the file. 
+ * The remote server must also be accessible and the file must be available for download.
+ * Only direct download links are accepted, dynamic internet pages are not valid.
 
-Use this function to download files from a network server to the local machine. It is assumed that both machines (local and remote) are prepared for this operation.
-No checks are done to ensure that the local machine is online or that is has enough disk space to download the file. The remote server must also be accessible and the file must be available for download.
-Only direct download links are accepted, dynamic internet pages are not valid.
-MD5 check is an additional parameter that is added to ensure that your file matches a security check based on the MD5 hash calculation. This is an optional parameter, only needed for cases when it is important to only accept a file that passes on this download integrity test. If  a file fails this test it won't be copied over to the final destination as FileOnDisk. 
-If the target filename folder doesn't exist, it will be created. If a file already exists it will be overwritten (read WebGetIfnotExist for alternative behavior)
-The WebGetIfNotExist command will only download a file if it is not already found as FileOnDisk - particularly useful to download a zipped file once from an internet server and ignore on the following times the script is executed.
-== Syntax example: == WebGet,http://boot-land.net/winbuilder/WinBuilder.exe,c:\WinBuilder\WinBuilder.exe Using this example we will download a WinBuilder.exe file from the server at boot-land.net to directory c:\WinBuilder. 
+MD5 check is an additional parameter that can be added to ensure that your file matches a security check based on the MD5 hash calculation.
+ * This is an optional parameter, only needed for cases when it is important to only accept a file that passes on this download integrity test. 
+ * If a file fails this test it won't be copied over to the final destination as !FileOnDisk. 
 
-Syntax example for enhanced WebGet functionality: 
+The optional parameters of *{{{Ask}}}* and *{{{Timeout}}}* are only used if enabled, _and if enabled_, will display a question dialog box, and wait for a response.  This can be used to let the user skip over a download operation.
+ * To use this feature, the line "Ask before !WebGet" in the Winbuilder Tab TOOLS\OPTIONS has to be checked.
+ * To use optional timeout, the line "Use Timeout when asking" in the Winbuilder Tab TOOLS\OPTIONS has to be checked.
 
-WebGet,http://irfanview.tu.wien.ac.at/iview423.zip,c:\IrfanView\iview423.zip,fd490d07cc236cb44ef29abfd9daf13d,ZIP-file,10
-In this example we download the file iview423.zip from server irfanview.tu.wien.ac.at to folder c:\IrfanView\iview423.zip
- * only if MD5sum is fd490d07cc236cb44ef29abfd9daf13d
- * with question dialog's comment 'ZIP-file'
- * and question dialog timeout 10 seconds
+If the target filename folder doesn't exist, it will be created. If a file already exists it will be overwritten (read [webgetifnotexist WebGetIfnotExist] for alternative behavior)
 
-To use optional comment the line Ask before ‘WebGet’ in Tab TOOLS\OPTIONS has to be checked.
-To use optional timeout the line Use Timeout when asking in Tab TOOLS\OPTIONS has to be checked.
+== Example: == 
+
+In this example we download the file iview423.zip from server foo.com to the folder c:\IrfanView\iview423.zip
+ * only if MD5sum is fd490d07cc236cb44ef29abfd9daf13d
+ * with a question dialog's text string displaying 'ZIP-file'
+ * and automatically accept the dialog (i.e. timeout) after 10 seconds
+
+{{{
+WebGet,http://foo.com/iview423.zip,c:\IrfanView\iview423.zip,fd490d07cc236cb44ef29abfd9daf13d,ZIP-file,10
+}}}
