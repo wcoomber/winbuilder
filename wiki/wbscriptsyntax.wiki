@@ -70,7 +70,7 @@ List of available keys
  * Download_level - used by download center to categorize scripts under download profiles (1..4)
  * Selected - using True/False will make your be checked or not for being processed. Place a Selected=none to completely remove any checkbox
  * Locked - use True/False to allows the users to edit the script interface 
- * Level - very important setting to allow your script to be placed on the correct sequence when the project is running (see [wbscriptlevels Script Levels] for more details on this)
+ * Level - very important setting to allow your script to be placed on the correct sequence when the project is running (see [wbscriptlevels#Script_Levels Script Levels] for more details on this)
 
 All of these keys can be edited easily using !WinBuilder's internal editor. While these keys are optional, it is recommended to place at least a few keys to better describe your script to others (i.e. `Title` and `Description`)
 
