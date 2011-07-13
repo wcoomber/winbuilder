@@ -1,0 +1,11 @@
+=Script Levels=
+
+Levels is a feature used by !WinBuilder that allow you to choose when your script should run while the project is being built.
+
+You can select values between 1 and 10, when the project starts it will begin with the scripts that have the lower level number and will increase a level after all scripts with the previous levels are processed.  
+
+To further categorize and group your scripts you can also create subfolders and in this way ensure that these scripts are separated from others with the same level. Look for examples on the available projects to understand more about these filters. In other words, !WinBuilder uses the folder structure and naming of the individual files to order scripts of the same level.
+
+This is a very useful way to ensure that your script always runs at the correct time. First levels are usually used to be build the structure of your project, while the last levels are the ones where your project is finished and an image is created.
+
+By default, we use level 5 as the middle value where most scripts that are only meant to add programs (i.e. Application Scripts) should be processed.
