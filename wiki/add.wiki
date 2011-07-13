@@ -91,7 +91,7 @@
 ----
 ----
 
-==`Add,DesktopIni`==
+==Add,!DesktopIni==
 
 ==Syntax==
 {{{
