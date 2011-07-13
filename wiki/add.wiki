@@ -18,7 +18,7 @@ His funny "dash" is to provide an internal anchor for the following command, sin
 ----
 
 <br>
-=Add,DesktopIni=
+=Add,!DesktopIni=
 
 ==Syntax==
 {{{
