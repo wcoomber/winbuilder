@@ -1,10 +1,17 @@
-RegImport
+=!RegImport=
 
+== Syntax ==
+{{{
 RegImport,<RegFileToImport> 
-This command will import an external registry file (*.reg) to your local registry system.
+}}}
+This command will import an external registry file (`*.reg`) to your local registry system.
 
-It will use as parameter the  filename to read values from.
+It will use as parameter the specified filename to read values from.
 
-== Syntax example: ==
+== Example: ==
+{{{
 RegImport,c:\myFile.reg 
-In this example we add the values from myFile.reg onto the registry system
+}}}
+
+=Warning=
+As stated above, this adds information to the CURRENT systems registry.  You should be careful and use this only with sections mounted using the proper commands to mount hives otherwise you might corrupt the current systems registry
