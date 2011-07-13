@@ -1,9 +1,8 @@
-
 Compatibility 
 
 WinBuilder.exe is supported on Microsoft Windows 95/98/ME, Microsoft Windows NT4/2000/XP/2003 and Microsoft Windows Vista.
 
-It will require Internet Explorer (5.0 and above) to be installed on your machine to properly acess these help pages and use the Web tab.
+It will require Internet Explorer (5.0 and above) to be installed on your machine to properlyï¿½acess these help pages and use the Web tab.
 
 It won't require any .NET framework or any similar component. It is mostly a standalone application without special external dependencies. (you can even disable the whole network access and IE won't be needed at all).
 
@@ -23,9 +22,9 @@ Bugs
 
 WinBuilder is a tool in progress and there are always bugs being reported and properly solved, we always appreciate your feedback and reports in case a bug is found.
 
-Bugs can be divided in two types: WinBuilder or Project.
+Bugs can be divided in two types: WinBuilder orï¿½Project.
 1. WinBuilder - Visit this page and check if you're using the latest version - report here if you need. It's always good to use the latest versions since they contain several improvements at each time a new version is released.
- 
+ï¿½
 2. Project related - Each project has a specific forum where all related issues and fixes can be found, please visit the respective forum page for more details.
 
 In both cases, when reporting for a bug it is recommended that your search the forums to check if any other person has already posted a similar report and post a comment in the respective thread. Your feedback will help others who may be able to assist in quickly finding a solution.
@@ -34,7 +33,7 @@ In both cases, when reporting for a bug it is recommended that your search the f
 
 AntiVirus debugging
 
-It was ocasionally reported by a few users that some AntiVirus can interfer while scripts are copying or deleting files. It's advisable to temporarily disable the anti-virus only when debugging while the building process is running to check for possible causes that keep your project from being concluded as expected.
+It was ocasionally reported by a few users that some AntiVirus can interfer while scripts are copying or deleting files. It's advisable to temporarily disable the anti-virus only when debugging while the building process is running to checkï¿½for possible causes that keep your project from being concluded as expected.
 
 Under normal circunstances there is no need to disable your Antivirus.
 Please be aware that antivirus programs will scan any files being copied which may impede performance.
@@ -42,8 +41,27 @@ Please be aware that antivirus programs will scan any files being copied which m
 
 
 
+<br>
+<br>
+----
+----
+==Bugs ==
+When a command doesn't work as expected you should follow these steps to ensure that it is a true bug and not a human error:
+ * Check the source code and see if the syntax is correct
+ * Add small tests to the used variables to check if the respective values are outputted correctly. (ex. echo,%myVariable%)
+ * Read the special conditions under which the project has to be run (found the project page)
+ * Check if there aren't any external interferences as locked files or no disk space on the target folder
+ * Try whenever possible from a fresh project to avoid any chance of corrupted files or invalid project settings
 
+If none of the above solves your issue then here's the recommended way to proceed:
+ * Visit the community forums and search for similar reports of the same behavior as you notice
+ * If a similar case is found you should post a reply on this topic, otherwise start a new topic in the appropriate category
+ * Writing advice before posting a bug : Include a descriptive title in your message including your log.html file and a test script so that it can be debugged and used by others
 
+Log of changes 
+ * Changes in script language can be followed in each newer WinBuilder beta discussion where changes to the script code are suggested and debugged by other members. 
+ * Projects also follow their own script rules and these methods can change occasionally, whenever in doubt you should post your questions in each project forum discussion.
+ * Please let us know if this page is not complete or if you still haven't found needed information.
 
 
 
