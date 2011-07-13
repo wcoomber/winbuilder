@@ -7,9 +7,6 @@ Contents
    * [wbcompatbugs#Compatibility Compatibility]
    * [wbcompatbugs#Bugs Reporting Bugs]
    * [wblicense License]
-<wiki:comment>
-   * Installing
-</wiki:comment>
  * Scripts
    * [wbscripts Scripts]
    * Application Scripts
@@ -81,3 +78,7 @@ Contents
    * VistaPE-CAPI
    * Win7PE
    * Win7RescuePE
+
+<wiki:comment>
+   * Installing
+</wiki:comment>
