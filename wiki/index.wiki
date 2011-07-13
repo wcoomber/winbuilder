@@ -1,41 +1,40 @@
-
 Welcome to the help pages of WinBuilder!
 
 
 Contents 
 
-* Welcome
-* Welcome
-* Overview
-* Installing
-* Compatibility
-* Scripts
-* Tools
-* Bugs
-* License
+ * Welcome
+ * Welcome
+ * Overview
+ * Installing
+ * Compatibility
+ * Scripts
+ * Tools
+ * Bugs
+ * License
 
-* Scripts
-* Scripts
-* Application Scripts
-* Escape Character Usage
-* Interface
-* Link Files
-* ==Syntax==
-* Winbuilder 080 ==Syntax==
-* Winbuilder 082 ==Syntax==
-* Variables
+ * Scripts
+ * Scripts
+ * Application Scripts
+ * Escape Character Usage
+ * Interface
+ * Link Files
+ * Syntax
+ * Winbuilder 080
+ * Winbuilder 082
+ * Variables
 
-* Script Command Categories
-* Attachments
-* File Operations
-* IF Clauses
-* INI Manipulation
-* Miscellaneous Commands
-* Network Tools
-* Registry Handling
-* Retrieve Functions
-* String Format
-* Text Files
+ * Script Command Categories
+ * Attachments
+ * File Operations
+ * IF Clauses
+ * INI Manipulation
+ * Miscellaneous Commands
+ * Network Tools
+ * Registry Handling
+ * Retrieve Functions
+ * String Format
+ * Text Files 
 
 * Common API
 * _Calculate
