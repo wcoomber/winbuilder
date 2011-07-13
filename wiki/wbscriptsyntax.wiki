@@ -161,7 +161,7 @@ List of available functions
  * [filerename FileRename]
  * [filecreateblank FileCreateBlank]
  * [filebyteextract FileByteExtract]
- * [dircoopy DirCopy]
+ * [dircopy DirCopy]
  * [dirdelete DirDelete]
  * [dirmove DirMove]
  * [dirmake DirMake]
