@@ -1,18 +1,23 @@
-RegRead
+=!RegRead=
 
+==Syntax ==
+{{{
 RegRead,<HKEY>,<Section>,<Key>,<%Variable%> 
+}}}
 This command will read a value from the key you specify.
 
-It uses the same components as described above with the difference that it will copy the value of a key into a variable.
+It uses the same components as described in the other registry commands with the difference that it will read the value of a key and write it into a variable.
 
 This command will only retrieve values from the following keytypes:
  * 0x1 - String
  * 0x3 - Integer
  * 0x4 - Binary
 
-WB078 added:
+==WB078 added:==
 All key types are supported now.
 
-== Syntax example: ==
+== Example: ==
+{{{
 RegRead,HKLM,Build\ControlSet001\Services\VgaSave\Device0,DefaultSettings.XResolution,%myXresolution% 
-In this example the variable %myXresolution% will store the value of the mentioned key 
+}}}
+In this example the variable %myXresolution% will store the value of the mentioned key 
