@@ -1,12 +1,20 @@
+#sidebar index
+=!Reg_Del=
 
-Reg_Del
 ==Syntax==
+{{{
 Reg_Del,KeyName,[ValueName]
+}}}
+
 ==Parameters==
-1KeyNameKey name to delete. Must be prefixed with %reg%\.2 ValueNameOptional value name to delete. If not specified then the key and its contents will be deleted.
-Remarks
-This function is used to delete a registry key and all contained values / keys or to delete a value from the registry hive loaded by Hive_Load.
+||1||!KeyName||Key name to delete. Must be prefixed with %reg%\.||
+||2||!ValueName||Optional value name to delete. If not specified then the key and its contents will be deleted.||
+
+==Remarks==
+This function is used to delete a registry key and all contained values / keys or to delete a value from the registry hive loaded by !Hive_Load.
+
 ==Example==
+{{{
 Reg_Del,%reg%\ControlSet001\Services\VgaSave\Device0,DefaultSettings.XResolution
 Reg_Del,%reg%\ControlSet001\Services\VgaSave\Device0
-
+}}}
