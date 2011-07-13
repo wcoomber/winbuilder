@@ -13,7 +13,7 @@ In general there are 2 build models:
 * Boot the windows directory from the boot media 
 * Boot the windows directory from a ram drive. This option gives better performance but uses much more ram. 
 
-See also[runfromcd RunFromCD]
+See also [runfromcd RunFromCD]
 
 ==Example==
 {{{
