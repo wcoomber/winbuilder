@@ -1,14 +1,19 @@
-RegHiveUnload
+=!RegHiveUnload=
 
+== Syntax ==
+{{{
 RegHiveUnload,<SectionName> 
-This command will unload an external registry hive from your local registry system that was previously loaded with the RegHiveLoad command or with another application capable of handling external hives.
+}}}
 
-This is an obligatory step whenever you use the RegHiveLoad command otherwise your project might fail to be properly completed. 
+This command will unload an external registry hive from your local registry system that was previously loaded with the [reghiveload RegHiveLoad] command or with another application capable of handling external hives.
+
+This is an obligatory step whenever you use the  command otherwise your project might fail to be properly completed. 
 
 It will use as parameter the section name where the previously loaded hive was placed.
 
 This command is based on Windows 32bit API and works under any Windows platform - under Vista it is necessary to disable the UAC (User Account Control).
 
-== Syntax example: ==
+== example: ==
+{{{
 RegHiveUnload,Build 
-In this example we will unload the setupreg.hiv hive file that has been loaded under registry section Build as described above. 
+}}}
