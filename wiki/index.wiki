@@ -1,7 +1,7 @@
 #sidebar index
 Contents 
 
- * Welcome and Overview of WinBuilder
+ * Welcome and Overview
    * [wbwelcome Welcome]
    * Overview
    * Installing
@@ -12,22 +12,22 @@ Contents
    * License
 
  * Scripts
-   * Scripts
+   * [wbscripts Scripts]
    * Application Scripts
-   * Escape Character Usage
-   * Interface
+   * [wbscriptescape Escape Character Usage]
+   * [wbgui-interface-builder Interface]
    * Link Files
    * Script Command Categories
-     * Attachments
-     * File Operations
-     * IF Clauses
-     * INI Manipulation
-     * Miscellaneous Commands
-     * Network Tools
-     * Registry Handling
-     * Retrieve Functions
-     * String Format
-     * Text Files 
+     * [wbscriptsyntax#Attachments Attachments]
+     * [wbscriptsyntax#File_Operations File Operations]
+     * [wbscriptsyntax#IF_Clauses IF Clauses]
+     * [wbscriptsyntax#INI_Manipulation INI Manipulation]
+     * [wbscriptsyntax#Miscellaneous_Commands Miscellaneous Commands]
+     * [wbscriptsyntax#Network_Tools Network Tools]
+     * [wbscriptsyntax#Registry_Handling Registry Handling]
+     * [wbscriptsyntax#Retrieve_Functions Retrieve Functions]
+     * [wbscriptsyntax#String_Format String Format]
+     * [wbscriptsyntax#Text_Files  Text Files]
 
   * Syntax
    * Winbuilder 080
