@@ -152,7 +152,7 @@ All available commands are described on a single page so that you can later prin
 <br>
 ----
 ----
-==File operations==
+==File Operations==
 Commands under this category were designed to handle files and are particularly useful to create the base structure of your project or add additional features that you need.
 
 List of available functions
@@ -305,6 +305,4 @@ Under this category you find the commands which aren't grouped under any specifi
 WB076 added:
 
  * [loop Loop]
-
-
 
