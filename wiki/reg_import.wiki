@@ -5,7 +5,7 @@
 Reg_Import,RegFile
 }}}
 ==Parameters==
-||1||RegFile||Name of reg file to import.||
+||1||!RegFile||Name of reg file to import.||
 
 This will download the latest version of reg2wbsprg.exe if not already downloaded and use it to convert the reg file to a script file using the -h -e -a parameters. 
 
