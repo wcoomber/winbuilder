@@ -36,56 +36,56 @@ Contents
  * String Format
  * Text Files 
 
-* Common API
-* _Calculate
-* Add_Asso
-* Add,DesktopIni
-* Add_Pin
-* Add,Shortcut
-* Add,URL
-* AddAutoRun
-* AddPostConfig
-* AddPreConfig
-* AddToPEShell
-* Arch
-* Ask_License
-* associate_file
-* Add_Asso
-* Add_Shortcut
-* CopyProgram
-* Hive_Load
-* Hive_Unload
-* Not_Compatible
-* Process_Log
-* ReadENV
-* Reg_Add
-* Reg_Del
-* Reg_Import
-* RegAddBoot
-* Register_File
-* Require_File
-* Require_FileQ
-* RequireSysFile
-* RunFromCD
-* RunFromRam
-* ScriptInterface,Read
-* ScriptInterface,State
-* ScriptInterface,Write
-* Select_Case
-* Unpack
+Common API
+ * [calculate _Calculate]
+ * [add_ass Add_Asso]
+ * [add#DesktopIni Add,DesktopIni]
+ * [add_pin Add_Pin]
+ * [add#Shortcut Add,Shortcut]
+ * [add#URL Add,URL]
+ * [addautorun AddAutoRun]
+ * [addpostconfig AddPostConfig]
+ * [addpreconfig AddPreConfig]
+ * [addtopeshell AddToPEShell]
+ * [arch Arch]
+ * Ask_License
+ * associate_file
+ * Add_Asso
+ * Add_Shortcut
+ * CopyProgram
+ * Hive_Load
+ * Hive_Unload
+ * Not_Compatible
+ * Process_Log
+ * ReadENV
+ * Reg_Add
+ * Reg_Del
+ * Reg_Import
+ * RegAddBoot
+ * Register_File
+ * Require_File
+ * Require_FileQ
+ * RequireSysFile
+ * RunFromCD
+ * RunFromRam
+ * ScriptInterface,Read
+ * ScriptInterface,State
+ * ScriptInterface,Write
+ * Select_Case
+ * Unpack
 
-* VistaPE API
-* VistaPE API
+ * VistaPE API
+ * VistaPE API
 
-* Projects
-* Projects
-* LiveXP
-* MobileOS
-* NativePE
-* NativeEx
-* PicoXP
-* ReactOS
-* VistaPE
-* VistaPE-CAPI
-* Win7PE
-* Win7RescuePE
+ * Projects
+ * Projects
+ * LiveXP
+ * MobileOS
+ * NativePE
+ * NativeEx
+ * PicoXP
+ * ReactOS
+ * VistaPE
+ * VistaPE-CAPI
+ * Win7PE
+ * Win7RescuePE
