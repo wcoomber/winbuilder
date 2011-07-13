@@ -11,6 +11,9 @@ RunFromCD,[BuildType]
 
 ==Remarks==
 Typically used in a build where the build model is run from ram and you want to force the current script program to run directly from the boot media 
+
+See also [runfromram RunFromRam]
+
 ==Example==
 {{{
 RunFromCD,True
