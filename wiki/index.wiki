@@ -9,10 +9,9 @@ Contents
    * [wblicense License]
  * Scripts
    * [wbscripts Scripts]
-   * Application Scripts
-   * [wbscriptescape Escape Character Usage]
-   * [wbgui-interface-builder Interface]
-   * Link Files
+     * [wbscriptescape Escape Character Usage]
+     * [wbgui-interface-builder Interface]
+   * [wbscriptlinks Link Files]
    * Script Command Categories
      * [wbscriptsyntax#Attachments Attachments]
      * [wbscriptsyntax#File_Operations File Operations]
