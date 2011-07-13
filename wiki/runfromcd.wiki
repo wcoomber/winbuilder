@@ -1,4 +1,4 @@
-=!RunFromCD ( LiveXP / !NativeEx Projects Only )=
+=RunFromCD ( LiveXP / !NativeEx Projects Only )=
 
 ==Syntax==
 {{{
