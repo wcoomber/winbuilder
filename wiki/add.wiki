@@ -41,12 +41,12 @@ Add,DesktopIni,Type,[Folder],[Section],Value,Data
 || || || *!ConfirmFileOp* - Set this entry to 0 to avoid a "You Are Deleting a System Folder" warning when deleting or moving the folder.||
 || || || *!NoSharing* - Not supported under Windows Vista or later. Set this entry to 1 to prevent the folder from being shared.||
 || || || *!IconFile* - If you want to specify a custom icon for the folder, set this entry to the icon's file name. The .ico file name extension is preferred, but it is also possible to specify .bmp files, or .exe and .dll files that contain icons. If you use a relative path, the icon is available to people who view the folder over the network. You must also set the !IconIndex entry.||
-|| || || *!IconIndex* - Set this entry to specify the index for a custom icon. If the file assigned to !IconFile only contains a single icon, set IconIndex to 0.||
+|| || || *!IconIndex* - Set this entry to specify the index for a custom icon. If the file assigned to !IconFile only contains a single icon, set !IconIndex to 0.||
 || || || *!InfoTip* - Set this entry to an informational text string. It is displayed as an infotip when the cursor hovers over the folder. If the user clicks the folder, the information text is displayed in the folder's information block, below the standard information.||
 ||6||Data||The value data.||
 
 ==Remarks==
-This function is used to create a desktop.ini file in the selected folder. The Desktop.ini file is a text file that allows you to specify how a file system folder is viewed. The [.ShellClassInfo] section, allows you to customize the folder's view by assigning values to the appropriate entries.
+This function is used to create a desktop.ini file in the selected folder. The Desktop.ini file is a text file that allows you to specify how a file system folder is viewed. The !ShellClassInfo section, allows you to customize the folder's view by assigning values to the appropriate entries.
  
 File system folders are commonly displayed with a standard icon and set of properties, which specify, for instance, whether or not the folder is shared. You can customize the appearance and behavior of an individual folder by creating a Desktop.ini file for that folder.
  
