@@ -1,7 +1,5 @@
 <wiki:toc max_depth="4" />
-=Script Syntax=
-
-==Overview ==
+=Scripts=
 
 Script files use a very simple to understand language to run their commands and actions.
 
@@ -18,7 +16,7 @@ In general, the syntax is very simple - i.e. keywords for functions with the par
 
 You can also add additional files inside your scripts. These files are stored as attachments in a process very similar to the way email messages used to include binary files - i.e. they are "encoded" into an ASCII format. This way you can share your scripts in discussion forums with all the needed tools inside.
 
-===Syntax Rules and Escape Characters===
+==Syntax Rules and Escape Characters==
 
 First some rules: 
  # !WinBuilder Script Line Parameters are separated by a comma. If a comma is inside an argument, it must be 'escaped' by `#$c` 
@@ -154,6 +152,7 @@ Run,%ProjectDir%\script.project,Process-log
 .
 
 
+==Script Command Categories==
 
 All available commands are described on a single page so that you can later print this page to use as�reference.
 
