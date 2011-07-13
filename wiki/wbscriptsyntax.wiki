@@ -18,6 +18,39 @@ In general, the syntax is very simple - i.e. keywords for functions with the par
 
 You can also add additional files inside your scripts. These files are stored as attachments in a process very similar to the way email messages used to include binary files - i.e. they are "encoded" into an ASCII format. This way you can share your scripts in discussion forums with all the needed tools inside.
 
+===Syntax Rules and Escape Characters===
+
+First some rules: 
+ # !WinBuilder Script Line Parameters are separated by a comma. If a comma is inside an argument, it must be 'escaped' by `#$c` 
+ # Besides some special cases (e.g. parameters in ShellExecute?) generally enclosing quotes are not needed. 
+ # Enclosing quotes MUST be used if the !WinBuilder Script Line Parameters contain spaces. 
+
+Since there are times when the comma or quote need to be used inside a string or parameter, !WinBuilder has a character escape mechanisim. The following are the available escape characters: 
+ * `#$c` - Comma (`'`)
+ * `#$p` - Percent (`%`) 
+ * `#$q` - Double quotes (`"`)
+ * `#$s` - Space (` `)
+ * `#$x` - Newline (`<cr/lf>`)
+ * `#$z` - String separator (i.e. the unicode 0 which is only used by the !RegWriteBin command )
+
+Here is a short explanation of what can be done and what cannot be done and when the escaped characters should be used.
+   * If the spaces are replaced by the escape #$s, the enclosing quotes should be omitted. 
+   * In most cases user violation of the rules are accepted by !WinBuilder and processed as assumed. E.g. unnecessary enclosing quotes or a comma inside an item enclosed by quotes.
+
+But sometimes that can bring unexpected results. Let me give an Example:
+
+*`Item1,item2`* is understood as two items, separated by the comma.  *`Item1#$citem2`* and *`"Item1,item2"`* are both correctly written as *ONE* item with the comma inside.
+
+Now the problem occurs when it is not possible to determine what is meant.  For example, *`Set,%Var%,"Item1","item2"`* cannot be understood uniquely by WinBuilder?. Let's exchange the English understandable words by the character 'x'
+
+*`"xxxxx","xxxxx"`*
+
+ * Are there two quote-enclosed xxxxx, separated by a comma? 
+ * Or is there on long string of 10 xes, interrupted by a nested quote pair containing a comma? 
+ * Or is there on long string of 10 xes, interrupted by a nested quote pair 'escaping' a comma? > Set,%var%,xxxxx#$cxxxxx
+
+You see how important it is to follow the rules, even if !WinBuilder understands most violations correctly.
+
 ==Script Files==
 Script files can perform both specific and generic functions. Some scripts will be responsible for creating the base structure of the project while others will be used to add extra functionality and programs.
 
@@ -26,7 +59,7 @@ These scripts can also use a very specific model that only works on a single pro
 Let's start by looking at the structure of a typical script file.
 We use sections to group commands and settings inside script files. The easiest way to see how they are applied is to edit a few scripts and look at the source code to learn more about them.
 
-==Script File Structure==
+===File Structure===
 
 A typical script is composed of at least these 3 important sections
  # Main - will keep all details that identify your script
@@ -110,19 +143,17 @@ If it is present, during build this section is processed after the last `[Proces
 Run,%ProjectDir%\script.project,Process-log 
 }}}
 
+.
 
-==Syntax Rules==
+.
 
-First some general rules and explanations:
- # Besides some special cases (e.g. parameters in ShellExecute) generally enclosing quotes are not needed.
- # Enclosing quotes MUST be used if the WinBuilder Script Line Parameters contain spaces. If the spaces are replaced by the escape #$s, the enclosing quotes should be ommitted.
- # WinBuilder Script Line Parameters are separated by a comma. If a comma is inside an argument, it must be 'escaped' by #$c.
-In most cases user violation of that rules are accepted by WinBuilder and processed as assumed.
-E.g. unnecessary enclosing quotes or a comma inside an item enclosed by quotes.
+.
 
-But sometimes that can bring unexpected results.
+.
 
-.script language commands are�very dependent on the use of variables to make them more flexible, please read the respective variables page for additional information.
+.
+
+
 
 All available commands are described on a single page so that you can later print this page to use as�reference.
 
