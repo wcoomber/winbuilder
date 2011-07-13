@@ -1,11 +1,11 @@
 =Retrieve=
 
- * [retrieve#!FolderSize FolderSize]
- * [retrieve#!FileSize FileSize]
+ * [retrieve#FolderSize FolderSize]
+ * [retrieve#FileSize FileSize]
  * [retrieve#File File]
  * [retrieve#Dir Dir]
  * [retrieve#MD5 MD5]
- * [retrieve#!FileVersion FileVersion]
+ * [retrieve#FileVersion FileVersion]
 
 
 <br>
