@@ -1,13 +1,15 @@
 Contents 
  * Welcome and Overview
    * [wbwelcome Welcome]
-   * Overview
+   * [wboverview Overview]
+   * [wbscripts Scripts]
+   * [wbtools Tools]
+   * [wbcompatbugs#Compatibility Compatibility]
+   * [wbcompatbugs#Bugs Reporting Bugs]
+   * [wblicense License]
+<wiki:comment>
    * Installing
-   * Compatibility
-   * Scripts
-   * Tools
-   * Bugs
-   * License
+</wiki:comment>
  * Scripts
    * [wbscripts Scripts]
    * Application Scripts
@@ -29,7 +31,7 @@ Contents
    * Winbuilder 080
    * Winbuilder 082
    * Variables
- *Common API
+ * Common API
    * [calculate _Calculate]
    * [add_ass Add_Asso]
    * [add#DesktopIni Add,DesktopIni]
