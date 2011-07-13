@@ -1,46 +1,46 @@
-Welcome to the help pages of WinBuilder!
-
-
+#sidebar index
 Contents 
 
- * Welcome
- * Welcome
- * Overview
- * Installing
- * Compatibility
- * Scripts
- * Tools
- * Bugs
- * License
+ * Welcome and Overview of WinBuilder
+   * [wbwelcome Welcome]
+   * Overview
+   * Installing
+   * Compatibility
+   * Scripts
+   * Tools
+   * Bugs
+   * License
 
  * Scripts
- * Scripts
- * Application Scripts
- * Escape Character Usage
- * Interface
- * Link Files
- * Syntax
- * Winbuilder 080
- * Winbuilder 082
- * Variables
+   * Scripts
+   * Application Scripts
+   * Escape Character Usage
+   * Interface
+   * Link Files
+   * Script Command Categories
+     * Attachments
+     * File Operations
+     * IF Clauses
+     * INI Manipulation
+     * Miscellaneous Commands
+     * Network Tools
+     * Registry Handling
+     * Retrieve Functions
+     * String Format
+     * Text Files 
 
- * Script Command Categories
- * Attachments
- * File Operations
- * IF Clauses
- * INI Manipulation
- * Miscellaneous Commands
- * Network Tools
- * Registry Handling
- * Retrieve Functions
- * String Format
- * Text Files 
+  * Syntax
+   * Winbuilder 080
+   * Winbuilder 082
+   * Variables
 
-Common API
- * [calculate _Calculate]
- * [add_ass Add_Asso]
- * [add#DesktopIni Add,DesktopIni]
- * [add_pin Add_Pin]
+ 
+
+ *Common API
+   * [calculate _Calculate]
+   * [add_ass Add_Asso]
+   * [add#DesktopIni Add,DesktopIni]
+   * [add_pin Add_Pin]
  * [add#Shortcut Add,Shortcut]
  * [add#URL Add,URL]
  * [addautorun AddAutoRun]
