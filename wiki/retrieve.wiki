@@ -1,5 +1,7 @@
 =Retrieve=
 
+This command will querry the OS and return variuos types of information about files and folders (or directories)  The available sub-commands are:
+
  * [retrieve#FolderSize FolderSize]
  * [retrieve#FileSize FileSize]
  * [retrieve#File File]
@@ -7,6 +9,7 @@
  * [retrieve#MD5 MD5]
  * [retrieve#FileVersion FileVersion]
 
+See the information below for more specifics on each individual command.
 
 <br>
 
@@ -27,6 +30,7 @@ This function is used to calculate the size of a folder and store it inside a va
 <br>
 
 <br>
+[retrieve#Retrieve Return to Top]
 ----
 
 =!FileSize=
@@ -47,8 +51,10 @@ Retrieve,FolderSize,c:\myFolder,%var%
 <br>
 
 <br>
+[retrieve#Retrieve Return to Top]
 ----
 =File=
+
 ==Syntax==
 {{{
 Retrieve,File,<Filename>,<%var%> 
@@ -66,6 +72,7 @@ Retrieve,File,c:\*.txt,%var%
 <br>
 
 <br>
+[retrieve#Retrieve Return to Top]
 ----
 =Dir=
 
@@ -86,6 +93,7 @@ Retrieve,Dir,c:\,%var%
 <br>
 
 <br>
+[retrieve#Retrieve Return to Top]
 ----
 =MD5=
 
@@ -107,6 +115,7 @@ Retrieve,MD5,c:\MyText.txt,%var%
 <br>
 
 <br>
+[retrieve#Retrieve Return to Top]
 ----
 =!FileVersion=
 
@@ -119,3 +128,10 @@ Retrieve,FILEVERSION,<Filename>,<%var%>
 {{{
 Retrieve,FILEVERSION,"c:\Program Files\IrfanView\i_view32.exe",%var%
 }}}
+
+
+<br>
+
+<br>
+[retrieve#Retrieve Return to Top]
+----
