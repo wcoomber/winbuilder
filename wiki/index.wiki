@@ -1,7 +1,5 @@
 Contents 
- * Welcome and Overview
-   * [wbwelcome Welcome]
-   * [wboverview Overview]
+ * [wbwelcome Welcome and Overview]
    * [wbscriptsyntax Scripts]
    * [wbtools Tools]
    * [wbcompatbugs#Compatibility Compatibility]
