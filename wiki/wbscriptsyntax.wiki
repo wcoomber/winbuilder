@@ -144,7 +144,7 @@ Run,%ProjectDir%\script.project,Process-log
 ----
 ----
 
-==Script Command Categories==
+=Script Command Categories=
 
 All available commands are described on a single page so that you can later print that page to use as a reference. 
  * Usually all command which compare etc. are case insensitive.
@@ -152,7 +152,7 @@ All available commands are described on a single page so that you can later prin
 <br>
 ----
 ----
-===File operations===
+==File operations==
 Commands under this category were designed to handle files and are particularly useful to create the base structure of your project or add additional features that you need.
 
 List of available functions
@@ -171,7 +171,7 @@ List of available functions
 <br>
 ----
 ----
-===Registry handling===
+==Registry handling==
 
 These commands are written to write and read values from the local registry on your windows machine. You can also load the hives from the projects being built at any given time.
 
@@ -188,7 +188,7 @@ List of available functions
 <br>
 ----
 ----
-===INI manipulation===
+==INI manipulation==
 
 This category contains commands that were created to work with INI based text files. INI files group information using a few rules, it is also very easy to understand and edit when needed.
 
@@ -210,7 +210,7 @@ Available INI functions
 <br>
 ----
 ----
-===Attachments ===
+==Attachments ==
 
 Attachments are files that can be included inside your script.
 
@@ -220,7 +220,7 @@ While a script is running you can use some of the following commands to best tak
 
 List of related commands
  * [extractfile ExtractFile]
- * extractandrun ExtractAndRun]
+ * [extractandrun ExtractAndRun]
  * [extractallfiles ExtractAllFiles]
  * [extractallfilesifnotexist ExtractAllFilesIfNotExist]
  * [encode Encode]
@@ -228,7 +228,7 @@ List of related commands
 <br>
 ----
 ----
-===Text Files===
+==Text Files==
 
 With this set of commands we can handle text files and modify them as needed. All these commands can be applied to either a single or multiple file using wildcards.
 
@@ -243,7 +243,7 @@ Description of commands
 <br>
 ----
 ----
-===IF Clauses and Command Blocks===
+==IF Clauses and Command Blocks==
 If the evaluation of an If condition is 'True', the command following the condition is processed. If the evaluation of an If condition is 'False', the command of the Else command (if present), is processed.
 In both cases, instead of a command, there can also be a command block.
 
@@ -251,18 +251,16 @@ In both cases, instead of a command, there can also be a command block.
 <br>
 ----
 ----
- * Retrieve functions
-Retrieve Functions 
+==Retrieve Functions== 
 
-This set of functions will enable you to get some specific values when running your script.
+These commands will querry the OS and return variuos types of information about files and folders (or directories)  The available sub-commands are:
 
-They can be grouped as 
- * FolderSize/FileSize
- * File/Dir
- * MD5
-
-WB076 added:
- * FileVersion
+ * [retrieve#FolderSize FolderSize]
+ * [retrieve#FileSize FileSize]
+ * [retrieve#File File]
+ * [retrieve#Dir Dir]
+ * [retrieve#MD5 MD5]
+ * [retrieve#FileVersion FileVersion]
 
 
 
@@ -270,13 +268,14 @@ WB076 added:
 <br>
 ----
 ----
- * String format
+==String format==
+ * See the [strformat string formatting page]
 
 
 <br>
 ----
 ----
-===Network tools===
+==Network tools==
 
 Functions on this category allow you to work with the network environment whenever available.
  * [webget WebGet]
@@ -286,11 +285,11 @@ Functions on this category allow you to work with the network environment whenev
 <br>
 ----
 ----
-===Miscellaneous Commands ===
+==Miscellaneous Commands ==
 
 Under this category you find the commands which aren't grouped under any specific category but are still quite used on most scripting tasks.
  * [run run / exec - runs a section from a script file]
- * [shellexecute - launches an external file
+ * [shellexecute - launches an external file]
  * [beep beep - uses the system speaker]
  * [message message - outputs a message window]
  * [system system - used to refresh values on the program itself]
