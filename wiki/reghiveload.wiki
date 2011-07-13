@@ -1,12 +1,17 @@
-RegHiveLoad
+=!RegHiveLoad=
 
+==Syntax==
+{{{
 RegHiveLoad,<SectionName>,<HiveFilename> 
+}}}
 This command will load an external registry hive onto your local registry system.
 
 It is particularly useful to allow editing the hives of project when they are being built. Most scripts usually load the needed hives for editing and after writing all necessary data are properly unloaded (command described below).
 
-This command is based on Windows 32bit API and works under any Windows platform - under Vista it is necessary to disable the UAC (User Account Control).
+This command is based on Windows 32bit API and works under any Windows platform - under Vista it is necessary to disable the UAC (User Account Control) - i.e. Run as Administrator.
 
-== Syntax example: ==
-RegHiveLoad,Build,%targetdir%\I386\system32\setupreg.hiv 
+== Example: == 
 In this example we will load the setupreg.hiv hive file from our work folder and place it under a registry section called Build 
+{{{
+RegHiveLoad,Build,%targetdir%\I386\system32\setupreg.hiv 
+}}}
