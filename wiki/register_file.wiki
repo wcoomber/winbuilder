@@ -1,7 +1,10 @@
 =!Register_File ( LiveXP / !NativeEx Projects Only )=
 
 ==Syntax==
+{{{
 Register_File,FileName,RegType
+}}}
+
 ==Parameters==
 ||1||!FileName||File to register||
 ||2||!RegType||Type of registration to perform||
