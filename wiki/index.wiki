@@ -1,6 +1,5 @@
 #sidebar index
 Contents 
-
  * Welcome and Overview
    * [wbwelcome Welcome]
    * Overview
@@ -10,11 +9,11 @@ Contents
    * Tools
    * Bugs
    * License
-
  * Scripts
    * [wbscripts Scripts]
    * Application Scripts
    * [wbscriptescape Escape Character Usage]
+ * ff
    * [wbgui-interface-builder Interface]
    * Link Files
    * Script Command Categories
