@@ -1,76 +1,44 @@
-Script ==Syntax==
+<wiki:toc max_depth="4" />
+=Script Syntax=
 
-Contents 
- * Overview
- * Compatibility
- * Usage
- * ==Syntax==
- * Variables
- * Application scripts
- * Bugs
- * Change log
-
-
-Overview 
+==Overview ==
 
 Script files use a very simple to understand language to run their commands and actions.
 
 In general terms these files use the extension .script and can be edited with any text editor or using the internal editor from WinBuilder. 
 
-Settings are written in the form of Key=Value (e.g. Color=Blue) and these values are kept inside sections (e.g. [MySection]).
+Settings are written in the form of Key=Value (e.g. Color=Blue) and these values are kept inside sections similar to the structure of an `*.ini` file (e.g. [MySection]).
 
-You can also add additional files inside your scripts and these files are stored as attachements in a process very similar to popular email messages. This way you can share your scripts in discussion forums with all the needed tools inside.
+In general, the syntax is very simple - i.e. keywords for functions with the parameters separated by commas.  Comment lines start with two slashes, and are skipped during processing. Out of compatibility concerns two hash marks are accepted as comment marker.
+ Example:
+{{{
+// This is a comment line
+## This is a comment line, too
+}}}
 
-With this .script language you can copy files, create folders, write values on the registry and do a whole lot more.
+You can also add additional files inside your scripts. These files are stored as attachments in a process very similar to the way email messages used to include binary files - i.e. they are "encoded" into an ASCII format. This way you can share your scripts in discussion forums with all the needed tools inside.
 
+==Script Files==
+Script files can perform both specific and generic functions. Some scripts will be responsible for creating the base structure of the project while others will be used to add extra functionality and programs.
 
-We'll start off with very simple descriptions of each command and then some quick examples so that you can easily start understanding and creating your own scripts.
+These scripts can also use a very specific model that only works on a single project and cannot be successfully used on another project unless it also shares the same model as the original project from where it came. The model consists of functions and variables stored in scripts.
 
-
-
-Compatibility 
-
-This page is updated directly from the internet and some of the commands that you find mentioned here might have been added only on recent WinBuilder versions.
-
-It is recommended to use the latest versions to ensure the best results.
-
-
-
-Usage 
-
-
-Overview
- * sections
- * levels
- * comments
-
-
-Script files can perform both specific and generic functions. 
-
-Some scripts will be responsible for creating the base structure of the project while others will be used to add extra functionality and programs.
-
-These scripts can also use a very specific model that only works on a single project and cannot be sucessfully used on another project unless it also shares the same model as the original project from where it came. The model consists of functions and variables stored in scripts.
-
-An effort is being made to create a generic sort of script to add programs across different projects, please read the script applications page for more details.
-
-
-Sections
-
-
+Let's start by looking at the structure of a typical script file.
 We use sections to group commands and settings inside script files. The easiest way to see how they are applied is to edit a few scripts and look at the source code to learn more about them.
 
+==Script File Structure==
 
-A typical script is composed by 3 important sections
- * Main - will keep all details that identify your script
- * Variables - used to keep variable values
- * Process - where your commands are placed
+A typical script is composed of at least these 3 important sections
+ # Main - will keep all details that identify your script
+ # Variables - used to keep variable values
+ # Process - where your commands are placed
 
-Script.project has two optional sections
+In addition to the script files, there is a master project file called Script.project, which has two optional sections
  * OnProcessEntry - run as first command of every script
- * OnProcessExit - run as last command of every script
+ * OnProcessExit - run as last command of every script
 
 Here is a small example of how it should look:
-
+{{{
 [Main]
 Title=Add my Program
 Description=This script will add my program
@@ -83,13 +51,11 @@ Level=5
 echo,%myTitle%
 ....
 ....
-We can additionally use more sections to add variables from the script interface or even specify more sections with commands to be processed. We'll detail this further in these pages.
+}}}
 
-The [Interface] section is also important to scripts but we'll soon be referring to it in another chapter.
+We can additionally use more sections to add variables from the script interface or even specify more sections with commands to be processed. 
 
-
-[Main] section
-
+===The `[Main]` section===
 
 Inside this main section you can store the definitions that identify your script and allow it to be properly categorized inside the project. This section works like a normal INI section where you write all your data in the form of Key=Value (e.g. Color=Blue) 
 
@@ -98,115 +64,74 @@ List of available keys
  * Description - a short description of what the script is intended to do
  * Author - the author or group involved in the initial release, following releases or branches should be mentioned in Credits
  * Credits - details the people involved making the script possible or persons involved in updating the work.
- * Date - date of changes, any text is accepted - recommended to use "Year-Month-Day" all written in numeric format
+ * Date - date of changes, any text is accepted - recommended to use "Year-Month-Day" all written in numeric format
  * Version - scripts support version and they are important to mark new updated scripts on the download center
  * Website / topic discussion - place a link here to help users to find their way to a site with more informations
- * download_level - used by download center to categorize scripts under download profiles (1..4)
+ * Download_level - used by download center to categorize scripts under download profiles (1..4)
  * Selected - using True/False will make your be checked or not for being processed. Place a Selected=none to completely remove any checkbox
- * Locked - use True/False to allows the users to edit the script interface 
- * Level - very important setting to allow your script to be placed on the correct sequence when the project is running
+ * Locked - use True/False to allows the users to edit the script interface 
+ * Level - very important setting to allow your script to be placed on the correct sequence when the project is running (see [wbscriptlevels Script Levels] for more details on this)
 
-
-All of these keys can be edited easily using the wb's internal editor
-
-These keys are optional, but it is recommended to place at least a few keys to better describe your script to others.
- * Title
- * Description
+All of these keys can be edited easily using !WinBuilder's internal editor. While these keys are optional, it is recommended to place at least a few keys to better describe your script to others (i.e. `Title` and `Description`)
 
 Some keys are assumed with default values if they are not found inside the script
- * Title  --> Display the filename
- * Level --> 5
- * Profile --> Recommended (value=2)
+||Title||Display the filename||
+||Level||5||
+||Profile||Recommended (value=2)||
 
 
-[Variables] section
+===The `[Variables]` section===
+
+This section is described in more detail [wbscriptvariables here]
 
 
-This section is described in more detail here
-
-
-[Process] section
-
+===The `[Process]` section===
 
 All commands you write in this section will be executed by the program. 
 
-From this section you can also call other sections using the run command from the same script or other scripts if necessary.
+From this section you can also call other sections from the same script or other scripts if necessary using the [wbrun run command].
 
 The result of each operation is written on the log window - which you can later view or save to an html page. 
 
 
-[OnProcessEntry] section
+===The `[OnProcessEntry]` section===
+
+This section is an optional secial section exclusive in script.project. If it is present, during build this section is processed before the first `[Process]` line of every processed script.
 
 
-This section is an optional secial section exclusive in script.project.
+===The `[OnProcessExit]` section===
 
-If it is present, during build this section is processed beforet the first [Process] line of every processed script.
+This section is an optional special section exclusive in script.project.
+If it is present, during build this section is processed after the last `[Process]` line of every processed script.
 
-
-[OnProcessExit] section
-
-
-This section is an optional secial section exclusive in script.project.
-
-If it is present, during build this section is processed after the last [Process] line of every processed script.
-
-Example:
+ Example:
+{{{
 [OnProcessExit]
 Run,%ProjectDir%\script.project,Process-log 
-
-Levels
-
-
-Levels is a feature from scripts that allow you to choose when your script should run while the project is being built.
-
-You can select values between 1 and 10, when the project starts it will begin with the scripts that have the lower level number and will increase a level after all scripts with the previous levels are processed.
-
-This is a very useful way to ensure that your script always runs at the correct time. First levels are usually used to be build the structure of your project, while the last levels are the ones where your project is finished and an image is created.
-
-By default, we use level 5 as the middle value where most scripts that are only meant to add programs should be processed.
-
-To further categorize and group your scripts you can also create subfolders and in this way ensure that these scripts are separated from others with the same level. Look for examples on the available projects to understand more about these filters.
-
-Comments
+}}}
 
 
-Comment lines are skipped during processing. 
-Comment lines start with two slashes.
-
-== Syntax example: ==
-// This is a comment line
- 
-Out of compatibility reasons also two hash marks are accepted as comment marker.
-
-== Syntax example: ==
-## This is a comment line, too
-
-
-
-Syntax 
-
+==Syntax Rules==
 
 First some general rules and explanations:
-1. Besides some special cases (e.g. parameters in ShellExecute) generally enclosing quotes are not needed.
-2. Enclosing quotes MUST be used if the WinBuilder Script Line Parameters contain spaces.
-If the spaces are replaced by the escape #$s, the enclosing quotes should be ommitted.
-3. WinBuilder Script Line Parameters are separated by a comma.
-If a comma is inside an argument, it must be 'escaped' by #$c.
+ # Besides some special cases (e.g. parameters in ShellExecute) generally enclosing quotes are not needed.
+ # Enclosing quotes MUST be used if the WinBuilder Script Line Parameters contain spaces. If the spaces are replaced by the escape #$s, the enclosing quotes should be ommitted.
+ # WinBuilder Script Line Parameters are separated by a comma. If a comma is inside an argument, it must be 'escaped' by #$c.
 In most cases user violation of that rules are accepted by WinBuilder and processed as assumed.
 E.g. unnecessary enclosing quotes or a comma inside an item enclosed by quotes.
 
 But sometimes that can bring unexpected results.
 
-.script language commands are very dependent on the use of variables to make them more flexible, please read the respective variables page for additional information.
+.script language commands areï¿½very dependent on the use of variables to make them more flexible, please read the respective variables page for additional information.
 
-All available commands are described on a single page so that you can later print this page to use as reference.
+All available commands are described on a single page so that you can later print this page to use asï¿½reference.
 
 Usually all command which compare etc. are case insensitive.
 
 There are some commands having a "X" at the end.
 
 These commands work like that ones without the "X", but case sensitive. 
-  
+ï¿½ 
 
 .script commands can be grouped under the following categories
 
@@ -263,8 +188,8 @@ We use INI files to exchange information between scripts or store data whenever 
 
 
 Quick explaining some INI concepts:
- * A group of data (section) is always contained between [] (e.g. [MySection] ) and will only finish whenever another section is found or when the file has no more lines to read.
- * Each entry has a Title and is followed by it's respective data. Both are separated by an equal sign (e.g. Color=Blue)
+ * Aï¿½group of data (section) is always contained between [] (e.g. [MySection] )ï¿½and will only finish whenever another section is found or when the file has no more lines to read.
+ * Each entry has a Title and isï¿½followed by it's respective data. Both are separated by an equal sign (e.g. Color=Blue)
 
 Available INI functions
  * IniWrite
@@ -355,14 +280,14 @@ Functions on this category allow you to work with the network environment whenev
 Miscellaneous Commands 
 Under this category you find the commands which aren't grouped under any specific category but are still quite used on most scripting tasks.
  * run / exec - runs a section from a script file
- * shellexecute / shellexecuteex / shellexecutedelete - launches an external file
- * beep - uses the system speaker 
+ * shellexecute /ï¿½shellexecuteex / shellexecutedelete - launches an external file
+ * beep - uses the system speakerï¿½
  * message - outputs a message window
  * system - used to refresh values on the program itself
  * echo - outputs a message (viewable on the log)
  * wait - "sleeps" the script for specified time
  * exit - stops processing current script
- * halt - stops building the whole project 
+ * halt - stops building the whole projectï¿½
  * set - changes the value of a variable
  * addvariables - adds all variables listed inside a section
 
@@ -388,12 +313,17 @@ When a command doesn't work as expected you should follow these steps to ensure 
  * Check if there aren't any external interferences as locked files or no disk space on the target folder
  * Try whenever possible from a fresh project to avoid any chance of corrupted files or invalid project settings
 
-If none of the above solves your issue then here's the recommended way to proceed:
+If none of the above solves your issue then here's the recommended wayï¿½to proceed:
  * Visit the community forums and search for similar reports of the same behavior as you notice
  * If a similar case is found you should post a reply on this topic, otherwise start a new topic in the appropriate category
  * Writing advice before posting a bug : Include a descriptive title in your message including your log.html file and a test script so that it can be debugged and used by others
 
 Log of changes 
-Changes in script language can be followed in each newer WinBuilder beta discussion where changes to the script code are suggested and debugged by other members. 
+Changes in script language can be followed in each newer WinBuilder beta discussion where changes to the script code are suggested and debugged by other members.ï¿½
 Projects also follow their own script rules and these methods can change occasionally, whenever in doubt you should post your questions in each project forum discussion.
 Please let us know if this page is not complete or if you still haven't found needed information.
+
+
+
+===The `[Interface]` section===
+While this is important to scripts we'll be referring to it in another chapter.
