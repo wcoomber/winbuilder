@@ -204,7 +204,7 @@ Available INI functions
  * [inidelete IniDelete]
  * [iniaddsection IniAddSection]
  * [inideletesection IniDeleteSection]
- * [iniwritetestline IniWriteTextLine]
+ * [iniwritetextline IniWriteTextLine]
  * [inimerge IniMerge]
 
 <br>
