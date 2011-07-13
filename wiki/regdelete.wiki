@@ -1,34 +1,24 @@
-RegDelete
+=!RegDelete=
 
+== Syntax ==
+{{{
 RegDelete,<HKEY>,<Section>,<Key> 
-This command will delete the key you specify.
+}}}
+This command will delete the key you specify. It uses the same parameters as the other registry related commands with the difference that it will delete a key from the registry.
 
-It uses the same components as described above with the difference that it will delete a key from the registry.
-
-== Syntax example: ==
+ == Example: ==
+{{{
 RegDelete,HKLM,Build\ControlSet001\Services\VgaSave\Device0,DefaultSettings.XResolution 
-In this example the specified key will be deleted
+}}}
 
-WB076 added: RegDelete,<HKEY>,<Section>
+ 
+==WB076 added:==
+{{{
+RegDelete,<HKEY>,<Section>
+}}}
+ This command will delete the section you specify.
 
-This command will delete the section you specify.
-
-== Syntax example: ==
+ == Example: ==
+{{{
 RegDelete,HKLM,Build\ControlSet001\Services\VgaSave\Device0
-RegDelete
-
-RegDelete,<HKEY>,<Section>,<Key> 
-This command will delete the key you specify.
-
-It uses the same components as described above with the difference that it will delete a key from the registry.
-
-== Syntax example: ==
-RegDelete,HKLM,Build\ControlSet001\Services\VgaSave\Device0,DefaultSettings.XResolution 
-In this example the specified key will be deleted
-
-WB076 added: RegDelete,<HKEY>,<Section>
-
-This command will delete the section you specify.
-
-== Syntax example: ==
-RegDelete,HKLM,Build\ControlSet001\Services\VgaSave\Device0
+}}}
