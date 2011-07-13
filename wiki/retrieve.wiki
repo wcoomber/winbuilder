@@ -12,16 +12,16 @@
 
 <br>
 ----
+=Sub Commands / Parameters=
+----
 =!FolderSize=
-
 ==Syntax==
 {{{
 Retrieve,FolderSize,<Directory>,<%var%> 
 }}}
 
-This function is used to calculated sizes and store them inside variables.
- * FolderSize is used to get the overall size of folder along with respective files and sub-folders inside.
- * Directory is the target, it can be a file or a directory
+This function is used to calculate the size of a folder and store it inside a variable.
+ * Directory is the target directory
  * %var% is the stored value (expressed in bytes)
 
 <br>
@@ -29,38 +29,39 @@ This function is used to calculated sizes and store them inside variables.
 <br>
 ----
 
-=Retrieve,FileSize=
+=FileSize=
+
+==Syntax==
 {{{
-Retrieve,FolderSizeOrFileSize,<DirectoryOrFilename>,<%var%> 
+Retrieve,FileSize,<Filename>,<%var%> 
 }}}
-This function is used to calculated sizes and store them inside variables.
- * FolderSize is used to get the overall size of folder along with respective files and sub-folders inside.
- * FileSize will report back the filesize of the specified file
- * DirectoryOrFilename is the target, it can be a file or a directory
- * %var% is�the stored value (expressed in bytes)
+This function is used to calculate the size of a folder and store it inside a variable.
+ * Filename is the target file
+ * %var% is the stored value (expressed in bytes)
 
 == Syntax example: ==
+{{{
 Retrieve,FolderSize,c:\myFolder,%var%
-This example will write the size of myFolder as a new value for %var% 
+}}}
 
 <br>
 
 <br>
 ----
 =File=
+==Syntax==
+{{{
+Retrieve,File,<Filename>,<%var%> 
+}}}
+This function will display a dialog box asking the user to select a filename. Once a value is selected and the user clicks "Ok" to close the box, this value will be stored inside %var%
+ * You can specify the path to use and filter the accepted extensions or filenames to be accepted
+ * %var% is the stored value of the selected filename
 
-/Dir
-
-Retrieve,File/Dir,<DirectoryOrFilename>,<%var%> 
-This function will bring a box asking the user to select a folder or a filename. Once a value is selected and the user clicks "Ok" to close the box, this value will be stored inside %var%
- * File is used when we want the user to select a file. You can specify the path to use and filter�the accepted extensions or filenames to be accepted
- * Dir will open a box allowing the user to select a folder, you can specify where the initially selected folder is placed.
- * %var% is�the stored value of the selected filename or foldername
-
-== Syntax example: ==
+== Example: ==
+ This example will open a dialog box asking the user to select a file. This box will start in `c:\` and will only display files that match the filter criteria which is `*.txt` on this case. Once a file is selected, the %var% will contain the full filename of this selected file. 
+{{{
 Retrieve,File,c:\*.txt,%var%
-
-You can use this example to open a box asking the user to select a file. This box will start in c:\ and will only display files that match the filter criteria which is *.txt on this case. Once a file is selected, the %var% will contain the full filename of this selected file. 
+}}}
 
 <br>
 
@@ -68,16 +69,19 @@ You can use this example to open a box asking the user to select a file. This bo
 ----
 =Dir=
 
+==Syntax==
+{{{
 Retrieve,File/Dir,<DirectoryOrFilename>,<%var%> 
-This function will bring a box asking the user to select a folder or a filename. Once a value is selected and the user clicks "Ok" to close the box, this value will be stored inside %var%
- * File is used when we want the user to select a file. You can specify the path to use and filter�the accepted extensions or filenames to be accepted
- * Dir will open a box allowing the user to select a folder, you can specify where the initially selected folder is placed.
+}}}
+This function will display a dialog box asking the user to select a folder. Once a value is selected and the user clicks "Ok" to close the box, this value will be stored inside %var%
+ * You can specify where the initially selected folder is placed.
  * %var% is�the stored value of the selected filename or foldername
 
 == Syntax example: ==
-Retrieve,File,c:\*.txt,%var%
-
-You can use this example to open a box asking the user to select a file. This box will start in c:\ and will only display files that match the filter criteria which is *.txt on this case. Once a file is selected, the %var% will contain the full filename of this selected file. 
+ You can use this example to open a dialog box asking the user to select a folder. This box will start in `c:\`. Once a file is selected, the %var% will contain the full pathname of this selected directory. 
+{{{
+Retrieve,Dir,c:\,%var%
+}}}
 
 <br>
 
@@ -85,14 +89,19 @@ You can use this example to open a box asking the user to select a file. This bo
 ----
 =MD5=
 
-Retrieve,MD5,<Filename>,<%var%> MD5 is a way to calculate a number�known as a 'hash' or 'checksum' that is based on the filesize of a file.
+==Syntax==
+{{{
+Retrieve,MD5,<Filename>,<%var%> 
+}}}
+MD5 is a way to calculate a number known as a 'hash' or 'checksum' that is based on the content of a file.
 
-It is used as a safety check to ensure that files are complete when they are downloaded from a server. You can also call this function to ensure that your files were not modified. 
+It is used as a safety check to ensure that files are complete and unmodified when they are downloaded from a server. You can also call this function to ensure that your files were not modified. 
 
-== Syntax example: ==
+== Example: ==
+ This function will write the value of the MD5 result on %var%, you can compare against a security value written elsewhere to prove that your file is intact.
+{{{
 Retrieve,MD5,c:\MyText.txt,%var%
-
-This function will write the value of the MD5 result on %var%, you can compare against a security value written elsewhere to prove that your file is intact.
+}}}
 
 
 <br>
@@ -101,6 +110,12 @@ This function will write the value of the MD5 result on %var%, you can compare a
 ----
 =!FileVersion=
 
+==Syntax==
+{{{
 Retrieve,FILEVERSION,<Filename>,<%var%>
-== Syntax example: == Retrieve,FILEVERSION,�c:\Program Files\IrfanView\i_view32.exe�,%var%
-This example fills %var% with the file version string, as it can be seen by EXE-file�s properties.
+}}}
+== Example: == 
+ This example fills %var% with the file version string, as it can be seen by EXE-file's properties.
+{{{
+Retrieve,FILEVERSION,"c:\Program Files\IrfanView\i_view32.exe",%var%
+}}}
