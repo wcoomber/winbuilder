@@ -58,8 +58,8 @@ Common API
  * Not_Compatible
  * Process_Log
  * ReadENV
- * Reg_Add
- * Reg_Del
+ * [reg_add Reg_Add]
+ * [reg_del Reg_Del]
  * Reg_Import
  * RegAddBoot
  * Register_File
