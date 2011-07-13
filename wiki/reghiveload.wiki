@@ -6,7 +6,7 @@ RegHiveLoad,<SectionName>,<HiveFilename>
 }}}
 This command will load an external registry hive onto your local registry system.
 
-It is particularly useful to allow editing the hives of project when they are being built. Most scripts usually load the needed hives for editing and after writing all necessary data are properly unloaded (command described below).
+It is particularly useful to allow editing the hives of project when they are being built. Most scripts usually load the needed hives for editing and after writing all necessary data are properly unloaded (see [reghiveunload RegHiveUnload] )
 
 This command is based on Windows 32bit API and works under any Windows platform - under Vista it is necessary to disable the UAC (User Account Control) - i.e. Run as Administrator.
 
