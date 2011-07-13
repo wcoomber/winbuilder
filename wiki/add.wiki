@@ -1,6 +1,6 @@
 =Add=
 
- * [add#Add,DesktopIni DesktopIni]
+ * [add#Add,DesktopIni]
  * [add#Add,URL URL]
 
 ----
