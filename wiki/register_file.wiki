@@ -1,12 +1,12 @@
-=!Register_File ( LiveXP / NativeEx Projects Only )=
+=!Register_File ( LiveXP / !NativeEx Projects Only )=
 
 ==Syntax==
 Register_File,FileName,RegType
 ==Parameters==
-||1||FileName||File to register||
-||2||RegType||Type of registration to perform||
-|| || || *Install* - Register the file using the DllInstall entry point ( /i on regsvr32 )||
-|| || || *Register* - Register the file using the DllRegisterServer entry point||
+||1||!FileName||File to register||
+||2||!RegType||Type of registration to perform||
+|| || || *Install* - Register the file using the !DllInstall entry point ( /i on regsvr32 )||
+|| || || *Register* - Register the file using the !DllRegisterServer entry point||
 
 ==Remarks==
 This uses one of two methods to perform the registration:
