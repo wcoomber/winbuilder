@@ -1,32 +1,91 @@
-Retrieve FolderSize/FileSize
+=Retrieve=
 
+ * [retrieve#!FolderSize FolderSize]
+ * [retrieve#!FileSize FileSize]
+ * [retrieve#File File]
+ * [retrieve#Dir Dir]
+ * [retrieve#MD5 MD5]
+ * [retrieve#!FileVersion FileVersion]
+
+
+<br>
+
+<br>
+----
+=!FolderSize=
+
+==Syntax==
+{{{
+Retrieve,FolderSize,<Directory>,<%var%> 
+}}}
+
+This function is used to calculated sizes and store them inside variables.
+ * FolderSize is used to get the overall size of folder along with respective files and sub-folders inside.
+ * Directory is the target, it can be a file or a directory
+ * %var% is the stored value (expressed in bytes)
+
+<br>
+
+<br>
+----
+
+=Retrieve,FileSize=
+{{{
 Retrieve,FolderSizeOrFileSize,<DirectoryOrFilename>,<%var%> 
+}}}
 This function is used to calculated sizes and store them inside variables.
  * FolderSize is used to get the overall size of folder along with respective files and sub-folders inside.
  * FileSize will report back the filesize of the specified file
  * DirectoryOrFilename is the target, it can be a file or a directory
- * %var% is the stored value (expressed in bytes)
+ * %var% isï¿½the stored value (expressed in bytes)
 
 == Syntax example: ==
 Retrieve,FolderSize,c:\myFolder,%var%
 This example will write the size of myFolder as a new value for %var% 
 
-Retrieve File/Dir
+<br>
+
+<br>
+----
+=File=
+
+/Dir
 
 Retrieve,File/Dir,<DirectoryOrFilename>,<%var%> 
 This function will bring a box asking the user to select a folder or a filename. Once a value is selected and the user clicks "Ok" to close the box, this value will be stored inside %var%
- * File is used when we want the user to select a file. You can specify the path to use and filter the accepted extensions or filenames to be accepted
+ * File is used when we want the user to select a file. You can specify the path to use and filterï¿½the accepted extensions or filenames to be accepted
  * Dir will open a box allowing the user to select a folder, you can specify where the initially selected folder is placed.
- * %var% is the stored value of the selected filename or foldername
+ * %var% isï¿½the stored value of the selected filename or foldername
 
 == Syntax example: ==
 Retrieve,File,c:\*.txt,%var%
 
 You can use this example to open a box asking the user to select a file. This box will start in c:\ and will only display files that match the filter criteria which is *.txt on this case. Once a file is selected, the %var% will contain the full filename of this selected file. 
 
-Retrieve MD5
+<br>
 
-Retrieve,MD5,<Filename>,<%var%> MD5 is a way to calculate a number known as a 'hash' or 'checksum' that is based on the filesize of a file.
+<br>
+----
+=Dir=
+
+Retrieve,File/Dir,<DirectoryOrFilename>,<%var%> 
+This function will bring a box asking the user to select a folder or a filename. Once a value is selected and the user clicks "Ok" to close the box, this value will be stored inside %var%
+ * File is used when we want the user to select a file. You can specify the path to use and filterï¿½the accepted extensions or filenames to be accepted
+ * Dir will open a box allowing the user to select a folder, you can specify where the initially selected folder is placed.
+ * %var% isï¿½the stored value of the selected filename or foldername
+
+== Syntax example: ==
+Retrieve,File,c:\*.txt,%var%
+
+You can use this example to open a box asking the user to select a file. This box will start in c:\ and will only display files that match the filter criteria which is *.txt on this case. Once a file is selected, the %var% will contain the full filename of this selected file. 
+
+<br>
+
+<br>
+----
+=MD5=
+
+Retrieve,MD5,<Filename>,<%var%> MD5 is a way to calculate a numberï¿½known as a 'hash' or 'checksum' that is based on the filesize of a file.
 
 It is used as a safety check to ensure that files are complete when they are downloaded from a server. You can also call this function to ensure that your files were not modified. 
 
@@ -36,8 +95,12 @@ Retrieve,MD5,c:\MyText.txt,%var%
 This function will write the value of the MD5 result on %var%, you can compare against a security value written elsewhere to prove that your file is intact.
 
 
-Retrieve FileVersion
+<br>
+
+<br>
+----
+=!FileVersion=
 
 Retrieve,FILEVERSION,<Filename>,<%var%>
-== Syntax example: == Retrieve,FILEVERSION,”c:\Program Files\IrfanView\i_view32.exe”,%var%
-This example fills %var% with the file version string, as it can be seen by EXE-file’s properties.
+== Syntax example: == Retrieve,FILEVERSION,ï¿½c:\Program Files\IrfanView\i_view32.exeï¿½,%var%
+This example fills %var% with the file version string, as it can be seen by EXE-fileï¿½s properties.
