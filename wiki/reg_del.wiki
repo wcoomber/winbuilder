@@ -17,5 +17,3 @@ This function is used to delete a registry key and all contained values / keys o
 Reg_Del,%reg%\ControlSet001\Services\VgaSave\Device0,DefaultSettings.XResolution
 Reg_Del,%reg%\ControlSet001\Services\VgaSave\Device0
 }}}
-
-#sidebar index
