@@ -1,43 +1,47 @@
-RegWrite
+=!RegWrite=
 
+==Syntax==
+{{{
 RegWrite,<HKEY>,<KeyType>,<Section>,<Keyname>,<Value> 
+}}}
 This command will create a new registry entry as specified.
 
-HKEY is the "Hive Key" where the key is to be placed. These hives are files that are loaded by your machine when booting and compose the registry structure. By default, most scripts use HKLM as the work hive.
+ * HKEY is the "Hive Key" where the key is to be placed. These hives are files that are loaded by your machine when booting and compose the registry structure. By default, most scripts use HKLM as the work hive.
 
-Valid HKEY values
- * HKLM
- * HKCU
- * HKCR
- * HKEY_USERS
- * HKEY_CURRENT_CONFIG 
+ Valid HKEY values
+  * HKLM
+  * HKCU
+  * HKCR
+  * HKEY_USERS
+  * HKEY_CURRENT_CONFIG
 
-Details on the functions of each hive can be found at the Microsoft Site.
+ Details on the functions of each hive can be found at the Microsoft Site.
+
+ * Keytype will specify how the data in the registry key should be interpreted.
+
+ Valid key type values
+  * 0x0 - Empty key
+  * 0x1 - String - writes a text value
+  * 0x2 - Expanded String - will expand any variable value contained inside %%. (e.g. %temp%)
+  * 0x3 - Binary data - adds data in binary format. Each byte is specified by groups of two digits splitting each value with commas
+  * 0x4 - Dword - writes a numeric value
+  * 0x7 - Writes multiple NULL separated strings
+
+ * Section is the complete path to the section where the key is supposed to be written
+
+ * Keyname and value are similar to the method for INI files, please ensure that the value you use is compatible with the key type.
+
+==Tips==
+To create an empty section: Write a key using keytype as 0x1 and omit the entries for key and value - this will create a new section at the location you specify.
 
 
-Keytype will specify how the data in the registry key should be interpreted.
-
-Valid key type values
- * 0x0 - Empty key
- * 0x1 - String - writes a text value
- * 0x2 - Expanded String - will expand any variable value contained inside %%. (e.g. %temp%)
- * 0x3 - Binary data - adds data in binary format. Each byte is specified by groups of two digits splitting each value with commas
- * 0x4 - Dword - writes a numeric value
- * 0x7 - Writes multiple NULL separated strings
-
-
-Section is the complete path to the section where the key is supposed to be written
-
-Keyname and value are similar to the method for INI files, please ensure that the value you use is compatible with the key type.
-
-Creating an empty section: Write a key using keytype as 0x1 and omit the entries for key and value - this will create a new section at the location you specify.
-
-
-== Syntax example: ==
+== Example: ==
+{{{
 RegWrite,HKLM,0x4,Build\ControlSet001\Services\VgaSave\Device0,DefaultSettings.XResolution,1024 
-The above example writes a numeric key with the value 1024 WB078 added:
-RegWrite gives a warning in the log, if the destination value already exists.
-If there is a parameter PRESERVE added, RegWrite does not overwrite an existing value. A warning is still given
-The warning can be suppressed by an additional parameter NOWARN
+}}}
 
-The parameters PRESERVE, and NOWARN can be used simultaniously. The order does not matter.
+==WB078 added:==
+ * RegWrite gives a warning in the log, if the destination value already exists.
+ * If there is a parameter PRESERVE added, RegWrite does not overwrite an existing value. A warning is still given
+ * The warning can be suppressed by an additional parameterNOWARN
+ * The parameters PRESERVE, and NOWARN can be used simultaniously. The order does not matter.
