@@ -29,7 +29,7 @@ This function is used to calculate the size of a folder and store it inside a va
 <br>
 ----
 
-=FileSize=
+=!FileSize=
 
 ==Syntax==
 {{{
