@@ -1,4 +1,3 @@
-#sidebar index
 Contents 
  * Welcome and Overview
    * [wbwelcome Welcome]
@@ -9,11 +8,10 @@ Contents
    * Tools
    * Bugs
    * License
- Scripts
+ * Scripts
    * [wbscripts Scripts]
    * Application Scripts
    * [wbscriptescape Escape Character Usage]
- * ff
    * [wbgui-interface-builder Interface]
    * Link Files
    * Script Command Categories
@@ -27,64 +25,57 @@ Contents
      * [wbscriptsyntax#Retrieve_Functions Retrieve Functions]
      * [wbscriptsyntax#String_Format String Format]
      * [wbscriptsyntax#Text_Files  Text Files]
-
   * Syntax
    * Winbuilder 080
    * Winbuilder 082
    * Variables
-
- 
-
  *Common API
    * [calculate _Calculate]
    * [add_ass Add_Asso]
    * [add#DesktopIni Add,DesktopIni]
    * [add_pin Add_Pin]
- * [add#Shortcut Add,Shortcut]
- * [add#URL Add,URL]
- * [addautorun AddAutoRun]
- * [addpostconfig AddPostConfig]
- * [addpreconfig AddPreConfig]
- * [addtopeshell AddToPEShell]
- * [arch Arch]
- * Ask_License
- * associate_file
- * Add_Asso
- * Add_Shortcut
- * CopyProgram
- * Hive_Load
- * Hive_Unload
- * Not_Compatible
- * Process_Log
- * ReadENV
- * [reg_add Reg_Add]
- * [reg_del Reg_Del]
- * Reg_Import
- * RegAddBoot
- * Register_File
- * Require_File
- * Require_FileQ
- * RequireSysFile
- * RunFromCD
- * RunFromRam
- * ScriptInterface,Read
- * ScriptInterface,State
- * ScriptInterface,Write
- * Select_Case
- * Unpack
-
+   * [add#Shortcut Add,Shortcut]
+   * [add#URL Add,URL]
+   * [addautorun AddAutoRun]
+   * [addpostconfig AddPostConfig]
+   * [addpreconfig AddPreConfig]
+   * [addtopeshell AddToPEShell]
+   * [arch Arch]
+   * Ask_License
+   * associate_file
+   * Add_Asso
+   * Add_Shortcut
+   * CopyProgram
+   * Hive_Load
+   * Hive_Unload
+   * Not_Compatible
+   * Process_Log
+   * ReadENV
+   * [reg_add Reg_Add]
+   * [reg_del Reg_Del]
+   * Reg_Import
+   * RegAddBoot
+   * Register_File
+   * Require_File
+   * Require_FileQ
+   * RequireSysFile
+   * RunFromCD
+   * RunFromRam
+   * ScriptInterface,Read
+   * ScriptInterface,State
+   * ScriptInterface,Write
+   * Select_Case
+   * Unpack
  * VistaPE API
- * VistaPE API
-
+   * VistaPE API
  * Projects
- * Projects
- * LiveXP
- * MobileOS
- * NativePE
- * NativeEx
- * PicoXP
- * ReactOS
- * VistaPE
- * VistaPE-CAPI
- * Win7PE
- * Win7RescuePE
+   * LiveXP
+   * MobileOS
+   * NativePE
+   * NativeEx
+   * PicoXP
+   * ReactOS
+   * VistaPE
+   * VistaPE-CAPI
+   * Win7PE
+   * Win7RescuePE
