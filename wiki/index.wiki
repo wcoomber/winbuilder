@@ -9,10 +9,10 @@ Contents
    * Tools
    * Bugs
    * License
- * Scripts
+ Scripts
    * [wbscripts Scripts]
    * Application Scripts
-   * [wbscriptescape Escape Character Usage]<br>
+   * [wbscriptescape Escape Character Usage]
  * ff
    * [wbgui-interface-builder Interface]
    * Link Files
