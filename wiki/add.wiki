@@ -26,7 +26,7 @@ Add,DesktopIni,Type,[Folder],[Section],Value,Data
 }}}
 
 ==Parameters==
-||1||Url||Selects common API function to execute. In this case its Add_DesktopIni. Its a mystery why Add_DesktopIni was not added to the common API.||
+||1||Url||Selects common API function to execute. In this case its !Add_DesktopIni. Its a mystery why !Add_DesktopIni was not added to the common API.||
 ||2||Type||Specifies the target directory where the desktop.ini file will be created. ||
 || || || *Desktop* - Desktop.ini will be created in the desktop folder.||
 || || || *!StartMenu* - Desktop.ini will be created in the Start Menu folder.||
@@ -38,11 +38,11 @@ Add,DesktopIni,Type,[Folder],[Section],Value,Data
 ||3||Folder||If Type is Path then this specifies the folder in which desktop.ini will be created.||
 ||4||!Section||Optional parameter that specifies the section in desktop.ini to be updated. If specified it must be. !ShellClassInfo as that is the only section supported by windows.||
 ||5||Value||Value name to be updated in the selected desktop.ini file.||
-|| || || *ConfirmFileOp* - Set this entry to 0 to avoid a "You Are Deleting a System Folder" warning when deleting or moving the folder.||
-|| || || *NoSharing* - Not supported under Windows Vista or later. Set this entry to 1 to prevent the folder from being shared.||
-|| || || *IconFile* - If you want to specify a custom icon for the folder, set this entry to the icon's file name. The .ico file name extension is preferred, but it is also possible to specify .bmp files, or .exe and .dll files that contain icons. If you use a relative path, the icon is available to people who view the folder over the network. You must also set the IconIndex entry.||
-|| || || *IconIndex* - Set this entry to specify the index for a custom icon. If the file assigned to IconFile only contains a single icon, set IconIndex to 0.||
-|| || || *InfoTip* - Set this entry to an informational text string. It is displayed as an infotip when the cursor hovers over the folder. If the user clicks the folder, the information text is displayed in the folder's information block, below the standard information.||
+|| || || *!ConfirmFileOp* - Set this entry to 0 to avoid a "You Are Deleting a System Folder" warning when deleting or moving the folder.||
+|| || || *!NoSharing* - Not supported under Windows Vista or later. Set this entry to 1 to prevent the folder from being shared.||
+|| || || *!IconFile* - If you want to specify a custom icon for the folder, set this entry to the icon's file name. The .ico file name extension is preferred, but it is also possible to specify .bmp files, or .exe and .dll files that contain icons. If you use a relative path, the icon is available to people who view the folder over the network. You must also set the !IconIndex entry.||
+|| || || *!IconIndex* - Set this entry to specify the index for a custom icon. If the file assigned to !IconFile only contains a single icon, set IconIndex to 0.||
+|| || || *!InfoTip* - Set this entry to an informational text string. It is displayed as an infotip when the cursor hovers over the folder. If the user clicks the folder, the information text is displayed in the folder's information block, below the standard information.||
 ||6||Data||The value data.||
 
 ==Remarks==
@@ -82,15 +82,15 @@ Add,Url,[Type],<FileName>,<WebAddress>,[IconFile],[IconIndex],[HotKey]
 ||2||Type||Optional parameter specifying target directory where the URL file link will be created. Assuming favorites is chosen as the target directory then the links will automatically appear in the IE favorites menu. There is no current mechanism to create links that will appear in other browser's bookmarks menu.||
 || || || *Favorites* - URL link will be created in the IE favorites folder.||
 || || || *Links* - URL link will be created in the IE Links folder.||
-|| || || *StartMenu* - URL link will be created in the StartMenu folder.||
-|| || || *StartMenuRoot* - URL link will be created in the root of the Start Menu.||
+|| || || *!StartMenu* - URL link will be created in the !StartMenu folder.||
+|| || || *!StartMenuRoot* - URL link will be created in the root of the Start Menu.||
 || || || *Desktop* - URL link will be created on the desktop.||
-|| || || *Path* - URL link will be created in the path specified in the path part of the FileName parameter.||
-||3||FileName||File name of the URL link file that will be created.||
-||4||WebAddress||Web Address associated with the URL link.||
-||5||IconFile||Optional parameter specifying full path of icon file to be associated with the URL link file. Can be specified as UrlDLL to reference the url.dll system file.||
-||6||IconIndex||Optional parameter specifying the icon index from the IconFile. If not specified then the first icon in the specified file will be used.||
-||7||HotKey||Optional parameter specifying the hotkey used to launch the URL by the default browser. Hotkeys are specified using the text form of the key seperated by + e.g. CTRL+ALT+A.||
+|| || || *Path* - URL link will be created in the path specified in the path part of the !FileName parameter.||
+||3||!FileName||File name of the URL link file that will be created.||
+||4||!WebAddress||Web Address associated with the URL link.||
+||5||!IconFile||Optional parameter specifying full path of icon file to be associated with the URL link file. Can be specified as UrlDLL to reference the url.dll system file.||
+||6||!IconIndex||Optional parameter specifying the icon index from the !IconFile. If not specified then the first icon in the specified file will be used.||
+||7||!HotKey||Optional parameter specifying the hotkey used to launch the URL by the default browser. !Hotkeys are specified using the text form of the key separated by + e.g. CTRL+ALT+A.||
 
 ==Remarks==
 Creates URL file links for default browser.
