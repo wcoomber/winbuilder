@@ -1,9 +1,7 @@
 <wiki:toc max_depth="4" />
 =Scripts=
 
-Script files use a very simple to understand language to run their commands and actions.
-
-In general terms these files use the extension .script and can be edited with any text editor or using the internal editor from WinBuilder. 
+Script files use a very simple to understand language to run their commands and actions. In general terms these files use the extension .script and can be edited with any text editor or using the internal editor from WinBuilder. 
 
 Settings are written in the form of Key=Value (e.g. Color=Blue) and these values are kept inside sections similar to the structure of an `*.ini` file (e.g. [MySection]).
 
@@ -119,10 +117,13 @@ This section is described in more detail [wbscriptvariables here]
 ===The `[Process]` section===
 
 All commands you write in this section will be executed by the program. 
-
 From this section you can also call other sections from the same script or other scripts if necessary using the [wbrun run command].
 
 The result of each operation is written on the log window - which you can later view or save to an html page. 
+
+
+===The `[Interface]` section===
+While this is important to scripts we'll be referring to it in another chapter.
 
 
 ===The `[OnProcessEntry]` section===
@@ -133,151 +134,123 @@ This section is an optional secial section exclusive in script.project. If it is
 ===The `[OnProcessExit]` section===
 
 This section is an optional special section exclusive in script.project.
-If it is present, during build this section is processed after the last `[Process]` line of every processed script.
-
- Example:
+If it is present, during build this section is processed after the last `[Process]` line of every processed script. For example, this will cause a specific section of the `project.script` file to be run when the build process exits.
 {{{
 [OnProcessExit]
 Run,%ProjectDir%\script.project,Process-log 
 }}}
 
-.
-
-.
-
-.
-
-.
-
-.
-
+<br>
+----
+----
 
 ==Script Command Categories==
 
-All available commands are described on a single page so that you can later print this page to use as�reference.
-
-Usually all command which compare etc. are case insensitive.
-
-There are some commands having a "X" at the end.
-
-These commands work like that ones without the "X", but case sensitive. 
-� 
-
-.script commands can be grouped under the following categories
-
- * File operations
-
+All available commands are described on a single page so that you can later print that page to use as a reference. 
+ * Usually all command which compare etc. are case insensitive.
+ * There are some commands having a "X" at the end. These commands work like that ones without the "X", but case sensitive. 
+<br>
+----
+----
+===File operations===
 Commands under this category were designed to handle files and are particularly useful to create the base structure of your project or add additional features that you need.
 
 List of available functions
- * [#FileCopy FileCopy]
- * [#FileDelete FileDelete]
- * FileRename
- * FileCreateBlank
- * FileByteExtract
+ * [filecopy FileCopy]
+ * [filedelete FileDelete]
+ * [filerename FileRename]
+ * [filecreateblank FileCreateBlank]
+ * [filebyteextract FileByteExtract]
+ * [dircoopy DirCopy]
+ * [dirdelete DirDelete]
+ * [dirmove DirMove]
+ * [dirmake DirMake]
+ * [copyorexpand CopyOrExpand]
+ * [expand Expand]
 
- * DirCopy
- * DirDelete
- * DirMove
- * DirMake
- * CopyOrExpand
- * Expand
-
-
-
- * Registry handling
-
-
-Registry Handling 
+<br>
+----
+----
+===Registry handling===
 
 These commands are written to write and read values from the local registry on your windows machine. You can also load the hives from the projects being built at any given time.
 
-These registry operations are valid for any Windows Platform, you should however note that Vista restricts the specific operation to load/unload hives - it is necessary to disable the UAC (User Account Control) before running projects that need this support.
+These registry operations are valid for any Windows Platform, you should however note that Vista (and later versions of windows) restricts the specific operation to load/unload hives - it is necessary to disable the UAC (User Account Control) before running projects that need this support.
 
 List of available functions
- * RegWrite
- * RegRead
- * RegDelete
- * RegHiveLoad
- * RegHiveUnload
- * RegImport
+ * [regwrite RegWrite]
+ * [regread RegRead]
+ * [regdelete RegDelete]
+ * [reghiveload RegHiveLoad]
+ * [reghiveunload RegHiveUnload]
+ * [regimport RegImport]
 
+<br>
+----
+----
+===INI manipulation===
 
-
-
- * INI manipulation
-
-
-Ini manipulation 
-
-This category contains commands that were created to work with INI based text files.
-
-INI consists in grouping information using a few rules, it is also very easy to understand and edit when needed.
+This category contains commands that were created to work with INI based text files. INI files group information using a few rules, it is also very easy to understand and edit when needed.
 
 We use INI files to exchange information between scripts or store data whenever needed. In most cases INI language files use extension .ini - but our commands are not limited to just this type of extension and can be used on any text file that uses a INI derivated language like .script language.
 
-
-Quick explaining some INI concepts:
- * A�group of data (section) is always contained between [] (e.g. [MySection] )�and will only finish whenever another section is found or when the file has no more lines to read.
- * Each entry has a Title and is�followed by it's respective data. Both are separated by an equal sign (e.g. Color=Blue)
+Quick explaintion of some INI concepts:
+ * A group of data (section) is always contained between [] (e.g. [MySection] ) and will only finish whenever another section is found or when the file has no more lines to read.
+ * Each entry has a Title and is followed by it's respective data. Both are separated by an equal sign (e.g. Color=Blue)
 
 Available INI functions
- * IniWrite
- * IniRead
- * IniDelete
- * IniAddSection
- * IniDeleteSection
- * IniWriteTextLine
- * IniMerge
+ * [iniwrite IniWrite]
+ * [iniread IniRead]
+ * [inidelete IniDelete]
+ * [iniaddsection IniAddSection]
+ * [inideletesection IniDeleteSection]
+ * [iniwritetestline IniWriteTextLine]
+ * [inimerge IniMerge]
 
-
-
-
-
-
-
-
- * Attachments
-
-
-Attachments 
+<br>
+----
+----
+===Attachments ===
 
 Attachments are files that can be included inside your script.
 
-Since script files are meant to be edited by any text editor, these files are encoded in a process similar to email attachments.
-
-This method allows to add small files along with your scripts in order to keep everything together.
+Since script files are meant to be edited by any text editor, these files are encoded into ascii text. This method allows you to add small files along with your scripts in order to keep everything together.
 
 While a script is running you can use some of the following commands to best take advantage of this feature.
 
 List of related commands
- * ExtractFile
- * ExtractAndRun
- * ExtractAllFiles
- * ExtractAllFilesIfNotExist
- * Encode
+ * [extractfile ExtractFile]
+ * extractandrun ExtractAndRun]
+ * [extractallfiles ExtractAllFiles]
+ * [extractallfilesifnotexist ExtractAllFilesIfNotExist]
+ * [encode Encode]
 
-
-
-
- * Text Files
-Text Files
+<br>
+----
+----
+===Text Files===
 
 With this set of commands we can handle text files and modify them as needed. All these commands can be applied to either a single or multiple file using wildcards.
 
 Description of commands
- * TxtAddline
- * TxtReplace
- * TxtDelLine
- * TxtDelSpaces
- * TxtDelEmptyLines
+ * [txtaddline TxtAddline]
+ * [txtreplace TxtReplace]
+ * [txtdelline TxtDelLine]
+ * [txtdelspaces TxtDelSpaces]
+ * [txtdelemptylines TxtDelEmptyLines]
 
 
+<br>
+----
+----
+===IF Clauses and Command Blocks===
+If the evaluation of an If condition is 'True', the command following the condition is processed. If the evaluation of an If condition is 'False', the command of the Else command (if present), is processed.
+In both cases, instead of a command, there can also be a command block.
 
 
- * IF Clauses
-
-
+<br>
+----
+----
  * Retrieve functions
 Retrieve Functions 
 
@@ -294,48 +267,52 @@ WB076 added:
 
 
 
+<br>
+----
+----
  * String format
 
 
- * Network tools
-Network Tools 
+<br>
+----
+----
+===Network tools===
+
 Functions on this category allow you to work with the network environment whenever available.
- * WebGet
- * WebGetIfNotExist
+ * [webget WebGet]
+ * [webgetifnotexist WebGetIfNotExist]
 
 
- * Miscellaneous commands
+<br>
+----
+----
+===Miscellaneous Commands ===
 
-
-Miscellaneous Commands 
 Under this category you find the commands which aren't grouped under any specific category but are still quite used on most scripting tasks.
- * run / exec - runs a section from a script file
- * shellexecute /�shellexecuteex / shellexecutedelete - launches an external file
- * beep - uses the system speaker�
- * message - outputs a message window
- * system - used to refresh values on the program itself
- * echo - outputs a message (viewable on the log)
- * wait - "sleeps" the script for specified time
- * exit - stops processing current script
- * halt - stops building the whole project�
- * set - changes the value of a variable
- * addvariables - adds all variables listed inside a section
+ * [run run / exec - runs a section from a script file]
+ * [shellexecute - launches an external file
+ * [beep beep - uses the system speaker]
+ * [message message - outputs a message window]
+ * [system system - used to refresh values on the program itself]
+ * [echo echo - outputs a message (viewable on the log)]
+ * [wait wait - "sleeps" the script for specified time]
+ * [exit exit - stops processing current script]
+ * [halt halt - stops building the whole project]
+ * [set set - changes the value of a variable]
+ * [addvariables addvariables - adds all variables listed inside a section]
 
 WB076 added:
- * Loop
+ * [loop Loop]
 
 
 
 
 
-
-Command Blocks
-If the evaluation of an If condition is 'True', the command following the condition is processed. If the evaluation of an If condition is 'False', the command of the Else command (if present), is processed.
-In both cases, instead of a command, there can also be a command block.
-
-
-
-Bugs 
+<br>
+<br>
+----
+----
+==Bugs ==
 When a command doesn't work as expected you should follow these steps to ensure that it is a true bug and not a human error:
  * Check the source code and see if the syntax is correct
  * Add small tests to the used variables to check if the respective values are outputted correctly. (ex. echo,%myVariable%)
@@ -343,17 +320,12 @@ When a command doesn't work as expected you should follow these steps to ensure 
  * Check if there aren't any external interferences as locked files or no disk space on the target folder
  * Try whenever possible from a fresh project to avoid any chance of corrupted files or invalid project settings
 
-If none of the above solves your issue then here's the recommended way�to proceed:
+If none of the above solves your issue then here's the recommended way to proceed:
  * Visit the community forums and search for similar reports of the same behavior as you notice
  * If a similar case is found you should post a reply on this topic, otherwise start a new topic in the appropriate category
  * Writing advice before posting a bug : Include a descriptive title in your message including your log.html file and a test script so that it can be debugged and used by others
 
 Log of changes 
-Changes in script language can be followed in each newer WinBuilder beta discussion where changes to the script code are suggested and debugged by other members.�
-Projects also follow their own script rules and these methods can change occasionally, whenever in doubt you should post your questions in each project forum discussion.
-Please let us know if this page is not complete or if you still haven't found needed information.
-
-
-
-===The `[Interface]` section===
-While this is important to scripts we'll be referring to it in another chapter.
+ * Changes in script language can be followed in each newer WinBuilder beta discussion where changes to the script code are suggested and debugged by other members. 
+ * Projects also follow their own script rules and these methods can change occasionally, whenever in doubt you should post your questions in each project forum discussion.
+ * Please let us know if this page is not complete or if you still haven't found needed information.
