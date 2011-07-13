@@ -8,7 +8,7 @@ Contents
    * [wbcompatbugs#Bugs Reporting Bugs]
    * [wblicense License]
  * Scripts
-   * [wbscripts Scripts]
+   * [wbscriptsyntax Scripts]
      * [wbscriptescape Escape Character Usage]
      * [wbgui-interface-builder Interface]
    * [wbscriptlinks Link Files]
