@@ -1,97 +1,24 @@
 =Add=
 
- * [add#Add,DesktopIni DesktopIni]
- * [add#Add,URL URL]
+The `Add` command has two separate sub-commands
 
-----
-----
-.
+ * [add#- Add,DesktopIni]
+ * [add#Add,URL Add,URL]
 
-.
+Documentation for them is provided below.
 
-.
-
-.
-
-.
-
-.
-
-.
+<br>
 
 
-.
-
-.
-
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-
+<wiki:comment>
+His funny "dash" is to provide an internal anchor for the following command, since it has mixed case (looks like a Wiki word) and has a comment
+</wiki:comment>
+====-====
 ----
 ----
 
-==!Add,DesktopIni==
+<br>
+=Add,DesktopIni=
 
 ==Syntax==
 {{{
@@ -133,11 +60,17 @@ Add,DesktopIni,Path,%Target_PE%\AFolder,.ShellClassInfo,IconFile,#$pSystemRoot#$
 Add,DesktopIni,Path,%Target_PE%\AFolder,.ShellClassInfo,IconIndex,25
 }}}
 
-----
+<br>
+ 
+<br>
+
 
 ----
 
-==Add,URL==
+----
+<br>
+
+=Add,URL=
 
 ==Syntax==
 {{{
