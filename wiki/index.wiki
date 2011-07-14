@@ -106,7 +106,7 @@
    * [hive_unload Hive_Unload]
    * [not_compatible Not_Compatible]
    * [process_log Process_Log]
-   * [read_env ReadENV]
+   * [readenv ReadENV]
    * [reg_add Reg_Add]
    * [reg_del Reg_Del]
    * [reg_import Reg_Import]
