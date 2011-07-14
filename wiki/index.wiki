@@ -53,7 +53,7 @@ Contents
      * [txtdelline TxtDelLine]
      * [txtdelspaces TxtDelSpaces]
      * [txtdelemptylines TxtDelEmptyLines]
-   * [wbscriptsyntax#IF_ Clauses_and_Command_Blocks IF Clauses and Command Blocks]
+   * [wbscriptsyntax#IF_Clauses_and_Command_Blocks IF Clauses and Command Blocks]
    * [wbscriptsyntax#Retrieve_Functions Retrieve Functions]
      * [retrieve#FolderSize FolderSize]
      * [retrieve#FileSize FileSize]
