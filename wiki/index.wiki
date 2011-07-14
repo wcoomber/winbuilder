@@ -113,8 +113,8 @@
    * [regaddboot RegAddBoot]
    * [register_file Register_File]
    * [require_file Require_File]
-   * [reguire_fileq Require_FileQ]
-   * [reguiresysfile RequireSysFile _deprecated_]
+   * [require_fileq Require_FileQ]
+   * [requiresysfile RequireSysFile _deprecated_]
    * [runfromcd RunFromCD]
    * [runfromram RunFromRam]
    * ScriptInterface,Read
