@@ -1,14 +1,18 @@
 Contents 
  * [wbwelcome Welcome and Overview]
+   * [wbwelcome Overview]
    * [wbscriptsyntax Scripts]
    * [wbtools Tools]
    * [wbcompatbugs#Compatibility Compatibility]
    * [wbcompatbugs#Bugs Reporting Bugs]
    * [wblicense License]
  * [wbscriptsyntax Scripts]
+   * [wbscriptsyntax Scripts]
      * [wbscriptsyntax#Syntax_Rules_and_Escape_Characters Syntax Rules]
      * [wbscriptsyntax#Syntax_Rules_and_Escape_Characters Escape Characters]
      * [wbscriptsyntax#File_Structure File Structure]
+   * Variables
+   * !WinBuilder Interface
    * [wbscriptsyntax#Script_Command_Categories Script Command Categories]
      * [wbscriptsyntax#File_Operations File Operations]
       * [filecopy FileCopy]
@@ -79,7 +83,6 @@ Contents
   * Syntax
    * Winbuilder 080
    * Winbuilder 082
-   * Variables
  * Common API
    * [calculate _Calculate]
    * [add_ass Add_Asso]
