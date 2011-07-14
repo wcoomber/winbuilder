@@ -104,7 +104,7 @@
    * [copyprogram CopyProgram]
    * [hive_load Hive_Load]
    * [hive_unload Hive_Unload]
-   * [notcompatible Not_Compatible]
+   * [not_compatible Not_Compatible]
    * [process_log Process_Log]
    * [read_env ReadENV]
    * [reg_add Reg_Add]
