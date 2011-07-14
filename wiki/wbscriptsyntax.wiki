@@ -1,4 +1,10 @@
 =Scripts=
+ * Quick Links
+   * [wbscriptsyntax#Syntax_Rules_and_Escape_Characters Syntax Rules and Escape Characters]
+   * [wbscriptsyntax#File_Structure File Structure]
+   * [wbscriptvariables  Variables]
+   * [wbinterface_gui WinBuilder Interface]
+   * [wbscriptlinks Link Files]
 
 Script files use a very simple to understand language to run their commands and actions. In general terms these files use the extension .script and can be edited with any text editor or using the internal editor from WinBuilder. 
 
