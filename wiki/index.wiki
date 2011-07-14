@@ -114,12 +114,12 @@
    * [register_file Register_File]
    * [require_file Require_File]
    * [require_fileq Require_FileQ]
-   * [requiresysfile RequireSysFile _deprecated_]
+   * [requiresysfile RequireSysFile]
    * [runfromcd RunFromCD]
    * [runfromram RunFromRam]
-   * ScriptInterface,Read
-   * ScriptInterface,State
-   * ScriptInterface,Write
+   * [scriptinterface_read ScriptInterface,Read]
+   * [scriptinterface_state ScriptInterface,State]
+   * [scriptinterface_write ScriptInterface,Write]
    * [select_case Select_Case]
    * [unpack Unpack]
  * VistaPE API
