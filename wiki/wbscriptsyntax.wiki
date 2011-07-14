@@ -1,4 +1,3 @@
-<wiki:toc max_depth="4" />
 =Scripts=
 
 Script files use a very simple to understand language to run their commands and actions. In general terms these files use the extension .script and can be edited with any text editor or using the internal editor from WinBuilder. 
@@ -13,6 +12,10 @@ In general, the syntax is very simple - i.e. keywords for functions with the par
 }}}
 
 You can also add additional files inside your scripts. These files are stored as attachments in a process very similar to the way email messages used to include binary files - i.e. they are "encoded" into an ASCII format. This way you can share your scripts in discussion forums with all the needed tools inside.
+
+Script files can perform both specific and generic functions. Some scripts will be responsible for creating the base structure of the project while others will be used to add extra functionality and programs.
+
+These scripts can also use a very specific model that only works on a single project and cannot be successfully used on another project unless it also shares the same model as the original project from where it came. The model consists of functions and variables stored in scripts.
 
 ==Syntax Rules and Escape Characters==
 
@@ -47,15 +50,12 @@ Now the problem occurs when it is not possible to determine what is meant.  For 
 
 You see how important it is to follow the rules, even if !WinBuilder understands most violations correctly.
 
-==Script Files==
-Script files can perform both specific and generic functions. Some scripts will be responsible for creating the base structure of the project while others will be used to add extra functionality and programs.
 
-These scripts can also use a very specific model that only works on a single project and cannot be successfully used on another project unless it also shares the same model as the original project from where it came. The model consists of functions and variables stored in scripts.
+==File Structure==
 
 Let's start by looking at the structure of a typical script file.
 We use sections to group commands and settings inside script files. The easiest way to see how they are applied is to edit a few scripts and look at the source code to learn more about them.
 
-===File Structure===
 
 A typical script is composed of at least these 3 important sections
  # Main - will keep all details that identify your script
@@ -247,6 +247,7 @@ Description of commands
 If the evaluation of an If condition is 'True', the command following the condition is processed. If the evaluation of an If condition is 'False', the command of the Else command (if present), is processed.
 In both cases, instead of a command, there can also be a command block.
 
+ * [if If / Else Clauses]
 
 <br>
 ----
@@ -305,4 +306,3 @@ Under this category you find the commands which aren't grouped under any specifi
 WB076 added:
 
  * [loop Loop]
-
