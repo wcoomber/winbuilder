@@ -290,9 +290,9 @@ Functions on this category allow you to work with the network environment whenev
 
 Under this category you find the commands which aren't grouped under any specific category but are still quite used on most scripting tasks.
  * [run run / exec - runs a section from a script file]
- * [shellexecute - launches an external file]
-   * [shellexecutedelete ]
-   * [shellexecute]] 
+ * [shellexecute ShellExecute - launches an external file]
+   * [shellexecutedelete ShellExecuteDelete ]
+   * [shellexecuteex ShellExecuteEx ] 
  * [beep beep - uses the system speaker]
  * [message message - outputs a message window]
  * [system system - used to refresh values on the program itself]
