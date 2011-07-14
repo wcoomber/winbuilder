@@ -1,4 +1,4 @@
-=!ReadENV=
+=ReadENV=
 
 ==Syntax==
 {{{
