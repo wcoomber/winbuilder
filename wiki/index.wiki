@@ -87,7 +87,7 @@
    * Winbuilder 082
  * Common API
    * [calculate _Calculate]
-   * [add_ass Add_Asso]
+   * [add_asso Add_Asso]
    * [add#DesktopIni Add,DesktopIni]
    * [add_pin Add_Pin]
    * [add#Shortcut Add,Shortcut]
