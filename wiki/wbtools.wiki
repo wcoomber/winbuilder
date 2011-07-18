@@ -1,209 +1,123 @@
+<h1>
 Tools 
-Contents 
-* Overview
-* Compatibility
-* Internal Tools
-* Script editor
-* Backup
-* Create new script
-* Convert tool
-* Upload 
-* FTP client
-* New Web Server
-* Single script upload
-* Options
-* Language
-* CodeBox
-* Web
-* Help system
-* Third Party tools (look in Overview)
-* FAQ
-* Bugs
+</h1>
+<wiki:toc max_depth="2" />
+
+=Overview =
+There are many tools that can be used to assist in the development of scripts or to help in the process of completing a project. In addition, there are also some tools available for specific tasks.
+
+We can divide these Tools under two categories and will also describe in more detail the internal !WinBuilder tools. These tools were added with the purpose of combining the several steps necessary to produce, test, run and publish new scripts. 
+
+Whenever this information is not complete enough and you have doubts on how to make things work, don't hesitate in placing your questions on our forum so that aditional information can be added to these pages. We also welcome requests on [http://reboot.pro the forum] for new tools to be added in the future.
+
+==Compatibility==
+These tools were created with the intention to work under Windows 32 bit environments since Windows 95 up to Windows Vista. No major compatibility issues are present, except for limitations specific to individual tool.  For example, tools like WimUtil should be executed on NTFS partitions to properly handle WIM images.
+
+You might also be required to run some of these tools under an account with Administrative level privileges. 
 
 
+=Internal Tools and Settings =
 
-
-Overview 
-This page will focus the tools that can be used to assist scripts in the process of completing a project or tools available for some specific tasks.
-
-We can divide these Tools under two categories and will describe each one of internal WinBuilder tools.
-* Internal tools and settings
-* Third party tools
-* H7SE plugin Builder
-* MakeScript
-
-
-
-These tools were added with the purpose of combining the several steps necessay to produce, test, run and publish new scripts. Whenever this information is not complete enought and you have doubts on how to make things work, don't hesitate in placing your questions on our forum so that aditional information can be added on these pages.
-
-We also welcome requests for new tools to be added in the future.
-
-
-Compatibility
-These tools were added with the intention to work under Windows 32 bit environments since Windows 95 up to Windows Vista. Not major compatibility issues are present, except for some tools like WimUtil who should be executed on NTFS partitions to properly handle WIM images.
-
-You might also require to run some of these third party tools under an account with Administrative level.  
-
-
-
-Internal Tools and Settings 
-
-As mentioned on the introduction we will now detail each one of the tools that are included inside WinBuilder.exe - some of the focused tools might only be available from more recent wb versions. 
-
-Please use the latest published binaries or stable beta releases to ensure the best results.
+As mentioned in the Overview, we will now detail each one of the tools that are included inside WinBuilder.exe
+ Some of the focused tools might only be available from more recent wb versions. Please use the latest published binaries or stable beta releases to ensure the best results.
 
 If you find any bugs that need to be corrected, please let us know so that they can be solved quickly - thanks! 
 
+==Script Editor ==
+Scripts are not static and you can edit or modify them as needed - this is a very simple and intuitive process. Select the script you wish to edit from the Main window and then click on the Edit button (the small icon that looks like a little wrench). This script editor contains several tabs - each one with a specific purpose
 
-
-Script Editor 
-
-Scripts are not static and you can edit or modify them as needed - this is a very simple and intuitive process.
-
-
-Select the script you wish to edit from the Main window and then click on the Edit button
-
+http://winbuilder.googlecode.com/svn/wiki/images/script_edit.png
 
 Note: Clicking on the logo image of the script will also enter edit mode.
 
 
-This script editor contains several tabs - each one with a specific purpose
-* Interface Editor
-* Description
-* Attachments
-* Options
-* Source Code
-
-
-Interface Editor
-
+===Interface Editor===
 
 With this tool you can manage the objects placed within the interface of the script. These objects are very simple to handle. You just need to press the add button and select the object you wish to add from a list. 
 
 If you wish to remove a component you should select it and then press the delete button. 
 
-Selecting an object will also allow you to resize it and add your customizations. You don't need to edit
+Selecting an object will also allow you to resize it and add your customizations. Some scripts have this interface locked - clicking on the small lock at the upper-right corner will unlock the interface.
 
-Some scripts have this interface locked - clicking on the small lock at the upper-right corner will unlock the interface.
+You can also select multiple items.  To do this, use the SHIFT button when selecting the various items you wish to adjust as a group.
 
-There is a known issue when you are working with only one object - to solve this little annoyance you can either add another object to allow reselect it or leave and re-enter edit mode. It should be corrected soon.
-
-
-Description
-
+===Description===
 
 On this tab you can write the details that will be mentioned on the [main] section of your scripts.
 
 It also lets you select a logo image to help identify your script. You can use images in some popular formats like BMP, JPG and GIF - animated Gif's are also supported.
 
-
-
-Attachments
-
-
+===Attachments===
 Use this tool to add files inside your scripts. 
 
-To allow your script to properly include binary files and still be editable with any text editor - these files will be encoded using a process similar to the attachments included inside email messages.
+To allow your script to properly include binary files and still be editable with any text editor - these files will be encoded into an text form. These files can later be extracted while the script is running to the location you wish. 
 
-When adding your files, please be careful not to include big sized files or software that is not authorized to be freely distributed inside scripts.
+ *When adding your files, please be careful not to include very large files or software that is not authorized to be freely distributed inside scripts.*
 
-The interface is very similar to any other archiving utility like 7zip and you should be able to quickly learn how to use it properly.
+===Options===
 
-These files can later be extracted while the script is running to the location you wish. Look here for more details
-
-
-
-Options
-
-
-On this tab you can change the behavior of the script when it is enabled from the main window.
-
-It was added to ensure that other required scripts or even other scripts that are incompatible get disabled or enabled to automatically to help users.
-* Dependencies - all scripts listed here will be enabled whenever possible
-* Disable - the scripts on this list will be disabled if they are enabled on your project.
-
+On this tab you can change the behavior of the script when it is enabled from the main window. It was added to ensure that other required scripts or even other scripts that are incompatible get disabled or enabled to automatically to help users.
+ * Dependencies - all scripts listed here will be enabled whenever possible
+ * Disable - the scripts on this list will be disabled if they are enabled on your project.
 
 In each box you can specify the path to the scripts you wish to control. To avoid using static paths you can use these variables to make the path dynamic
-* %ProjectDir% - is the full path to your project folder
-* %ScriptDir% - it's the path where this script is located
-* %BaseDir% - is the path where WinBuilder.exe was executed from (base)
+ * %ProjectDir% - is the full path to your project folder
+ * %ScriptDir% - it's the path where this script is located
+ * %BaseDir% - is the path where WinBuilder.exe was executed from (base)
 
 You can also list more than one script on this text box, just split each script with a comma.
 
-Inside this tab you also find some good examples on how it should be used.
+===Source Code===
+
+This tab allows you to edit the source code of your script. It's the place where you can view and add your commands. 
+
+There is a built in syntax help system. To use it, just press the right-click button of your mouse to view a menu that contains all available commands.  Once you select a command it will be added in the place where your cursor is placed.
+
+----
+  http://winbuilder.googlecode.com/svn/wiki/images/script_source-code_menu.png
+----
+
+This command will also contain a quick template of the proper syntax as an example to show how to use it. With this menu you won't need to memorize all functions.
 
 
+==The Tools Tab==
+There are many options and tools available by selecting the tools function 
 
-Source Code
+===Options ===
 
+The options tab allows to change some settings to work as you prefer or read more informations about wb.
 
-This tab allows you to edit the source code of your script.
+ * Local Registry 
+ This box contains settings that allow you to write associate winbuilder related files to open with your favourite text editor. You have the option to add the file association on your registry and later removed if needed.
 
-It's the place where you can view and add your commands. To help you on this task you can press the right-click button of your mouse to view a menu that contains all available commands.
+ You can also make wb ensure that these script files are predefined to your text editor when the program is starting up.
 
-This menu will help to perform tests quickly and browse all available functions. Once you select a command it will be added in the place where your cursor is placed.
+ * Log Options
+ Control the behavior of your log window after a project is concluded. The first option "View in browser after saving" means that when you press the Save log button inside the log window your log.html file will be created and opened using you favorite browser.
 
-This command will also contain a quick template of the proper syntax as an example to show how to use it. With this menu you won't need to memorize all functions.
+ The option "Open log window after process" will show you the contents of the log window when your project has finished running all scripts. This is an useful option when debugging your projects and scripts.
 
+ * Network support 
+ You can enable or disable network support inside WinBuilder. This applies to
+  * Web tab
+  * Download Center
+  * FTP client
+  * New Download Server
+  * Single script upload
 
+Use this option under restricted environments where the program is not authorized to access the internet.
 
-
-Changes on the [interface] and [main] sections are ignored for security reasons. 
-
-
-
-
-
-
-Backup 
-This tool can be found inside the Tools menu when you click the "Tools" button on top of the program.
-
-What sort of backup is done?
-
-It will simply copy the contents of the selected folders to a new folder that is labeled with a date and displayed on the list of backups window.
-
-You can select to backup the following folders
-* Projects
-* Target
-* ISO
-
-There is also an option that allows to completely remove the copied folders after the backup is completed.
-
-This tool is mostly used to help starting wb in fresh condition - or to create multiple projects snapshots to test different results.
-
-You can restore each one the available backups using the available buttons, or browse the backup with any file manager.
-
-By default a folder called Backup is placed in the same folder where WinBuilder.exe is placed (%basedir%) and you can view all backuped files.
-
-
-
-
-
-Create new script 
+===Create new script ===
 
 This is a tool that helps creating new scripts and use a small set of templates and wizards to make this process as user friendly as possible.
 
-To create a new script you will only need to specify where you wish to place it on the "Location" box and write a filename under the "Filename" box.
+To create a new script you will only need to specify where you wish to place it using the "Location" box and write a filename under the "Filename" box.
 
 On the right you find a text window that is already filled with some default values.
 
 Pressing the create button will create a script with details and code you've written.
 
-
-Using the templates tab
-
-Inside this tool you also find a tab called "Templates" - this tool helps you browse some specific code templates that most of the coding and allow you to add pieces of code already written by other members.
-
-Inside this tab you will also find two special programs designed to assist you on the process of creating scripts. You can click on the MakeScript or H7SEpluginBuilder to start them - please add the details such as path and filename of the script you want to create on the "script" tab before launching them.
-
-Other templates are small text files that you can preview and add inside your code if you wish
-
-
-
-
-
-
-Convert Tool 
+===Convert Tool ===
 
 Use this tool to convert files from one file format into text compatible to be used inside scripts.
 
@@ -213,366 +127,67 @@ You can convert the following formats
 
 Please note that the bartPE plugins does not completely translates all code and will only help converting most of the plugin into usable script format - you will still need to edit and adapt the resulting code as needed
 
+===Upload ===
 
-Upload 
+This is a very important tool for everyone who wishes to create a new Download Server or upload their updated scripts. *_NEEDS MORE DETAIL_*
 
+===License Agreement ===
 
-This is a very important tool for everyone who wishes to create a new Download Server or upload their updated scripts.
+Clicking on the "View license Agreeement" box will open a new window that will display the terms of !WinBuilder's license. As you might know, this program is freeware for both personal and commercial uses - but distribution and usage has to comply under the terms of this license.
 
+It's not meant to be restrictive to the end user since !WinBuilder is always provided for free in good faith, but these are the formal terms in which !WinBuilder can legally be used and shared. These terms were needed to be written in order to avoid any abuse of rights in the future.
 
-Configuring your FTP details
+To avoid having to distribute !WinBuilder.exe along with a separate license file - these license terms were merged inside the binary itself where they are always available for everyone to read.
 
+===Language Support ===
 
-You only need to configure these upload tools once in most cases.
-
-The first tab is Settings - on this tab you find a box with the same name that contains the following fields
-* ftp:// - the path to your FTP server
-* WebServer Path - the path where your project is located
-* Username - you account username
-* Password - the security code to access the account
-
-
-There also another option on this tab
-
-Skip Upload Test - When you have this option selected, you will skip the test that will verify that a download server is already created 
-
-
-
-
-FTP Client
-
-
-WinBuilder has an internal FTP client that will allow you browse your FTP server. It will use the same settings provided on the previous tab.
-
-You only need to press the connect button if the Settings tab already contains your account details.
-
-It is the best way to test your settings to see if they are correct.
-
-
-
-
-
-New Web Server
-
-
-This tab will allow you to create a new Download Server that can later be used to share your projects and scripts with others.
-
-The Web Server is a copy of your Projects folder. 
-It will upload all files, scripts and projects from your Projects folder to a location on a network server using FTP.
-
-
-
-What do you need?
-
-Before starting you will need to have an FTP server to where you can upload your files. Popular .script developers on boot-land.net get an FTP account to host their work.
-
-
-What needs to be done before creating a web server?
-
-Before you start uploading anything please check the list below
-* Test your projects before uploading since this will be same way how users will download it.
-* Clean all personal settings that are only valid on your computer like paths to where your sources are placed, serial numbers from licensed software scripts, etc
-* Delete all temporary files created while your project was built - most projects are starting to place their temporary files outside the Projects folder, but you should still check to see if any clutter is left to clean from your folders.
-
-
-What needs to be done after uploading all files?
-
-It is recommended that test your newly created download server from an empty folder to see for sure that everything works as you expect.
-
-
-These web servers can sometimes contain hundreds of megabytes containing scripts and programs. You surely don't want to spend many hours uploading your projects folder just to discover that there was something wrong and you need to repeat the same process.
-
-
-
-Here's a little trick for quick testing and help you learn to use this tool
-
-
-
-Install an apache server on your computer - this may sound hi-tech-geek-dificult but it's not.
-
-I recommend you to use xammp because it's free, small and you can quickly make it work without fuss - it also comes with screenshots for each step you need to take.
-
-Download here: xammp
-
-I recommend that you download the 7-zipped version since you can control where you want to place it.
-
-
-Install xammp on a simple folder like c:\xammp (to avoid Vista possible UAC restrictions under Program Files) and you'll quickly be running your own webserver.
-
-
-You can test this server by typing localhost on your favourite web browser
-
-
-Configure the FTP server application (found on \xampp\FileZillaFTP) to use the same folder as the http server
-
-Look here for a description of the folder you'll find and configure the anonymous account from the ftp server (\xampp\anonymous) to start on the same folder as the HTTP server (\xampp\htdocs)
-
-When they both match they you will be uploading files from your FTP the same way as found on internet servers.
-
-For FTP account you can use anonymous leaving the password field empty.
-
-
-Having a local server is the perfect way to test everything since you can control everything and repeat the same tests over and over again without spending any bandwidth or waiting a long time for this operation to complete (both uploading and downloading).
-
-Once everything is the way as you expect - time to upload only once to the internet FTP server and share your project.
-
-
-
-
-More details about the New Web Server tool
-
-
-On this tab you also have the option to specify a title for your server - this title will be displayed whenever a user download the list of available files on the Download Center.
-
-The option "Skip file upload" will do as the name indicates and won't try to upload any files - it will create two new files on your projects folder: index.html and updates.ini - the html page is a web page containing the presentation for the scripts found inside your projects folder. Updates.ini is the file that contains a full description of values needed to know about the files availables for download.
-
-This option is used whenever you wish to use your favourite FTP client to upload your files. All you need to do is upload of all files inside your Projects folder to any location you wish.
-
-Look here for live examples of index.html and updates.ini
-
-
-
-
-
-
-
-
-Single script upload
-
-
-This is a feature that allows to upload an individual script to an already existent web server. 
-
-We've already detailed how to create a New Web Server and we could always overwrite it again to reflect the changes if needed, but why upload back all scripts since we only need to update one file?
-
-To answer this request, there's the option to click and immediately start uploading your script to the web server specified under the Settings tab.
-
-
-
-This is a very simple one-click operation.
-
-May take some extra seconds to authenticate on slow FTP servers while uploading (depending on the size of the script), please wait until this operation is completed and a message box is displayed.
-
-
-
-
-
-Options 
-
-The options tab allows to change some settings to work as you prefer or read more informations about wb.
-
-Can be grouped as
-* Local Registry
-* Log Window
-* Network support
-* License Agreement
-
-
-
-
-
-Local Registry 
-
-
-This box contains settings that allow you to write associate winbuilder related files to open with your favourite text editor. You have the option to add the file association on your registry and later removed if needed.
-
-You can also make wb ensure that these script files are predefined to your text editor when the program is starting up.
-
-
-
-
-
-Log Window 
-
-
-Control the behavior of your log window after a project is concluded. 
-
-The first option "View in browser after saving" means that when you press the Save log button inside the log window your log.html file will be created and opened using you favourite browser.
-
-The second option "Open log window after process" will show you the contents of the log window when your project has finished running all scripts. This is an usefull option when debugging your projects and scripts.
-
-
-
-
-
-Network support 
-
-
-You can enable or disable network support inside WinBuilder. 
-
-This applies to
-* Web tab
-* Download Center
-* FTP client
-* New Download Server
-* Single script upload
-
-Use this option under restricted environments where the program is not authorized to access the internet. 
-
-
-
-
-License Agreement 
-
-
-Clicking on the "View license Agreeement" box will open a new window that will display the terms of WinBuilder's license.
-
-As you might know, this program is freeware for both personal and commercial uses - but distribution and usage has to comply under the terms of this license.
-
-It's not meant to be restrictive to the end user since WinBuilder is always provided for free in good faith, but these are the formal terms in which WinBuilder can legally be used and shared. These terms were needed to be written in order to avoid any abuse of rights in the future.
-
-To avoid having to distribute WinBuilder.exe along with a separate license file - these license terms were merged inside the binary itself where they are always available for everyone to read.
-
-
-
-
-
-Language Support 
-
-WinBuilder can support multiple languages and users can submit their own language files.
-
-
-Each term to be translated uses a numeric key to allow the same term be applied on similar cases. This avoids having to write thousands of messages which would only become a very tedious task for anyone proposing himself to complete a translation.
+WinBuilder can support multiple languages and users can submit their own language files. Each term to be translated uses a numeric key to allow the same term be applied on similar cases. This avoids having to write thousands of messages which would only become a very tedious task for anyone proposing himself to complete a translation.
 
 Since our program is constantly changing values and adding new features - languages would grow outdated quite quickly and surely most translators wouldn't always be available to provide the needed updates.
 
 Whenever a language file is available, this program will compare it against the internal language database (in default english) and will add the missing terms. 
 
-This also means that even old translated language files that are not completed with the latest changes will still be valid to be used and you'll be able to complete yourself what needs to be corrected.
+This also means that even old translated language files that are not completed with the latest changes will still be valid to be used and you'll be able to complete yourself what needs to be corrected.
+
+ _*How to create your own language wb?*_ - You can start by clicking on this button from the Language tab
+----
+  http://winbuilder.googlecode.com/svn/wiki/images/winbuilder_add_language.png
+----
+ This button will open a box asking for a filename to describe your language. Use only english compatible characters and description so that it can be understood under as many languages as possible.
+
+ _*How to edit your language?*_ -  On the same tab you find the window that lists all values and corresponding translated terms - just write each term the way it best fits your language and press the save button.
+
+ _*Where do I find my language file?*_ - All language files are placed under `%BaseDir%\Projects\Tools\Languages` (remember that `%BaseDir%` is the same path from where you run WinBuilder). If this folder doesn't exist, English language is used as standard - when creating a new translation file this folder is automatically generated. You can edit any of these language files with a simple text editor.
+
+ _*How do I share my language file?*_ - Look on community forums for the language specific sub-forums where you might find more people that share the same language, if there isn't a forum created then you can post on the main winbuilder discussion forum
 
 
+===Code Box=== 
 
-How to create your own language wb?
-
-
-
-You can start by clicking on this button from the Language tab
-
-
-
-
-This button will open a box asking for a filename to describe your language. Use only english compatible characters and description so that it can be understood under as many languages as possible.
-
-Example
-Language: Português - Portugal
-Translation filename: Portuguese [Portugal]
-
-As you noticed - the English designation of the language was used.
-
-
-
-How to edit your language?
-
-On the same tab you find the window that lists all values and corresponding translated terms - just write each term the way it best fits your language and press the save button.
-
-
-Where do I find my language file?
-
-All language files are placed under %BaseDir%\Projects\Tools\Languages
-
-%BaseDir% is the same path from where you run WinBuilder
-
-If this folder doesn't exist, English language is used as standard - when creating a new translation file this folder is automatically generated.
-
-You can edit any of these language files with a simple text editor.
-
-
-
-How do I share my language file?
-
-Look on community forums for the language specific sub-forums where you might find more people that share the same language, if there isn't a forum created then you can post on the main winbuilder discussion forum
-
-
-
-We are always looking for volunters to help translating so consider yourself very welcome to contribute to this effort. Thank you.
-
-
-
-
-
-Code Box 
-
-Code box is a tool added to quickly help you test new commands. 
+Code box is a tool added to quickly help you test new commands. It is an _*Advanced*_ command and must first be enabled from the Options page.
 
 It will create a small template script that will be executed whenever you press the play button inside this tab. With this tool you can run commands to see how they work and view the results on the log window.
 
-You can also add commands using the right click menu in the same way as the internal source code editor
-
-Each code box script runs exactly under the same conditions as any other script inside your selected project, making this a good tool for debugging variables and commands.
+You can also add commands using the right click menu in the same way as the internal source code editor. Each code box script runs exactly under the same conditions as any other script inside your selected project, making this a good tool for debugging variables and commands.
 
 The code you add inside the Code Box is automatically saved inside a file called CodeBox.txt which can be found on the root of each project where you use it - this way we ensure that you can have a Code Box specific to a single project.
 
+==Download==
+
+The Download interface was added to help people keep in touch with the community. From this page you can quickly view the latest discussed topics from our forums.
 
 
+=Frequently Asked Questions =
 
+===Q: I want to create a new script with these tools, but I still have lots of doubts about scripting and all things that need to be done to get my programs working - where can I find more info?===
 
-Web 
+A: Perhaps the best help you can get is reading other scripts that work the way you need and apply them to run your programs.  Don't forget to also ask people whenever you find something a bit harder to understand or do, nobody knows everything from scratch so take one step at time and things will start to make sense quickly.
 
-The web tab was added to help people keep in touch with the community. 
-
-From the custom homepage you can quickly view the latest discussed topics from our forums and also read more pages that details the use of this program.
-
-WinBuilder's homepage is available here: http://boot-land.net/forums/wb.php
-
-
-If you have good php programming skills we would appreciate your help to make this page even more interactive and add aditional features that could help our community to share experiences and feedback in a better way.
-
-Everyone is invited to post their ideas and requests of things that should be added or changed on our homepage.
-
-
-
-
-
-Help system 
-
-This help system is a collection of web pages that are available on the internet where everyone can read them.
-
-To ease offline navigation, they automatically selected for download using the Download Center and whenever these pages became available on disk, a new tab called Help will become available.
-
-This way we ensure that help is quickly acessible, complete and updated as much as possible.
-
-All web pages once downloaded can be found inside %BaseDir%\Projects\Tools\Help
-
-%BaseDir% is the same path where WinBuilder.exe is placed
-
-
-
-Since all pages were written by humans - it is only understandable that you find some errors or grammar in sentences that need to be corrected. We keep trying to make the texts bug free and clear to follow.
-
-As always, you're very welcome to let us know if something needs to be added or corrected. We would really like to hear your opinion and thoughts since this is a true community effort where we can freely share our knowledge.
-
-
-
-
-
-
-Frequently Asked Questions 
-
-Q: I want to create a new script with these tools, but I still have lots of doubts about scripting and all things that need to be done to get my programs working - where can I find more info?
-A: Perhaps the best help you can get is reading other scripts that work the way you need and apply them to run your programs.  Don't forget to also ask people whenever you find something a bit harder to understand or do, nobody knows everything from scratch so take one step at time and things will start to make sense quickly.
-
-Q: One of the programs found inside the tools folder is very outdated and a more recent version has just come out - can we see it updated on the download servers?
-A: Sure it can! Sometimes it takes a bit longer to updated to newer versions but whenever possible it will be done.
-
-Q: I'm trying to create my own Web Server to share some project files with a few friends, how can I get an FTP server from boot land? 
-A: Hosting on boot-land.net is freely available for everyone who contributes in his own way to share his knowledge and work. Try exposing all your ideas and scripts on the forums where you'll surely get support from other members and even hosting if needed.
-
-Q: I'm trying to upload a script but it's not working - do you have any ideas why?
-A: It might be that you're using a proxy - at the moment you need to use a direct network connection do upload files. However, the Download Center should always work as long as you can also access the Internet with IE (it will share the same settings)
-
-
-
-
-Bugs 
-
-
-Bugs and requests are welcome on our discussion forum dedicated to these reports here
+=Bugs =
+Bugs and requests are welcome on our discussion forum dedicated to these reports here.
 
 Please remember to add as much details as possible and it would also help if you described exactly how this bug can be reproduced.
 
 Also check if you're also using the latest version since a lot of bugs tend to be corrected as new versions become available.
 
-
 Whenever in doubt you can also help yourself and use the Search function inside the forums to find other members who might have reported similar cases to yours. You might even find answers to how they've solved the same issue or add your comment to ensure that it gets solved sooner.
-
-
-Please let us know if this page is not complete or if you still haven't found needed information.
