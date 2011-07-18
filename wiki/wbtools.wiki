@@ -15,23 +15,17 @@ These tools were created with the intention to work under Windows 32 bit environ
 
 You might also be required to run some of these tools under an account with Administrative level privileges. 
 
-
-=Internal Tools and Settings =
-
-As mentioned in the Overview, we will now detail each one of the tools that are included inside WinBuilder.exe
- Some of the focused tools might only be available from more recent wb versions. Please use the latest published binaries or stable beta releases to ensure the best results.
-
-If you find any bugs that need to be corrected, please let us know so that they can be solved quickly - thanks! 
-
-==Script Editor ==
+<br>
+----
+=Script Editor =
 Scripts are not static and you can edit or modify them as needed - this is a very simple and intuitive process. Select the script you wish to edit from the Main window and then click on the Edit button (the small icon that looks like a little wrench). This script editor contains several tabs - each one with a specific purpose
 
-http://winbuilder.googlecode.com/svn/wiki/images/script_edit.png
+  http://winbuilder.googlecode.com/svn/wiki/images/script_edit.png
 
 Note: Clicking on the logo image of the script will also enter edit mode.
 
 
-===Interface Editor===
+==Interface Editor==
 
 With this tool you can manage the objects placed within the interface of the script. These objects are very simple to handle. You just need to press the add button and select the object you wish to add from a list. 
 
@@ -41,20 +35,20 @@ Selecting an object will also allow you to resize it and add your customizations
 
 You can also select multiple items.  To do this, use the SHIFT button when selecting the various items you wish to adjust as a group.
 
-===Description===
+==Description==
 
 On this tab you can write the details that will be mentioned on the [main] section of your scripts.
 
 It also lets you select a logo image to help identify your script. You can use images in some popular formats like BMP, JPG and GIF - animated Gif's are also supported.
 
-===Attachments===
+==Attachments==
 Use this tool to add files inside your scripts. 
 
 To allow your script to properly include binary files and still be editable with any text editor - these files will be encoded into an text form. These files can later be extracted while the script is running to the location you wish. 
 
  *When adding your files, please be careful not to include very large files or software that is not authorized to be freely distributed inside scripts.*
 
-===Options===
+==Options==
 
 On this tab you can change the behavior of the script when it is enabled from the main window. It was added to ensure that other required scripts or even other scripts that are incompatible get disabled or enabled to automatically to help users.
  * Dependencies - all scripts listed here will be enabled whenever possible
@@ -67,23 +61,23 @@ In each box you can specify the path to the scripts you wish to control. To avoi
 
 You can also list more than one script on this text box, just split each script with a comma.
 
-===Source Code===
+==Source Code==
 
 This tab allows you to edit the source code of your script. It's the place where you can view and add your commands. 
 
 There is a built in syntax help system. To use it, just press the right-click button of your mouse to view a menu that contains all available commands.  Once you select a command it will be added in the place where your cursor is placed.
 
-----
   http://winbuilder.googlecode.com/svn/wiki/images/script_source-code_menu.png
-----
 
 This command will also contain a quick template of the proper syntax as an example to show how to use it. With this menu you won't need to memorize all functions.
 
 
-==The Tools Tab==
+<br>
+----
+=The Tools Tab=
 There are many options and tools available by selecting the tools function 
 
-===Options ===
+==Options ==
 
 The options tab allows to change some settings to work as you prefer or read more informations about wb.
 
@@ -107,7 +101,7 @@ The options tab allows to change some settings to work as you prefer or read mor
 
 Use this option under restricted environments where the program is not authorized to access the internet.
 
-===Create new script ===
+==Create new script ==
 
 This is a tool that helps creating new scripts and use a small set of templates and wizards to make this process as user friendly as possible.
 
@@ -117,7 +111,7 @@ On the right you find a text window that is already filled with some default val
 
 Pressing the create button will create a script with details and code you've written.
 
-===Convert Tool ===
+==Convert Tool ==
 
 Use this tool to convert files from one file format into text compatible to be used inside scripts.
 
@@ -127,11 +121,11 @@ You can convert the following formats
 
 Please note that the bartPE plugins does not completely translates all code and will only help converting most of the plugin into usable script format - you will still need to edit and adapt the resulting code as needed
 
-===Upload ===
+==Upload ==
 
 This is a very important tool for everyone who wishes to create a new Download Server or upload their updated scripts. *_NEEDS MORE DETAIL_*
 
-===License Agreement ===
+==License Agreement ==
 
 Clicking on the "View license Agreeement" box will open a new window that will display the terms of !WinBuilder's license. As you might know, this program is freeware for both personal and commercial uses - but distribution and usage has to comply under the terms of this license.
 
@@ -139,7 +133,7 @@ It's not meant to be restrictive to the end user since !WinBuilder is always pro
 
 To avoid having to distribute !WinBuilder.exe along with a separate license file - these license terms were merged inside the binary itself where they are always available for everyone to read.
 
-===Language Support ===
+==Language Support ==
 
 WinBuilder can support multiple languages and users can submit their own language files. Each term to be translated uses a numeric key to allow the same term be applied on similar cases. This avoids having to write thousands of messages which would only become a very tedious task for anyone proposing himself to complete a translation.
 
@@ -150,9 +144,9 @@ Whenever a language file is available, this program will compare it against the 
 This also means that even old translated language files that are not completed with the latest changes will still be valid to be used and you'll be able to complete yourself what needs to be corrected.
 
  _*How to create your own language wb?*_ - You can start by clicking on this button from the Language tab
-----
+
   http://winbuilder.googlecode.com/svn/wiki/images/winbuilder_add_language.png
-----
+
  This button will open a box asking for a filename to describe your language. Use only english compatible characters and description so that it can be understood under as many languages as possible.
 
  _*How to edit your language?*_ -  On the same tab you find the window that lists all values and corresponding translated terms - just write each term the way it best fits your language and press the save button.
@@ -161,8 +155,10 @@ This also means that even old translated language files that are not completed w
 
  _*How do I share my language file?*_ - Look on community forums for the language specific sub-forums where you might find more people that share the same language, if there isn't a forum created then you can post on the main winbuilder discussion forum
 
-
-===Code Box=== 
+<br>
+----
+=Other Tools=
+==Code Box== 
 
 Code box is a tool added to quickly help you test new commands. It is an _*Advanced*_ command and must first be enabled from the Options page.
 
@@ -172,17 +168,21 @@ You can also add commands using the right click menu in the same way as the inte
 
 The code you add inside the Code Box is automatically saved inside a file called CodeBox.txt which can be found on the root of each project where you use it - this way we ensure that you can have a Code Box specific to a single project.
 
-==Download==
+===Download===
 
 The Download interface was added to help people keep in touch with the community. From this page you can quickly view the latest discussed topics from our forums.
 
 
+<br>
+----
 =Frequently Asked Questions =
 
 ===Q: I want to create a new script with these tools, but I still have lots of doubts about scripting and all things that need to be done to get my programs working - where can I find more info?===
 
 A: Perhaps the best help you can get is reading other scripts that work the way you need and apply them to run your programs.  Don't forget to also ask people whenever you find something a bit harder to understand or do, nobody knows everything from scratch so take one step at time and things will start to make sense quickly.
 
+<br>
+----
 =Bugs =
 Bugs and requests are welcome on our discussion forum dedicated to these reports here.
 
