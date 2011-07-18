@@ -21,8 +21,8 @@ This is a very powerful construct, since the `<command>` specified can be
 
 ====List of available IF conditions====
  * [if#Exist...  Exist... / NotExist...]
- * [if#EQUAL Equal / Smaller / Bigger / NotEqual]
- * [if#PING Ping]
+ * [if#Equal Equal / Smaller / Bigger / NotEqual]
+ * [if#Ping Ping]
  * [if#Online Online]
  * [if#License License / NotLicense]
  * [if#Not Not]
