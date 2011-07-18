@@ -1,10 +1,12 @@
-=Application Scripts =
-
-==Overview ==
+<h1>
+Application Scripts
+</h1>
+<wiki:toc max_depth="3" />
+=Overview =
 
 Application Scripts is  how projects that use this method are able to create application scripts that are to be shared and used with different projects. These scripts are specifically designed to add programs to your projects.
 
-===Advantages===
+==Advantages==
  * Quickly allow you to write a new script that adds a program to a project with very few lines of code.
  * Easy to learn with very intuitive functions
  * Creates scripts compatible across different projects
@@ -12,15 +14,15 @@ Application Scripts is  how projects that use this method are able to create app
  * Available on the Create Script tab - only need to add your files and change the title, description and folder name
 
 
-===Disadvantages===
+==Disadvantages==
  * Very limited scope of functions, only basic functions are supported.
- * Targeted to smaller programs that need�few files and settings.
+ * Targeted to smaller programs that need few files and settings.
  * The target program needs to be freeware in most cases to be distributed with the script
  * Still in development 
 
 <br>
 ----
-==Usage ==
+=Usage =
 
 An application script isn't much different from "regular" scripts but it will take for granted that you follow a few definitions and rules and this way have enough conditions that are used by all compatible projects
 
@@ -48,35 +50,25 @@ As you may notice - very few lines are needed, also note that this script is com
 * Variables
 * Process
 
-===Settings on the [Main] section===
+==Settings on the `[Main]` section==
 
 * More settings in this section can be added but only Title, Description and Level are needed as a minimum.
 * Since this script is meant to add programs you need to use Level=5 value to group it with other similar scripts
 
-===Settings in the [variables] section===
+==Settings in the `[variables]` section==
 
- * %ProgramTitle% - Used as title for the created shortcuts
- * %ProgramEXE% - The executable file that should be launched when clicking on shortcut (no paths required, only filename) �
- * %ProgramFolder% - The name of the folder where all files should be placed
- * More details about the variables section
-  * %ProgramTitle% is the title of this program and we can use any description as desired, no need to be directly related to the exe or folder.
-  * %ProgramEXE% stands for Program Executable and is used as the target application that is launched when clicking on the respective shortcut (if created), it can also be used to launch any other files besides executables like text files, html pages, bat files, etc.
-  * %ProgramFolder% is the folder name where all files inside the script will be placed. You only need to add the folder name you wish to use, there's no need to add the full path. 
+ * %ProgramTitle% - Used as title for the created shortcuts. We can use any description as desired, no need to be directly related to the exe or folder.
+ * %ProgramEXE% - Program Executable used as the target application that is launched when clicking on the respective shortcut (if created), it can also be used to launch any other files besides executables like text files, html pages, bat files, etc.
+ * %ProgramFolder% - The folder name where all files inside the script will be placed. You only need to add the folder name you wish to use, there's no need to add the full path.
 
-===Settings in the [process] section===
+==Settings in the `[process`] section==
 This is the section that is executed when running the script so it's where we should place our functions.
 
-Let's list and explain each one of the available functions:
- * `Add_Shortcut,Desktop` - This function will add a shortcut on the desktop
- * `Add_Shortcut,AutoStart` - Mark your program to be included on the group of programs that runs on start up.
- * `Add_Shortcut,StartMenu,Games and Fun` - In this example you can add a shortcut on the start menu, notice that applying the aditional parameter as "Games and Fun" will place your shortcut inside a folder on the start menu with this name.
- * `unpack` - A very important function because it will do most of the hard work of adding the needed files to your project.
-
-====How does unpack work?====
-Very simple, just add all your files meant to be "unpacked" inside your script. By default all these files should be located on an archive called "Folder"
-
-For this task you can use the tools found inside !WinBuilder. Look under the script syntax page for more details on how to edit scripts and add files.
-
+Let's list and explain each one of the command functions used in the `[process]` section:
+ # `Add_Shortcut,Desktop` - This function will add a shortcut on the desktop
+ # `Add_Shortcut,AutoStart` - Mark your program to be included on the group of programs that runs on start up.
+ # `Add_Shortcut,StartMenu,Games and Fun` - In this example, we are adding a shortcut on the start menu. Notice that applying the additional parameter as "Games and Fun" will place your shortcut inside a folder on the start menu with this name.
+ # `unpack` - A very important function because it will do most of the hard work of adding the needed files to your project.  For more details, see the [unpack Common API command command reference page for the unpack command].
 
 <br>
 ----
