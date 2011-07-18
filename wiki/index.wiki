@@ -1,5 +1,5 @@
-=Index=
-==[wbwelcome WinBuilder Welcome and Overview]==
+=[wbwelcome WinBuilder]=
+ * [wbwelcome Welcome and Overview]
  * [wbtools Tools]
  * [wbscriptsyntax Script Files]
  * [wbscriptapplication Application Scripts]
