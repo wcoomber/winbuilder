@@ -12,21 +12,14 @@ Starting up is easy and you can do it in 3 steps. After downloading a project:
 
 =Overview =
 
-!WinBuilder is a flexible scripting environment that is well suited to building boot disks and other Windows "Pre-installation Enviroment" (or PE) images.
+!WinBuilder is a flexible scripting environment that is well suited to building boot disks and other Windows "Pre-installation Enviroment" (or PE) images. Using special scripts, this program can create different bootable environments based on the source that is used. 
 
-Using special scripts, this program can create different bootable environments based on the source that is used. 
-
-There are several projects available for winbuilder so please remember to read the instructions found inside each project to understand which compatible sources can be used. 
+There are several projects available for !WinBuilder so please remember to read the instructions found inside each project to understand which compatible sources can be used. 
 
 Some of the features to expect from !WinBuilder include:
+ * Many built-in tools to edit and create new scripts
  * Friendly User Interface
- * Users can freely select, download, and update new scripts from the internet
- * Scripts can be configured without needing to edit any code in most cases
+ * Scripts that in most cases, can be configured without needing to edit any code (i.e Scriptable GUI components)
  * Most scripts already come included with freeware applications
- * Customizable projects, everything can be customized and improved.
- * Many built-in tools to edit and create new scripts inside wb
- * Much smaller/efficient boot-disks and more flexibility to add changes.
- * Tool specially targeted for boot method challenges.
+ * Scripting Language and API specially targeted at Windows PE challenges.
  * Last but not least - A very active community 
-
-This help manual is also available as a single .chm file.
