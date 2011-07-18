@@ -6,19 +6,19 @@
      * [wbtools#Script_Editor Script Editor]
      * [wbtools#The_Tools_Tab Tools Tab]
      * [wbtools#Other_Tools Other Tools]
-   * [wbscriptsyntax Script Files]
-      * [wbscriptvariables Variables]
-      * [wbinterface_gui Graphical Interface]
-      * [wbscriptlinks Link Files]
+   * [index#Script_Files Script Files]
    * [wbscriptapplication Application Scripts]
    * [wbcompatbugs Compatibility]
    * [wbcompatbugs#Troubleshooting Troubleshooting]
    * [wbcompatbugs#Reporting_Bugs Reporting Bugs]
    * [wblicense License]
- * [wbscriptsyntax Script Files]
+=Script Files=
    * [wbscriptsyntax#Syntax_Rules_and_Escape_Characters Syntax Rules]
    * [wbscriptsyntax#Syntax_Rules_and_Escape_Characters Escape Characters]
    * [wbscriptsyntax#File_Structure File Structure]
+   * [wbscriptvariables Variables]
+   * [wbinterface_gui Graphical Interface]
+   * [wbscriptlinks Link Files]
    * [wbscriptapplication Application Scripts]
      * [wbscriptapplication#Overview Overview]
      * [wbscriptapplication#Usage Usage]
@@ -116,7 +116,7 @@
  * Additional Syntax
    * [wbscriptsyntax80 Winbuilder 080]
    * [wbscriptsyntax82 Winbuilder 082]
- * Common API
+ = Common API=
    * [calculate _Calculate]
    * [add_asso Add_Asso]
    * [add#DesktopIni Add,DesktopIni]
