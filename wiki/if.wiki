@@ -20,7 +20,7 @@ This is a very powerful construct, since the `<command>` specified can be
 *ANY* valid script command.  This was further enhanced with the addition of command blocks using [begin_end Begin / End], which allows multiple commands to be executed. 
 
 ====List of available IF conditions====
- * Exist... / !NotExist...
+ * [if#Exist..._/_!NotExist... Exist... / !NotExist...]
  * Equal / Smaller / Bigger / !NotEqual
  * Ping
  * Online
@@ -31,7 +31,7 @@ This is a very powerful construct, since the `<command>` specified can be
 <br>
 ----
 
-==
+=Exist... / !NotExist...=
 You can use these test to determine if a file, directory, script section, or variable does or does not exist. If this test is true, then a Command is executed. 
  Avaialable tests include:
 || !ExistFile || !NotExistFile||
