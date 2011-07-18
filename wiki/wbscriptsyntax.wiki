@@ -194,7 +194,7 @@ List of available functions
 <br>
 ----
 ----
-==INI manipulation==
+==INI Manipulation==
 
 This category contains commands that were created to work with INI based text files. INI files group information using a few rules, it is also very easy to understand and edit when needed.
 
