@@ -20,7 +20,7 @@ This is a very powerful construct, since the `<command>` specified can be
 *ANY* valid script command.  This was further enhanced with the addition of command blocks using [begin_end Begin / End], which allows multiple commands to be executed. 
 
 ====List of available IF conditions====
- * [if#Exist..._/_!NotExist... Exist... / !NotExist...]
+ * [if#Exist..._/_!NotExist... Exist... / NotExist...]
  * Equal / Smaller / Bigger / !NotEqual
  * Ping
  * Online
