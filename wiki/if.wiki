@@ -21,12 +21,12 @@ This is a very powerful construct, since the `<command>` specified can be
 
 ====List of available IF conditions====
  * [if#Exist...  Exist... / !NotExist...]
- * Equal / Smaller / Bigger / !NotEqual
- * Ping
- * Online
- * License / !NotLicense
- * Not
- * Question
+ * [if#EQUAL Equal / Smaller / Bigger / !NotEqual]
+ * [if#PING Ping]
+ * [if#Online Online]
+ * [if#License License / !NotLicense]
+ * [if#Not Not]
+ * [if#Question Question]
 <br>
 <br>
 ----
@@ -73,7 +73,8 @@ If,ExistVar,%var%,Message,"'%var%' does exist",Information
 
 <br>
 ----
-=IF Equal / Smaller / Bigger / !NotEqual=
+=Equal=
+=Smaller / Bigger / !NotEqual=
 
 This set of `IF` clauses can compare numeric values as well as text strings.
 {{{
@@ -90,7 +91,7 @@ If,%myVariable%,Equal,10,FileCreateBlank,c:\myFile.txt
 
 <br>
 ----
-=IF Ping=
+=Ping=
 
 Ping will test if a given IP is valid and run a command if this test is true.
 {{{
@@ -107,7 +108,7 @@ If,ping,winbuilder.net,FileCreateBlank,c:\myFile.txt
 
 <br>
 ----
-=IF Online=
+=Online=
 
 This command will test if the computer is online and run a command if this test is true.
 {{{
@@ -122,7 +123,8 @@ If,online,FileCreateBlank,c:\myFile.txt
 
 <br>
 ----
-=IF License / !NotLicense=
+=License=
+=!NotLicense=
 
 This command was added to be used as tool to accept a license agreement whenever needed. It will open a special tab where the user has the option to read the terms of the license and then press a button corresponding to his decision to agree or not with the displayed terms.
 {{{
@@ -143,7 +145,7 @@ If,NotLicense,c:\myEULA.txt,halt,"User doesn't agree with license."
 
 <br>
 ----
-==IF Not==
+=Not=
 
 This syntax was introduced to simplify the addition of future conditions.  It basically changes the "sense" of the check from true to false. 
  In other words, the statement `If,Not,%var1%,EQUAL,%var2%,command` is equivalent to `If,%var1%,NOTEQUAL,%var2%,command`.
@@ -160,7 +162,7 @@ If,Not,%var1%,EQUAL,%var2%,FileCreateBlank,C:\myFile.txt
 
 <br>
 ----
-==If Question==
+=Question=
 
 Asks the user a question, and uses their response to determine if the command should be executed. Note: all strings defined in the language files can be used like variables, identified by their ID number $#nnnn.
 {{{
