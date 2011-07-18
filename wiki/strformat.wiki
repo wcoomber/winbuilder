@@ -1,9 +1,19 @@
-<h1>
-String Formatting
-</h1>
+=String Formatting=
+!WinBuilder has some string formatting capabilities which are documented below.
 
-!WinBuilder has some limited string formatting capabilities which are documented below.
-<wiki:toc max_depth="1" />
+ * [strformat#INC/DEC/MULT/DIV  INC / DEC / MULT / DIV ]
+ * [strformat#FILENAME/PATH/EXT    FILENAME / PATH / EXT ]
+ * [strformat#BYTES    BYTES ]
+ * [strformat#DATE    DATE ]
+ * [strformat#CEIL/FLOOR    CEIL / FLOOR ]
+ * [strformat#LTRIM/RTRIM/CTRIM/NTRIM    LTRIM / RTRIM / CTRIM / NTRIM ]
+ * [strformat#LEFT/RIGHT    LEFT / RIGHT ]
+ * [strformat#REPLACE/REPLACEX    REPLACE / REPLACEX ]
+ * [strformat#SPLIT    SPLIT]
+ * [strformat#SHORTPATH/LONGPATH    SHORTPATH / LONGPATH]
+ * [strformat#CHARTOOEM/OEMTOCHAR    CHARTOOEM / OEMTOCHAR]
+ * [strformat#LEN    LEN]
+ * [strformat#POS    POS]
 ----
 
 =INC/DEC/MULT/DIV=
