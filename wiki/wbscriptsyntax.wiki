@@ -128,7 +128,7 @@ From this section you can also call other sections from the same script or other
 The result of each operation is written on the log window - which you can later view or save to an html page. 
 
 
-===The `[`[wbscriptgui-interface Interface]`]` section===
+===The `[`[wbinterface_gui  Interface]`]` section===
 While this is important to scripts it is described in more detail [wbscriptgui-interface here].
 
 
