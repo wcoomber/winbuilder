@@ -254,6 +254,7 @@ If the evaluation of an If condition is 'True', the command following the condit
 In both cases, instead of a command, there can also be a command block.
 
  * [if If / Else Clauses]
+ * [begin_end Begin / End]
 
 <br>
 ----
