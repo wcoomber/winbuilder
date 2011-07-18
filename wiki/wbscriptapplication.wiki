@@ -1,12 +1,4 @@
 =Application Scripts =
-Contents 
-* Overview
-* Compatibility
-* Usage
-* FAQ
-* Bugs and Exceptions
-* Log of changes
-
 
 ==Overview ==
 
