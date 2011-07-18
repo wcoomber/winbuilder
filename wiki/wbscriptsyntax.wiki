@@ -1,11 +1,4 @@
-=Scripts=
- * Scripts
-  * [wbscriptsyntax#Syntax_Rules_and_Escape_Characters Syntax Rules and Escape Characters]
-  * [wbscriptsyntax#File_Structure File Structure]
- * [wbscriptvariables  Variables]
- * [wbinterface_gui WinBuilder Interface]
- * [wbscriptlinks Link Files]
-
+=Script Files=
 Script files use a very simple to understand language to run their commands and actions. In general terms these files use the extension .script and can be edited with any text editor or using the internal editor from WinBuilder. 
 
 Settings are written in the form of Key=Value (e.g. Color=Blue) and these values are kept inside sections similar to the structure of an `*.ini` file (e.g. [MySection]).
