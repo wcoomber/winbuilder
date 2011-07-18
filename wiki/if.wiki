@@ -20,11 +20,11 @@ This is a very powerful construct, since the `<command>` specified can be
 *ANY* valid script command.  This was further enhanced with the addition of command blocks using [begin_end Begin / End], which allows multiple commands to be executed. 
 
 ====List of available IF conditions====
- * [if#Exist...  Exist... / !NotExist...]
- * [if#EQUAL Equal / Smaller / Bigger / !NotEqual]
+ * [if#Exist...  Exist... / NotExist...]
+ * [if#EQUAL Equal / Smaller / Bigger / NotEqual]
  * [if#PING Ping]
  * [if#Online Online]
- * [if#License License / !NotLicense]
+ * [if#License License / NotLicense]
  * [if#Not Not]
  * [if#Question Question]
 <br>
@@ -35,12 +35,12 @@ This is a very powerful construct, since the `<command>` specified can be
 =!NotExist...=
 You can use these tests to determine if a file, directory, script section, or variable does or does not exist. If this test is true, then a Command is executed. 
  Avaialable tests include:
-|| !ExistFile || !NotExistFile||
-|| !ExistDir || !NotExistDir||
-|| !ExistSection || !NotExistSection||
-|| !ExistRegSection || !NotExistRegSection ||
-|| !ExistRegKey || !ExistRegKey||
-|| !ExistVar || !ExistVar ||
+|| *FILE:* || !ExistFile || !NotExistFile||
+|| *DIRECTORY:* || !ExistDir || !NotExistDir||
+|| *SECTION:* || !ExistSection || !NotExistSection||
+|| *REGISTRY:* || !ExistRegSection || !NotExistRegSection ||
+|| || !ExistRegKey || !ExistRegKey||
+|| *VARIABLE:* || !ExistVar || !ExistVar ||
 
 ==Syntax==
 {{{
