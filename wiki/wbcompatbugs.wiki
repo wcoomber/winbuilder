@@ -25,12 +25,8 @@ If none of the above solves your issue then here's the recommended way to procee
  * Visit the community forums and search for similar reports of the same behavior as you notice
  * If a similar case is found you should post a reply on this topic, otherwise start a new topic in the appropriate category
  * Writing advice before posting a bug : Include a descriptive title in your message including your log.html file and a test script so that it can be debugged and used by others
-
-Log of changes 
- * Changes in script language can be followed in each newer WinBuilder beta discussion where changes to the script code are suggested and debugged by other members. 
  * Projects also follow their own script rules and these methods can change occasionally, whenever in doubt you should post your questions in each project forum discussion.
- * Please let us know if this page is not complete or if you still haven't found needed information.
-
+ * Check the forums - Changes in script language can be followed for each newer !WinBuilder as changes to the script code are suggested and debugged by other members. 
 
 ==!AntiVirus Issues==
 
