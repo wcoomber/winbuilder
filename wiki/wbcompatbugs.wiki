@@ -32,9 +32,9 @@ Log of changes
  * Please let us know if this page is not complete or if you still haven't found needed information.
 
 
-==AntiVirus Issues==
+==!AntiVirus Issues==
 
-It was occasionally reported by a few users that some AntiVirus can interfere while scripts are copying or deleting files. It's advisable to temporarily disable the anti-virus *only when debugging* the building process to check for possible causes that keep your project from being concluded as expected.
+It was occasionally reported by a few users that some !AntiVirus can interfere while scripts are copying or deleting files. It's advisable to temporarily disable the anti-virus *only when debugging* the building process to check for possible causes that keep your project from being concluded as expected.
 
 *Under normal circumstances there is no need to disable your Antivirus.*
 But, please be aware that antivirus programs will scan any files being copied which may impede performance.
