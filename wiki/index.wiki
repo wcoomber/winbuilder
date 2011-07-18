@@ -2,6 +2,8 @@
  * [wbwelcome Welcome]
    * [wbwelcome Overview]
    * [wbtools WinBuilder Tools]
+     * [wbtools#Script_Editor Script Editor]
+     * [wbtools#Tools_Tab Tools Tab]
    * [wbscriptsyntax Script Files]
       * [wbscriptvariables Variables]
       * [wbinterface_gui Graphical Interface]
