@@ -12,6 +12,7 @@
  * [wbcompatbugs#Troubleshooting Troubleshooting]
  * [wbcompatbugs#Reporting_Bugs Reporting Bugs]
  * [wblicense License]
+
 ==Script Files==
  * [wbscriptsyntax  Script Files]
    * [wbscriptsyntax#Syntax_Rules_and_Escape_Characters Syntax Rules]
@@ -25,6 +26,7 @@
    * [wbscriptapplication#Usage Usage]
    * [wbscriptapplication#Frequently_Asked_Questions F.A.Q.]
    * [wbscriptapplication#Bugs_and_Exceptions Bugs]
+
 ==Script Command Categories==
  * [wbscriptsyntax#Script_Command_Categories Script Command Categories]
    * [wbscriptsyntax#File_Operations File Operations]
