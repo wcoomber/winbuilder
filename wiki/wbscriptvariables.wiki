@@ -1,7 +1,7 @@
-=Script Variables =
+<h1>Script Variables </h1>
 <wiki:toc max_depth="3" />
 
-==Overview ==
+=Overview =
 
 Variables are expressions that you can use to store a value that can be changed as needed.
 
@@ -9,7 +9,7 @@ These variables can be used to avoid fixed settings and keep the script language
 
 We can group variable into 3 categories, Fixed, Custom, and Runtime, each one having a specific sequence which we detail over the next chapter.
 
-===Usage ===
+==Usage ==
 Variables are meant to be used inside your commands while your script is running. 
 
 They allow you to make changes at a global level. Changing the value of single variable can change the way how the whole project is built.
@@ -25,14 +25,14 @@ This is only valid while this script is running and these changes will be remove
 
 These explanations may seem complicated now but it's simple to understand once you follow each one of the chapters below. You don't have to worry much about this information until you decide to begin coding your own scripts in a more efficient way. In either case, it will be detailed here should you need it one day.
 
-===Scope===
+==Scope==
 
 The `[variables]` section can be placed in 3 different files, each one with a different scale of availability. 
  * System - variables placed inside WinBuilder.ini�are available for all projects and scripts
  * Project - variables inside script.project are available for all scripts
  * Script - placed inside the script that is running (also called as "local variables") are valid until the script is concluded.
 
-==Fixed Variables ==
+=Fixed Variables =
 These variables are created by default just before a project start to run.
 
 !WinBuilder retrieves information found inside your Operating System and a few others definitions related to your project settings. 
@@ -62,12 +62,11 @@ These variables are created by default just before a project start to run.
    * %ISOdir% - path of %ISOfile%
    * %ProjectDir% - path to the respective project folder
 
-
-==Custom Variables ==
+=Custom Variables =
 
 These are additional variables that can be added by script authors. To create them, place a section called `[variables]` into your script and write your variables in INI style. It is obligatory to use the percentage (%) for labeling it as a variable.
 
-===Example===
+==Example==
  For this example we are creating two variables, available while the script is running, which can be used inside script commands.
 {{{
 [variables]
@@ -76,11 +75,11 @@ These are additional variables that can be added by script authors. To create th
 }}}
 
 
-==Macros ==
+=Macros =
 
 Macros are defined in the [Variables] section, too. Unlike Variables they do not have the percentage (%) as label. And they can only be used at the begin of a script command line. They are used to substitute often used script command line starts.
 
-===Example===
+==Example==
 {{{
 [Process]
 FileCopy,%source_sys%\aclui.dll,%target_sys%
@@ -104,7 +103,7 @@ Copy,kernel.dll
 }}}
 
 
-==Runtime Variables ==
+=Runtime Variables =
 
 These are the type of variables that are created while the script is running. This means that you can create your own local variables whenever needed.
 
@@ -125,7 +124,7 @@ One last detail - the run command also uses runtime variables that we can use to
 
 
 
-==Bugs ==
+=Bugs =
 
 There are a few known issues with variables that you should be aware.
  * Adding too many variables on the list will start decreasing performance of the script processing because of the quantity of text to analyse and translate - recommended to keep variables list on local scripts and projects as minimum as possible.
@@ -133,7 +132,7 @@ There are a few known issues with variables that you should be aware.
 
 Please let us know if this page is not complete or if you still haven't found needed information.
 
-==Variables FAQ ==
+=Variables FAQ =
 ----
 Q: I'm still a bit confused, how can I understand this better?
 
