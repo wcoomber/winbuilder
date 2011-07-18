@@ -104,8 +104,8 @@
      * [addvariables addvariables]
      * [loop Loop]
  * Additional Syntax
-   * Winbuilder 080
-   * Winbuilder 082
+   * [wbscriptsyntax80 Winbuilder 080]
+   * [wbscriptsyntax82 Winbuilder 082]
  * Common API
    * [calculate _Calculate]
    * [add_asso Add_Asso]
@@ -143,20 +143,4 @@
    * [scriptinterface_write ScriptInterface,Write]
    * [select_case Select_Case]
    * [unpack Unpack]
- * VistaPE API
-   * VistaPE API
- * Projects
-   * LiveXP
-   * MobileOS
-   * NativePE
-   * NativeEx
-   * PicoXP
-   * ReactOS
-   * VistaPE
-   * VistaPE-CAPI
-   * Win7PE
-   * Win7RescuePE
-
-<wiki:comment>
-   * Installing
-</wiki:comment>
+ * [projects Projects]
