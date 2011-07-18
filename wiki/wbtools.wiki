@@ -191,3 +191,7 @@ Please remember to add as much details as possible and it would also help if you
 Also check if you're also using the latest version since a lot of bugs tend to be corrected as new versions become available.
 
 Whenever in doubt you can also help yourself and use the Search function inside the forums to find other members who might have reported similar cases to yours. You might even find answers to how they've solved the same issue or add your comment to ensure that it gets solved sooner.
+
+<br>
+<br>
+[wbscriptsyntax >>Next - Script Files]
