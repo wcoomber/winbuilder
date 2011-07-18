@@ -203,7 +203,7 @@ StrFormat,MID,%string%,3,4,%var%
 <br>
 <br>
 ----
-=REPLACE / REPLACEX=
+=REPLACE/REPLACEX=
 
 {{{
 StrFormat,REPLACE,<%string%>,<CharsToReplace>,<ReplacementChars>,
