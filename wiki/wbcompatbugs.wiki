@@ -40,7 +40,7 @@ But, please be aware that antivirus programs will scan any files being copied wh
 ----
 ----
 <br>
-=Bugs =
+=Reporting Bugs =
 
 !WinBuilder is a tool in progress and there are always bugs being reported and properly solved, we always appreciate your feedback and reports in case a bug is found.
 
