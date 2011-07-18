@@ -18,7 +18,7 @@
    * [wbscriptapplication#Overview Overview]
    * [wbscriptapplication#Usage Usage]
    * [wbscriptapplication#Frequently_Asked_Questions F.A.Q.]
-   * [wbscriptapplication#Bugs Bugs]
+   * [wbscriptapplication#Bugs_and_Exceptions Bugs]
  * [wbscriptsyntax#Script_Command_Categories Script Command Categories]
    * [wbscriptsyntax#File_Operations File Operations]
      * [filecopy FileCopy]
