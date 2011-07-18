@@ -1,4 +1,10 @@
-=Script Files=
+<h1>
+Script Files
+</h1>
+<wiki:toc max_depth="2" />
+<br>
+----
+
 Script files use a very simple to understand language to run their commands and actions. In general terms these files use the extension .script and can be edited with any text editor or using the internal editor from !WinBuilder. 
 
 Settings are written in the form of Key=Value (e.g. Color=Blue) and these values are kept inside sections similar to the structure of an `*.ini` file (e.g. `[MySection]`).
@@ -16,7 +22,7 @@ Script files can perform both specific and generic functions. Some scripts will 
 
 These scripts can also use a very specific model that only works on a single project and cannot be successfully used on another project unless it also shares the same model as the original project from where it came. The model consists of functions and variables stored in scripts.
 
-==Syntax Rules and Escape Characters==
+=Syntax Rules and Escape Characters=
 
 First some rules: 
  # !WinBuilder Script Line Parameters are separated by a comma. If a comma is inside an argument, it must be 'escaped' by `#$c` 
@@ -49,12 +55,13 @@ Now the problem occurs when it is not possible to determine what is meant.  For 
 
 You see how important it is to follow the rules, even if !WinBuilder understands most violations correctly.
 
+<br>
+----
 
-==File Structure==
+=File Structure=
 
 Let's start by looking at the structure of a typical script file.
 We use sections to group commands and settings inside script files. The easiest way to see how they are applied is to edit a few scripts and look at the source code to learn more about them.
-
 
 A typical script is composed of at least these 3 important sections
  # Main - will keep all details that identify your script
@@ -108,9 +115,9 @@ Some keys are assumed with default values if they are not found inside the scrip
 ||Profile||Recommended (value=2)||
 
 
-===The `[Variables]` section===
+===The `[`[wbscriptvariables Variables]`]` section===
 
-This section is described in more detail [wbscriptvariables here]
+This section is described in more detail [wbscriptvariables here].
 
 
 ===The `[Process]` section===
@@ -121,13 +128,13 @@ From this section you can also call other sections from the same script or other
 The result of each operation is written on the log window - which you can later view or save to an html page. 
 
 
-===The `[Interface]` section===
-While this is important to scripts we'll be referring to it in another chapter.
+===The `[`[wbscriptgui-interface Interface]`]` section===
+While this is important to scripts it is described in more detail [wbscriptgui-interface here].
 
 
 ===The `[OnProcessEntry]` section===
 
-This section is an optional secial section exclusive in script.project. If it is present, during build this section is processed before the first `[Process]` line of every processed script.
+This section is an optional section exclusive in script.project. If it is present, during build this section is processed before the first `[Process]` line of every processed script.
 
 
 ===The `[OnProcessExit]` section===
@@ -141,7 +148,6 @@ Run,%ProjectDir%\script.project,Process-log
 
 <br>
 ----
-----
 
 =Script Command Categories=
 
@@ -149,7 +155,6 @@ All available commands are described on a single page so that you can later prin
  * Usually all command which compare etc. are case insensitive.
  * There are some commands having a "X" at the end. These commands work like that ones without the "X", but case sensitive. 
 <br>
-----
 ----
 ==File Operations==
 Commands under this category were designed to handle files and are particularly useful to create the base structure of your project or add additional features that you need.
@@ -169,7 +174,6 @@ List of available functions
 
 <br>
 ----
-----
 ==Registry Handling==
 
 These commands are written to write and read values from the local registry on your windows machine. You can also load the hives from the projects being built at any given time.
@@ -186,7 +190,7 @@ List of available functions
 
 <br>
 ----
-----
+
 ==INI Manipulation==
 
 This category contains commands that were created to work with INI based text files. INI files group information using a few rules, it is also very easy to understand and edit when needed.
@@ -208,7 +212,6 @@ Available INI functions
 
 <br>
 ----
-----
 ==Attachments ==
 
 Attachments are files that can be included inside your script.
@@ -226,7 +229,6 @@ List of related commands
 
 <br>
 ----
-----
 ==Text Files==
 
 With this set of commands we can handle text files and modify them as needed. All these commands can be applied to either a single or multiple file using wildcards.
@@ -241,7 +243,6 @@ Description of commands
 
 <br>
 ----
-----
 ==IF Clauses and Command Blocks==
 If the evaluation of an If condition is 'True', the command following the condition is processed. If the evaluation of an If condition is 'False', the command of the Else command (if present), is processed.
 In both cases, instead of a command, there can also be a command block.
@@ -250,7 +251,6 @@ In both cases, instead of a command, there can also be a command block.
  * [begin_end Begin / End]
 
 <br>
-----
 ----
 ==Retrieve Functions== 
 
@@ -268,8 +268,7 @@ These commands will querry the OS and return variuos types of information about 
 
 <br>
 ----
-----
-=String Formatting=
+==String Formatting==
 !WinBuilder has the following string formatting capabilities :
 
  * [strformat#INC/DEC/MULT/DIV  INC / DEC / MULT / DIV ]
@@ -289,7 +288,6 @@ These commands will querry the OS and return variuos types of information about 
 
 <br>
 ----
-----
 ==Network Tools==
 
 Functions on this category allow you to work with the network environment whenever available.
@@ -298,7 +296,6 @@ Functions on this category allow you to work with the network environment whenev
 
 
 <br>
-----
 ----
 ==Miscellaneous Commands ==
 
