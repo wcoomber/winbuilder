@@ -116,7 +116,7 @@ This section is described in more detail [wbscriptvariables here]
 ===The `[Process]` section===
 
 All commands you write in this section will be executed by the program. 
-From this section you can also call other sections from the same script or other scripts if necessary using the [wbrun run command].
+From this section you can also call other sections from the same script or other scripts if necessary using the [run run command].
 
 The result of each operation is written on the log window - which you can later view or save to an html page. 
 
