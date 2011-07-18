@@ -1,7 +1,7 @@
 <h1>
 Application Scripts
 </h1>
-<wiki:toc max_depth="3" />
+<wiki:toc max_depth="2" />
 =Overview =
 
 Application Scripts is  how projects that use this method are able to create application scripts that are to be shared and used with different projects. These scripts are specifically designed to add programs to your projects.
@@ -71,35 +71,35 @@ Let's list and explain each one of the command functions used in the `[process]`
  # `unpack` - A very important function because it will do most of the hard work of adding the needed files to your project.  For more details, see the [unpack Common API command command reference page for the unpack command].
 
 <br>
+
+=Frequently Asked Questions= 
 ----
-==Frequently Asked Questions== 
-
-====Q: How is this script used after all?====
-A: It is used to add simple programs and tools on your project in a quick and simple manner.
-
-====Q: What can be considered as "simple programs"?====
-A: In this category should be considered programs labeled as "standalone" and "portable" - which use very few files and registry settings. Also note that any program under this category should also be prepared to work under all�available projects that support this method.
-
-====Q: Well, I need a special icon different than the one used by the script - how can I do it?====
-A: Don't use this generic script for these cases, read the chapter about exceptions and how to handle them in your scripts
-
-====Q: I want to use a script to add notepad on the windows directory instead of the programs folder, why can't these functions support this?====
-A: This is a specific feature that should be handled as an exception, you shouldn't use this method for these cases.
-
-====Q: How can we add more functions to the application scripts?====
-A: You will need to suggest and discuss them on the respective discussion topic, in most cases do remember to ask functions that can also provided by other projects to make them globally available
-
-====Q: Can I use this method and the project specific way to create these scripts together?====
-A: Yes you can, but it is not adviced. Both methods can work well together but should be kept in separate scripts. A script that was written with this common method should avoid using methods specific to a particular type of project.
-
-====Q: Where can these scripts be found or identified?====
-A: They can be included either inside your projects mixed with other scripts or you can find them in the download section of the community forums under the Application scripts category. We are also discussing a common folder where all these generic scripts could be placed but it's still in development.
-
-====Q: Is this method perfect?====
-A: No way! But we hope that this is a good method to create scripts that can work on most projects available at this moment and even on the ones to come in the future. This way we ensure that your favourite project can use as many available scripts as possible within the next years without having to rewrite or edit anything - making it easier for you to find more available programs.
-
+===Q: How is this script used after all?===
+ A: It is used to add simple programs and tools on your project in a quick and simple manner.
+----
+===Q: What can be considered as "simple programs"?===
+ A: In this category should be considered programs labeled as "standalone" and "portable" - which use very few files and registry settings. Also note that any program under this category should also be prepared to work under all available projects that support this method.
+----
+===Q: Well, I need a special icon different than the one used by the script - how can I do it?===
+ A: Don't use this generic script for these cases, read the chapter about exceptions and how to handle them in your scripts
+----
+===Q: I want to use a script to add notepad on the windows directory instead of the programs folder, why can't these functions support this?===
+ A: This is a specific feature that should be handled as an exception, you shouldn't use this method for these cases.
+----
+===Q: How can we add more functions to the application scripts?===
+ A: You will need to suggest and discuss them on the respective discussion topic, in most cases do remember to ask functions that can also provided by other projects to make them globally available
+----
+===Q: Can I use this method and the project specific way to create these scripts together?===
+ A: Yes you can, but it is not adviced. Both methods can work well together but should be kept in separate scripts. A script that was written with this common method should avoid using methods specific to a particular type of project.
+----
+===Q: Where can these scripts be found or identified?===
+ A: They can be included either inside your projects mixed with other scripts or you can find them in the download section of the community forums under the Application scripts category. We are also discussing a common folder where all these generic scripts could be placed but it's still in development.
+----
+===Q: Is this method perfect?===
+ A: No way! But we hope that this is a good method to create scripts that can work on most projects available at this moment and even on the ones to come in the future. This way we ensure that your favourite project can use as many available scripts as possible within the next years without having to rewrite or edit anything - making it easier for you to find more available programs.
+----
 <br>
-----
-==Bugs and Exceptions ==
+
+=Bugs and Exceptions =
 
 You should look on the discussion forums for assistance in case you find a script that doesn't work as you expected so that the community can properly view it and suggest other alternative ways to solve exceptions.
