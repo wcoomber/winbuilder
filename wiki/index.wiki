@@ -69,7 +69,7 @@
      * [retrieve#Dir Dir]
      * [retrieve#MD5 MD5]
      * [retrieve#FileVersion FileVersion]
-   * [strformat String Format]
+   * [wbscriptsyntax#String_Formatting String Formating]
      * [strformat#INC/DEC/MULT/DIV  INC / DEC / MULT / DIV ]
      * [strformat#FILENAME/PATH/EXT    FILENAME / PATH / EXT ]
      * [strformat#BYTES    BYTES ]
