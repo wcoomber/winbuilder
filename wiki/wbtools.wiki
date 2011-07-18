@@ -194,4 +194,4 @@ Whenever in doubt you can also help yourself and use the Search function inside 
 
 <br>
 <br>
-[wbscriptsyntax >>Next - Script Files]
+[wbscriptsyntax >>Next Page - Script Files]
