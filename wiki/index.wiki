@@ -1,9 +1,9 @@
 =Contents =
  * [wbwelcome Welcome]
    * [wbwelcome Overview]
-   * [wbscriptsyntax Script Files]
    * [wbtools Tools]
-   * [wbcompatbugs#Compatibility Compatibility]
+   * [wbscriptsyntax Script Files]
+   * [wbcompatbugs#Compatibility OS / Scripting Compatibility]
    * [wbcompatbugs#Bugs Reporting Bugs]
    * [wblicense License]
  * [wbscriptsyntax Script Files]
