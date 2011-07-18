@@ -1,4 +1,4 @@
-=PackParam=
+=!PackParam=
 {{{
 PackParam,Start,%Var%[,%Num%]
 }}}
