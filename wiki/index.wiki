@@ -13,14 +13,13 @@
  * [wbcompatbugs#Reporting_Bugs Reporting Bugs]
  * [wblicense License]
 
-==Script Files==
- * [wbscriptsyntax  Script Files]
-   * [wbscriptsyntax#Syntax_Rules_and_Escape_Characters Syntax Rules]
-   * [wbscriptsyntax#Syntax_Rules_and_Escape_Characters Escape Characters]
-   * [wbscriptsyntax#File_Structure File Structure]
- * [wbscriptvariables Variables]
- * [wbinterface_gui Graphical Interface]
- * [wbscriptlinks Link Files]
+==[wbscriptsyntax  Script Files]===
+   ====[wbscriptsyntax#Syntax_Rules_and_Escape_Characters Syntax Rules]====
+   ====[wbscriptsyntax#Syntax_Rules_and_Escape_Characters Escape Characters]====
+   ===[wbscriptsyntax#File_Structure File Structure]===
+ ===[wbscriptvariables Variables]===
+ ===[wbinterface_gui Graphical Interface]===
+ ===[wbscriptlinks Link Files]===
  * [wbscriptapplication Application Scripts]
    * [wbscriptapplication#Overview Overview]
    * [wbscriptapplication#Usage Usage]
