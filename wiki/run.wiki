@@ -7,7 +7,7 @@ Exec,%ScriptFile%,<Section>[,parameters]
 The *Run* command is used to process the commands found in a named section of a script file. You can run sections from any script including the script from where run is originally called. 
  Note: use the variable `%scriptFile%` as a parameter to call another section found inside the same script.
 
-The `Run` command command will use the same variables available in the original script from where it was called. The `Exec` command has a very similar behavior. However, it will additionally add all the variables found inside the [variables] section of the script file selected. Identical variables found on the new script will overwrite the existing value.
+The `Run` command command will use the same variables available in the original script from where it was called. The `Exec` command has a very similar behavior. However, it will additionally add all the variables found inside the `[variables]` section of the script file selected. Identical variables found on the new script will overwrite the existing value.
 
 This command also allows you to use parameters - this is a very useful feature to create a section that works based on these variables and this way avoid the need to add very long similar lines of code.  In fact, this is used heavily by the common API implementation.
 
