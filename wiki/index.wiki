@@ -53,7 +53,7 @@
      * [txtdelline TxtDelLine]
      * [txtdelspaces TxtDelSpaces]
      * [txtdelemptylines TxtDelEmptyLines]
-   * [if If / Else]
+   * [wbscriptsyntax#IF_Clauses_and_Command_Blocks If / Else]
      * [if#Exist...  Exist... / NotExist...]
      * [if#Equal Equal / Smaller / Bigger / NotEqual]
      * [if#Ping Ping]
