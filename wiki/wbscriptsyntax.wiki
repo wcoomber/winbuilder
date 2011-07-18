@@ -1,7 +1,7 @@
 =Script Files=
-Script files use a very simple to understand language to run their commands and actions. In general terms these files use the extension .script and can be edited with any text editor or using the internal editor from WinBuilder. 
+Script files use a very simple to understand language to run their commands and actions. In general terms these files use the extension .script and can be edited with any text editor or using the internal editor from !WinBuilder. 
 
-Settings are written in the form of Key=Value (e.g. Color=Blue) and these values are kept inside sections similar to the structure of an `*.ini` file (e.g. [MySection]).
+Settings are written in the form of Key=Value (e.g. Color=Blue) and these values are kept inside sections similar to the structure of an `*.ini` file (e.g. `[MySection]`).
 
 In general, the syntax is very simple - i.e. keywords for functions with the parameters separated by commas.  Comment lines start with two slashes, and are skipped during processing. Out of compatibility concerns two hash marks are accepted as comment marker.
  Example:
