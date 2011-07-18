@@ -62,8 +62,8 @@ A typical script is composed of at least these 3 important sections
  # Process - where your commands are placed
 
 In addition to the script files, there is a master project file called Script.project, which has two optional sections
- * OnProcessEntry - run as first command of every script
- * OnProcessExit - run as last command of every script
+ * !OnProcessEntry - run as first command of every project
+ * !OnProcessExit - run as last command of every project
 
 Here is a small example of how it should look:
 {{{
