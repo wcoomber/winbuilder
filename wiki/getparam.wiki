@@ -1,0 +1,14 @@
+=Getparam=
+{{{
+GetParam,Index,%Var%
+}}}
+This command writes the parameter at the given index position int *%var%*.  This is needed when dealing with more than 9 passed parameters using the [run Run or Exec] commands.
+
+This is because normally, the parameters are access by only a single digit following the "#" (hash mark) character.  Given the "fixed formatting", a different process was needed to access the values of any greater parameter.
+
+This is also an easy way to make script files more readable, since it allows you to assign a more meaningful variable name to the parameters being passed into the section.
+
+==Example:==
+{{{
+GetParam,10,%Variable_Ten
+}}}
