@@ -2,7 +2,7 @@
 
 The `Add` command has two separate sub-commands
 
- * [add#- Add,DesktopIni]
+ * [add#Add,!DesktopIni Add,DesktopIni]
  * [add#Add,URL Add,URL]
 
 Documentation for them is provided below.
