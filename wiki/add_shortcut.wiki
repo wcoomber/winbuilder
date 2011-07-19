@@ -1,4 +1,4 @@
-=Add_Shortcut=
+=!Add_Shortcut=
 ==Syntax==
 {{{
 Add_Shortcut,[Type],[StartMenuFolder],[FullFileName],[Title],[Work Folder],
