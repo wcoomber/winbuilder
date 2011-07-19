@@ -1,4 +1,4 @@
-=IniRead=
+=!IniRead=
 ==Syntax ==
 {{{
 IniRead,<Filename>,<Section>,<Key>,<%variable%> 
