@@ -101,7 +101,7 @@
      * [webget WebGet]
      * [webgetifnotexist WebGetIfNotExist]
    * Miscellaneous Commands
-     * [run Run] / [exec Exec]
+     * [run Run / Exec]
      * [getparam GetParam]
      * [packparam PackParam]
      * [shellexecute ShellExecute]
