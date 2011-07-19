@@ -1,4 +1,4 @@
-= {{{FileCopy}}} =
+=!FileCopy=
 
 ==Syntax==
 {{{
