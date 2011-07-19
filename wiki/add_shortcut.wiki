@@ -48,7 +48,7 @@ Add_Shortcut,StartMenuRoot
 }}}
 
 ==Example==
-For a script called Test.script, located in folder Apps\CD\ProgTest\ like this :
+For a script called Test.script, located in folder `Apps\CD\ProgTest\` like this :
 {{{
 [Variables]
 %ProgramTitle%=Test
