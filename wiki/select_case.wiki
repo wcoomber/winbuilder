@@ -71,11 +71,3 @@ Echo,"%Source_Type%"
 Select_Case,%Os_Type%,"x86|amd64|ia64","http://www.nirsoft.net/utils/heapmemview.zip|http://www.nirsoft.net/utils/heapmemview-x64.zip|"
 If,Not,%Case%,Equal,,Unpack,%Case%,-URL
 }}}
-
-=====Source code for Case_Select=====
-{{{
-StrFormat,POS,#2,#1,#9
-StrFormat,LEFT,#2,#9,#8
-StrFormat,SPLIT,#8,|,0,%Case%
-If,NOT,#3,Equal,,StrFormat,SPLIT,#3,|,%Case%,%Case%
-}}}
