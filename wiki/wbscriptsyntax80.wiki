@@ -1,160 +1,148 @@
-Script Syntax 080
+<h1>Script Syntax 080</h1>
+<wiki:toc max_depth="2" />
 
-Contents 
-* Compatibility
-* ==Syntax==
-* Back to index
-
-
-
-
-Compatibility 
-
-This page describes new functionalty introduced with WinBuilder 080.
+This page describes new functionalty introduced with WinBuilder 080.
 Older WinBuilder versions cannot work with this functionality.
-Here you can download WinBuilder 080.
 
+There are new commands in the following categories
+ * Registry handling
+ * IF Clauses
+ * Miscellaneous commands
 
-
-
-Syntax 
-
-
-.script commands can be grouped under the following categories
-* Registry handling
-* IF Clauses
-* Miscellaneous commands
-
-
-Registry Handling 
+<br>
+----
+=Registry Handling =
 
 These commands are written to write and read values from the local registry on your windows machine. You can also load the hives from the projects being built at any given time.
 
 These registry operations are valid for any Windows Platform, you should however note that Vista restricts the specific operation to load/unload hives - it is necessary to disable the UAC (User Account Control) before running projects that need this support.
 
-List of available functions
-* RegWriteBin,  RegWriteBinEx
-* RegReadBin
-* RegMulti
-
-RegWriteBin
-
+==!RegWriteBin / !RegWriteBinEx==
+{{{
 RegWriteBin,<HKEY>,<KeyType>,<Section>,<Keyname>,<Value> 
-This command will create a new or overwrite an existing registry entry as specified.
-The command is used to write Wide Strings (e.g. Unicode) into the registry. The wide string is defined by a series of hexadecimal values, separated by comma.
+}}}
+This command will create a new or overwrite an existing registry entry as specified. The command is used to write Wide Strings (e.g. Unicode) into the registry. The wide string is defined by a series of hexadecimal values, separated by comma.
 
-RegWriteBinEx has the same syntax, but writes every value of every type unchecked into the registry.
-It is in the responsibility of the script's author to make shure  that only valid registry entries are created. 
+!RegWriteBinEx has the same syntax, but writes every value of every type unchecked into the registry.
+It is in the responsibility of the script's author to make shureï¿½ that only valid registry entries are created. 
 
-HKEY is the "Hive Key" where the key is to be placed. These hives are files that are loaded by your machine when booting and compose the registry structure. By default, most scripts use HKLM as the work hive.
+HKEY is the "Hive Key" where the key is to be placed. These hives are files that are loaded by your machine when booting and compose the registry structure. By default, most scripts useï¿½HKLM as the work hive.
 
 Valid HKEY values
-* HKLM
-* HKCU
-* HKCR
-* HKEY_USERS
-* HKEY_CURRENT_CONFIG  
-KeyType will specify how the data in the registry key should be interpreted.
+ * HKLM
+ * HKCU
+ * HKCR
+ * HKEY_USERS
+ * HKEY_CURRENT_CONFIG
 
-Valid key type values for RegWriteBin
-* 0x1 - String - writes a text value
-* 0x2 - Expanded String - will expand any variable value contained inside %%. (e.g. %temp%)
-* 0x7 - Writes multiple NULL separated strings
+KeyType will specify how the data in the registry key should be interpreted. Valid key type values for RegWriteBin
+ * 0x1 - String - writes a text value
+ * 0x2 - Expanded String - will expand any variable value contained inside %%. (e.g. %temp%)
+ * 0x7 - Writes multiple NULL separated strings
 Section is the complete path to the section where the key is supposed to be written
 
-Keyname is the name of the name of one of the 'child keys' of a section.
+Keyname is the name of the name of one of the 'child keys' of a section. Value can be
+ * an explicitelly written list of hexadecimal values, separated by comma
+ * a variable containing the list. Instead of the comma the variable must contain the escape #$c
 
-Value can be
-* an explicitelly written list of hexadecimal values, separated by comma
-* a variable containing the list. Instead of the comma the variable must contain the escape #$c
 The substrings of a 0x7 entry can be divided by ",00,00" bytes (without the quotes) or by the escape #$z. 
 
-Syntax examples:
+===Examples:===
+{{{
 RegWriteBin,HKLM,0x2,WB-Software\SOFTWARE\Classes\.bfc\ShellNew,Command,25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,00,00 
 Set,%Value%,25#$c00#$c53#$c00#$c79#$c00#$c73#$c00#$c74#$c00#$c65#$c00#$c6d#$c00#$c52#$c00#$c6f#$c00#$c6f#$c00#$c00#$c00
 RegWriteBin,HKLM,0x2,WB-Software\SOFTWARE\Classes\.bfc\ShellNew,Command,%Value%
+}}}
 
-
-RegReadBin
-
+==!RegReadBin==
+{{{
 RegRead,<HKEY>,<Section>,<Key>,<%Variable%> 
+}}}
 This command will read a value from the key you specify.
 
 It uses the same components as described above with the difference that it will copy the value of a key into a variable.
 
 This command will only retrieve values from the following keytypes:
-* 0x1 - String
-* 0x2 - Expandable String
-* 0x7 - Multiple String
-== Syntax example: == 
+ * 0x1 - String
+ * 0x2 - Expandable String
+ * 0x7 - Multiple String
+
+=== Example: ===
+{{{
 RegReadBin,HKLM,WB-Software\SOFTWARE\Classes\.bfc\ShellNew,Command,%Value%
-In this example the variable %Value% will store the value of the mentioned key 
+}}}
+In this example the variable %Value% will store the value of the mentioned key 
 
-RegMulti
+==!RegMulti==
 
-The command uses the same components as described above.
+These commands uses the same components as described above.
+ * Writes a string at the specified place. If the string already exists in the current value, a warning is written and the current value is left unchanged.
+{{{
 RegMulti,<HKEY>,<Section>,<Key>,APPEND,<String>
 RegMulti,<HKEY>,<Section>,<Key>,PREPEND,<String>
 RegMulti,<HKEY>,<Section>,<Key>,BEFORE,<SubString>,<String>
 RegMulti,<HKEY>,<Section>,<Key>,BEHIND,<SubString>,<String>
 RegMulti,<HKEY>,<Section>,<Key>,PLACE,<Index>,<String>
-Writes a string at the specified place.
-If the string already exists in the current value, a warning is written and the current value is left unchanged.
+}}}
+ * Removes the specified substring.
+{{{
 RegMulti,<HKEY>,<Section>,<Key>,DELETE,<SubString>
-Removes the specified substring.
+}}}
+ * Queries the index of the specified string. If the substring does not exist, the returned value is 0.
+{{{
 RegMulti,<HKEY>,<Section>,<Key>,INDEX,<SubString>,%Index%
-Queries the index of the specified string. 
-If the substring does not exist, the returned value is 0.
+}}}
 
+<br>
+----
+=If Clauses =
 
-If Clauses 
+The following two conditional tests were added in Version 80
 
-In .script language you can use If clauses to ease your life when running a script and to be able to evaluate certain conditions. 
-
-If a condition is true when you test it with the IF command then a command will be executed.
-
-General format: If,<condition>,<command> Optional line: Else,<command>
-
-If a condition is false when you test it with the IF command then the second command will be executed. 
-List of IF conditions  new in WinBuilder 080
-*  ExistRegMulti
-*  ExistMacro
-IF ExistRegMulti
-
+==!ExistRegMulti==
+{{{
 If,ExistRegMulti,<HKEY>,<Section>,<Key>,<SubString>,<Command>
+}}}
 The command checks for the existence of a substring in a multiple string
-== Syntax example: ==
+
+=== Example: ===
+{{{
 If,EXISTREGMULTI,HKLM,SYSTEM\ControlSet001\Control\ServiceGroupOrder,List,"FSFilter Infrastructure",Echo,YES
+}}}
 
-IF ExistMacro
-
+==!ExistMacro==
+{{{
 If,ExistMacro,<Macro>,<Command>
+}}}
 The command checks whether the macro is defined in the [Variables] section.
 
-Miscellaneous Commands 
+<br>
+----
+=Miscellaneous Commands =
 Under this category you find the commands which aren't grouped under any specific category but are still quite used on most scripting tasks.
-addinterface - adds all interface  values to the variables  list 
 
-
-AddInterface
-
-AddInterface,<Script>[,<Interface>],<prefix> 
+==!AddInterface==
+{{{
+AddInterface,<Script>[,<Interface>],<prefix>ï¿½
+}}}
 Use this command to add the values of an interface to the variables List.
-The optional <Interface> is used to read alternative interfaces, e.g. [Interface-Language]
-Default is the standard interface [Interface].
-The prefix is used to distinguish to already existing interface values of the same name.
+The optional `<Interface>` is used to read alternative interfaces, e.g. [Interface-Language]  The default value is to use the standard interface (`[Interface]`).
 
-The generated variables can be used as %<prefix>_<original name>%
-If prefix is omitted, also the underline in the name of the generated variables is omitted.
-== Syntax example: == 
+The prefix is used to distinguish to already existing interface values of the same name. The generated variables can be used as `%<prefix>_<original name>%`. If prefix is omitted, also the underline in the name of the generated variables is omitted.
+
+=== Example: ===
+{{{
 AddInterface,%ScriptFile%,Interface-German,DE
+}}}
 Values of the German interface are now accessable like
+{{{
 Echo,%DE_pTextBox1%
+}}}
+if instead you used
+{{{
 AddInterface,%ScriptFile%,Interface-German,
+}}}
 Values of the German interface are now accessable like
+{{{
 Echo,%pTextBox1%
-
-Log of changes 
-Changes in script language can be followed in each newer WinBuilder beta discussion where changes to the script code are suggested and debugged by other members. 
-Projects also follow their own script rules and these methods can change occasionally, whenever in doubt you should post your questions in each project forum discussion.
-Please let us know if this page is not complete or if you still haven't found needed information.
+}}}
