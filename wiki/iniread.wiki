@@ -1,8 +1,12 @@
-IniRead
-
+=IniRead=
+==Syntax ==
+{{{
 IniRead,<Filename>,<Section>,<Key>,<%variable%> 
+}}}
 This command will read the key from a section inside a file that you specify.
 
-== Syntax example: ==
+== Example: ==
+In this example the value of the specified key will be stored inside %myVariable% 
+{{{
 IniRead,C:\myFile.ini,mySection,myKey,%myVariable% 
-In this example the value of the specified key will be stored inside %myVariable% 
+}}}
