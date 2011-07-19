@@ -66,11 +66,11 @@ Fields 8 and higher (if present) depend on the component type:
  * cmpRadioGroup: `<Caption 1>, ... ,<Caption n>,<Selected index, starting with 0>`
 
 
-==Additions added in !WinBuilder 077 RC 2 ==
+==Added in !WinBuilder 077 RC 2 ==
 
-Two additional fields are optional:
- # For cmpCheckBox, cmpRadioButton and cmpButton: `<Show progress window when running>`
- #For all: Tooltip. This field starts with a double underscore `__` as marker.
+Two additional (and optional) fields were added:
+ # For cmpCheckBox, cmpRadioButton and cmpButton: These now support an optional parameter that will `<Show progress window when running>`
+ #For all: Tooltip. This field starts with a double underscore `__` as marker.  When added, will generate a "tool-tip" if the mouse hovers over the object.
 
 =Example=
 This example code has two pages of interface, and a button that toggles between them (i.e. causes code to be executed)
