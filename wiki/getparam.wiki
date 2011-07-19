@@ -1,4 +1,5 @@
 =Getparam=
+==Syntax==
 {{{
 GetParam,Index,%Var%
 }}}
