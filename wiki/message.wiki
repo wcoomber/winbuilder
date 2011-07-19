@@ -1,4 +1,5 @@
 =Message=
+==Syntax==
 {{{
 Message,<message>,<Action> 
 }}}
