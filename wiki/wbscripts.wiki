@@ -1,8 +1,0 @@
-=Scripts =
-
-The behavior of !WinBuilder is driven by it's own internal scripting language.  These "Script files" are simple text files that use the extension .script.  They are most easily edited with !WinBuilder's internal editor, but you can also use your favorite text editor or a simple text notepad.
-
-Detailed information about scripts
- * script syntax
- * script variables
- * application scripts
