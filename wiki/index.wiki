@@ -3,6 +3,7 @@
    * [wbwelcome Welcome and Overview]
    * [wbtools Tools]
    * [wbscriptsyntax Script Files]
+   * [wbscriptsyntax#Script_Command_Categories Script Command Categories]
    * [wbscriptapplication Application Scripts]
    * [wbprojects Projects]
    * [wbcompatbugs Compatibility]
@@ -18,7 +19,6 @@
    * [wbscriptlinks Link Files] 
    * [wbscriptapplication Application Scripts]
  * Script Command Categories
-   * [wbscriptsyntax#Script_Command_Categories Introduction]
    * [wbscriptsyntax#File_Operations File Operations]
      * [filecopy FileCopy]
      * [filedelete FileDelete]
