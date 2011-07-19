@@ -17,6 +17,7 @@
 ----
 
 =INC/DEC/MULT/DIV=
+==Syntax==
 {{{
 StrFormat,<Action>,<%var%>,<n>
 }}}
@@ -41,6 +42,7 @@ StrFormat,Inc,%LoopAgain%,5
 <br>
 ----
 =FILENAME/PATH/EXT=
+==Syntax==
 {{{
 StrFormat,<Action>,<Filename>,<%VarResult%> 
 }}}
@@ -70,7 +72,7 @@ which results in
 <br>
 ----
 =BYTES=
-
+==Syntax==
 {{{
 StrFormat,bytes,<%VarResult%> 
 }}}
@@ -86,6 +88,7 @@ In this example %myVar% will contain "1.44Mb "
 <br>
 ----
 =DATE=
+==Syntax==
 {{{
 StrFormat,Date,<%var%>,<yyyy-mmm-dd hh:nn am/pm> 
 }}}
@@ -99,7 +102,7 @@ This option is used to retrieve the current hour and date and output it to a var
  * am/pm indicates to use 12 hours cycle instead of 24 hours 
 The last parameter will define the way these values will be written to your variable. You can omit values that aren't needed and even add custom text inside.
 
-== Syntax example: ==
+== Example: ==
 In this example %myVar% will output the current year, month and day formatted as specified (eg. 2007-jun-07)
 {{{
 StrFormat,date,%myVar%,yyyy-mmm-dd
@@ -110,6 +113,7 @@ StrFormat,date,%myVar%,yyyy-mmm-dd
 <br>
 ----
 =CEIL/FLOOR=
+==Syntax==
 {{{
 StrFormat,<Action>,<%var%>,<%size%>
 }}}
@@ -134,6 +138,7 @@ StrFormat,CEIL,%Var%,%size%
 <br>
 ----
 =LTRIM/RTRIM/CTRIM/NTRIM=
+==Syntax==
 {{{
 StrFormat,<Action>,<%string%>,<CharsToTrim>,<%var%>
 }}}
@@ -170,6 +175,7 @@ StrFormat,NTRIM,pTextBox12,%var%
 <br>
 ----
 =LEFT/RIGHT=
+==Syntax==
 {{{
 StrFormat,<Action>,<%string%>,<CharsToObtain>,<%var%>
 }}}
@@ -187,12 +193,14 @@ StrFormat,Right,%string%,3,%var2%
 <br>
 <br>
 ----
-=MID
+=MID=
+==Syntax==
 {{{
 StrFormat,MID,<%string%>,<PositionOfFirstChar>,<CharsToObtain>,<%var%>
 }}}
 This command pulss a given number of characters out of the "middle" of a string
-== Syntax example: == 
+
+== Example: == 
 In this example we have a given string tomorrow  and we want to get 4 chars beginning with the third char. The result is filled into %var% with value `morr`.
 {{{
 Set,%string%,tomorrow
@@ -204,14 +212,14 @@ StrFormat,MID,%string%,3,4,%var%
 <br>
 ----
 =REPLACE/REPLACEX=
-
+==Syntax==
 {{{
 StrFormat,REPLACE,<%string%>,<CharsToReplace>,<ReplacementChars>,
 <%VarResult%>
 }}}
 Will "replace" a given number of characters inside a given string.  There is also a case sensitive version of this command (`REPLACEX`)
 
-== Syntax example: == 
+== Example: == 
 
 {{{
 Set,%a%,BROWN
@@ -233,6 +241,7 @@ The quick brown fox jumps over the lazy dog
 <br>
 ----
 =SPLIT=
+==Syntax==
 {{{
 StrFormat,SPLIT,<%string%>,<DelimiterChar>,<Index>,<%VarResult%>
 }}}
@@ -257,6 +266,7 @@ In this example we split the string "The quick brown fox jumps over the lazy dog
 <br>
 ----
 =SHORTPATH/LONGPATH=
+==Syntax==
 {{{
 StrFormat,<Action>,<%string%>,<%VarResult%>
 }}}
@@ -266,6 +276,7 @@ This command will take a string and return either the "DOS 8.3" (i.e. ShortPath)
 <br>
 ----
 =CHARTOOEM/OEMTOCHAR=
+==Syntax==
 {{{
 StrFormat,<Action>,<%string%>,<%VarResult%>
 }}}
@@ -278,6 +289,7 @@ These functions convert between the ANSI charset and the DOS charset, and are us
 <br>
 ----
 =LEN=
+==Syntax==
 {{{
 StrFormat,LEN,<%string%>,<%VarResult%>
 }}}
@@ -295,6 +307,7 @@ StrFormat,LEN,"Hello World",%var1%
 <br>
 ----
 =POS=
+==Syntax==
 {{{
 StrFormat,POS,<String>,<SubString>,<%VarResult%>
 }}}
