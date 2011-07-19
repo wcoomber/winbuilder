@@ -1,8 +1,9 @@
 =Exec=
+==Syntax==
 {{{
 Exec,%ScriptFile%,<Section>[,parameters]
 }}}
 
 The *Exec* command is used to process the commands found in a named section of a script file. The `Exec` command is similar to the [run Run Command], however, it will additionally add all the variables found inside the `[variables]` section of the script file selected. Identical variables found on the new script will overwrite the existing value.
-
+==Remarks==
 For more information and examples, see the [run Run Command]
