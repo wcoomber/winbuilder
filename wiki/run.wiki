@@ -1,4 +1,5 @@
 =Run / Exec=
+==Syntax==
 {{{
 Run,%ScriptFile%,<Section>[,parameters]
 Exec,%ScriptFile%,<Section>[,parameters]
