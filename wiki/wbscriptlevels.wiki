@@ -10,4 +10,4 @@ This is a very useful way to ensure that your script always runs at the correct 
 
 By default, we use level 5 as the middle value where most scripts that are only meant to add programs (i.e. [wbscriptapplication Application Scripts]) should be processed.
 
-For a more in depth discussion on levels, see [http://reboot.pro/515/page__view__findpost__p__4183 this forum posting].
+For a more in depth discussion on levels, see [http://reboot.pro/515/ this forum posting].
