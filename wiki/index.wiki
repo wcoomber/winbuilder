@@ -17,7 +17,7 @@
    * [wbinterface_gui Graphical Interface] 
    * [wbscriptlinks Link Files] 
    * [wbscriptapplication Application Scripts]
- *[wbscriptsyntax#Script_Command_Categories Script Command Categories]
+ * [wbscriptsyntax#Script_Command_Categories Script Command Categories]
    * [wbscriptsyntax#File_Operations File Operations]
      * [filecopy FileCopy]
      * [filedelete FileDelete]
@@ -110,7 +110,7 @@
    * [wbscriptsyntax80 Winbuilder 080]
    * [wbscriptsyntax82 Winbuilder 082]
 
-==WinBuillder Commands==
+==!WinBuillder Commands==
      * [filecopy FileCopy]
      * [filedelete FileDelete]
      * [filerename FileRename]
