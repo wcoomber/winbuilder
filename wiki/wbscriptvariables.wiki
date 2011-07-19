@@ -28,7 +28,7 @@ These explanations may seem complicated now but it's simple to understand once y
 ==Scope==
 
 The `[variables]` section can be placed in 3 different files, each one with a different scale of availability. 
- * System - variables placed inside WinBuilder.ini�are available for all projects and scripts
+ * System - variables placed inside !WinBuilder.ini are available for all projects and scripts
  * Project - variables inside script.project are available for all scripts
  * Script - placed inside the script that is running (also called as "local variables") are valid until the script is concluded.
 
@@ -50,17 +50,17 @@ These variables are created by default just before a project start to run.
    * %!WindowsDir% - path to your Windows directory
    * %!WindowsSystemDir% - in most cases pointing to your windows system32 folder
 
- * WinBuilder specific
+ * !WinBuilder specific
    * %!BaseDir% - folder from where !WinBuilder.exe is running
    * %tools% - path where the common Tools folder can be found
    * %version% - current version of !WinBuilder
 
  * Project specific
-   * %SourceDir% - path to use as source for your project
-   * %TargetDir% - work folder that will have the project build files
+   * %!SourceDir% - path to use as source for your project
+   * %!TargetDir% - work folder that will have the project build files
    * %ISOfile% - filename of the image to be created
    * %ISOdir% - path of %ISOfile%
-   * %ProjectDir% - path to the respective project folder
+   * %!ProjectDir% - path to the respective project folder
 
 =Custom Variables =
 
@@ -136,7 +136,7 @@ Please let us know if this page is not complete or if you still haven't found ne
 ----
 Q: I'm still a bit confused, how can I understand this better?
 
-A: Look inside a project folder and open up the script.project file with notepad to view good examples. This also applies to WinBuilder.ini (same folder as WinBuilder.exe) and to your script files.
+A: Look inside a project folder and open up the script.project file with notepad to view good examples. This also applies to !WinBuilder.ini (same folder as !WinBuilder.exe) and to your script files.
 ----
 Q: I'm doing my own script - how can I know if the value of my variables is right?
 A: Use commands to output show the variables on the log. Echo,%myVar% is a good example to help in this case.
