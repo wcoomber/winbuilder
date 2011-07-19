@@ -13,7 +13,7 @@
    * [wbscriptsyntax#Syntax_Rules_and_Escape_Characters Syntax Rules]
    * [wbscriptsyntax#Syntax_Rules_and_Escape_Characters Escape Characters]
    * [wbscriptsyntax#File_Structure File Structure]   
-   * [wbscriptsyntax#Script_Command_Categories Script Command Categories]
+   * Script Command Categories
      * [wbscriptsyntax#File_Operations File Operations]
      * [wbscriptsyntax#Registry_Handling Registry Handling]
      * [wbscriptsyntax#INI_Manipulation INI Manipulation]
