@@ -1,22 +1,9 @@
-=Add=
-
-The `Add` command has two separate sub-commands
-
- * [add#Add,DesktopIni Add,DesktopIni]
- * [add#Add,URL Add,URL]
-
-Documentation for them is provided below.
+<h1>Add</h1>
+<wiki:toc max_depth="1" />
 
 <br>
 
-
-<wiki:comment>
-His funny "dash" is to provide an internal anchor for the following command, since it has mixed case (looks like a Wiki word) and has a comment
-</wiki:comment>
-====-====
 ----
-----
-
 <br>
 =Add,!DesktopIni=
 
@@ -61,15 +48,12 @@ Add,DesktopIni,Path,%Target_PE%\AFolder,.ShellClassInfo,IconIndex,25
 }}}
 
 <br>
- 
-<br>
-
-
-----
-
 ----
 <br>
-
+=Add,Shortcut=
+ ==See [add_shortcut Add_Shortcut] for documentation, since they are just two different ways to call the same AP functionality==
+----
+<br>
 =Add,URL=
 
 ==Syntax==
