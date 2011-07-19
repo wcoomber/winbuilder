@@ -1,17 +1,23 @@
-IniWriteTextLine
-
-IniWriteTextLine,<Filename>,<Section>,<StringLine> 
+=!IniWriteTextLine=
+==Syntax ==
+{{{
+IniWriteTextLine,<Filename>,<Section>,<StringLine>[,APPEND] 
+}}}
 This command will add a text line to given section inside the file you select.
 
 This line is placed on the top of the section.
 
-== Syntax example: ==
-IniWriteTextLine,C:\myFile.ini,mySection,ThisIsMyLine 
+== Example: ==
 In this example a new line is added on the top of the section and all remaining lines are moved below.
+{{{
+IniWriteTextLine,C:\myFile.ini,mySection,ThisIsMyLine 
+}}}
 
-WB078 added:
-Optional APPEND argument
+*WB078 added:*
+ Optional APPEND argument
 
-== Syntax example: ==
-IniWriteTextLine,C:\myFile.ini,mySection,ThisIsMyLine,APPEND 
+== Example: ==
 In this example the new line is added on the end of the section
+{{{
+IniWriteTextLine,C:\myFile.ini,mySection,ThisIsMyLine,APPEND 
+}}}
