@@ -13,11 +13,7 @@ In this example a new line is added on the top of the section and all remaining 
 IniWriteTextLine,C:\myFile.ini,mySection,ThisIsMyLine 
 }}}
 
-*WB078 added:*
- Optional APPEND argument
-
-== Example: ==
-In this example the new line is added on the end of the section
+ * *WB078 added:*  Optional APPEND argument so that the new line is added on the end of the section
 {{{
 IniWriteTextLine,C:\myFile.ini,mySection,ThisIsMyLine,APPEND 
 }}}
