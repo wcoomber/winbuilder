@@ -17,7 +17,8 @@
    * [wbinterface_gui Graphical Interface] 
    * [wbscriptlinks Link Files] 
    * [wbscriptapplication Application Scripts]
- * [wbscriptsyntax#Script_Command_Categories Script Command Categories]
+ * Script Command Categories
+   * [wbscriptsyntax#Script_Command_Categories Introduction]
    * [wbscriptsyntax#File_Operations File Operations]
      * [filecopy FileCopy]
      * [filedelete FileDelete]
