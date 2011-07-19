@@ -32,9 +32,9 @@ Add_Shortcut,[Type],[StartMenuFolder],[FullFileName],[Title],[Work Folder],
 ||9||!ToolTipText`*`||Text to display when cursor is on the icon of the program||
 
 ==Remarks==
- * Add_Shortcut is a generic command that will create a shortcut. On most projects, by leaving empty parameter 2, it will create this shortcut inside the Start Menu and will place it inside a subfolder that has the same name as the folder where the respective script is placed.
+ * !Add_Shortcut is a generic command that will create a shortcut. On most projects, by leaving empty parameter 2, it will create this shortcut inside the Start Menu and will place it inside a subfolder that has the same name as the folder where the respective script is placed.
  * You don't need to worry where the shortcut will be placed because each project will create them in the best possible way.
- * This seems that it was coded exclusively to work with the explorer shell but it wasn't. If the user prefers (for example) to use xoblite, then the Add_Shortcut will either use the equivalent shortcut or simply ignore the request if it is not possible to execute.
+ * This seems that it was coded exclusively to work with the explorer shell but it wasn't. If the user prefers (for example) to use xoblite, then the !Add_Shortcut will either use the equivalent shortcut or simply ignore the request if it is not possible to execute.
 
 ==Tips==
 If you want place an icon in `StartMenu\Programs` without subfolder use a point (.) as parameter 2
