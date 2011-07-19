@@ -8,4 +8,4 @@ To further categorize and group your scripts you can also create subfolders and 
 
 This is a very useful way to ensure that your script always runs at the correct time. First levels are usually used to be build the structure of your project, while the last levels are the ones where your project is finished and an image is created.
 
-By default, we use level 5 as the middle value where most scripts that are only meant to add programs (i.e. Application Scripts) should be processed.
+By default, we use level 5 as the middle value where most scripts that are only meant to add programs (i.e. [wbscriptapplication Application Scripts]) should be processed.
