@@ -123,10 +123,10 @@
  * Common API
   * [calculate _Calculate]
   * [add_asso Add_Asso]
-  * [add#DesktopIni Add,DesktopIni]
+  * [add#Add,DesktopIni Add,DesktopIni]
   * [add_pin Add_Pin]
-  * [add#Shortcut Add,Shortcut]
-  * [add#URL Add,URL]
+  * [add#Add,Shortcut Add,Shortcut]
+  * [add#Add,URL Add,URL]
   * [addautorun AddAutoRun]
   * [addpostconfig AddPostConfig]
   * [addpreconfig AddPreConfig]
