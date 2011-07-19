@@ -28,6 +28,7 @@
    * [wbinterface_gui Graphical Interface] 
    * [wbscriptlinks Link Files] 
    * [wbscriptapplication Application Scripts]
+   * [wbscriptfaq  Script F. A. Q.]
  * Script Command Categories
    * File Operations
      * [filecopy FileCopy]
