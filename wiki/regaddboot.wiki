@@ -9,7 +9,7 @@ RegAddBoot,Hive,ValueType,KeyName,ValueName,Value
 ||1||Hive||Hive to be updated at boot time||
 || || ||*HKLM* = The HKEY_LOCAL_MACHINE hive.||
 || || ||*HKCU* = The HKEY_CURRENT_UER hive.||
-||2||ValueType||The type of the registry value||
+||2||!ValueType||The type of the registry value||
 || || ||*0x0* = Registry key with no value||
 || || ||*0x1* = String Value||
 || || ||*0x2* = Expanded String - will expand any variable value contained inside {{{%<var>%}}}. (e.g. {{{%temp%}}})||
