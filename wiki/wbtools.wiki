@@ -11,7 +11,7 @@ We can divide these Tools under two categories and will also describe in more de
 Whenever this information is not complete enough and you have doubts on how to make things work, don't hesitate in placing your questions on our forum so that aditional information can be added to these pages. We also welcome requests on [http://reboot.pro the forum] for new tools to be added in the future.
 
 ==Compatibility==
-These tools were created with the intention to work under Windows 32 bit environments since Windows 95 up to Windows Vista. No major compatibility issues are present, except for limitations specific to individual tool.  For example, tools like WimUtil should be executed on NTFS partitions to properly handle WIM images.
+These tools were created with the intention to work under Windows 32 bit environments since Windows 95 up to Windows Vista. No major compatibility issues are present, except for limitations specific to individual tool.  For example, tools like !WimUtil should be executed on NTFS partitions to properly handle WIM images.
 
 You might also be required to run some of these tools under an account with Administrative level privileges. 
 
@@ -55,9 +55,9 @@ On this tab you can change the behavior of the script when it is enabled from th
  * Disable - the scripts on this list will be disabled if they are enabled on your project.
 
 In each box you can specify the path to the scripts you wish to control. To avoid using static paths you can use these variables to make the path dynamic
- * %ProjectDir% - is the full path to your project folder
- * %ScriptDir% - it's the path where this script is located
- * %BaseDir% - is the path where WinBuilder.exe was executed from (base)
+ * %!ProjectDir% - is the full path to your project folder
+ * %!ScriptDir% - it's the path where this script is located
+ * %!BaseDir% - is the path where !WinBuilder.exe was executed from (base)
 
 You can also list more than one script on this text box, just split each script with a comma.
 
@@ -82,7 +82,7 @@ There are many options and tools available by selecting the tools function
 The options tab allows to change some settings to work as you prefer or read more informations about wb.
 
  * Local Registry 
- This box contains settings that allow you to write associate winbuilder related files to open with your favourite text editor. You have the option to add the file association on your registry and later removed if needed.
+ This box contains settings that allow you to write associate !WinBuilder related files to open with your favourite text editor. You have the option to add the file association on your registry and later removed if needed.
 
  You can also make wb ensure that these script files are predefined to your text editor when the program is starting up.
 
@@ -92,7 +92,7 @@ The options tab allows to change some settings to work as you prefer or read mor
  The option "Open log window after process" will show you the contents of the log window when your project has finished running all scripts. This is an useful option when debugging your projects and scripts.
 
  * Network support 
- You can enable or disable network support inside WinBuilder. This applies to
+ You can enable or disable network support inside !WinBuilder. This applies to
   * Web tab
   * Download Center
   * FTP client
@@ -135,7 +135,7 @@ To avoid having to distribute !WinBuilder.exe along with a separate license file
 
 ==Language Support ==
 
-WinBuilder can support multiple languages and users can submit their own language files. Each term to be translated uses a numeric key to allow the same term be applied on similar cases. This avoids having to write thousands of messages which would only become a very tedious task for anyone proposing himself to complete a translation.
+!WinBuilder can support multiple languages and users can submit their own language files. Each term to be translated uses a numeric key to allow the same term be applied on similar cases. This avoids having to write thousands of messages which would only become a very tedious task for anyone proposing himself to complete a translation.
 
 Since our program is constantly changing values and adding new features - languages would grow outdated quite quickly and surely most translators wouldn't always be available to provide the needed updates.
 
@@ -151,9 +151,9 @@ This also means that even old translated language files that are not completed w
 
  _*How to edit your language?*_ -  On the same tab you find the window that lists all values and corresponding translated terms - just write each term the way it best fits your language and press the save button.
 
- _*Where do I find my language file?*_ - All language files are placed under `%BaseDir%\Projects\Tools\Languages` (remember that `%BaseDir%` is the same path from where you run WinBuilder). If this folder doesn't exist, English language is used as standard - when creating a new translation file this folder is automatically generated. You can edit any of these language files with a simple text editor.
+ _*Where do I find my language file?*_ - All language files are placed under `%BaseDir%\Projects\Tools\Languages` (remember that `%BaseDir%` is the same path from where you run !WinBuilder). If this folder doesn't exist, English language is used as standard - when creating a new translation file this folder is automatically generated. You can edit any of these language files with a simple text editor.
 
- _*How do I share my language file?*_ - Look on community forums for the language specific sub-forums where you might find more people that share the same language, if there isn't a forum created then you can post on the main winbuilder discussion forum
+ _*How do I share my language file?*_ - Look on community forums for the language specific sub-forums where you might find more people that share the same language, if there isn't a forum created then you can post on the main [http://reboot.pro/forum/22/ WinBuilder discussion forum].
 
 <br>
 ----
