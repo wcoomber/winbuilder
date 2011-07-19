@@ -1,8 +1,12 @@
-IniDelete
-
+=!IniDelete=
+==Syntax ==
+{{{
 IniDelete,<Filename>,<Section>,<Key> 
+}}}
 This command will delete the key from a section inside a file that you specify.
 
-== Syntax example: ==
+== example: ==
+In this example the specified key and respective value will both be deleted
+{{{
 IniDelete,C:\myFile.ini,mySection,myKey 
-In this example the specified key and respective value will both be deleted
+}}}
