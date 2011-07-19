@@ -1,10 +1,15 @@
-IniDeleteSection
+=!IniDeleteSection=
 
+==Syntax ==
+{{{
 IniDeleteSection,<Filename>,<Section> 
+}}}
 This command will delete a given section inside the file you select.
 
 All keys and values inside this section are completely removed as well.
 
-== Syntax example: ==
+== Example: ==
+In this example we're deleting an existing section.
+{{{
 IniDeleteSection,C:\myFile.ini,mySection 
-In this example we're deleting an existing section.
+}}}
