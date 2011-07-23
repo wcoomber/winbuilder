@@ -77,7 +77,7 @@ End
 }}}
 
 
-==System,IsTerminal==
+==System,!IsTerminal==
 {{{
 System,IsTerminal,<%var%>
 }}}
