@@ -63,7 +63,7 @@ System,Comp80,off
 
 ==System,HasUAC==
 {{{
-System,HasUAC,<%var%>�
+System,HasUAC,<%var%>
 }}}
 This command will set the variable to true if Vista / Win 7 UAC ( User Account Control ) is enabled. This can cause problems to some projects.
 
@@ -94,7 +94,7 @@ End
  
 ==System,Log==
 {{{
-System,Log,{on|off}�
+System,Log,{on|off}
 }}}
 When in your project a certain function is used many, many times, it usually expands inside the log.html into many unnecessary lines.
 This command stops / restarts logging to log.html
