@@ -1,0 +1,81 @@
+#summary One-sentence summary of this page.
+#labels Deprecated,u2o_Examples
+<h1>
+u2o_Examples_WB_v082
+</h1>
+<wiki:toc max_depth="3" />
+<br>
+
+----
+
+=Miscellaneous Commands=
+== Run / Exec ==
+  Referred to: [run Run / Exec]
+*Syntax:*
+{{{
+Run,%ScriptFile%,<Section>[,parameters]
+}}}
+
+===Complex Example 1: Associate an Extension (or more) with a different icon==
+
+Simplify the association of extensions, you can call so through a single _Run_ line.
+
+{{{
+Run,%scriptfile%,SectionAssocExt,P#1,P#2,P#3,P#4,P#5,P#6,P#7
+
+//P#1 = EXTENSION
+//P#2 = EXTENSION_LINK
+//P#3 = EXTENSION_DESCRIPTION
+//P#4 = ICON_CONTAINER
+//P#5 = ICON_CONTAINER_INDEX
+//P#6 = APP_FULL_PATH
+//P#7 = APP_PARAMETERS
+}}}
+
+{{{
+[Interface]
+pCheckBox5="JPG,JPE,JPEG",1,3,30,150,100,16,True
+pCheckBox6=BMP,1,3,30,165,100,16,True
+
+[Variables]
+%ProgramTitle%=FastStone Image Viewer
+%ProgramFolder%=FastStone Image Viewer
+%ProgramEXE%=FSViewer.exe
+%SMProgramDir%=%pTextBox1%
+
+[Process]
+Echo,"Processing %ProgramTitle%..."
+Set,"%LinkDir%","%PE_Programs%\%ProgramFolder%"
+Set,"%ExeFullPath%","#$q%LinkDir%\%ProgramEXE%#$q"
+Set,"%ExeParameter%","#$q#$p1#$q"
+
+RegHiveLoad,WB_Software,%RegSoftware%
+
+If,%pCheckBox5%,Equal,True,Run,%scriptfile%,SectionAssocExt,.jpe,FastStone.jpe,FastStone JPE File,%LinkDir%\FSIcons.db,4,%ExeFullPath%,%ExeParameter%
+If,%pCheckBox5%,Equal,True,Run,%scriptfile%,SectionAssocExt,.jpeg,FastStone.jpeg,FastStone JPEG File,%LinkDir%\FSIcons.db,4,%ExeFullPath%,%ExeParameter%
+If,%pCheckBox5%,Equal,True,Run,%scriptfile%,SectionAssocExt,.jpg,FastStone.jpg,FastStone JPG File,%LinkDir%\FSIcons.db,4,%ExeFullPath%,%ExeParameter%
+
+If,%pCheckBox6%,Equal,True,Run,%scriptfile%,SectionAssocExt,.bmp,FastStone.bmp,FastStone BMP File,%LinkDir%\FSIcons.db,0,%ExeFullPath%,%ExeParameter%
+
+RegHiveUnLoad,WB_Software
+
+[SectionAssocExt]
+Echo,"Registering Association for Extension: #1"
+RegWrite,HKLM,0x1,"WB-Software\Classes\#1","","#2"
+RegWrite,HKLM,0x1,"WB-Software\Classes\#2","","#3"
+RegWrite,HKLM,0x1,"WB-Software\Classes\#2\DefaultIcon","","#4,#5"
+RegWrite,HKLM,0x2,"WB-Software\Classes\#2\shell\open\command","","#6#$s#7"
+}}}
+
+
+=== Implicit example 1: Run by button ===
+  Referred to: [Message Message]
+This is an Event *_Click Button_*. When you click the button, call the section _MessageOne_
+
+{{{
+[Interface]
+pButton1=ButtonShowThisText,1,8,189,260,25,25,MessageOne,False,False,False,_MessageOne_,False
+
+[MessageOne]
+Message,"You message here...",Information
+}}}
