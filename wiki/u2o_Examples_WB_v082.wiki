@@ -70,7 +70,7 @@ RegWrite,HKLM,0x2,"WB-Software\Classes\#2\shell\open\command","","#6#$s#7"
 
 === Implicit example 1: Run by button ===
   Referred to: [message Message]
-This is an Event *_Click Button_*. When you click the button, call the section: MessageOne
+This is an Event *_Click Button_*. When you click the button, call the section: *{{{MessageOne}}}*
 
 {{{
 [Interface]
