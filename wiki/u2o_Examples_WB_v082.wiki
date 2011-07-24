@@ -1,5 +1,5 @@
 #summary One-sentence summary of this page.
-#labels Deprecated,u2o_Examples
+#labels Deprecated
 <h1>
 u2o_Examples_WB_v082
 </h1>
@@ -69,8 +69,8 @@ RegWrite,HKLM,0x2,"WB-Software\Classes\#2\shell\open\command","","#6#$s#7"
 
 
 === Implicit example 1: Run by button ===
-  Referred to: [Message Message]
-This is an Event *_Click Button_*. When you click the button, call the section _MessageOne_
+  Referred to: [message Message]
+This is an Event *_Click Button_*. When you click the button, call the section: MessageOne
 
 {{{
 [Interface]
