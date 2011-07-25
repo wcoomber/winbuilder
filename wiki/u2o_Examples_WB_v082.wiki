@@ -13,14 +13,14 @@ We will try to show real and explicit examples, with the necessary code for each
 <br>
 <br>
 =Registry Handling=
-== {{{RegRead}}} ==
+== !RegRead ==
   {{{References:}}} [regread RegRead] 
 *Syntax:*
 {{{
 RegRead,<HKEY>,<Section>,<Key>,<%Variable%> 
 }}}
 === Complex Example 1: Read a Value, put Date on a textbox and refresh script interface ===
-  This is an Event *_Click Button_*. When you click the button, call the section: *{{{pButton1}}}*
+  This is an Event *_Click Button_*. When you click the button, call the section: *pButton1*
 {{{
 [Interface]
 pButton1="Copy Your current key",1,8,414,201,121,25,pButton1,0,False,False,_pButton1_,False
@@ -37,8 +37,8 @@ System,REFRESHINTERFACE
   {{{Similar Example:}}} [#Implicit_example_1:_Run_by_button Run by button]
 
 =Miscellaneous Commands=
-== {{{Run/Exec}}} ==
-   {{{References:}}} [run Run / Exec]
+== Run / Exec ==
+  {{{References:}}} [run Run / Exec]
 *Syntax:*
 {{{
 Run,%ScriptFile%,<Section>[,parameters]
@@ -48,7 +48,6 @@ Run,%ScriptFile%,<Section>[,parameters]
 
   Simplify the association of extensions, you can call so through a single _Run_ line.
 
-  _*Note*: You can also use the following functions: [add_asso CommonApi -> add_asso ]  | [associate_file  CommonApi -> associate_file ] _
 *How to use:*
 {{{
 Run,%scriptfile%,SectionAssocExt,<P#1>,<P#2>,<P#3>,<P#4>,<P#5>,<P#6>,<P#7>
@@ -100,8 +99,10 @@ RegWrite,HKLM,0x2,"WB-Software\Classes\#2\shell\open\command","","#6#$s#7"
 }}}
    {{{References:}}} [wbinterface_gui Graphical Interface] | [wbscriptvariables  Variables] | [echo Echo] | [set Set] | [run Run / Exec] | [reghiveload RegHiveLoad] | [reghiveunload RegHiveUnLoad] | [if   If Clauses] | [regwrite RegWrite] | [wbscriptsyntax#Syntax_Rules_and_Escape_Characters Syntax Rules and Escape Characters]
 
+  _*Note*: You can also use the following functions: [add_asso CommonApi -> add_asso ]  | [associate_file  CommonApi -> associate_file ] _
+
 === Implicit example 1: Run by button ===
-  This is an Event *_Click Button_*. When you click the button, call the section: *{{{MessageOne}}}*
+  This is an Event *_Click Button_*. When you click the button, call the section: *MessageOne*
 
 {{{
 [Interface]
@@ -115,7 +116,7 @@ Message,"You message here...#$x With new line #$c and comma.",Information
   {{{Similar Example:}}} [#Complex_Example_1:_Read_a_Value,_put_Date_on_a_textbox_and_refre Read a value, put date on a textbox and refresh script interface]
 
 = Network Tools =
-== {{{WebGet}}} ==
+== !WebGet ==
   {{{References:}}} [webget#WebGet WebGet]
 === Example 1: Download a Zip File ===
 
