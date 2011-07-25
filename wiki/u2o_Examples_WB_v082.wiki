@@ -14,7 +14,7 @@ u2o_Examples_WB_v082
 {{{
 RegRead,<HKEY>,<Section>,<Key>,<%Variable%> 
 }}}
-=== Complex Example 1: Read a value, put date on a textbox and refresh script interface ===
+=== Complex Example 1: Read a Value, put Date on a textbox and refresh script interface ===
   This is an Event *_Click Button_*. When you click the button, call the section: *{{{pButton1}}}*
 {{{
 [Interface]
@@ -27,8 +27,9 @@ System,REFRESHINTERFACE
 }}}
   _*Note*: The *Key* and *Value* must exist to get the content (*Data*) of the *Value*_
 
-  {{{References:}}} [wbinterface_gui Graphical Interface] | [regread RegRead] | [set Set] | [system#RefreshInterface System -> RefreshInterface ] || [#Implicit_example_1:_Run_by_button Similar Example: Run By Button]
+  {{{References:}}} [wbinterface_gui Graphical Interface] | [regread RegRead] | [set Set] | [system#RefreshInterface System -> RefreshInterface ]
 
+  {{{Similar Example:}}} [#Implicit_example_1:_Run_by_button Run by button]
 
 =Miscellaneous Commands=
 == {{{Run/Exec}}} ==
@@ -105,3 +106,5 @@ pButton1=ButtonShowThisText,1,8,189,260,25,25,MessageOne,False,False,False,_Mess
 Message,"You message here...#$x With new line #$c and comma.",Information
 }}}
   {{{References:}}} [wbinterface_gui Graphical Interface] | [message Message] | [wbscriptsyntax#Syntax_Rules_and_Escape_Characters Syntax Rules and Escape Characters]
+
+  {{{Similar Example:}}} [#Complex_Example_1:_Read_a_Value,_put_Date_on_a_textbox_and_refre Read a value, put date on a textbox and refresh script interface]
