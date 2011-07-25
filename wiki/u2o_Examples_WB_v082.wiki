@@ -7,10 +7,32 @@ u2o_Examples_WB_v082
 <br>
 
 ----
+=Registry Handling=
+== {{{RegRead}}} ==
+  {{{References:}}} [regread RegRead] 
+*Syntax:*
+{{{
+RegRead,<HKEY>,<Section>,<Key>,<%Variable%> 
+}}}
+=== Complex Example 1: Read a value, put date on a textbox and refresh script interface ===
+  This is an Event *_Click Button_*. When you click the button, call the section: *{{{pButton1}}}*
+{{{
+[Interface]
+pButton1="Copy Your current key",1,8,414,201,121,25,pButton1,0,False,False,_pButton1_,False
+
+[pButton1]
+RegRead,"HKLM","SOFTWARE\Acronis\DiskDirector","enterprise","%temp_reg_data%"
+Set,%pTextBox2%,"%temp_reg_data%",Permanent
+System,REFRESHINTERFACE
+}}}
+  _*Note*: The *Key* and *Value* must exist to get the content (*Data*) of the *Value*_
+
+  {{{References:}}} [wbinterface_gui Graphical Interface] | [regread RegRead] | [set Set] | [system#RefreshInterface System -> RefreshInterface ] || [#Implicit_example_1:_Run_by_button Similar Example: Run By Button]
+
 
 =Miscellaneous Commands=
-== Run / Exec ==
-  Referred to: [run Run / Exec]
+== {{{Run/Exec}}} ==
+   {{{References:}}} [run Run / Exec]
 *Syntax:*
 {{{
 Run,%ScriptFile%,<Section>[,parameters]
@@ -18,10 +40,12 @@ Run,%ScriptFile%,<Section>[,parameters]
 
 ===Complex Example 1: Associate an Extension (or more) with a different icon==
 
-Simplify the association of extensions, you can call so through a single _Run_ line.
+  Simplify the association of extensions, you can call so through a single _Run_ line.
 
+  _*Note*: You can also use the following functions: [add_asso CommonApi -> add_asso ]  | [associate_file  CommonApi -> associate_file ] _
+*How to use:*
 {{{
-Run,%scriptfile%,SectionAssocExt,P#1,P#2,P#3,P#4,P#5,P#6,P#7
+Run,%scriptfile%,SectionAssocExt,<P#1>,<P#2>,<P#3>,<P#4>,<P#5>,<P#6>,<P#7>
 
 //P#1 = EXTENSION
 //P#2 = EXTENSION_LINK
@@ -31,7 +55,9 @@ Run,%scriptfile%,SectionAssocExt,P#1,P#2,P#3,P#4,P#5,P#6,P#7
 //P#6 = APP_FULL_PATH
 //P#7 = APP_PARAMETERS
 }}}
+  _*Note*: All parameters are required._
 
+*The code sample:*
 {{{
 [Interface]
 pCheckBox5="JPG,JPE,JPEG",1,3,30,150,100,16,True
@@ -49,7 +75,7 @@ Set,"%LinkDir%","%PE_Programs%\%ProgramFolder%"
 Set,"%ExeFullPath%","#$q%LinkDir%\%ProgramEXE%#$q"
 Set,"%ExeParameter%","#$q#$p1#$q"
 
-RegHiveLoad,WB_Software,%RegSoftware%
+RegHiveLoad,"WB-Software",%RegSoftware%
 
 If,%pCheckBox5%,Equal,True,Run,%scriptfile%,SectionAssocExt,.jpe,FastStone.jpe,FastStone JPE File,%LinkDir%\FSIcons.db,4,%ExeFullPath%,%ExeParameter%
 If,%pCheckBox5%,Equal,True,Run,%scriptfile%,SectionAssocExt,.jpeg,FastStone.jpeg,FastStone JPEG File,%LinkDir%\FSIcons.db,4,%ExeFullPath%,%ExeParameter%
@@ -57,7 +83,7 @@ If,%pCheckBox5%,Equal,True,Run,%scriptfile%,SectionAssocExt,.jpg,FastStone.jpg,F
 
 If,%pCheckBox6%,Equal,True,Run,%scriptfile%,SectionAssocExt,.bmp,FastStone.bmp,FastStone BMP File,%LinkDir%\FSIcons.db,0,%ExeFullPath%,%ExeParameter%
 
-RegHiveUnLoad,WB_Software
+RegHiveUnLoad,"WB-Software"
 
 [SectionAssocExt]
 Echo,"Registering Association for Extension: #1"
@@ -66,16 +92,16 @@ RegWrite,HKLM,0x1,"WB-Software\Classes\#2","","#3"
 RegWrite,HKLM,0x1,"WB-Software\Classes\#2\DefaultIcon","","#4,#5"
 RegWrite,HKLM,0x2,"WB-Software\Classes\#2\shell\open\command","","#6#$s#7"
 }}}
-
+   {{{References:}}} [wbinterface_gui Graphical Interface] | [echo Echo] | [set Set] | [run Run / Exec] | [reghiveload RegHiveLoad] | [reghiveunload RegHiveUnLoad] | [regwrite RegWrite] | [wbscriptsyntax#Syntax_Rules_and_Escape_Characters Syntax Rules and Escape Characters]
 
 === Implicit example 1: Run by button ===
-  Referred to: [message Message]
-This is an Event *_Click Button_*. When you click the button, call the section: *{{{MessageOne}}}*
+  This is an Event *_Click Button_*. When you click the button, call the section: *{{{MessageOne}}}*
 
 {{{
 [Interface]
 pButton1=ButtonShowThisText,1,8,189,260,25,25,MessageOne,False,False,False,_MessageOne_,False
 
 [MessageOne]
-Message,"You message here...",Information
+Message,"You message here...#$x With new line #$c and comma.",Information
 }}}
+  {{{References:}}} [wbinterface_gui Graphical Interface] | [message Message] | [wbscriptsyntax#Syntax_Rules_and_Escape_Characters Syntax Rules and Escape Characters]
