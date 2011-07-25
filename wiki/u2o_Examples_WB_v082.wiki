@@ -7,6 +7,11 @@ u2o_Examples_WB_v082
 <br>
 
 ----
+= Intro =
+We will try to show real and explicit examples, with the necessary code for each action and references to their use. By this way you'll understand the use of each function (separately), as well as have the ability to modify sentences for fit what you need when you are creating your own script.
+<br>
+<br>
+<br>
 =Registry Handling=
 == {{{RegRead}}} ==
   {{{References:}}} [regread RegRead] 
@@ -93,7 +98,7 @@ RegWrite,HKLM,0x1,"WB-Software\Classes\#2","","#3"
 RegWrite,HKLM,0x1,"WB-Software\Classes\#2\DefaultIcon","","#4,#5"
 RegWrite,HKLM,0x2,"WB-Software\Classes\#2\shell\open\command","","#6#$s#7"
 }}}
-   {{{References:}}} [wbinterface_gui Graphical Interface] | [echo Echo] | [set Set] | [run Run / Exec] | [reghiveload RegHiveLoad] | [reghiveunload RegHiveUnLoad] | [regwrite RegWrite] | [wbscriptsyntax#Syntax_Rules_and_Escape_Characters Syntax Rules and Escape Characters]
+   {{{References:}}} [wbinterface_gui Graphical Interface] | [wbscriptvariables  Variables] | [echo Echo] | [set Set] | [run Run / Exec] | [reghiveload RegHiveLoad] | [reghiveunload RegHiveUnLoad] | [if   If Clauses] | [regwrite RegWrite] | [wbscriptsyntax#Syntax_Rules_and_Escape_Characters Syntax Rules and Escape Characters]
 
 === Implicit example 1: Run by button ===
   This is an Event *_Click Button_*. When you click the button, call the section: *{{{MessageOne}}}*
@@ -108,3 +113,37 @@ Message,"You message here...#$x With new line #$c and comma.",Information
   {{{References:}}} [wbinterface_gui Graphical Interface] | [message Message] | [wbscriptsyntax#Syntax_Rules_and_Escape_Characters Syntax Rules and Escape Characters]
 
   {{{Similar Example:}}} [#Complex_Example_1:_Read_a_Value,_put_Date_on_a_textbox_and_refre Read a value, put date on a textbox and refresh script interface]
+
+= Network Tools =
+== {{{WebGet}}} ==
+  {{{References:}}} [webget#WebGet WebGet]
+=== Example 1: Download a Zip File ===
+
+  The best way to get small size scripts, is to download the application zip package from its website. And obviously it's good, add the variables and code necessary for update the script easily.
+{{{
+[Variables]
+%ProgramTitle%=FastStone Image Viewer
+%ProgramFolder%=FastStone Image Viewer
+%ProgramEXE%=FSViewer.exe
+%SMProgramDir%=%pTextBox1%
+// Download Config
+%DownloadFileBaseName%=FSViewer46
+%DownloadFile%=%DownloadFileBaseName%.zip
+%DownloadUrl%=http://www.faststonesoft.net/DN/%DownloadFile%
+// path where program templates are stored
+%ProgramTemplate%=%BaseDir%\Workbench\Common\FastStone_Image_Viewer
+
+[Process]
+Run,%ScriptFile%,Download
+
+[Download]
+Echo,"Trying download %ProgramTitle%  (%DownloadFile%)..."
+If,Not,ExistDir,%ProgramTemplate%,DirMake,%ProgramTemplate%
+// Download
+If,Not,ExistFile,%ProgramTemplate%\%DownloadFile%,WebGet,%DownloadUrl%,%ProgramTemplate%\%DownloadFile%
+If,Not,ExistFile,%ProgramTemplate%\%DownloadFile%,Echo,"File not downloaded",WARN
+If,Not,ExistFile,%ProgramTemplate%\%DownloadFile%,Echo,"Perhaps there is a new version of %DownloadUrl%",WARN
+// Unpack zip file
+If,ExistFile,%ProgramTemplate%\%DownloadFile%,ShellExecute,Hide,%Tools%\7z.exe,"x #$q%ProgramTemplate%\%DownloadFile%#$q -y -o#$q%ProgramTemplate%#$q"
+}}}
+   {{{References:}}} [wbscriptvariables  Variables] | [echo Echo] | [run Run / Exec] | [if   If Clauses] and [if#Exist... Exist... / NotExist...] | [webget#WebGet WebGet] | [shellexecute ShellExecute] | [wbscriptsyntax#Syntax_Rules_and_Escape_Characters Syntax Rules and Escape Characters]
