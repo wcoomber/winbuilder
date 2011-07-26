@@ -18,7 +18,7 @@ AddAutoRun,[Title],[FileName],[Parameters],[StartMode]
 ==Remarks==
 This is used to configure a program to automatically run when PE boots. 
 
-In PE1 projects the API calls AddShortcut,Autostart to create the run entry in the registry.
+In PE1 projects the API calls [addshortcut AddShortcut,Autostart] to create the run entry in the registry.
 
 In PE2+ projects AddAutoRun will create an entry in the autorun section in the %PE_CFG% configuration file. 
 
