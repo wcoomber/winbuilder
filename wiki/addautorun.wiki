@@ -1,4 +1,4 @@
-=!AddAutoRun ( Vista / Win7 projects only )=
+=!AddAutoRun=
 
 ==Syntax==
 {{{
@@ -16,9 +16,19 @@ AddAutoRun,[Title],[FileName],[Parameters],[StartMode]
 || || ||*4* = Run the program hidden and don't wait for the program to finish running.||
 
 ==Remarks==
-This is used to configure a program to automatically run when PE boots. This adds an entry to the autorun section in the %PE_CFG% configuration file. 
+This is used to configure a program to automatically run when PE boots. 
 
-This file is processed at boot time by the vpeldr / win7peldr programs. The only difference between this and [addpostconfig AddPostConfig] is the position in the startup sequence when the entry is run. This runs before the hardware detection is run and device drivers are installed.
+In PE1 projects the API calls AddShortcut,Autostart to create the run entry in the registry.
+
+In PE2+ projects AddAutoRun will create an entry in the autorun section in the %PE_CFG% configuration file. 
+
+This file is processed at boot time. The only difference between this and [addpostconfig AddPostConfig] is the position in the startup sequence when the entry is run. This runs before the hardware detection is run and device drivers are installed.
+
+In current PE2+ projects the %PE_CFG% file is processed by:
+  * *VistaPE*: vpeldr.exe
+  * *Win7RescuePE*: win7peldr.exe
+  * *Win7PE_SE*: shortcuts.exe
+
 
 ==Example==
 This example shows how to automatically start a service at boot time. In this example the lanman service will be started. The loader program will wait for the service to start and hide the console window that otherwise would be shown.
