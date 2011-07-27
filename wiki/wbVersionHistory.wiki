@@ -5,10 +5,11 @@
 Winbuilder uses a ____ version system where even numbered version are stable releases and odd numbered releases are pre-release builds.
 
 
-= Change Log =
+= Version History =
+----
 
 ==Winbuilder Releases==
-
+----
 ===[082] stable (2011-06-15)===
 
 changed - comp80 default from ON to OFF
@@ -1469,6 +1470,8 @@ beta 4
 - ScrollBox can be resized to smaller sizes
 
 ==OpenBuilder Releases==
+----
+
 ===[048] (2006-07-27)===
 
 - Fixed misplaced image when processing scripts in maximized mode
