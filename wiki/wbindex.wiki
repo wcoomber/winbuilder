@@ -8,7 +8,7 @@
    * [wbcompatbugs Compatibility]
    * [wbcompatbugs#Troubleshooting Troubleshooting]
    * [wbcompatbugs#Reporting_Bugs Reporting Bugs]
-   * [wbVersionHistory#Version History] 
+   * [wbVersionHistory Version History] 
    * [wblicense License]
  * [wbscriptsyntax  Script Files]
    * [wbscriptsyntax#Syntax_Rules_and_Escape_Characters Syntax Rules]
