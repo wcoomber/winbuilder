@@ -433,13 +433,9 @@ Rebuild - Syntax highlight in editor restored
 ===`[076]` (2009-02-02)===
 unknown
 
+===`[075]` beta 7 (2009-01-14)===
 
-=Older release information not yet formatted for WIKI=
-
-{{{
-===[075] beta 7 (2009-01-14)===
-
- * changed - Dialogbox with timeout now has progressbar and secunds countdown 
+ * changed - Dialogbox with timeout now has progressbar and seconds countdown 
  * fixed - filebox in directory mode showed backslash at single drive letter (D:\) but no backslash at path (D:\mypath\subpath)
  * fixed - filebox in directory mode now shows last directory
  * fixed - indenting begin / end blocks confused on comment lines
@@ -448,7 +444,7 @@ unknown
  * added - GLOBAL and PERMANENT options to AddVariables command
  * fixed - Editor changes have been lost when switching tabs in source edit mode
  * changed - log by default in English, optional in user language (checkbox on Tools > Language)
-***     preview as beta 6 a
+   preview as beta 6 a
  * added - API functions to magic wand
  * fixed - bug in WebGet with ftp protocol
  * changed - on IniWrite inifile is created if not exists
@@ -456,44 +452,43 @@ unknown
  * fixed - script.project.sav files has been also treated as project root
  * changed - autosave logic: now with On, Off, On and Ask, Off and Ask (combobox on Tools > Options)
  * fixed - bug in indenting with 'Else,Begin'
-***     preview as beta 6 b
+   preview as beta 6 b
  * changed - WebGet function enhanced
-***     preview as beta 6 c
+   preview as beta 6 c
  * changed - options as first tab
-removed - lblAdvLaunch to make room for additional option
-removed - language entry !#1621=Launch a separate process for running projects.
-removed - exit cross at the license tab to make tab look simpler
-added   - checkbox to enable visibility of Code Box tab (disabled by default)
-added   - language entry !#1625=Enable Code Box
+ * removed - lblAdvLaunch to make room for additional option
+ * removed - language entry !#1621=Launch a separate process for running projects.
+ * removed - exit cross at the license tab to make tab look simpler
+ * added   - checkbox to enable visibility of Code Box tab (disabled by default)
+ * added   - language entry !#1625=Enable Code Box
  * changed - cosmetic improvements on Tools, now it's possible properly use all tools when window is maximized
  * changed - proxy tab moved to download center
  * changed - server tab in download center moved to frontpage
-removed - buttons on server list (edit and visit webserver)
+ * removed - buttons on server list (edit and visit webserver)
  * fixed - bug in evaluating RadioGroup
-***     preview as beta 6 d
+   preview as beta 6 d
  * added - during build you cannot exit WB using the upper left 'x'. Build must be stopped before.
  * added - treeview to progress window, shown during project build (experimental)
  * added - System,GetFreeSpace command
-***     preview as beta 6 e
+   preview as beta 6 e
  * fixed - escape of escape handling in TXTfile commands
  * changed - some smaller adjustements in User Interface
-***     preview as beta 6 e (overwritten)
+   preview as beta 6 e (overwritten)
  * fixed - escape of escape handling in IniWriteTextLine command
  * added - some visual changes to progress window
  * changed - for mandatory scripts replaced red exclamation icon by locker icon
  * fixed - bug in Source window which let the $sourcedir% variable sometimes undefined
  * fixed - bug in 'launch external processs'
  * fixed - bug in copying directories recursive
- * added - in Convert BartPE, added BartPE [strings] section to WinBuilde [Variables] section
+ * added - in Convert BartPE, added BartPE `[strings]` section to WinBuilde `[Variables]` section
  * fixed - I/O error 6 when exiting WinBuilder with folder selected (after editing a script)
  * added - warning when WinBuilder is started w/o admin privileges
  * fixed - bug that comment and API lines are not indented
  * added - Fast DirDelete
-***     preview as beta 6 f
-rebuild - complete 'unattended' design
+   preview as beta 6 f
+   rebuild - complete 'unattended' design
 
-
-===[075] beta 6 (2008-09-18)===
+===`[075]` beta 6 (2008-09-18)===
 
  * fixed - bug in If,EXISTREGSECTION
  * fixed - bug in StrFormat,CTRIM if the SingleChar was an escape like #$q
@@ -600,7 +595,7 @@ speed - in log html build, replaced if - else sequence by case statement
  * fixed - wrong color of GUI background
 ***     Preview as beta 5 A
  * changed - some more internal structure, Interface editor
- * added - *.inf can contain WinBuilder sections. [Process] is processed, [Interface] is used for building GUI, [Variables] are evaluated
+ * added - *.inf can contain WinBuilder sections. `[Process]` is processed, `[Interface]` is used for building GUI, `[Variables]` are evaluated
 ***     Preview as beta 5 B
  * changed - Source tab implementation
  * changed - Script editor form separated from WinBuilder's main form - re-implemented large parts
@@ -636,7 +631,7 @@ rebuilt - old ShellExecute functionality
  * fixed - Access violation when there is no project
  * fixed - bug with lost file level on GUI edit
  * fixed - bug with labeled edit box on GUI edit
- * added - BartPE inf is skipped when [PEBuilder] contains WinBuilder=0
+ * added - BartPE inf is skipped when `[PEBuilder]` contains WinBuilder=0
  * fixed - new bug with nested If commands
  * added - Indents in Begin ... End blocks
 ***     Preview as beta 5 K
@@ -673,7 +668,7 @@ recreated - lost language dependent interface
 reanimated - If,License command
 ***     Preview as beta 5 T
 
-===[075] beta 5 (2008-07-07)===
+===`[075]` beta 5 (2008-07-07)===
 
  * fixed - double 'beta' in form caption
  * fixed - unsaved change of download server constellation
@@ -771,7 +766,7 @@ cleaned - internal If command logic
  * fixed - bug in previous / next selected: Changes were lost
 ***     preview as beta 4 v
 
-===[075] beta 4 (2008-06-10)===
+===`[075]` beta 4 (2008-06-10)===
 
 modified - log button will always be displayed when using codebox
  * fixed - Else,Set,%var%,xxx bug
@@ -789,7 +784,7 @@ modified - log button will always be displayed when using codebox
  * added - System,ErrorOff command
  * added - Webget of FTP:// URLs
 
-===[075 beta 3] (2008-06-09)===
+===`[075 beta 3]` (2008-06-09)===
 
  * added - begin/end for If and Else commands
  * fixed - attachement context menu
@@ -797,14 +792,14 @@ modified - log button will always be displayed when using codebox
  * added - stepping through selected scripts
  * fixed - WebGet bug with redirection
 
-===[075 beta 2] (2008-05-13)===
+===`[075 beta 2]` (2008-05-13)===
 
  * added - 'variable names can contain variables'
  * added - Multiple 'Else,If' possible
  * added - 'Loop' statement
  * added - %ExitCode% for ShellExecute
  * added - System,Cursor,Wait / Normal
- * added - Expand Echo,Message to optional Echo,Message[,Warn]
+ * added - Expand Echo,Message to optional Echo,Message`[,Warn]`
  * added - button to open Download Center from main window
  * added - updates.ini can will open a custom website if specific info is found ([info] -> Website=http://myexample.com)
  * fixed - greyed scrollbars area
@@ -814,41 +809,44 @@ modified - log button will always be displayed when using codebox
  * fixed - bug in script macro resolving
  * fixed - CopyOrExpand now works in W2000 host
  * fixed - Main treeview has a stable behavior
-modified - Some cosmetics in log.html generation
-modified - GUI editor fixes
-modified - Log tab is only visible whenever it is not empty
-modified - wb License is now visible by default under the Tools menu
-removed - If,License and If,NotLicense commands
-removed - IE dependency to allow wb work on Windows 2000 (no proxy support based on IE settings)
-removed - Web and Help tab were removed to keep GUI simpler and quickier to load
-removed - All built-in FTP upload functions were removed since most developer prefer to use own FTP clients
-removed - Backup Tool was removed since it was rarely used
+ * modified - Some cosmetics in log.html generation
+ * modified - GUI editor fixes
+ * modified - Log tab is only visible whenever it is not empty
+ * modified - wb License is now visible by default under the Tools menu
+ * removed - If,License and If,NotLicense commands
+ * removed - IE dependency to allow wb work on Windows 2000 (no proxy support based on IE settings)
+ * removed - Web and Help tab were removed to keep GUI simpler and quickier to load
+ * removed - All built-in FTP upload functions were removed since most developer prefer to use own FTP clients
+ * removed - Backup Tool was removed since it was rarely used
 
-===[075] (2007-12-18)===
+===`[075]` (2007-12-18)===
 
--  * added - Version number next to script description
-- Fix bug #32 (Retreive cmd)
-- Fix bug with RegRead `MULTI_SZ`
-- Implementation of `REG_NONE`
-- Log generation accelerated; Fix of 'truncated log lines'
-- Add Generation of API format lines to 'Convert from BartPE'
-- Separate unit 'ConvertBart'
-- ConvertBart now can handle most 'standard' app scripts including a start menu entry extracted from nu2menu???.xml
-- New unit nu2menu
-- Fix bug #7 with Access violation on double click
-- Fix bug in StrFormat: Now last parameter can be %variable%
-- Add string functions RTrim, LTrim, CTRim, Left, Mid, Right to StrFormat
-- Fix bug in If,ExistSection and If,NotExistSection
-- New enhanced variables handling
-- Add If,ExistVar and If,NotExistVar
-- Add Else command
-- RegWrite,0x4 now accepts four binary hex bytes in addition to DWORD
-- Unload open hive after clicking the stop button
-- Add ProcessMessages in RunLite loop
-- STOP button now works also during Exec command
-- Fix bug in RegRead 0x3
-- Accelerated creation of log HTMLs
+ * added - Version number next to script description
+ * Fix bug #32 (Retreive cmd)
+ * Fix bug with RegRead `MULTI_SZ`
+ * Implementation of `REG_NONE`
+ * Log generation accelerated; Fix of 'truncated log lines'
+ * Add Generation of API format lines to 'Convert from BartPE'
+ * Separate unit 'ConvertBart'
+ * ConvertBart now can handle most 'standard' app scripts including a start menu entry extracted from nu2menu???.xml
+ * New unit nu2menu
+ * Fix bug #7 with Access violation on double click
+ * Fix bug in StrFormat: Now last parameter can be %variable%
+ * Add string functions RTrim, LTrim, CTRim, Left, Mid, Right to StrFormat
+ * Fix bug in If,ExistSection and If,NotExistSection
+ * New enhanced variables handling
+ * Add If,ExistVar and If,NotExistVar
+ * Add Else command
+ * RegWrite,0x4 now accepts four binary hex bytes in addition to DWORD
+ * Unload open hive after clicking the stop button
+ * Add ProcessMessages in RunLite loop
+ * STOP button now works also during Exec command
+ * Fix bug in RegRead 0x3
+ * Accelerated creation of log HTMLs
 
+=Older release information not yet formatted for WIKI=
+
+{{{
 ===[073] (2007-10-14)===
 
 beta 1
