@@ -124,7 +124,7 @@
  * Additional Syntax
    * [wbscriptsyntax80 Winbuilder 080]
    * [wbscriptsyntax82 Winbuilder 082]
- * Common API
+ * [wbcommonapi Common API]
   * [calculate _Calculate]
   * [add_asso Add_Asso]
   * [add_pin Add_Pin]
