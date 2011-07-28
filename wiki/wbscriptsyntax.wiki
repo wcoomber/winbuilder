@@ -175,6 +175,16 @@ Run,%ProjectDir%\script.project,Process-log
 All available commands are described on a single page so that you can later print that page to use as a reference. 
  * Usually all command which compare etc. are case insensitive.
  * There are some commands having a "X" at the end. These commands work like that ones without the "X", but case sensitive. 
+ * [wbscriptsyntax#File_Operations File Operations]
+ * [wbscriptsyntax#Registry_Handling Registry Handling]
+ * [wbscriptsyntax#INI_Manipulation INI Manipulation]
+ * [wbscriptsyntax#Attachments Attachments]
+ * [wbscriptsyntax#Text_Files  Text Files]
+ * [wbscriptsyntax#IF_Clauses_and_Command_Blocks If / Else]
+ * [wbscriptsyntax#Retrieve_Functions Retrieve Functions]
+ * [wbscriptsyntax#String_Formatting String Formating]
+ * [wbscriptsyntax#Network_Tools Network Tools]
+ * [wbscriptsyntax#Miscellaneous_Commands Miscellaneous Commands]
 <br>
 ----
 ==File Operations==
