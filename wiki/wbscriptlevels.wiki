@@ -10,4 +10,18 @@ This is a very useful way to ensure that your script always runs at the correct 
 
 By default, we use level 5 as the middle value where most scripts that are only meant to add programs (i.e. [wbscriptapplication Application Scripts]) should be processed.
 
+Bellow is a proposed description of the build phases typically performed by each project:
+  #1 Preprocess info (where all informations are gathered)
+  #2 Build (basic building scripts - create folders, copy/expand, winsxs)
+  #3 Base (shell, shortcuts, ramdisk/FBWF options..)
+  #4 Settings and Drivers (all tweaks and drivers)
+  #5 Applications (added programs like CD-burn, editor, tools..)
+  #6 PostProcessing (autoUPX, cleanup)
+  #7 ISO creation (mkisofs, RAM boot..)
+  #8 PC Emulation (Qemu, vmware, virtualPC)
+  #9 Burn ISO
+  #10 Project Tools (hive editing, target tweaking..)
+
+
+
 For a more in depth discussion on levels, see [http://reboot.pro/515/ this forum posting].
