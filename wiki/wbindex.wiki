@@ -121,7 +121,7 @@
      * [set set]
      * [addvariables addvariables]
      * [loop Loop]
- * Additional Syntax
+ * [wbadditionalsyntax Additional Syntax]
    * [wbscriptsyntax80 Winbuilder 080]
    * [wbscriptsyntax82 Winbuilder 082]
  * [wbcommonapi Common API]
