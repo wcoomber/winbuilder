@@ -1,5 +1,3 @@
-#summary One-sentence summary of this page.
-
 = Introduction =
 
 Winbuilder uses a ____ version system where even numbered version are stable releases and odd numbered releases are pre-release builds.
@@ -10,811 +8,812 @@ Winbuilder uses a ____ version system where even numbered version are stable rel
 
 ==Winbuilder Releases==
 ----
-===[082] stable (2011-06-15)===
+===`[082]` stable (2011-06-15)===
 
-changed - comp80 default from ON to OFF
-fixed - bug in interface editor with multiple selected components
-fixed - bug in interface editor with weblabel in panel
-fixed - lost custom title
+ * changed - comp80 default from ON to OFF
+ * fixed - bug in interface editor with multiple selected components
+ * fixed - bug in interface editor with weblabel in panel
+ * fixed - lost custom title
 published as release preview
-fixed - bug in If command, when a compare string starts with "run"
-changed - removed "orphaned" System,HasDOS8_3 command
-fixed - bug which in interface editor with multiple selections sometimes "forgot" single selections
-fixed - bug introduced by removing of System,HasDOS8_3 command
-added - when image does not contain URL, click into the image starts the default graphical editor
-changed - place weblabels in front of textlabels
-fixed - script editor bug with source code button (the light bulb) http://reboot.pro/14...post__p__131528
-fixed - single run now displays script's description rather than script.project description
-fixed - bug with endless loop in exiting WinBuilder, when a script has been deleted externally
-fixed - When in interface editor activating "resize to fit" on an image, the corner dots of the image are not repositioned correctly until the image is clicked
-changed - set "clear" button in interface editor / image to invisible
-added - RefreshControl method to TInterfaceComponentManager. That hopefully avoids interface troubles with con-classic themes
+ * fixed - bug in If command, when a compare string starts with "run"
+ * changed - removed "orphaned" System,HasDOS8_3 command
+ * fixed - bug which in interface editor with multiple selections sometimes "forgot" single selections
+ * fixed - bug introduced by removing of System,HasDOS8_3 command
+ * added - when image does not contain URL, click into the image starts the default graphical editor
+ * changed - place weblabels in front of textlabels
+ * fixed - script editor bug with source code button (the light bulb) http://reboot.pro/14...post__p__131528
+ * fixed - single run now displays script's description rather than script.project description
+ * fixed - bug with endless loop in exiting WinBuilder, when a script has been deleted externally
+ * fixed - When in interface editor activating "resize to fit" on an image, the corner dots of the image are not repositioned correctly until the image is clicked
+ * changed - set "clear" button in interface editor / image to invisible
+ * added - RefreshControl method to TInterfaceComponentManager. That hopefully avoids interface troubles with con-classic themes
 frozen for second release preview as 82.0.0.15 on 2011-JUL-01
 
-===[081] Beta 1 (2011-01-04)===
+===`[081]` Beta 1 (2011-01-04)===
 
-added - System,HasUAC and System,IsTerminal commands
-fixed - bug "RegMulti,HKLM,Section,Key,DELETE,SubVal bug"
-fixed - bug "RegWrite,HKLM,0x3,<Section>,<Keyname>,%variable%"
-fixed - access violation in Set,%InterfaceVar%
-fixed - bug "AddInterface does not work when used with run"
-changed - "Add a new object" window in Interface Editor is sized depending on DPI
-added - Please add the function to doublecklick a line the the combobox of "Add a new object window" to add the object
-added - AutoSave mechanism to interface editor
-added - When clicking the green 'run' arrow in source editor, it is (depending on AutoSave option) also asked for 'save' before starting
-added - Interface editor now can group elements to adjust or move them all simultaneously
-added - #$z to magic wand
-fixed - "Coolest Bug ever!" corrupting .scr file
-added - AutoSave mechanism to description editor
-fixed - License window sizing issue
-fixed - Comma issue in If commands
-added - Deleting all selected components in interface editor
-added - Equal horizontal or vertical spacing of components in interface editor
-added - Horizontal or vertical centering of components in interface editor
-added - optional [Text] output in log rather than download icons.
-added - optional supressing time output in log, in order to compare easier.
-added - NOWARN parameter to FileDelete command
-fixed - Bug in RegMulti, which overwrote %variables%
-fixed - Bug in logging error of DirCopy command (wrote " + s" rather than error description)
-added - Verbose option to Debug Log
-added - NOREC option to FileDelete
-changed - the string "#<number>" can be passed and is not seen as parameter
-fixed - Codebox in a fresh started WB was without API
-fixed - Bug in logging Loop statements
-changed - certification logic
-added - System,HasDOS8_3 command
-
-fixed - Bug in RegWrite,HKLM,0x1,WB-Setup\Classes\SHCmdFile\shell\open\ddeexec,,"[ShellFile(""%1""#$c""%1"",%S)]"
-fixed - Bug in StrFormat,Rtrim
-changed - %variables% as macros temporarily tolerated with log warning. In stable version this will be an error.
-fixed - Parameter existing only of 2 quotes now becomes empty
-fixed - Do not write surrounding quotes into variables when reading the [variables] section
-fixed - resolve escapes to character in If command compares
-fixed - (Finally) Do not write surrounding quotes into variables when reading the [variables] section
-fixed - resolve escapes to character in If,QUESTION
-fixed - several 'surrounding quotes' bugs in If command
-added - menu entry in magic wand: copy complete command list to clipboard
-rewrote - If command
-fixed - log output for If commands
-fixed - Bug in PackParam
-fixed - Bug in RegWriteBin
-changed - fine tuning of RegRead and RegReadBin commands
-fixed - Incompatibility of GetParam, introduced by the bug fix of PackParam
-addded - System,LOG,OFF / System,LOG,ON commands
-fixed - Bug in StrFormat when writing result to parameter #n
-fixed - Bug in log.html generation causing 'Index out of bounds' when logging a Loop command
-fixed - Bug causing 'Access Violation' in interface 
-changed - Errors supressed by System,ERROROFF are now shown in Debug Log as 'Handled Errors'
-added - icons for log.html can be optionally in %BaseDir%\Pictures, bypasses download
-fixed - Bug in interface due to values with quotes
-fixed - Bug in running section on CheckBox click
-fixed - Bug in Interface Click event handling
-fixed - Bug in If command, when comparing numerical values
-changed - some cosmetics in output of log.html
-fixed - Bug in OUT: parameters handling
-
-fixed - Bug which did not allow GLOBAL changes of %Constants%
-fixed - Bug with duplicating quotes in interface text labels
-fixed - Bug in IniDelete
-changed - variables replacement: from linear search to binary search
-fixed - #$xs sometimes not resolved
-improved - log output
-fixed - some smaller bugs when treating multiple components in interface editor
-fixed - bug in progress window when exec a script at tree end
-fixed - made behaviour of interface component 'FileCheckList' logically compatible to WinBuilder 076
-fixed - bug when aborting "Add component to interface"
-fixed - bug: Set,%InterfaceComponent% PERMANENT sometimes corrupts interface
-changed - now If,EXISTFILE accepts wild cards ? and *
-changed - now If,EXISTDIR accepts wild cards ? and *
-fixed - bug in positioning of RadioGroup when scrollbars used
-added - System,Log command
-
-rebuild - Compatible to 080 now by default. Can be changed by command System,Comp80,{OFF|ON}
-changed - Log icons are no more downloaded. They are as resources in WinBuilder.exe and are extracted on first use.
-fixed - bug in FileCopy / DirCopy command with SHOW option
-fixed - bug in Visible command
-fixed - made z-order of components compatible to version 80
+ * added - System,HasUAC and System,IsTerminal commands
+ * fixed - bug `"RegMulti,HKLM,Section,Key,DELETE,SubVal bug"`
+ * fixed - bug `"RegWrite,HKLM,0x3,<Section>,<Keyname>,%variable%"`
+ * fixed - access violation in Set,%InterfaceVar%
+ * fixed - bug "AddInterface does not work when used with run"
+ * changed - "Add a new object" window in Interface Editor is sized depending on DPI
+ * added - Please add the function to doublecklick a line the the combobox of "Add a new object window" to add the object
+ * added - AutoSave mechanism to interface editor
+ * added - When clicking the green 'run' arrow in source editor, it is (depending on AutoSave option) also asked for 'save' before starting
+ * added - Interface editor now can group elements to adjust or move them all simultaneously
+ * added - #$z to magic wand
+ * fixed - "Coolest Bug ever!" corrupting .scr file
+ * added - AutoSave mechanism to description editor
+ * fixed - License window sizing issue
+ * fixed - Comma issue in If commands
+ * added - Deleting all selected components in interface editor
+ * added - Equal horizontal or vertical spacing of components in interface editor
+ * added - Horizontal or vertical centering of components in interface editor
+ * added - optional `[Text]` output in log rather than download icons.
+ * added - optional supressing time output in log, in order to compare easier.
+ * added - NOWARN parameter to FileDelete command
+ * fixed - Bug in RegMulti, which overwrote %variables%
+ * fixed - Bug in logging error of DirCopy command (wrote " + s" rather than error description)
+ * added - Verbose option to Debug Log
+ * added - NOREC option to FileDelete
+ * changed - the string `"#<number>"` can be passed and is not seen as parameter
+ * fixed - Codebox in a fresh started WB was without API
+ * fixed - Bug in logging Loop statements
+ * changed - certification logic
+ * added - System,HasDOS8_3 command
+ * fixed - Bug in RegWrite,HKLM,0x1,WB-Setup\Classes\SHCmdFile\shell\open\ddeexec,,"`[ShellFile(""%1""#$c""%1"",%S)]`"
+ * fixed - Bug in StrFormat,Rtrim
+ * changed - %variables% as macros temporarily tolerated with log warning. In stable version this will be an error.
+ * fixed - Parameter existing only of 2 quotes now becomes empty
+ * fixed - Do not write surrounding quotes into variables when reading the `[variables]` section
+ * fixed - resolve escapes to character in If command compares
+ * fixed - (Finally) Do not write surrounding quotes into variables when reading the `[variables]` section
+ * fixed - resolve escapes to character in If,QUESTION
+ * fixed - several 'surrounding quotes' bugs in If command
+ * added - menu entry in magic wand: copy complete command list to clipboard
+ * rewrote - If command
+ * fixed - log output for If commands
+ * fixed - Bug in PackParam
+ * fixed - Bug in RegWriteBin
+ * changed - fine tuning of RegRead and RegReadBin commands
+ * fixed - Incompatibility of GetParam, introduced by the bug fix of PackParam
+ * addded - System,LOG,OFF / System,LOG,ON commands
+ * fixed - Bug in StrFormat when writing result to parameter #n
+ * fixed - Bug in log.html generation causing 'Index out of bounds' when logging a Loop command
+ * fixed - Bug causing 'Access Violation' in interface 
+ * changed - Errors supressed by System,ERROROFF are now shown in Debug Log as 'Handled Errors'
+ * added - icons for log.html can be optionally in %BaseDir%\Pictures, bypasses download
+ * fixed - Bug in interface due to values with quotes
+ * fixed - Bug in running section on CheckBox click
+ * fixed - Bug in Interface Click event handling
+ * fixed - Bug in If command, when comparing numerical values
+ * changed - some cosmetics in output of log.html
+ * fixed - Bug in OUT: parameters handling
+ * fixed - Bug which did not allow GLOBAL changes of %Constants%
+ * fixed - Bug with duplicating quotes in interface text labels
+ * fixed - Bug in IniDelete
+ * changed - variables replacement: from linear search to binary search
+ * fixed - #$xs sometimes not resolved
+ * improved - log output
+ * fixed - some smaller bugs when treating multiple components in interface editor
+ * fixed - bug in progress window when exec a script at tree end
+ * fixed - made behaviour of interface component 'FileCheckList' logically compatible to WinBuilder 076
+ * fixed - bug when aborting "Add component to interface"
+ * fixed - bug: Set,%InterfaceComponent% PERMANENT sometimes corrupts interface
+ * changed - now If,EXISTFILE accepts wild cards ?
+ * changed - now If,EXISTDIR accepts wild cards ? 
+ * fixed - bug in positioning of RadioGroup when scrollbars used
+ * added - System,Log command
+ * rebuild - Compatible to 080 now by default. Can be changed by command System,Comp80,{OFF|ON}
+ * changed - Log icons are no more downloaded. They are as resources in WinBuilder.exe and are extracted on first use.
+ * fixed - bug in FileCopy / DirCopy command with SHOW option
+ * fixed - bug in Visible command
+ * fixed - made z-order of components compatible to version 80
 uploaded as WinBuilder_110509.zip
 
-fixed - made z-order of components compatible to version 80 (finally ?)
-fixed - Font size and bold issue with themes different from classic
-fixed - "Cancel' in "Create new attachement folder"
+ * fixed - made z-order of components compatible to version 80 (finally ?)
+ * fixed - Font size and bold issue with themes different from classic
+ * fixed - "Cancel' in "Create new attachement folder"
 uploaded as WinBuilder_110513.zip
 
-fixed - z-order fix sometimes broight interface display to hang
+ * fixed - z-order fix sometimes broight interface display to hang
 uploaded as WinBuilder_110520.zip
 
-fixed - access violation in TextFile interface component
+ * fixed - access violation in TextFile interface component
 uploaded as WinBuilder_110601.zip
 
-removed - unnecessary SetEsc command (http://reboot.pro/14648/page__view__findpost__p__130037).
+ * removed - unnecessary SetEsc command (http://reboot.pro/14648/page__view__findpost__p__130037).
 uploaded as WinBuilder_110602.zip
 
-fixed - link function did not display first level linked scripts in project tree (http://reboot.pro/14477/page__view__findpost__p__129661)
-fixed - link finction displays non-script files
-fixed - sometimes in the interface editor changes on grouped elements are not completelly saved
+ * fixed - link function did not display first level linked scripts in project tree (http://reboot.pro/14477/page__view__findpost__p__129661)
+ * fixed - link finction displays non-script files
+ * fixed - sometimes in the interface editor changes on grouped elements are not completelly saved
 uploaded as WinBuilder_110607.zip
 
-fixed - now different link behaviours with <linked path> vs <linked path>\*.* (http://reboot.pro/14477/page__view__findpost__p__130523)
+ * fixed - now different link behaviours with `<linked path>` vs `<linked path>\*.*` (http://reboot.pro/14477/page__view__findpost__p__130523)
 uploaded as WinBuilder_110610.zip
 
-fixed - bug in WinBuilder command line start (http://reboot.pro/14477/page__view__findpost__p__130616)
-Added - NOWARN option to Exit command
+ * fixed - bug in WinBuilder command line start (http://reboot.pro/14477/page__view__findpost__p__130616)
+ * added - NOWARN option to Exit command
 uploaded as WinBuilder_110612.zip
 
-===[080] update (2010-03-03)===
+===`[080]` update (2010-03-03)===
 
-fixed - lost "search next" in sorce editor
-fixed - nested macros now work
+ * fixed - lost "search next" in sorce editor
+ * fixed - nested macros now work
 
-===[080] update (2010-02-23)===
+===`[080]` update (2010-02-23)===
 
-fixed - hidden components in interface editor
+ * fixed - hidden components in interface editor
 
-===[080] update (2010-02-20)===
+===`[080]` update (2010-02-20)===
 
-fixed - bug with missing last zero pair in REG_MULTI_SZ strings
+ * fixed - bug with missing last zero pair in REG_MULTI_SZ strings
 
-===[080] (2010-01-15)===
+===`[080]` (2010-01-15)===
 
-fixed - Bug ID #238: new scripts added to server not seen on download list
-fixed - bug: command line 'If, ... ,If, ... ,Begin' causes double indent in log.html
-fixed - bug: Some RegWrite errors have been logged as successfully processed
-changed - RegWrite 0x1 tolerates syntax error (comma in string rather than escape)
-added - If,EXISTMACRO command
-added - Error when StrFormat calculates with uninitialized variables (gave accesss violation right now)
-changed - Make GUI in Download Center simpler mit respect to 'Dummy User'
-added - detection of Win7 to %HostOS%
-changed - Set command: replace comma and space by escapes
-added - AddInterface can optionally define an alternate interface
-fixed - bug in RegRead multi_sz
-added - StrFormat,CTRIM and StrFormat,SPLIT now can have escapes as 'single character'
-added - Variable %WBExe%
-fixed - bug in DirDelete,FAST left temp files in root
-fixed - bug in download center: On first show tree was allways built, regardless of 'green arrow' definition
-added - RegAddMulti command
-changed - improved syntax check with warnings / errors in RegAddMulti command
-added - RegAddMulti,HKLM,Section,Key,INDEX,SubVal,%Var%
-added - If,EXISTREGMULTI,HKLM,Section,Key,SubVal,Command
-added - %RegDataType% variable set on every successful RegRead operation
-added - RegWriteBin command to write wide strings
-added - RegReadBin command to read wide strings
-fixed - bug in scriptline parameter count check
-changed - improved syntax check with warnings / errors in RegWriteBin / RegReadBin command
-changed - Desktop path now read from registry
-fixed - untranslated #$x in script [Main] description
-fixed - smaller bug with source editor autosave
-added - error in RagHiveLoad when the hive is already mounted
-changed - copy commands accept 'null' arguments instead of COPY, PRESERVE, SHOW, NOREC
-changed - renamed RegAddMult command to RegMulti command (it handles also non-adding tasks)
-fixed - show Options and Proxy tabs in initial download in Download Center
-changed - Interface Bevel min size to 4 x 4
-fixed - disabled 'Add new web server' in very fresh WinBuilder installation
-added - RegWriteBinEx command to unchecked write any type from binary data
-fixed - Bug ID #245: Dircopy - different behavoir under xp and vista/7
-fixed - Bug ID #246: Dirdelete,FAST
-fixed - Bug ID #250: endless lop defining variables
-fixed - In ShellExecute,Explore distinguish between file and directory.
-fixed - Bug in RegWrite empty string
-fixed - Bug in RegWrite command introduced by Copy Command 'Null' argument change
-added - Set command also stores macros
-revised - handling of empty values in RegWrite
-revised - some more changes in handling of empty values in RegWrite
+ * fixed - Bug ID #238: new scripts added to server not seen on download list
+ * fixed - bug: command line 'If, ... ,If, ... ,Begin' causes double indent in log.html
+ * fixed - bug: Some RegWrite errors have been logged as successfully processed
+ * changed - RegWrite 0x1 tolerates syntax error (comma in string rather than escape)
+ * added - If,EXISTMACRO command
+ * added - Error when StrFormat calculates with uninitialized variables (gave accesss violation right now)
+ * changed - Make GUI in Download Center simpler mit respect to 'Dummy User'
+ * added - detection of Win7 to %HostOS%
+ * changed - Set command: replace comma and space by escapes
+ * added - AddInterface can optionally define an alternate interface
+ * fixed - bug in RegRead multi_sz
+ * added - StrFormat,CTRIM and StrFormat,SPLIT now can have escapes as 'single character'
+ * added - Variable %WBExe%
+ * fixed - bug in DirDelete,FAST left temp files in root
+ * fixed - bug in download center: On first show tree was allways built, regardless of 'green arrow' definition
+ * added - RegAddMulti command
+ * changed - improved syntax check with warnings / errors in RegAddMulti command
+ * added - RegAddMulti,HKLM,Section,Key,INDEX,SubVal,%Var%
+ * added - If,EXISTREGMULTI,HKLM,Section,Key,SubVal,Command
+ * added - %RegDataType% variable set on every successful RegRead operation
+ * added - RegWriteBin command to write wide strings
+ * added - RegReadBin command to read wide strings
+ * fixed - bug in scriptline parameter count check
+ * changed - improved syntax check with warnings / errors in RegWriteBin / RegReadBin command
+ * changed - Desktop path now read from registry
+ * fixed - untranslated #$x in script `[Main]` description
+ * fixed - smaller bug with source editor autosave
+ * added - error in RagHiveLoad when the hive is already mounted
+ * changed - copy commands accept 'null' arguments instead of COPY, PRESERVE, SHOW, NOREC
+ * changed - renamed RegAddMult command to RegMulti command (it handles also non-adding tasks)
+ * fixed - show Options and Proxy tabs in initial download in Download Center
+ * changed - Interface Bevel min size to 4 x 4
+ * fixed - disabled 'Add new web server' in very fresh WinBuilder installation
+ * added - RegWriteBinEx command to unchecked write any type from binary data
+ * fixed - Bug ID #245: Dircopy - different behavoir under xp and vista/7
+ * fixed - Bug ID #246: Dirdelete,FAST
+ * fixed - Bug ID #250: endless lop defining variables
+ * fixed - In ShellExecute,Explore distinguish between file and directory.
+ * fixed - Bug in RegWrite empty string
+ * fixed - Bug in RegWrite command introduced by Copy Command 'Null' argument change
+ * added - Set command also stores macros
+ * revised - handling of empty values in RegWrite
+ * revised - some more changes in handling of empty values in RegWrite
 
-===[078 SP6](2010-01-03)===
+===`[078 SP6]`(2010-01-03)===
 
-fixed - bug: Access violation on setting interface variables
-fixed - bug in log.html generating. Loop,BREAK can bring "Index out of bounds" and lets WinBuilder hang
-fixed - IniRead now translates comma in value to escape (troubles with TXTAddLine)
+ * fixed - bug: Access violation on setting interface variables
+ * fixed - bug in log.html generating. Loop,BREAK can bring "Index out of bounds" and lets WinBuilder hang
+ * fixed - IniRead now translates comma in value to escape (troubles with TXTAddLine)
 
 Release as 078 SP6 on 2010-JAN-09
 
-===[078 SP5](2009-11-23)===
+===`[078 SP5]`(2009-11-23)===
 
-fixed - bug: Unresolved *.Link brought crash with 'invalid filename'
-fixed - bug: Dependencies and Excludes did not work on *.Link files
-fixed - bug: No section shown in log, when started by button
-fixed - removed senceless "Download disabled" message when file exists on "WebGetIfNotExist" command
-fixed - bug in syntax check of "txtAddLine"
-added - optionally run WinBuilder only in CPU / core #1
-fixed - bug: changed ISOFile and TargetDir are not written to script.project
+ * fixed - bug: Unresolved `*`.Link brought crash with 'invalid filename'
+ * fixed - bug: Dependencies and Excludes did not work on `*`.Link files
+ * fixed - bug: No section shown in log, when started by button
+ * fixed - removed senceless "Download disabled" message when file exists on "WebGetIfNotExist" command
+ * fixed - bug in syntax check of "txtAddLine"
+ * added - optionally run WinBuilder only in CPU / core #1
+ * fixed - bug: changed ISOFile and TargetDir are not written to script.project
 
-===[078 SP4] (2009-11-02)===
+===`[078 SP4]` (2009-11-02)===
 
-fixed - bug: double comma when generating updates.ini
-fixed - bug in download when path contained 'Updates'
-fixed - bug in interpreting download levels
-fixed - bug: no download tree on a fresh installation
+ * fixed - bug: double comma when generating updates.ini
+ * fixed - bug in download when path contained 'Updates'
+ * fixed - bug in interpreting download levels
+ * fixed - bug: no download tree on a fresh installation
 
 Release as 078 SP4 on 2009-NOV-08
 
-===[078 SP3] (2009-09-25)===
+===`[078 SP3]` (2009-09-25)===
 
-added - AddInterface command
-fixed - Bug ID #214: Deselection by keyboard produces error
-changed - New Component Dialog now in center of WB window, rather than in center of desktop
-fixed - Deselecting a complete folder containing a mandatory script lets build crash
-fixed - Bug ID #222: wb078 sp2 - Depend not working
-added - Optional log at WinBuilder exit
-changed - In download center, there is an option whether selecting an additional server rebuilds the complete tree.
-fixed - bug in RegRead / RegWrite multi_sz
-fixed - bug in If,Online when running from command line
-fixed - Bug ID #209: User-agent - Windows Update: EmbeddedWB bug, using newer package
-added - RegWrite 0x3 accepts one %Variable% as input value
+ * added - AddInterface command
+ * fixed - Bug ID #214: Deselection by keyboard produces error
+ * changed - New Component Dialog now in center of WB window, rather than in center of desktop
+ * fixed - Deselecting a complete folder containing a mandatory script lets build crash
+ * fixed - Bug ID #222: wb078 sp2 - Depend not working
+ * added - Optional log at WinBuilder exit
+ * changed - In download center, there is an option whether selecting an additional server rebuilds the complete tree.
+ * fixed - bug in RegRead / RegWrite multi_sz
+ * fixed - bug in If,Online when running from command line
+ * fixed - Bug ID #209: User-agent - Windows Update: EmbeddedWB bug, using newer package
+ * added - RegWrite 0x3 accepts one %Variable% as input value
 
 Release as 078 SP3 on 2009-NOV-01
 
-===[078 SP2] (2009-09-06)===
+===`[078 SP2]` (2009-09-06)===
 
-changed - sepatate TNodeData unit with 'read on demand'
-added - Download center now can select by Version, MD5, Certification
-fixed - RegWrite multiple strings with comma in argument
-fixed - Bug ID #217: Set,%var%,NIL,PERMANENT
-fixed - Smaller issue with resolving nested variables
-fixed - Bug ID #216: Access Violation when trying to trim empty string
-reanimated - CheckListBox
-added - change event to ComboBox
-added - change event to RadioGroup
-fixed - terrible bug with strFormat cutting long lines. Changed all according AnsMidStr Delphi commands to length of MaxInt
+ * changed - sepatate TNodeData unit with 'read on demand'
+ * added - Download center now can select by Version, MD5, Certification
+ * fixed - RegWrite multiple strings with comma in argument
+ * fixed - Bug ID #217: Set,%var%,NIL,PERMANENT
+ * fixed - Smaller issue with resolving nested variables
+ * fixed - Bug ID #216: Access Violation when trying to trim empty string
+ * reanimated - CheckListBox
+ * added - change event to ComboBox
+ * added - change event to RadioGroup
+ * fixed - terrible bug with strFormat cutting long lines. Changed all according AnsMidStr Delphi commands to length of MaxInt
 
 Release as 078 SP2 on 2009-SEP-24
 
-===[078 SP1](2009-09-02)===
+===`[078 SP1]`(2009-09-02)===
 
-fixed - source indenting disturbed certification
-fixed - CopyOrExpand of single *.ca_ file does not work
-fixed - leading and trailing spaces in variables were lost.
-fixed - download issues when proxy does not allow DNS
-fixed - Bug ID #211: Access violation
-changed - certification issuer shown in log, when applicable
-added - in Tools >> Upload tab, write certification string into updates.ini 
+ * fixed - source indenting disturbed certification
+ * fixed - CopyOrExpand of single `*.ca_` file does not work
+ * fixed - leading and trailing spaces in variables were lost.
+ * fixed - download issues when proxy does not allow DNS
+ * fixed - Bug ID #211: Access violation
+ * changed - certification issuer shown in log, when applicable
+ * added - in Tools >> Upload tab, write certification string into updates.ini 
 
 Release as 078 SP1 on 2009-SEP-06
 
-===[077 RC 3](2009-07-14)===
+===`[077 RC 3]`(2009-07-14)===
 
-added - some more syntax checks. Now e.g. comma in command parameter gives warning
-added - When WB is not running as active window, ShellExecute,Open windows are not shown
-changed - when there are troubles in downloading WB asks whether to continue or not
-changed - removed PERMANENT option from AddVariables
-fixed - bug in 'interface editor area' with non-standard WB size
-fixed - Bug ID #205: StrFormat,Inc don't increment Letter
-fixed - bug in concat of split lines
-changed - warning mechanism on overwrite and parameter count: all is OFF by default
-added - OnProcessEntry and OnProcessExit functionality
-added - OUT capability for Run command parameters
-added - StrFormat,LEN command
-fixed - download issues with proxy
-fixed - bug in OUT capability
-changed - a lot of internet functions for work behind proxy
-fixed - bug in OUT capability due to existing OUT variables
-added - certification functionality
-fixed - misfeature in IniWriteTextLine,APPEEND (empty line in section)
-fixed - misfeature in IniAddSection (missing empty line)
+ * added - some more syntax checks. Now e.g. comma in command parameter gives warning
+ * added - When WB is not running as active window, ShellExecute,Open windows are not shown
+ * changed - when there are troubles in downloading WB asks whether to continue or not
+ * changed - removed PERMANENT option from AddVariables
+ * fixed - bug in 'interface editor area' with non-standard WB size
+ * fixed - Bug ID #205: StrFormat,Inc don't increment Letter
+ * fixed - bug in concat of split lines
+ * changed - warning mechanism on overwrite and parameter count: all is OFF by default
+ * added - OnProcessEntry and OnProcessExit functionality
+ * added - OUT capability for Run command parameters
+ * added - StrFormat,LEN command
+ * fixed - download issues with proxy
+ * fixed - bug in OUT capability
+ * changed - a lot of internet functions for work behind proxy
+ * fixed - bug in OUT capability due to existing OUT variables
+ * added - certification functionality
+ * fixed - misfeature in IniWriteTextLine,APPEEND (empty line in section)
+ * fixed - misfeature in IniAddSection (missing empty line)
 
-===[077 RC 2] (2009-06-10)===
+===`[077 RC 2]` (2009-06-10)===
 
-fixed - In RegWrite REG_MULTI_SZ spaces are treated as separators
-changed - In RegWrite REG_MULTI_SZ write empty key as hex(00 00 00 00) rather then not to create the empty key
-fixed - Bug ID #196: Suggestions for improving UI (item #2 and #3)
-fixed - Bug ID #197: RegGetNext - access violation
-changed - consolidation of all file transfer commands.
-added - RegWrite warns on overwritintg different value
-fixed - Bug ID #199: Run - Failed to find section [AddShortcut] in file (bug in AddVariables)
-fixed - Bug in Exec command which deletes GLOBAL variables
-added - APPEND option to IniWriteTextLine
-changed - Filecopy overwrite warning only with different MD5
-added - Request Bug ID #201: Open Script Dir
-added - Request Bug ID #200: Interface Editor: Component Selector
-added - If,EQUALX command for case sensitive compare
-fixed - Disappearing scrollbars in Editor / Attachments
-added - Warnings and Errors in log.html header contain script titles
-added - RegWrite 0x2 parameter accepted as hex number list
-added - Option to warn before overwrite when extracting attachments manually
-added - Extract of single file fom a CAB archive
+ * fixed - In RegWrite REG_MULTI_SZ spaces are treated as separators
+ * changed - In RegWrite REG_MULTI_SZ write empty key as hex(00 00 00 00) rather then not to create the empty key
+ * fixed - Bug ID #196: Suggestions for improving UI (item #2 and #3)
+ * fixed - Bug ID #197: RegGetNext - access violation
+ * changed - consolidation of all file transfer commands.
+ * added - RegWrite warns on overwritintg different value
+ * fixed - Bug ID #199: Run - Failed to find section `[AddShortcut]` in file (bug in AddVariables)
+ * fixed - Bug in Exec command which deletes GLOBAL variables
+ * added - APPEND option to IniWriteTextLine
+ * changed - Filecopy overwrite warning only with different MD5
+ * added - Request Bug ID #201: Open Script Dir
+ * added - Request Bug ID #200: Interface Editor: Component Selector
+ * added - If,EQUALX command for case sensitive compare
+ * fixed - Disappearing scrollbars in Editor / Attachments
+ * added - Warnings and Errors in log.html header contain script titles
+ * added - RegWrite 0x2 parameter accepted as hex number list
+ * added - Option to warn before overwrite when extracting attachments manually
+ * added - Extract of single file fom a CAB archive
 
 published as WinBuilder 077 RC 2 on 2009-JUL-14
 
-===[077 RC 1] (2009-06-03)===
+===`[077 RC 1]` (2009-06-03)===
 
-fixed - loop with 'Choose source' in case of only invalid source list entries
-added - StrFormat,POSX and StrFormat,REPLACEX commands for case sensitive processing
-added - ToolTips to GUI
-changed - System,RESCANSCRIPTS does not longer restart WinBuilder
-fixed - beta 3 introduced bug in FileCopy with wildcards
+ * fixed - loop with 'Choose source' in case of only invalid source list entries
+ * added - StrFormat,POSX and StrFormat,REPLACEX commands for case sensitive processing
+ * added - ToolTips to GUI
+ * changed - System,RESCANSCRIPTS does not longer restart WinBuilder
+ * fixed - beta 3 introduced bug in FileCopy with wildcards
 
 published as WinBuilder 077 RC 1 on 2009-JUN-09
 
-===[077 beta 3 hotfix] (2009-04-26)===
+===`[077 beta 3 hotfix]` (2009-04-26)===
 
-fixed - conflict between picture and 'show progress' in GUI button
-fixed - 'List index out of bounds' in new Winbuilder installation with WinBuilder.exe only
+ * fixed - conflict between picture and 'show progress' in GUI button
+ * fixed - 'List index out of bounds' in new Winbuilder installation with WinBuilder.exe only
 
-===[077 beta 3](2009-04-26)===
+===`[077 beta 3]`(2009-04-26)===
 
-fixed - anchored "rename current file" in download center to window buttom
-fixed - Bug ID #182: v.44 / WB077 beta2
-fixed - Bug ID #188: CopyOrExpand warnings
-fixed - (Some remaining issues) Fresh created interface components sometimes went lost.
-fixed - ExtractAndRun with parameters
-fixed - CopyOrExpand: M$ Expand fature when files are compressed under a different name than expanded
-changed - Log.html is now generated with W3C 4.01 compliancy
-fixed - Bug in RegWrite with comma in value
-fixed - Bug ID #192: _Calculate,AutoIT Command
-fixed - Bug ID #190: System,REFRESHINTERFACE
-added - BartPE convert: put syntax error original lines into log
-added - BartPE convert: Optional suppress Nu2Menu shortcut generation, when XPEINIT shortcut is present
-fixed - BartPE convert: Some smaller bugs with progress and log.html
-changed - Smoothed FileCopy command, added NOREC and PRESERVE parameters
-changed - Interface components can be set like variables
-added - Visible command to dynamically hide / show interface components
-changed - Smoothed ScrollBar handling in interface editor
-added - In single scripts, processed sections can optionally use ProgressWindow  or not use.
-added - Alternate interface section definable in [Main]
-fixed - Bug in RegRead of binaries: First byte was duplicated
-added - 'SHOW' as last parameter to ShellExecute: progress bar animated
-fixed - Bug in RegRead of REG_MULTI_SZ with comma in value
-added - StrFormat,SHORTPATH and StrFormat,LONGPATH commands
+ * fixed - anchored "rename current file" in download center to window buttom
+ * fixed - Bug ID #182: v.44 / WB077 beta2
+ * fixed - Bug ID #188: CopyOrExpand warnings
+ * fixed - (Some remaining issues) Fresh created interface components sometimes went lost.
+ * fixed - ExtractAndRun with parameters
+ * fixed - CopyOrExpand: M$ Expand fature when files are compressed under a different name than expanded
+ * changed - Log.html is now generated with W3C 4.01 compliancy
+ * fixed - Bug in RegWrite with comma in value
+ * fixed - Bug ID #192: `_Calculate,AutoIT` Command
+ * fixed - Bug ID #190: System,REFRESHINTERFACE
+ * added - BartPE convert: put syntax error original lines into log
+ * added - BartPE convert: Optional suppress Nu2Menu shortcut generation, when XPEINIT shortcut is present
+ * fixed - BartPE convert: Some smaller bugs with progress and log.html
+ * changed - Smoothed FileCopy command, added NOREC and PRESERVE parameters
+ * changed - Interface components can be set like variables
+ * added - Visible command to dynamically hide / show interface components
+ * changed - Smoothed ScrollBar handling in interface editor
+ * added - In single scripts, processed sections can optionally use ProgressWindow  or not use.
+ * added - Alternate interface section definable in `[Main]`
+ * fixed - Bug in RegRead of binaries: First byte was duplicated
+ * added - 'SHOW' as last parameter to ShellExecute: progress bar animated
+ * fixed - Bug in RegRead of `REG_MULTI_SZ` with comma in value
+ * added - StrFormat,SHORTPATH and StrFormat,LONGPATH commands
 
-===[077 beta 2](2009-04-01)===
+===`[077 beta 2]`(2009-04-01)===
 
-added - Build progress shown in taskbar icon
-fixed - Bug ID #177: Wait command bug 077 Beta1
-added - Some visible user information in taskbar icon when WinBuilder builds in background
-fixed - Bug ID #176: Script Count incorrect
-added - Check commands for correct number of arguments
-fixed - Bug in If command when comparing floating point values
-fixed - Bug in proxy settings with disappearing 'z'
-added - If,FileExist command now can check HTTP URLs
-changed - Rewrote 'If,ONLINE' and 'If,PING' internal handling to Indi functions
-changed - Dynamical binding of psapi.dll - allows start of WinBuilder under w2k
-changed - Now WinBuilder internet functionality 100% independent from IE settings
-changed - Download center optionally renames current file rather than overwriting it
-added - System,SPLITPARAMETERS command
-fixed - Bug ID #180: MULT/DIV replaced 32 bit integer by 64 bit integer
-added - Interface editor has scroll bars by default.
-fixed - Fresh created interface components sometimes went lost.
+ * added - Build progress shown in taskbar icon
+ * fixed - Bug ID #177: Wait command bug 077 Beta1
+ * added - Some visible user information in taskbar icon when WinBuilder builds in background
+ * fixed - Bug ID #176: Script Count incorrect
+ * added - Check commands for correct number of arguments
+ * fixed - Bug in If command when comparing floating point values
+ * fixed - Bug in proxy settings with disappearing 'z'
+ * added - If,FileExist command now can check HTTP URLs
+ * changed - Rewrote 'If,ONLINE' and 'If,PING' internal handling to Indi functions
+ * changed - Dynamical binding of psapi.dll - allows start of WinBuilder under w2k
+ * changed - Now WinBuilder internet functionality 100% independent from IE settings
+ * changed - Download center optionally renames current file rather than overwriting it
+ * added - System,SPLITPARAMETERS command
+ * fixed - Bug ID #180: MULT/DIV replaced 32 bit integer by 64 bit integer
+ * added - Interface editor has scroll bars by default.
+ * fixed - Fresh created interface components sometimes went lost.
 
 published as WinBuilder 077 Beta 1 on 2009-APR-26
 
-===[077 beta 1] (2009-02-05)===
+===`[077 beta 1]` (2009-02-05)===
 
-fixed - dummy proxy entry in WinBuilder.ini, even there is no proxy used
-fixed - ExtractAndRun did not resolve variables completelly
-fixed - Bug in GUI FileBox component, setting %BaseDir% to last shown dir
-fixed - Bug ID #157 'StrFormat,POS'
-fixed - Bug ID #158 'StrFormat,SPLIT'
-fixed - Bug in DirCopy with trailing backslash
-fixed - wrong message text in IniMerge (error instead of success)
-changed - System,RescanScripts in standard build does not restart WinBuilder
-fixed - error 'File does not exist' which could occur on the very first start of WinBuilder in an empty directory
-fixed - some unresolved variable values in IniWrite and MakeDir
-added - Output Variables into log.html. Can be switched under Tools > Log Options
-fixed - Bug letting download center crash on empty version number
-fixed - Give the Exec command knowledge about API
-fixed - Bug ID #165 'Processing scripts interface'
-fixed - bug ID #164 'variable handling bug'
-fixed - Bug ID #163 'Download progress bar'
-fixed - Bug ID #159 'Tree view splitter bug reborn'
-fixed - StrFormat,CEIL and FLOOR decimal point troubles, logically CEIL and FLOOR exchanged
-added - Optional output of comment lines in log. Can be switched under Tools > Log Options
-added - optional warning in log on unresolved (misspelled) commands. Can be switched under Tools > Log Options
-fixed - Bug ID #167 Scrollbar markings in Interface editor have the wrong size.
-fixed - Bug ID #169: WB GUI slightly to big for wondow
-fixed - Bug ID #170: Options GUI to big for window yet no scrollbars
-fixed - Bug ID #171: disappearing scrollbars in the treeview
-added - Syntax highlighter for SynEdit with WB language
-changed - Made Syntax highlighter customizable
-added - Search / Replace functionality to source editor
-added - Include the search / replace dialogs into 'foreign language' translation
-added - parameters (#?) and escapes (#$?) to highlighter
-fixed - Bug in log.html generation with 'Begin' and 'End' in comment lines
-fixed - bug with escape of escape (##$p) in Set command value
-fixed - Bug ID #174: Retrieve,MD5 bug
-fixed - Source CDs of different projects got mixed
-added - StrFormat,UCASE and StrFormat,LCase commands
-fixed - Reanimated ability to hide interface component
-added - script version to progress window
-added - System,SaveLog command
-fixed - Bug ID #175: OnBuildExit | OnScriptExit,BEEP
-added - Interface component visibility controlled by CheckBox in iterface editor
-changed - Set command now updates interface values immediatelly. Optional the additional PERMANENT argument to write into script
-added - Interface scrollbox values now can be added
+ * fixed - dummy proxy entry in WinBuilder.ini, even there is no proxy used
+ * fixed - ExtractAndRun did not resolve variables completelly
+ * fixed - Bug in GUI FileBox component, setting %BaseDir% to last shown dir
+ * fixed - Bug ID #157 'StrFormat,POS'
+ * fixed - Bug ID #158 'StrFormat,SPLIT'
+ * fixed - Bug in DirCopy with trailing backslash
+ * fixed - wrong message text in IniMerge (error instead of success)
+ * changed - System,RescanScripts in standard build does not restart WinBuilder
+ * fixed - error 'File does not exist' which could occur on the very first start of WinBuilder in an empty directory
+ * fixed - some unresolved variable values in IniWrite and MakeDir
+ * added - Output Variables into log.html. Can be switched under Tools > Log Options
+ * fixed - Bug letting download center crash on empty version number
+ * fixed - Give the Exec command knowledge about API
+ * fixed - Bug ID #165 'Processing scripts interface'
+ * fixed - bug ID #164 'variable handling bug'
+ * fixed - Bug ID #163 'Download progress bar'
+ * fixed - Bug ID #159 'Tree view splitter bug reborn'
+ * fixed - StrFormat,CEIL and FLOOR decimal point troubles, logically CEIL and FLOOR exchanged
+ * added - Optional output of comment lines in log. Can be switched under Tools > Log Options
+ * added - optional warning in log on unresolved (misspelled) commands. Can be switched under Tools > Log Options
+ * fixed - Bug ID #167 Scrollbar markings in Interface editor have the wrong size.
+ * fixed - Bug ID #169: WB GUI slightly to big for wondow
+ * fixed - Bug ID #170: Options GUI to big for window yet no scrollbars
+ * fixed - Bug ID #171: disappearing scrollbars in the treeview
+ * added - Syntax highlighter for SynEdit with WB language
+ * changed - Made Syntax highlighter customizable
+ * added - Search / Replace functionality to source editor
+ * added - Include the search / replace dialogs into 'foreign language' translation
+ * added - parameters (#?) and escapes (#$?) to highlighter
+ * fixed - Bug in log.html generation with 'Begin' and 'End' in comment lines
+ * fixed - bug with escape of escape (##$p) in Set command value
+ * fixed - Bug ID #174: Retrieve,MD5 bug
+ * fixed - Source CDs of different projects got mixed
+ * added - StrFormat,UCASE and StrFormat,LCase commands
+ * fixed - Reanimated ability to hide interface component
+ * added - script version to progress window
+ * added - System,SaveLog command
+ * fixed - Bug ID #175: OnBuildExit | OnScriptExit,BEEP
+ * added - Interface component visibility controlled by CheckBox in iterface editor
+ * changed - Set command now updates interface values immediatelly. Optional the additional PERMANENT argument to write into script
+ * added - Interface scrollbox values now can be added
 reorganized - Internal handling of Commands / subcommands from If ... To case ...
-added - Syntax Highlighter gets word lists from WinBuilder source codeCommandLists.pas
+ * added - Syntax Highlighter gets word lists from WinBuilder source codeCommandLists.pas
 
 published as WinBuilder 077 Beta 1 on 2009-APR-01
 
-===[076] hotfix (2009-02-02)===
+===`[076]` hotfix (2009-02-02)===
 
-Fixed - Maximize - bug 
-Fixed - Proxy bug 
+ * fixed - Maximize - bug 
+ * fixed - Proxy bug 
 Rebuild - Syntax highlight in editor restored
-Fixed - Bug (access violation) in Create Script
-Fixed - Bug in System,RescanScripts 
-Fixed - Bug with Enable_RefreshButton in WinBuilder.ini
-Fixed - Bug with Autosave in WinBuilder.ini
+ * fixed - Bug (access violation) in Create Script
+ * fixed - Bug in System,RescanScripts 
+ * fixed - Bug with `Enable_RefreshButton` in WinBuilder.ini
+ * fixed - Bug with Autosave in WinBuilder.ini
 
-===[076] (2009-02-02)===
+===`[076]` (2009-02-02)===
 unknown
 
+
+=Older release information not yet formatted for WIKI=
+
+{{{
 ===[075] beta 7 (2009-01-14)===
 
-changed - Dialogbox with timeout now has progressbar and secunds countdown 
-fixed - filebox in directory mode showed backslash at single drive letter (D:\) but no backslash at path (D:\mypath\subpath)
-fixed - filebox in directory mode now shows last directory
-fixed - indenting begin / end blocks confused on comment lines
-added - enhanced WebGet functionality
-fixed - 'No Network Support' functionality
-added - GLOBAL and PERMANENT options to AddVariables command
-fixed - Editor changes have been lost when switching tabs in source edit mode
-changed - log by default in English, optional in user language (checkbox on Tools > Language)
+ * changed - Dialogbox with timeout now has progressbar and secunds countdown 
+ * fixed - filebox in directory mode showed backslash at single drive letter (D:\) but no backslash at path (D:\mypath\subpath)
+ * fixed - filebox in directory mode now shows last directory
+ * fixed - indenting begin / end blocks confused on comment lines
+ * added - enhanced WebGet functionality
+ * fixed - 'No Network Support' functionality
+ * added - GLOBAL and PERMANENT options to AddVariables command
+ * fixed - Editor changes have been lost when switching tabs in source edit mode
+ * changed - log by default in English, optional in user language (checkbox on Tools > Language)
 ***     preview as beta 6 a
-added - API functions to magic wand
-fixed - bug in WebGet with ftp protocol
-changed - on IniWrite inifile is created if not exists
-changed - Check button in source editor for begin / end indenting
-fixed - script.project.sav files has been also treated as project root
-changed - autosave logic: now with On, Off, On and Ask, Off and Ask (combobox on Tools > Options)
-fixed - bug in indenting with 'Else,Begin'
+ * added - API functions to magic wand
+ * fixed - bug in WebGet with ftp protocol
+ * changed - on IniWrite inifile is created if not exists
+ * changed - Check button in source editor for begin / end indenting
+ * fixed - script.project.sav files has been also treated as project root
+ * changed - autosave logic: now with On, Off, On and Ask, Off and Ask (combobox on Tools > Options)
+ * fixed - bug in indenting with 'Else,Begin'
 ***     preview as beta 6 b
-changed - WebGet function enhanced
+ * changed - WebGet function enhanced
 ***     preview as beta 6 c
-changed - options as first tab
+ * changed - options as first tab
 removed - lblAdvLaunch to make room for additional option
 removed - language entry !#1621=Launch a separate process for running projects.
 removed - exit cross at the license tab to make tab look simpler
 added   - checkbox to enable visibility of Code Box tab (disabled by default)
 added   - language entry !#1625=Enable Code Box
-changed - cosmetic improvements on Tools, now it's possible properly use all tools when window is maximized
-changed - proxy tab moved to download center
-changed - server tab in download center moved to frontpage
+ * changed - cosmetic improvements on Tools, now it's possible properly use all tools when window is maximized
+ * changed - proxy tab moved to download center
+ * changed - server tab in download center moved to frontpage
 removed - buttons on server list (edit and visit webserver)
-fixed - bug in evaluating RadioGroup
+ * fixed - bug in evaluating RadioGroup
 ***     preview as beta 6 d
-added - during build you cannot exit WB using the upper left 'x'. Build must be stopped before.
-added - treeview to progress window, shown during project build (experimental)
-added - System,GetFreeSpace command
+ * added - during build you cannot exit WB using the upper left 'x'. Build must be stopped before.
+ * added - treeview to progress window, shown during project build (experimental)
+ * added - System,GetFreeSpace command
 ***     preview as beta 6 e
-fixed - escape of escape handling in TXTfile commands
-changed - some smaller adjustements in User Interface
+ * fixed - escape of escape handling in TXTfile commands
+ * changed - some smaller adjustements in User Interface
 ***     preview as beta 6 e (overwritten)
-fixed - escape of escape handling in IniWriteTextLine command
-added - some visual changes to progress window
-changed - for mandatory scripts replaced red exclamation icon by locker icon
-fixed - bug in Source window which let the $sourcedir% variable sometimes undefined
-fixed - bug in 'launch external processs'
-fixed - bug in copying directories recursive
-added - in Convert BartPE, added BartPE [strings] section to WinBuilde [Variables] section
-fixed - I/O error 6 when exiting WinBuilder with folder selected (after editing a script)
-added - warning when WinBuilder is started w/o admin privileges
-fixed - bug that comment and API lines are not indented
-added - Fast DirDelete
+ * fixed - escape of escape handling in IniWriteTextLine command
+ * added - some visual changes to progress window
+ * changed - for mandatory scripts replaced red exclamation icon by locker icon
+ * fixed - bug in Source window which let the $sourcedir% variable sometimes undefined
+ * fixed - bug in 'launch external processs'
+ * fixed - bug in copying directories recursive
+ * added - in Convert BartPE, added BartPE [strings] section to WinBuilde [Variables] section
+ * fixed - I/O error 6 when exiting WinBuilder with folder selected (after editing a script)
+ * added - warning when WinBuilder is started w/o admin privileges
+ * fixed - bug that comment and API lines are not indented
+ * added - Fast DirDelete
 ***     preview as beta 6 f
 rebuild - complete 'unattended' design
 
 
 ===[075] beta 6 (2008-09-18)===
 
-fixed - bug in If,EXISTREGSECTION
-fixed - bug in StrFormat,CTRIM if the SingleChar was an escape like #$q
+ * fixed - bug in If,EXISTREGSECTION
+ * fixed - bug in StrFormat,CTRIM if the SingleChar was an escape like #$q
 ***     preview as beta 5 a
-added - escape of escape. e.g. ##$p writes the three characters #$p rather than a percentage
+ * added - escape of escape. e.g. ##$p writes the three characters #$p rather than a percentage
 ***     preview as beta 5 b
-fixed - bug in nested begin - end
-fixed - space in parameters
+ * fixed - bug in nested begin - end
+ * fixed - space in parameters
 ***     preview as beta 5 c
-fixed - Bug ID #19: CPU 100% When double clicking an attachement
-added - optional output of original lines in log
+ * fixed - Bug ID #19: CPU 100% When double clicking an attachement
+ * added - optional output of original lines in log
 speed - in log html build, replaced if - else sequence by case statement
-fixed - RegRead no longer creates non existing key
+ * fixed - RegRead no longer creates non existing key
 ***     preview as beta 5 d
-fixed - bug in System,GETFREEDRIVE if variable was already defined
-fixed - bug in nested begin - end: Run and Exec disturbed the stack
+ * fixed - bug in System,GETFREEDRIVE if variable was already defined
+ * fixed - bug in nested begin - end: Run and Exec disturbed the stack
 ***     preview as beta 5 e
-added - System,ONSCRIPTEXIT,command
-added - Custom logo size encrease, bug #89
+ * added - System,ONSCRIPTEXIT,command
+ * added - Custom logo size encrease, bug #89
 ***     preview as beta 5 f
-added - STOP, ERROR, DONE, COMMAND as #1 to ONSCRIPTEXIT runs
+ * added - STOP, ERROR, DONE, COMMAND as #1 to ONSCRIPTEXIT runs
 ***     preview as beta 5 g
-added - System,ONBUILDEXIT,command
+ * added - System,ONBUILDEXIT,command
 ***     preview as beta 5 h
-fixed - log listview now allows horizontal scolling
-added - an log entry in the log listview can be copied to clipboard by pressing Ctrl+C or doubleclicking the entry
-changed - internally split some objects from TScript
-added - add some system exceptions to the ONBUILDEXIT functionality.
+ * fixed - log listview now allows horizontal scolling
+ * added - an log entry in the log listview can be copied to clipboard by pressing Ctrl+C or doubleclicking the entry
+ * changed - internally split some objects from TScript
+ * added - add some system exceptions to the ONBUILDEXIT functionality.
 	shown as #1 = EXCEPTION
 	tracked exceptions will be completed more and more
-fixed - bug in ONBUILDEXIT when executing from a script button
-added - codebox now with context menu 'magic wand'
+ * fixed - bug in ONBUILDEXIT when executing from a script button
+ * added - codebox now with context menu 'magic wand'
 ***     preview as beta 5 i
-fixed - bug in ONBUILDEXIT: Run in a different script was not executed
-added - now the exec command also can have parameters like Run command
-fixed - bug #92: dropdown list not saved
+ * fixed - bug in ONBUILDEXIT: Run in a different script was not executed
+ * added - now the exec command also can have parameters like Run command
+ * fixed - bug #92: dropdown list not saved
 ***     preview as beta 5 j
-added - optional timeout for Message and If,Question
-fixed - bug #94: edit of folder.project
-fixed - bug #98: interface refresh issue when using XP style
-fixed - bug #96: Now [Main]Description key may contain line breaks
+ * added - optional timeout for Message and If,Question
+ * fixed - bug #94: edit of folder.project
+ * fixed - bug #98: interface refresh issue when using XP style
+ * fixed - bug #96: Now [Main]Description key may contain line breaks
 ***     preview as beta 5 k
-fixed - bug #100: Save attachment directory
-added - optionally hide 'Source' tab
-fixed - bug #103: Running functions from interface editor
-added - some new functionality to the 'Set' command
+ * fixed - bug #100: Save attachment directory
+ * added - optionally hide 'Source' tab
+ * fixed - bug #103: Running functions from interface editor
+ * added - some new functionality to the 'Set' command
 ***     preview as beta 5 l
-fixed - several bugs and misfeatures in GUI, especially when using XP-Style 
-fixed - bug in macro translation
-fixed - bug #108: %ScriptTitel% not printed by magic wand
-fixed - bug #95: [process] in script.project
-changed - new project tree handling
+ * fixed - several bugs and misfeatures in GUI, especially when using XP-Style 
+ * fixed - bug in macro translation
+ * fixed - bug #108: %ScriptTitel% not printed by magic wand
+ * fixed - bug #95: [process] in script.project
+ * changed - new project tree handling
 ***     preview as beta 5 m
-fixed - several bugs introduced in beta 5 m
-added - bug #107: language dependent interface
-added - StrFormat,REPLACE and StrFormat,SPLIT
+ * fixed - several bugs introduced in beta 5 m
+ * added - bug #107: language dependent interface
+ * added - StrFormat,REPLACE and StrFormat,SPLIT
 ***     preview as beta 5 n
-fixed - bug in If,EXISTREGKEY and If,EXISTREGSECTION: Non existing keys were created
-fixed - tree navigation by key stroke
-added - %WBLanguage% variable
+ * fixed - bug in If,EXISTREGKEY and If,EXISTREGSECTION: Non existing keys were created
+ * fixed - tree navigation by key stroke
+ * added - %WBLanguage% variable
 ***     preview as beta 5 o
-fixed - bug in IniWrite 0x7: #$S instead of spaces
-fixed - bug in language dependent interface which created new interface section
-fixed - smaller bug in BartPE inf processing: WB sometimes crashed
-fixed - RegDeleteKey of a single value
+ * fixed - bug in IniWrite 0x7: #$S instead of spaces
+ * fixed - bug in language dependent interface which created new interface section
+ * fixed - smaller bug in BartPE inf processing: WB sometimes crashed
+ * fixed - RegDeleteKey of a single value
 ***     preview as beta 5 p
-fixed - bug #113: key navigation in download pane
+ * fixed - bug #113: key navigation in download pane
 ***     preview as beta 5 q
-added - optional confirmation of Build STOP button click
-fixed - bug in If,Online
+ * added - optional confirmation of Build STOP button click
+ * fixed - bug in If,Online
 ***     preview as beta 5 r
-fixed - bug with #$s in regwrite multiple strings
-fixed - bug in interface editor when resizing a FileBox
+ * fixed - bug with #$s in regwrite multiple strings
+ * fixed - bug in interface editor when resizing a FileBox
 ***     preview as beta 5 s
-fixed - bug #116: entering text by cut&paste in interface editor destroys the interface if there is a CRLF
-fixed - bug #117: Return needed to add text by cut&paste
-fixed - downloads are written directly to disk (first with a .tmp added) if 
+ * fixed - bug #116: entering text by cut&paste in interface editor destroys the interface if there is a CRLF
+ * fixed - bug #117: Return needed to add text by cut&paste
+ * fixed - downloads are written directly to disk (first with a .tmp added) if 
         the download succeeds it will be renamed to the final name, otherwise 
 	the tmp file is deleted
 ***     preview as beta 5 t
-changed - escape handling in command dispatcher, hopefully providing something like bug #119
-fixed - bug with space in macro definition
+ * changed - escape handling in command dispatcher, hopefully providing something like bug #119
+ * fixed - bug with space in macro definition
 ***     preview as beta 5 u
-changed - wait logic of ShellExecute
+ * changed - wait logic of ShellExecute
 ***     preview as beta 5 v
-added - ShellExecuteDelete command
-fixed - bug in System,RefreshInterface
+ * added - ShellExecuteDelete command
+ * fixed - bug in System,RefreshInterface
 ***     preview as beta 5 w
-added - Verbose realtime WinBuilder file-logging mechanism implemented (to enable it add "DebugLogEnabled=true" to WinBuilder.ini)
-fixed - bug in interface: checkbox text unchangable or lost
-added - StrFormat,CharToOem and StrFormat,OemToChar commands
+ * added - Verbose realtime WinBuilder file-logging mechanism implemented (to enable it add "DebugLogEnabled=true" to WinBuilder.ini)
+ * fixed - bug in interface: checkbox text unchangable or lost
+ * added - StrFormat,CharToOem and StrFormat,OemToChar commands
 ***     preview as beta 5 x
-added - Vista UAC warning to manifest
-added - Proxy support, final version
+ * added - Vista UAC warning to manifest
+ * added - Proxy support, final version
 ***     Preview as beta 5 y
-fixed - some interface bugs introduced by internal restructuring started with beta 5 x
-fixed - bug 128, Set command
-changed - reanimated If,Ping command
-added - WB size is saved in INI, and restored next start
-fixed - some old WB 074 scripts in WB 075 appear with scrollbar
-changed - logic of 'Size Borders' in GUI editor
+ * fixed - some interface bugs introduced by internal restructuring started with beta 5 x
+ * fixed - bug 128, Set command
+ * changed - reanimated If,Ping command
+ * added - WB size is saved in INI, and restored next start
+ * fixed - some old WB 074 scripts in WB 075 appear with scrollbar
+ * changed - logic of 'Size Borders' in GUI editor
 ***     Preview as beta 5 z (next preview will start with UPPERCASE A)
-changed - logic of 'Size Borders' in GUI editor: now measure scrollbar width
-fixed - wrong color of GUI background
+ * changed - logic of 'Size Borders' in GUI editor: now measure scrollbar width
+ * fixed - wrong color of GUI background
 ***     Preview as beta 5 A
-changed - some more internal structure, Interface editor
-added - *.inf can contain WinBuilder sections. [Process] is processed, [Interface] is used for building GUI, [Variables] are evaluated
+ * changed - some more internal structure, Interface editor
+ * added - *.inf can contain WinBuilder sections. [Process] is processed, [Interface] is used for building GUI, [Variables] are evaluated
 ***     Preview as beta 5 B
-changed - Source tab implementation
-changed - Script editor form separated from WinBuilder's main form - re-implemented large parts
-changed - default language now available as independent in-exe-resource (editable via resource editor after UPX decompressing WinBuilder.exe)
-changed - script interface gui can now be aligned exactly with the beveled banner above (use "pBevel1,1,12,-1,0,557,318")
+ * changed - Source tab implementation
+ * changed - Script editor form separated from WinBuilder's main form - re-implemented large parts
+ * changed - default language now available as independent in-exe-resource (editable via resource editor after UPX decompressing WinBuilder.exe)
+ * changed - script interface gui can now be aligned exactly with the beveled banner above (use "pBevel1,1,12,-1,0,557,318")
 ***     Preview as beta 5 C
 recreated - escape of escape. e.g. ##$p writes the three characters #$p rather than a percentage (lost by introducing the VariablesManager class)
 recreated - lost colored background in interface editor, when using non-classic style
 ***     Preview as beta 5 D
-fixed - Fixed second editor (access violation, missing language, etc.)
-added - 'escape of escape' functionality to 'Set,...,PERMANENT' command
-added - Variables %ProcessorType% and %Wow64% to let scripts handle 64 bit specials
+ * fixed - Fixed second editor (access violation, missing language, etc.)
+ * added - 'escape of escape' functionality to 'Set,...,PERMANENT' command
+ * added - Variables %ProcessorType% and %Wow64% to let scripts handle 64 bit specials
 ***     Preview as beta 5 E
 recreated - Magic Wand works in CodeBox
-fixed - Variables %ProcessorType% and %Wow64% to let scripts handle 64 bit specials
-added - Variable %Wow64Dir% to let scripts handle 64 bit specials
-changed - truncate debug log file (WinBuilder.log) on start of WinBuilder
+ * fixed - Variables %ProcessorType% and %Wow64% to let scripts handle 64 bit specials
+ * added - Variable %Wow64Dir% to let scripts handle 64 bit specials
+ * changed - truncate debug log file (WinBuilder.log) on start of WinBuilder
 ***     Preview as beta 5 F
-fixed - bug in Convert BartPE, introduced by inserting apostrophes to the title
-changed - Click on picture in GUI now may be some more Wow64 friendly
-added - StrFormat,POS
+ * fixed - bug in Convert BartPE, introduced by inserting apostrophes to the title
+ * changed - Click on picture in GUI now may be some more Wow64 friendly
+ * added - StrFormat,POS
 ***     Preview as beta 5 G
-added - New variable %HostOS%
-fixed - Label font size bug with resolutions different from 96 DPI
-fixed - bug in System,GETFREEDRIVE: a 'not connected network drive' was assumed to be free
+ * added - New variable %HostOS%
+ * fixed - Label font size bug with resolutions different from 96 DPI
+ * fixed - bug in System,GETFREEDRIVE: a 'not connected network drive' was assumed to be free
 ***     Preview as beta 5 H
-added - System,REGREDIRECT
-added - System,FILEREDIRECT
+ * added - System,REGREDIRECT
+ * added - System,FILEREDIRECT
 ***     Preview as beta 5 I
-fixed - reanimated fixed folder view
+ * fixed - reanimated fixed folder view
 rebuilt - old ShellExecute functionality
 ***     Preview as beta 5 J
-fixed - Access violation when there is no project
-fixed - bug with lost file level on GUI edit
-fixed - bug with labeled edit box on GUI edit
-added - BartPE inf is skipped when [PEBuilder] contains WinBuilder=0
-fixed - new bug with nested If commands
-added - Indents in Begin ... End blocks
+ * fixed - Access violation when there is no project
+ * fixed - bug with lost file level on GUI edit
+ * fixed - bug with labeled edit box on GUI edit
+ * added - BartPE inf is skipped when [PEBuilder] contains WinBuilder=0
+ * fixed - new bug with nested If commands
+ * added - Indents in Begin ... End blocks
 ***     Preview as beta 5 K
 recreated - ShowSourceTab functionality which was lost in server transfer
 ***     Preview as beta 5 L
-fixed - bug with appearing 'Description' tab on script errors
+ * fixed - bug with appearing 'Description' tab on script errors
 ***     Preview as beta 5 M
-added - small grid facilities in interface editor
+ * added - small grid facilities in interface editor
 ***     Preview as beta 5 N
-changed - Wait command with process messages
-added - If,RUNS command
+ * changed - Wait command with process messages
+ * added - If,RUNS command
 ***     Preview as beta 5 O
 recreated - lost language dependent interface
-fixed - some new issues with refresh interface on xp-style
-fixed - autosave of script source on program exit
-fixed - bug in WebGet: If a file exists and WebGet of the same file failed with MD5 error, the existing file was deleted
-added - On_Exit and On_Enter events to scripts
-fixed - lost redirection in http download
+ * fixed - some new issues with refresh interface on xp-style
+ * fixed - autosave of script source on program exit
+ * fixed - bug in WebGet: If a file exists and WebGet of the same file failed with MD5 error, the existing file was deleted
+ * added - `On_Exit` and `On_Enter` events to scripts
+ * fixed - lost redirection in http download
 ***     Preview as beta 5 P
-added - System,GetFileSystem command
-fixed - bug in magic wand: did not work in codebox after script edit has been used
-fixed - correct WB startup coordinates when winbuilder.ini points outside desktop
+ * added - System,GetFileSystem command
+ * fixed - bug in magic wand: did not work in codebox after script edit has been used
+ * fixed - correct WB startup coordinates when winbuilder.ini points outside desktop
 ***     Preview as beta 5 Q
-fixed - Several lost download functionality
-fixed - bug in magic wand: still did not work in codebox after source editor has been used
-fixed - some new interface issues when working under xp-style
-fixed - script was truncated when in attachement modus winbuilder has been exited 
+ * fixed - Several lost download functionality
+ * fixed - bug in magic wand: still did not work in codebox after source editor has been used
+ * fixed - some new interface issues when working under xp-style
+ * fixed - script was truncated when in attachement modus winbuilder has been exited 
 ***     Preview as beta 5 R
-fixed - attachement 'delete folder' did not delete files, too
-fixed - access violation after use of file box
-added - System,IsAdmin command
-added - System,GetEnv command
+ * fixed - attachement 'delete folder' did not delete files, too
+ * fixed - access violation after use of file box
+ * added - System,IsAdmin command
+ * added - System,GetEnv command
 ***     Preview as beta 5 S
 reanimated - If,License command
 ***     Preview as beta 5 T
 
 ===[075] beta 5 (2008-07-07)===
 
-fixed - double 'beta' in form caption
-fixed - unsaved change of download server constellation
-fixed - default.txt is missing
-fixed - 'Index out of bounds' when last download server is deleted
-fixed - 'feature' how to remove custom program logo
+ * fixed - double 'beta' in form caption
+ * fixed - unsaved change of download server constellation
+ * fixed - default.txt is missing
+ * fixed - 'Index out of bounds' when last download server is deleted
+ * fixed - 'feature' how to remove custom program logo
 ***     preview as beta 4 a
-fixed - some smaller issues with download servers
-fixed - ExtractAndRun bug
-fixed - internal variables like %scriptDir% can contain commas
-added - 'Stop Build on Error' option
-fixed - senceless 'v.' in progress window
+ * fixed - some smaller issues with download servers
+ * fixed - ExtractAndRun bug
+ * fixed - internal variables like %scriptDir% can contain commas
+ * added - 'Stop Build on Error' option
+ * fixed - senceless 'v.' in progress window
 ***     preview as beta 4 b
-fixed - sort order bug with mapped folders
-fixed - ShellExecuteEx bug when opening documents by associated app
-added - Option to name log.html with additional time stamp
-added - Option to build log.html immediatelly after build w/o user interaction
+ * fixed - sort order bug with mapped folders
+ * fixed - ShellExecuteEx bug when opening documents by associated app
+ * added - Option to name log.html with additional time stamp
+ * added - Option to build log.html immediatelly after build w/o user interaction
 ***     preview as beta 4 c
-fixed - Bug with If,(NOT)EXISTFILE/DIR checking empty floppy drive
-added - Loop statement can run between characters, e.g. drive letters
-added - Strformat,INC and Strformat,DEC also work on characters
+ * fixed - Bug with If,(NOT)EXISTFILE/DIR checking empty floppy drive
+ * added - Loop statement can run between characters, e.g. drive letters
+ * added - Strformat,INC and Strformat,DEC also work on characters
 modified - nicer output in log.html
 ***     preview as beta 4 d
-fixed - bug with file type associations
-fixed - Convert tool - wrong popup menu
-added - Convert tool - remove file from list
-added - suggestion how to have certain scripts be selected mandatory
+ * fixed - bug with file type associations
+ * fixed - Convert tool - wrong popup menu
+ * added - Convert tool - remove file from list
+ * added - suggestion how to have certain scripts be selected mandatory
 ***     preview as beta 4 e
-added - RegDelete of values
-added - 'Not' option to If command
+ * added - RegDelete of values
+ * added - 'Not' option to If command
 ***     preview as beta 4 f
-added - StrFormat can extract path, filename and extentions from URLs
+ * added - StrFormat can extract path, filename and extentions from URLs
 ***     preview as beta 4 g
-fixed - bug in 'Exit on Error' when extracting files
+ * fixed - bug in 'Exit on Error' when extracting files
 ***     preview as beta 4 h
-fixed - Minor code changes and corrections to clean the hint & warnings reported on compile time
-fixed - bug 'system error occurs' in clicking log treeview
-fixed - newly added web servers for download are not tracked in WinBuilder.ini
+ * fixed - Minor code changes and corrections to clean the hint & warnings reported on compile time
+ * fixed - bug 'system error occurs' in clicking log treeview
+ * fixed - newly added web servers for download are not tracked in WinBuilder.ini
 ***     preview as beta 4 i
-fixed - bug when running script from source editor
-fixed - delete temporary files after extracting an attachement
-added - optional automatic log after clicking the STOP button
+ * fixed - bug when running script from source editor
+ * fixed - delete temporary files after extracting an attachement
+ * added - optional automatic log after clicking the STOP button
 ***     preview as beta 4 j
-fixed - wrong parent's node check marks when selecting with space bar
-changed - RegDelete syntax
+ * fixed - wrong parent's node check marks when selecting with space bar
+ * changed - RegDelete syntax
 ***     preview as beta 4 k
-changed - starting to clean up language support
-changed - remove 'charset' from log.html meta content tag
-fixed - finally(?) wrong parent's node check marks when selecting with space bar
+ * changed - starting to clean up language support
+ * changed - remove 'charset' from log.html meta content tag
+ * fixed - finally(?) wrong parent's node check marks when selecting with space bar
 ***     preview as beta 4 l
 ###     some consolidation with respect to next beta release
 removed - 'STOP' in interface editor when using themes other than XDP-classic
 removed - 'protected' functionality
-added - about 30 items to language translation
+ * added - about 30 items to language translation
 removed - new RegDelete syntax, temporarily use old syntax (see magic wand)
 ***     preview as beta 4 m
-changed - new RegDelete syntax again
-fixed - some smaller GUI adjustements
-added - some more items to language translation
-added - System,ERROROFF can get number of lines as optional argument
+ * changed - new RegDelete syntax again
+ * fixed - some smaller GUI adjustements
+ * added - some more items to language translation
+ * added - System,ERROROFF can get number of lines as optional argument
 ***     preview as beta 4 n
-added - files to be converted can be Drag&Drop-ed from explorer
-added - files to be attached can be Drag&Drop-ed from explorer
-added - If,ExistRegSection and If,ExistRegKey
-added - proxy support
-added - 'mandatory scripts' functionality (replaces removed Protect functionality)
+ * added - files to be converted can be Drag&Drop-ed from explorer
+ * added - files to be attached can be Drag&Drop-ed from explorer
+ * added - If,ExistRegSection and If,ExistRegKey
+ * added - proxy support
+ * added - 'mandatory scripts' functionality (replaces removed Protect functionality)
 cleaned - internal If command logic
 ***     preview as beta 4 o
-changed - WinBuilder always runs in CPU #0 only, also on multiprocessor and multicore systems
-added - internal variables %ProjectTitle% and %ScriptTitle%
-added - basic raw registry editor support
+ * changed - WinBuilder always runs in CPU #0 only, also on multiprocessor and multicore systems
+ * added - internal variables %ProjectTitle% and %ScriptTitle%
+ * added - basic raw registry editor support
 ***     preview as beta 4 p
-fixed - script was not shown if there was a folder with a name equal to the script's title
+ * fixed - script was not shown if there was a folder with a name equal to the script's title
 ***     preview as beta 4 q
-fixed - enable RegRead of expandable strings 0x2
-fixed - decode macro names only as first argument
-fixed - store changed text in a filebox
-added - Show Progress Window also when processing codebox ot buttons.
-added - several smaller adjustements
-added - autosave option for source code editor
+ * fixed - enable RegRead of expandable strings 0x2
+ * fixed - decode macro names only as first argument
+ * fixed - store changed text in a filebox
+ * added - Show Progress Window also when processing codebox ot buttons.
+ * added - several smaller adjustements
+ * added - autosave option for source code editor
 ***     preview as beta 4 r
-fixed - Changing source folder to a folder already on list
-changed - parameter stack added for 'Run' and 'Loop' statements
-fixed - bug occurring when a line contained a non-variable '%'
+ * fixed - Changing source folder to a folder already on list
+ * changed - parameter stack added for 'Run' and 'Loop' statements
+ * fixed - bug occurring when a line contained a non-variable '%'
 ***     preview as beta 4 s
-fixed - bug in If,QUESTION with space inside question
-fixed - 'Use Path Rule' now unchecked by default
-changed - some smaller corrections
+ * fixed - bug in If,QUESTION with space inside question
+ * fixed - 'Use Path Rule' now unchecked by default
+ * changed - some smaller corrections
 ***     preview as beta 4 t
-changed - now nested 'begin' - 'end' is possible. 'begin' stack added
-changed - no flushing window on missing source
-changed - dont show scripts of 0 bytes size
+ * changed - now nested 'begin' - 'end' is possible. 'begin' stack added
+ * changed - no flushing window on missing source
+ * changed - dont show scripts of 0 bytes size
 ***     preview as beta 4 u
-fixed - bug in System,GETFREEDRIVE
-fixed - bug in previous / next selected: Changes were lost
+ * fixed - bug in System,GETFREEDRIVE
+ * fixed - bug in previous / next selected: Changes were lost
 ***     preview as beta 4 v
 
 ===[075] beta 4 (2008-06-10)===
 
 modified - log button will always be displayed when using codebox
-fixed - Else,Set,%var%,xxx bug
-added - output of localized strings
-added - StrFormat,Ceil and StrFormat,Floor
-fixed - Some (WB 75 new) issues fixed with spaces in the %BaseDir% name
-added - folder linking (link to script folder trees of a different project)
-added - Retrieve,FileVersion command
-fixed - bug in FileByteExtract (popup error if sequence not found)
-fixed - project tree bug with deselect on collapsing
-added - WBZip by booty#1 as standard de/encoding
-added - System,GetFreeDrive command
-fixed - RegImport bug
-fixed - interface bug with unshown labels
-added - System,ErrorOff command
-added - Webget of FTP:// URLs
+ * fixed - Else,Set,%var%,xxx bug
+ * added - output of localized strings
+ * added - StrFormat,Ceil and StrFormat,Floor
+ * fixed - Some (WB 75 new) issues fixed with spaces in the %BaseDir% name
+ * added - folder linking (link to script folder trees of a different project)
+ * added - Retrieve,FileVersion command
+ * fixed - bug in FileByteExtract (popup error if sequence not found)
+ * fixed - project tree bug with deselect on collapsing
+ * added - WBZip by booty#1 as standard de/encoding
+ * added - System,GetFreeDrive command
+ * fixed - RegImport bug
+ * fixed - interface bug with unshown labels
+ * added - System,ErrorOff command
+ * added - Webget of FTP:// URLs
 
 ===[075 beta 3] (2008-06-09)===
 
-added - begin/end for If and Else commands
-fixed - attachement context menu
-fixed - multiple anchors in log
-added - stepping through selected scripts
-fixed - WebGet bug with redirection
+ * added - begin/end for If and Else commands
+ * fixed - attachement context menu
+ * fixed - multiple anchors in log
+ * added - stepping through selected scripts
+ * fixed - WebGet bug with redirection
 
 ===[075 beta 2] (2008-05-13)===
 
-added - 'variable names can contain variables'
-added - Multiple 'Else,If' possible
-added - 'Loop' statement
-added - %ExitCode% for ShellExecute
-added - System,Cursor,Wait / Normal
-added - Expand Echo,Message to optional Echo,Message[,Warn]
-added - button to open Download Center from main window
-added - updates.ini can will open a custom website if specific info is found ([info] -> Website=http://myexample.com)
-fixed - greyed scrollbars area
-fixed - bug with disappearing or moving components
-fixed - bug with overwritten component, if wrong order
-fixed - bug in RegGetNext
-fixed - bug in script macro resolving
-fixed - CopyOrExpand now works in W2000 host
-fixed - Main treeview has a stable behavior
+ * added - 'variable names can contain variables'
+ * added - Multiple 'Else,If' possible
+ * added - 'Loop' statement
+ * added - %ExitCode% for ShellExecute
+ * added - System,Cursor,Wait / Normal
+ * added - Expand Echo,Message to optional Echo,Message[,Warn]
+ * added - button to open Download Center from main window
+ * added - updates.ini can will open a custom website if specific info is found ([info] -> Website=http://myexample.com)
+ * fixed - greyed scrollbars area
+ * fixed - bug with disappearing or moving components
+ * fixed - bug with overwritten component, if wrong order
+ * fixed - bug in RegGetNext
+ * fixed - bug in script macro resolving
+ * fixed - CopyOrExpand now works in W2000 host
+ * fixed - Main treeview has a stable behavior
 modified - Some cosmetics in log.html generation
 modified - GUI editor fixes
 modified - Log tab is only visible whenever it is not empty
@@ -827,10 +826,10 @@ removed - Backup Tool was removed since it was rarely used
 
 ===[075] (2007-12-18)===
 
-- Added - Version number next to script description
+-  * added - Version number next to script description
 - Fix bug #32 (Retreive cmd)
-- Fix bug with RegRead MULTI_SZ
-- Implementation of REG_NONE
+- Fix bug with RegRead `MULTI_SZ`
+- Implementation of `REG_NONE`
 - Log generation accelerated; Fix of 'truncated log lines'
 - Add Generation of API format lines to 'Convert from BartPE'
 - Separate unit 'ConvertBart'
@@ -888,15 +887,15 @@ This mode will automatically try to find it's respective project file and read a
 [beta 4]
 
 - Removed - message that appeared after saving a script in the source editor - save button automatically detects when script is modified.
-- Fixed - bug that erased the contents of the script whenever using a spinedit object on the interface
-- Fixed - bug that prevented loading any .script file outside the projects folder 
-- Fixed - Bug which appeared when selecting an error on the log window after running a script "Cannot focus disabled window"
-- Fixed - bug that prevented loading .script files in editor mode using command line parameters
-- Added - IniDeleteSection - support for unicode files
-- Added - IniAddTextLine - support for unicode files
-- Added - button to edit listed web servers inside the web server list.
-- Added - missing <If,Question,"My Question?",Command> option on the right click menu of the source code editor
-- Added - option to launch external editor in source code editor
+-  * fixed - bug that erased the contents of the script whenever using a spinedit object on the interface
+-  * fixed - bug that prevented loading any .script file outside the projects folder 
+-  * fixed - Bug which appeared when selecting an error on the log window after running a script "Cannot focus disabled window"
+-  * fixed - bug that prevented loading .script files in editor mode using command line parameters
+-  * added - IniDeleteSection - support for unicode files
+-  * added - IniAddTextLine - support for unicode files
+-  * added - button to edit listed web servers inside the web server list.
+-  * added - missing `<If,Question,"My Question?",Command>` option on the right click menu of the source code editor
+-  * added - option to launch external editor in source code editor
 - Corrected - FileCopy command with progress bar - it was only outputing the name of the filename being copied after completing the copy
 - Corrected - After clicking on button inside UI - big play button is disabled
 - Corrected - System,RefreshInterface is not working after pressing button on script UI
@@ -914,15 +913,15 @@ beta 5
 - Corrected - Replaced all "wich" typo keywords by "which" 
 - Corrected - IniDeleteSection was not working with UNICODE files
 - Solved - bug when encoding files using beta 4 - incompatibilities between unicode vs ansi
-- Added - Main script treeview is locked when changing selected status to avoid flickers.
-- Added - Switch to TxtAddLine - using "unicode" as last parameter on the append line operations will write with unicode support
+-  * added - Main script treeview is locked when changing selected status to avoid flickers.
+ * added - Switch to TxtAddLine - using "unicode" as last parameter on the append line operations will write with unicode support
 
 [beta 6]
 
-- Fixed - bug that appeared when running the script inside the source code editor window
+-  * fixed - bug that appeared when running the script inside the source code editor window
 - Modified - Single script upload button was moved to the "Options" tab inside the script editor
 - Enabled - MD5 tool to calculate MD5 checksum was readded on the "Options" tab
-- Fixed - bug that "forgot" adding last folder on the "Create New script" tab
+-  * fixed - bug that "forgot" adding last folder on the "Create New script" tab
 
 ===[071] (2007-05-14)===
 
@@ -1269,7 +1268,7 @@ beta 15
 - Added command "regimport" to allow importing a .reg file straight into the local registry
 - bugfixed the internal inf2script tool to correctly add "" on each converted value on registry keys of type 0x3 and 0x7
 - DirMove has also been improved to allow moving files and folders silently - allowing to use *.* to only move files and subdirectories from a folder
-- echo command was also bugfixed - was not translating variables
+- echo command was also bug * fixed - was not translating variables
 - Clicking to disable or enable a folder will also reflect this value on all scripts inside
 - Added a new tab named "Tools" where "Backup", "Create new script" and "Create updates.ini" tools where placed
 - Added webupdate, allowing users to view and download the latest scripts and projects
