@@ -1,7 +1,7 @@
 = Common API=
 
-The "common" API is a means to extend and add functionality to a !WinBuilder project. It's purpose was to make application (and other) scripts more compatible across multiple projects.
+===The "common" API is a means to extend and add functionality to a !WinBuilder project. It's purpose was to make application (and other) scripts more compatible across multiple projects.===
 
-The current API project is still in a bit of "flux", however most commands have been around for some time and will continue to be supported in future versions.
+===The current API project is still in a bit of "flux", however most commands have been around for some time and will continue to be supported in future versions.===
 
-A process to better manage the API and put it under tighter version control is under development.
+===A process to better manage the API and put it under tighter version control is *_under development._*===
