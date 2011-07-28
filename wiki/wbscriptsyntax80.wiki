@@ -1,4 +1,4 @@
-<h1>Script Syntax 080</h1>
+<h1>Script Syntax Changes that appear in version 080</h1>
 <wiki:toc max_depth="2" />
 
 This page describes new functionalty introduced with WinBuilder 080.
