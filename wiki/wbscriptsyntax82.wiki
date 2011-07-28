@@ -1,4 +1,4 @@
-<h1>Script Syntax 082</h1>
+<h1>Script Syntax Changes that appear in version 082</h1>
 <wiki:toc max_depth="2" />
 
 This page describes new functionality introduced with !WinBuilder 082.
