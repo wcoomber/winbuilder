@@ -20,7 +20,7 @@ Bellow is a proposed description of the build phases typically performed by each
   #7 ISO creation (mkisofs, RAM boot..)
   #8 PC Emulation (Qemu, vmware, virtualPC)
   #9 Burn ISO
-  #10 Project Tools (hive editing, target tweaking..)
+  #1 Project Tools (hive editing, target tweaking..)
 
 
 
