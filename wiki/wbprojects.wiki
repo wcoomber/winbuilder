@@ -1,4 +1,4 @@
-=Projects =
+=[http://reboot.pro/forum/22/ Projects]=
 
 Projects are a collection of scripts that are used to build a specific boot disk. Specific details are included to help you use compatible sources and learn how to debug some common issues that might sometimes appear. 
  ===You should always read the information page of each project you intend to use before you start building a project.===
