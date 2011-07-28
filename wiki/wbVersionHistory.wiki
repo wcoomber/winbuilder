@@ -415,7 +415,7 @@ published as WinBuilder 077 Beta 1 on 2009-APR-26
  * added - Interface component visibility controlled by CheckBox in iterface editor
  * changed - Set command now updates interface values immediatelly. Optional the additional PERMANENT argument to write into script
  * added - Interface scrollbox values now can be added
-reorganized - Internal handling of Commands / subcommands from If ... To case ...
+ * reorganized - Internal handling of Commands / subcommands from If ... To case ...
  * added - Syntax Highlighter gets word lists from WinBuilder source codeCommandLists.pas
 
 published as WinBuilder 077 Beta 1 on 2009-APR-01
@@ -424,7 +424,7 @@ published as WinBuilder 077 Beta 1 on 2009-APR-01
 
  * fixed - Maximize - bug 
  * fixed - Proxy bug 
-Rebuild - Syntax highlight in editor restored
+ * Rebuild - Syntax highlight in editor restored
  * fixed - Bug (access violation) in Create Script
  * fixed - Bug in System,RescanScripts 
  * fixed - Bug with `Enable_RefreshButton` in WinBuilder.ini
@@ -500,7 +500,7 @@ preview as beta 5 b
 preview as beta 5 c
  * fixed - Bug ID #19: CPU 100% When double clicking an attachement
  * added - optional output of original lines in log
-speed - in log html build, replaced if - else sequence by case statement
+ * speed - in log html build, replaced if - else sequence by case statement
  * fixed - RegRead no longer creates non existing key
 preview as beta 5 d
  * fixed - bug in System,GETFREEDRIVE if variable was already defined
@@ -516,9 +516,7 @@ preview as beta 5 h
  * fixed - log listview now allows horizontal scolling
  * added - an log entry in the log listview can be copied to clipboard by pressing Ctrl+C or doubleclicking the entry
  * changed - internally split some objects from TScript
- * added - add some system exceptions to the ONBUILDEXIT functionality.
-	   shown as #1 = EXCEPTION
-	   tracked exceptions will be completed more and more
+ * added - add some system exceptions to the ONBUILDEXIT functionality. shown as #1 = EXCEPTION tracked exceptions will be completed more and more
  * fixed - bug in ONBUILDEXIT when executing from a script button
  * added - codebox now with context menu 'magic wand'
 preview as beta 5 i
@@ -595,7 +593,7 @@ Preview as beta 5 z (next preview will start with UPPERCASE A)
  * fixed - wrong color of GUI background
 Preview as beta 5 A
  * changed - some more internal structure, Interface editor
- * added - *.inf can contain WinBuilder sections. `[Process]` is processed, `[Interface]` is used for building GUI, `[Variables]` are evaluated
+ * added - '*.inf' can contain WinBuilder sections. `[Process]` is processed, `[Interface]` is used for building GUI, `[Variables]` are evaluated
 Preview as beta 5 B
  * changed - Source tab implementation
  * changed - Script editor form separated from WinBuilder's main form - re-implemented large parts
