@@ -1,27 +1,31 @@
 =Script Levels=
 
-Levels is a feature used by !WinBuilder that allow you to choose when your script should run while the project is being built.
+Levels are used by !WinBuilder to define when your script should run while the project is being built. This allows you to ensure that your script always runs at the correct time.
 
-You can select values between 1 and 10, when the project starts it will begin with the scripts that have the lower level number and will increase a level after all scripts with the previous levels are processed.  
+You can select values between 1 and 10, when the project starts it will begin with the scripts that have the lower level number and will increase a level after all scripts with the previous levels are processed. To further organize your scripts you can also create sub folders and in this way separate these scripts from others with the same level.
 
-To further categorize and group your scripts you can also create subfolders and in this way ensure that these scripts are separated from others with the same level. Look for examples on the available projects to understand more about these filters. In other words, !WinBuilder uses the folder structure and naming of the individual files to order scripts of the same level.
+Winbuilder will process scripts in the following order:
+ 1. Script Level
+  2. Folder Name
+   3. Script Name
 
-This is a very useful way to ensure that your script always runs at the correct time. First levels are usually used to be build the structure of your project, while the last levels are the ones where your project is finished and an image is created.
+File and folder names are processed in alpha numeric order.
 
+Top levels are usually used to be build the structure of your project, while the last levels are the ones where your project is finished and an image is created.
 By default, we use level 5 as the middle value where most scripts that are only meant to add programs (i.e. [wbscriptapplication Application Scripts]) should be processed.
 
-Bellow is a proposed description of the build phases typically performed by each project:
-  #1 Preprocess info (where all informations are gathered)
+Below is a proposed description of the build phases typically performed by each project:
+  #1 Preprocess info (gathering information, mounting wims, etc.)
   #2 Build (basic building scripts - create folders, copy/expand, winsxs)
   #3 Base (shell, shortcuts, ramdisk/FBWF options..)
   #4 Settings and Drivers (all tweaks and drivers)
   #5 Applications (added programs like CD-burn, editor, tools..)
-  #6 !PostProcessing (autoUPX, cleanup)
+  #6 PostProcessing (wim creation, autoUPX, cleanup)
   #7 ISO creation (mkisofs, RAM boot..)
   #8 PC Emulation (Qemu, vmware, virtualPC)
   #9 Burn ISO
   #1 Project Tools (hive editing, target tweaking..)
 
-
+Corresponding negative script levels also exist with the only difference being that scripts with negative levels are not displayed in the project tree. This can be useful for creating utility scripts containing a common set of functions shared between scripts. These scripts typically require no user interaction and usually do not contain a `[process]` section.
 
 For a more in depth discussion on levels, see [http://reboot.pro/515/ this forum posting].
