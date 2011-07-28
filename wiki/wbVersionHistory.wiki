@@ -21,7 +21,7 @@ published as release preview
  * fixed - bug introduced by removing of System,HasDOS8_3 command
  * added - when image does not contain URL, click into the image starts the default graphical editor
  * changed - place weblabels in front of textlabels
- * fixed - script editor bug with source code button (the light bulb) http://reboot.pro/14...post__p__131528
+ * fixed - [http://reboot.pro/14...post__p__131528 script editor bug with source code button (the light bulb)]
  * fixed - single run now displays script's description rather than script.project description
  * fixed - bug with endless loop in exiting WinBuilder, when a script has been deleted externally
  * fixed - When in interface editor activating "resize to fit" on an image, the corner dots of the image are not repositioned correctly until the image is clicked
@@ -122,24 +122,24 @@ uploaded as WinBuilder_110520.zip
  * fixed - access violation in TextFile interface component
 uploaded as WinBuilder_110601.zip
 
- * removed - unnecessary SetEsc command (http://reboot.pro/14648/page__view__findpost__p__130037).
+ * removed - [http://reboot.pro/14648/page__view__findpost__p__130037 unnecessary SetEsc command]
 uploaded as WinBuilder_110602.zip
 
- * fixed - link function did not display first level linked scripts in project tree (http://reboot.pro/14477/page__view__findpost__p__129661)
+ * fixed - [http://reboot.pro/14477/page__view__findpost__p__129661 link function did not display first level linked scripts in project tree]
  * fixed - link finction displays non-script files
  * fixed - sometimes in the interface editor changes on grouped elements are not completelly saved
 uploaded as WinBuilder_110607.zip
 
- * fixed - now different link behaviours with `<linked path>` vs `<linked path>\*.*` (http://reboot.pro/14477/page__view__findpost__p__130523)
+ * fixed - [http://reboot.pro/14477/page__view__findpost__p__130523 now different link behaviours with `<linked path>` vs `<linked path>\*.*`]
 uploaded as WinBuilder_110610.zip
 
- * fixed - bug in WinBuilder command line start (http://reboot.pro/14477/page__view__findpost__p__130616)
+ * fixed - [http://reboot.pro/14477/page__view__findpost__p__130616 bug in WinBuilder command line start]
  * added - NOWARN option to Exit command
 uploaded as WinBuilder_110612.zip
 
 ===`[080]` update (2010-03-03)===
 
- * fixed - lost "search next" in sorce editor
+ * fixed - lost "search next" in source editor
  * fixed - nested macros now work
 
 ===`[080]` update (2010-02-23)===
