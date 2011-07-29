@@ -31,7 +31,7 @@
    * [wbscriptlinks Link Files] 
    * [wbscriptapplication Application Scripts]
    * [wbscriptfaq  Script F. A. Q.]
- * Script Command Categories
+ * Script Command Reference
    * File Operations
      * [filecopy FileCopy]
      * [filedelete FileDelete]
@@ -72,6 +72,7 @@
      * [txtdelemptylines TxtDelEmptyLines]
    * IF Clauses and Command Blocks
      * [if If / Else Overview]
+     * [ifExist Exist/NotExit]
      * [if#Exist...  Exist... / NotExist...]
      * [if#Equal Equal / Smaller / Bigger / NotEqual]
      * [if#Ping Ping]
