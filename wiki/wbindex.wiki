@@ -72,7 +72,7 @@
      * [txtdelemptylines TxtDelEmptyLines]
    * IF Clauses and Command Blocks
      * [if If / Else Overview]
-     * [ifExist Exist/NotExit]
+     * [ifExist Exist/NotExist]
      * [if#Exist...  Exist... / NotExist...]
      * [if#Equal Equal / Smaller / Bigger / NotEqual]
      * [if#Ping Ping]
