@@ -70,10 +70,10 @@
      * [txtdelline TxtDelLine]
      * [txtdelspaces TxtDelSpaces]
      * [txtdelemptylines TxtDelEmptyLines]
-   * IF Clauses and Command Blocks
+   * IF / Else Clauses
      * [if If / Else Overview]
-     * [ifBlock Begin/End Block]
-     * [ifExist Exist/NotExist]
+     * [ifBlock Begin / End Block]
+     * [ifExist Exist / NotExist]
      * [ifComparison Comparison Operations]
      * [ifPing Ping]
      * [ifOnline Online]
