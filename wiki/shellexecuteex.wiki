@@ -18,7 +18,7 @@ This function will launch a file using the settings you specify.
 
  * *!StartDir* (optional) is the location that you wish to specify as your default work directory.
 
-The script will wait (pause) for the launched file or application to be closed before continuing to process the remaining commands.
+The script will *_NOT_* wait (pause) for the launched file or application to be closed before continuing to process the remaining commands.
 
 == Example: == 
 In this example we can open an exporer window and pass in the name of the folder to open and do not wait for the executable to finish. 
