@@ -17,4 +17,4 @@ If,Not,ExistFile,C:\myFile.txt,FileCreateBlank,C:\myFile.txt
 Else,Message,"File already exists",INFORMATION
 }}}
 This is a very powerful construct, since the `<command>` specified can be
-*ANY* valid script command.  This was further enhanced with the addition of command blocks using [ifBlocks Begin / End], which allows multiple commands to be executed. 
+*ANY* valid script command.  This was further enhanced with the addition of command blocks using [ifBlock Begin / End], which allows multiple commands to be executed. 
