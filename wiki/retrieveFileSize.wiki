@@ -1,0 +1,16 @@
+#summary Calculate the size of a file
+
+=!FileSize=
+
+==Syntax==
+{{{
+Retrieve,FileSize,<Filename>,<%var%> 
+}}}
+This function is used to calculate the size of a file and store it inside a variable.
+ * Filename is the target file
+ * %var% is the stored value (expressed in bytes)
+
+== Syntax example: ==
+{{{
+Retrieve,FolderSize,c:\myFolder,%var%
+}}}
