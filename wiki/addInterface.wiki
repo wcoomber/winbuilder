@@ -30,3 +30,6 @@ Values of the German interface are now accessible like
 {{{
 Echo,%pTextBox1%
 }}}
+
+===Note:===
+This command was added in Winbuilder 80; It will not work with older versions.
