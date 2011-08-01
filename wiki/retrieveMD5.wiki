@@ -1,0 +1,17 @@
+#summary Calculate the MD5 hash of a particular file
+
+=MD5=
+
+==Syntax==
+{{{
+Retrieve,MD5,<Filename>,<%var%> 
+}}}
+MD5 is a way to calculate a number known as a 'hash' or 'checksum' that is based on the content of a file.
+
+It is used as a safety check to ensure that files are complete and unmodified when they are downloaded from a server. You can also call this function to ensure that your files were not modified. 
+
+== Example: ==
+ This function will write the value of the MD5 result on %var%, you can compare against a security value written elsewhere to prove that your file is intact.
+{{{
+Retrieve,MD5,c:\MyText.txt,%var%
+}}}
