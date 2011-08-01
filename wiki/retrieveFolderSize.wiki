@@ -8,4 +8,4 @@ Retrieve,FolderSize,<Directory>,<%var%>
 
 This function is used to calculate the size of a folder and store it inside a variable.
  * Directory is the target directory
- * %var% is the stored value (expressed in bytes)
+ * %var% is a user defined variable used to store the value (expressed in bytes)
