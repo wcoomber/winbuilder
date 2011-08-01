@@ -81,6 +81,13 @@
      * [ifNot Not]
      * [ifQuestion Question]
    * Retrieve Functions
+     * [retrieveFolderSize FolderSize]
+     * [retrieveFileSize FileSize]
+     * [retrieveFile File]
+     * [retrieveDir Dir]
+     * [retrieveMD5 MD5]
+     * [retrieveFileVersion FileVersion]
+   * Retrieve Functions (old)
      * [retrieve#FolderSize FolderSize]
      * [retrieve#FileSize FileSize]
      * [retrieve#File File]
