@@ -8,7 +8,7 @@ Retrieve,FileSize,<Filename>,<%var%>
 }}}
 This function is used to calculate the size of a file and store it inside a variable.
  * Filename is the target file
- * %var% is the stored value (expressed in bytes)
+ * %var% is a user defined variable used to store the size of the file (in bytes) 
 
 == Syntax example: ==
 {{{
