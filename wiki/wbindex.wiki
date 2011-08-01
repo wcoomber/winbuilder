@@ -80,6 +80,8 @@
      * [ifLicense License]
      * [ifNot Not]
      * [ifQuestion Question]
+     * [ifExistMacro Existmacro]
+     * [ifExistRegMulti ExistRegMulti]
    * Retrieve Functions
      * [retrieve Overview]
      * [retrieveFolderSize FolderSize]
