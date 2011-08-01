@@ -81,19 +81,13 @@
      * [ifNot Not]
      * [ifQuestion Question]
    * Retrieve Functions
+     * [retrieve Overview]
      * [retrieveFolderSize FolderSize]
      * [retrieveFileSize FileSize]
      * [retrieveFile File]
      * [retrieveDir Dir]
      * [retrieveMD5 MD5]
      * [retrieveFileVersion FileVersion]
-   * Retrieve Functions (old)
-     * [retrieve#FolderSize FolderSize]
-     * [retrieve#FileSize FileSize]
-     * [retrieve#File File]
-     * [retrieve#Dir Dir]
-     * [retrieve#MD5 MD5]
-     * [retrieve#FileVersion FileVersion]
    * String Formating
      * [strformat#INC/DEC/MULT/DIV  INC / DEC / MULT / DIV ]
      * [strformat#FILENAME/PATH/EXT    FILENAME / PATH / EXT ]
