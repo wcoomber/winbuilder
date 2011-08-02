@@ -1,4 +1,6 @@
 =!ScriptInterface,Read=
+
+=WARNING! May not be correctly documented=
 ==Syntax==
 {{{
 ScriptInterface,Read,%VarResult%,Filename,ComponentName,[Position][,Interface]
