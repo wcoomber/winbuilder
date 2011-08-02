@@ -1,4 +1,7 @@
 =!ScriptInterface,Write=
+
+=WARNING MAY NOT BE CORRECTLY DOCUMENTED=
+
 ==Syntax==
 {{{
 ScriptInterface,Write,NewValue,Filename,ComponentName[,Position][,Interface]
