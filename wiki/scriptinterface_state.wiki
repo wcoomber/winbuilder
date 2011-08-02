@@ -1,4 +1,7 @@
-=!ScriptInterface,State+
+=!ScriptInterface,State=
+
+=WARNING!  May not be correctly documented=
+
 ==Syntax==
 {{{
 ScriptInterface,State,ComponentName[,State][,Filename][,RefreshInterface][,Interface]
