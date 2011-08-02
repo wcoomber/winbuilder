@@ -6,8 +6,10 @@
 
 ===A process to better manage the API and put it under tighter version control is *_under development._*===
 
-
-=Common API - How It works 
+<br>
+<br>
+----
+=Common API - How It works=
 
 The Common Api (Capi) is a set of macros, nothing more nothing lesss.  What makes it an API is that the !WinBuilder community has decided to use the same macro definitions across many projects.  This allows the individual scripts to be more easily used in different projects. 
  Note: Not all !WinBuilder projects need to be a CAPI based project, there are some projects that may not use the API, or use their own API definition.
