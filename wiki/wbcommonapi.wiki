@@ -1,4 +1,4 @@
-= Common API=
+<h1>The Common API</h1>
 
 ===The "common" API is a means to extend and add functionality to a !WinBuilder project. It's purpose was to make application (and other) scripts more compatible across multiple projects.===
 
@@ -6,10 +6,10 @@
 
 ===A process to better manage the API and put it under tighter version control is *_under development._*===
 
-<br>
+<wiki:toc max_depth="2" />
 <br>
 ----
-=Common API - How It works=
+=How It works=
 
 The Common Api (Capi) is a set of macros, nothing more nothing lesss.  What makes it an API is that the !WinBuilder community has decided to use the same macro definitions across many projects.  This allows the individual scripts to be more easily used in different projects. 
  Note: Not all !WinBuilder projects need to be a CAPI based project, there are some projects that may not use the API, or use their own API definition.
@@ -17,7 +17,7 @@ The Common Api (Capi) is a set of macros, nothing more nothing lesss.  What make
 
 If you know how to create a macro in a script, than you can easily figure out how the API is used. What makes this different than ordinary macros is how it is "hooked into" the !WinBuilder process.
 
-==Hooking in the API to your project==
+=Hooking in the API to your project=
 We will start by looking at what makes the Common API "turn on". If you look in *script.project* file you will see the following lines and Variables being defined.  This first variable
 {{{
 //-- API File and Some Api project settings
@@ -54,7 +54,7 @@ AddVariables,%API%,ApiVar,GLOBAL
 }}}
 This command loads all commands in the common_api.script from the `[ApiVar]` section we mentioned above as `GLOBAL` variables. We will get into this a bit more later, but know that this needs to happen in order for scripts to use the Common API commands.
 
-==The Common_API.script file===
+=The Common_API.script file=
 
 Ok now on to Common_API.script. As mentioned above, we have defined several variables, and there is typically an `[Api_Def]` section in the script file.  For example:
 {{{
@@ -106,7 +106,7 @@ Run,%API%,_Calculate
 }}}
 which will execute the `[_Calculate]` section in `%API%` which we defined earlier in script.project as being `%ProjectDir%\Build\Common_Api.script` 
 
-===Defining the menu entries (syntax templates) for the magic wand===
+=Defining the menu entries (syntax templates) for the magic wand=
 
 The definitions are contained (as mentioned above) in the `[API]` Section.  Note that line doesn't actually *do* anything - its just a reminder to developers that the next sections are menu definitions and not actually functions.
 
