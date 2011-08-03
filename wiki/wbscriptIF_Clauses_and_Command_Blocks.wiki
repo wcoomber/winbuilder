@@ -2,8 +2,14 @@
 If the evaluation of an If condition is 'True', the command following the condition is processed. If the evaluation of an If condition is 'False', the command of the Else command (if present), is processed.
 In both cases, instead of a command, there can also be a command block.
 
- * [if If / Else Clauses]
- * [begin_end Begin / End]
-
-<br>
-----
+     * [if If Clauses]
+     * [ifBlock Begin / End Block]
+     * [ifExist Exist / NotExist]
+     * [ifComparison Comparison Operations]
+     * [ifPing Ping]
+     * [ifOnline Online]
+     * [ifLicense License]
+     * [ifNot Not]
+     * [ifQuestion Question]
+     * [ifExistMacro ExistMacro]
+     * [ifExistRegMulti ExistRegMulti]
