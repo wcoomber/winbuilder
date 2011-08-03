@@ -1,8 +1,6 @@
 =Script Command Categories=
 
-All available commands are described on a single page so that you can later print that page to use as a reference. 
- * Usually all command which compare etc. are case insensitive.
- * There are some commands having a "X" at the end. These commands work like that ones without the "X", but case sensitive.
+All available commands are described on a single page so that you can later print that page to use as a reference.  Usually all command which compare etc. are case insensitive. But, there are some commands having a "X" at the end. These commands work like that ones without the "X", but case sensitive.
  
   * [wbscriptFile_Operations File Operations]
   * [wbscriptRegistry_Handling Registry Handling]
@@ -14,5 +12,3 @@ All available commands are described on a single page so that you can later prin
   * [wbscriptString_Formatting String Formating]
   * [wbscriptNetwork_Tools Network Tools]
   * [wbscriptMiscellaneous_Commands Miscellaneous Commands]
-<br>
-----
