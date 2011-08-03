@@ -338,7 +338,7 @@ System,SplitParameters,OFF
 
 ----
 
-==System,!Comp80==
+==System,Comp80==
 {{{
 System,Comp80,{on|off}
 }}}
@@ -356,7 +356,7 @@ System,Comp80,off
 
 ----
 
-==System,!HasUAC==
+==System,HasUAC==
 {{{
 System,HasUAC,<%var%>
 }}}
@@ -375,7 +375,7 @@ End
 
 ----
 
-==System,!IsTerminal==
+==System,IsTerminal==
 {{{
 System,IsTerminal,<%var%>
 }}}
@@ -394,7 +394,7 @@ End
 
 ----
  
-==System,!Log==
+==System,Log==
 {{{
 System,Log,{on|off}
 }}}
