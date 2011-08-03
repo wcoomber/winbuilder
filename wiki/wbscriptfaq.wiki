@@ -1,4 +1,5 @@
-=Script FAQ=
+=!WinBuilder and Script FAQ=
+
 ==Where do I place my scripts?==
  You can place your scripts inside the same folder where the project you want to create is placed.  Using LiveXP as example, you can place your scripts inside the `%BaseDir%\Projects\LiveXP` folder, where `%BaseDir%` is a variable used by !WinBuilder to indicate the same path where `WinBuilder.exe` is found. 
 
