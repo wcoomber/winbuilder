@@ -1,4 +1,4 @@
-==Registry Handling==
+=Registry Handling=
 
 These commands are written to write and read values from the local registry on your windows machine. You can also load the hives from the projects being built at any given time.
 
