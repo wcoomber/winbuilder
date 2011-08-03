@@ -31,7 +31,7 @@
    * [wbscriptlinks Link Files] 
    * [wbscriptapplication Application Scripts]
    * [wbscriptfaq  Script F. A. Q.]
- * Script Command Reference
+ * [wbscriptsyntax#Script_Command_Categories Script Command Categories]
    * [wbscriptsyntax#File_Operations File Operations]
      * [filecopy FileCopy]
      * [filedelete FileDelete]
