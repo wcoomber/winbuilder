@@ -1,6 +1,6 @@
 #summary Allows interface components from another interface to be accessed locally in a script
 
-=AddInterface=
+=!AddInterface=
 
 ==Syntax===
 {{{
