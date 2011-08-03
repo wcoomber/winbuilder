@@ -14,7 +14,7 @@
    * [wbscriptsyntax Syntax Rules and Escape Characters]
    * [wbfilestructure File Structure]
    * [wbscriptlevels  Script Levels]  
-   * [wbscriptcommand Script Command Categories]
+   * [wbscriptcommandsByCategory Script Command Categories]
      * [wbscriptFile_Operations File Operations]
      * [wbscriptRegistry_Handling Registry Handling]
      * [wbscriptINI_Manipulation INI Manipulation]
