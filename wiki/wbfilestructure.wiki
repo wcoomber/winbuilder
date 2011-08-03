@@ -1,12 +1,14 @@
-=File Structure=
+<h1>File Structure</h1>
 
 Let's start by looking at the structure of a typical script file.
-We use sections to group commands and settings inside script files. The easiest way to see how they are applied is to edit a few scripts and look at the source code to learn more about them.
+We use sections to group commands and settings inside script files. 
 
-A typical script is composed of at least these 3 important sections
- # Main - will keep all details that identify your script
- # Variables - used to keep variable values
- # Process - where your commands are placed
+<wiki:toc max_depth="2" />
+
+The easiest way to see how they are applied is to edit a few scripts and look at the source code to learn more about them. A typical script is composed of at least these 3 important sections
+ * Main - will keep all details that identify your script
+ * Variables - used to keep variable values
+ * Process - where your commands are placed
 
 In addition to the script files, there is a master project file called Script.project, which has two optional sections
  * !OnProcessEntry - run as first command of every project
@@ -76,7 +78,7 @@ Certification=cd55abf6082298a0044f110479f98b7e
 
 ==The `[Variables]` section==
 
-This section is described in more detail [wbscriptvariables on a separate page].
+This section is described in more detail *[wbscriptvariables on a separate page]*.
 
 
 ==The `[Process]` section==
@@ -88,7 +90,7 @@ The result of each operation is written on the log window - which you can later 
 
 
 ==The `[Interface]` section==
-While this is important to scripts it is described in more detail [wbscriptgui-interface on a separate page].
+While this is important to scripts it is described in more detail *[wbscriptgui-interface on a separate page]*.
 
 
 ==The `[OnProcessEntry]` section==
