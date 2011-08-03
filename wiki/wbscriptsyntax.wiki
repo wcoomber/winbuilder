@@ -288,15 +288,12 @@ In both cases, instead of a command, there can also be a command block.
 
 These commands will querry the OS and return variuos types of information about files and folders (or directories)  The available sub-commands are:
 
- * [retrieve#FolderSize FolderSize]
- * [retrieve#FileSize FileSize]
- * [retrieve#File File]
- * [retrieve#Dir Dir]
- * [retrieve#MD5 MD5]
- * [retrieve#FileVersion FileVersion]
-
-
-
+ * [retrieveFolderSize FolderSize]
+ * [retrieveFileSize FileSize]
+ * [retrieveFile File]
+ * [retrieveDir Dir]
+ * [retrieveMD5 MD5]
+ * [retrieveFileVersion FileVersion]
 
 <br>
 ----
