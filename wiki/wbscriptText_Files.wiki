@@ -8,7 +8,3 @@ Description of commands
  * [txtdelline TxtDelLine]
  * [txtdelspaces TxtDelSpaces]
  * [txtdelemptylines TxtDelEmptyLines]
-
-
-<br>
-----
