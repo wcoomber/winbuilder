@@ -1,0 +1,13 @@
+==Registry Handling==
+
+These commands are written to write and read values from the local registry on your windows machine. You can also load the hives from the projects being built at any given time.
+
+These registry operations are valid for any Windows Platform, you should however note that Vista (and later versions of windows) restricts the specific operation to load/unload hives - it is necessary to disable the UAC (User Account Control) before running projects that need this support.
+
+List of available functions
+ * [regwrite RegWrite]
+ * [regread RegRead]
+ * [regdelete RegDelete]
+ * [reghiveload RegHiveLoad]
+ * [reghiveunload RegHiveUnload]
+ * [regimport RegImport]
