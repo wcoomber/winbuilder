@@ -1,14 +1,5 @@
-=Script Command Categories=
+=Script Commands=
 
-The available scripting commands are grouped here according to their functionality. Usually all command which compare etc. are case insensitive. But, there are some commands having a "X" at the end. These commands work like that ones without the "X", but case sensitive.
- 
-  * [wbscriptFile_Operations File Operations]
-  * [wbscriptRegistry_Handling Registry Handling]
-  * [wbscriptINI_Manipulation INI Manipulation]
-  * [wbscriptAttachments Attachments]
-  * [wbscriptText_Files  Text Files]
-  * [wbscriptIF_Clauses_and_Command_Blocks IF Clauses and Command Blocks]
-  * [wbscriptRetrieve_Functions Retrieve Functions]
-  * [wbscriptString_Formatting String Formating]
-  * [wbscriptNetwork_Tools Network Tools]
-  * [wbscriptMiscellaneous_Commands Miscellaneous Commands]
+The available scripting commands are listed here in roughly alphabetical order. 
+
+Usually all command which compare etc. are case insensitive. But, there are some commands having a "X" at the end. These commands work like that ones without the "X", but case sensitive.
