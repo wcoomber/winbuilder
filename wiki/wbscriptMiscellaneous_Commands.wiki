@@ -1,4 +1,4 @@
-==Miscellaneous Commands ==
+=Miscellaneous Commands=
 
 Under this category you find the commands which aren't grouped under any specific category but are still quite used on most scripting tasks.
  * [run run / exec] - runs a section from a script file
