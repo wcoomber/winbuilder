@@ -10,4 +10,4 @@ If,ExistMacro,<Macro>,<Command>
 }}}
 
 ===Note===
-This command was added in Winbuilder 80; It will not work with older versions.
+This command was added in Winbuilder 80; It will *not* work with older versions.
