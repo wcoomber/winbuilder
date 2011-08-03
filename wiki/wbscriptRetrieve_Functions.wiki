@@ -1,0 +1,13 @@
+==Retrieve Functions== 
+
+These commands will querry the OS and return variuos types of information about files and folders (or directories)  The available sub-commands are:
+
+ * [retrieveFolderSize FolderSize]
+ * [retrieveFileSize FileSize]
+ * [retrieveFile File]
+ * [retrieveDir Dir]
+ * [retrieveMD5 MD5]
+ * [retrieveFileVersion FileVersion]
+
+<br>
+----
