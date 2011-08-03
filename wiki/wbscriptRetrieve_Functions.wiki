@@ -1,4 +1,4 @@
-==Retrieve Functions== 
+=Retrieve Functions=
 
 These commands will querry the OS and return variuos types of information about files and folders (or directories)  The available sub-commands are:
 
