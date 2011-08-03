@@ -9,14 +9,15 @@ Winbuilder will process scripts in the following order:
  # Folder Name
  # Script Name
 
-File and folder names are processed in alpha numeric order.  This information is used to build the "TREE" oriented view in the !WinBuilder interface.  While it might appear that this is just a simple folder/script view of the project - *IT IS NOT*.  Folders may be duplicated if there are script files of different levels inside the same folder. In the example below, notice how the "`Shared_Custom`" folder is listed many times.  This is because there are scripts in (or below) that folder level on disk that are at different levels.  Visually, this "Tree" view gives you a graphical representation of how !WinBuilder will process your scripts.
+File and folder names are processed in alpha numeric order.  This information is used to build the "TREE" oriented view in the !WinBuilder interface.  While it might appear that this is just a simple folder/script view of the project - *IT IS NOT*. 
+
+Folders may be duplicated if there are script files of different levels inside the same folder. In the example below, notice how the "`Shared_Custom`" folder is listed many times.  This is because there are scripts in (or below) that folder level on disk that are at different levels.  
 
 [http://winbuilder.googlecode.com/svn/wiki/images/levels.gif]
 
-Top levels are usually used to be build the structure of your project, while the last levels are the ones where your project is finished and an image is created.
-By default, we use level 5 as the middle value where most scripts that are only meant to add programs (i.e. [wbscriptapplication Application Scripts]) should be processed.
+Visually, this "Tree" view gives you a graphical representation of how !WinBuilder will process your scripts. Top levels are usually used to be build the structure of your project, while the last levels are the ones where your project is finished and an image is created.
 
-Below is a proposed description of the build phases typically performed by each project:
+By default, we use level 5 as the middle value where most scripts that are only meant to add programs (i.e. [wbscriptapplication Application Scripts]) should be processed. Below is a proposed description of the build phases typically performed by each project:
   #1 Preprocess info (gathering information, mounting wims, etc.)
   #2 Build (basic building scripts - create folders, copy/expand, winsxs)
   #3 Base (shell, shortcuts, ramdisk/FBWF options..)
@@ -30,4 +31,4 @@ Below is a proposed description of the build phases typically performed by each 
 
 Corresponding negative script levels also exist with the only difference being that scripts with negative levels are not displayed in the project tree. This can be useful for creating utility scripts containing a common set of functions shared between scripts. These scripts typically require no user interaction and usually do not contain a `[process]` section.
 
-For a more in depth discussion on levels, see [http://reboot.pro/515/ this forum posting].
+For a more in depth discussion on levels, see this [http://reboot.pro/515/ forum posting].
