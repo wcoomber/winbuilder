@@ -32,7 +32,7 @@
    * [wbscriptapplication Application Scripts]
    * [wbscriptfaq  Script F. A. Q.]
  * Script Command Reference
-   * File Operations
+   * [wbscriptsyntax#File_Operations File Operations]
      * [filecopy FileCopy]
      * [filedelete FileDelete]
      * [filerename FileRename]
@@ -44,33 +44,33 @@
      * [dirmake DirMake]
      * [copyorexpand CopyOrExpand]
      * [expand Expand]
-   * Registry Handling
+   * [wbscriptsyntax#Registry_Handling Registry Handling]
      * [regwrite RegWrite]
      * [regread RegRead]
      * [regdelete RegDelete]
      * [reghiveload RegHiveLoad]
      * [reghiveunload RegHiveUnload]
      * [regimport RegImport]
-   * INI Manipulation
+   * [wbscriptsyntax#INI_Manipulation INI Manipulation]
      * [iniread IniRead]
      * [inidelete IniDelete]
      * [iniaddsection IniAddSection]
      * [inideletesection IniDeleteSection]
      * [iniwritetextline IniWriteTextLine]
      * [inimerge IniMerge]
-   * Attachments
+   * [wbscriptsyntax#Attachments Attachments]
      * [extractfile ExtractFile]
      * [extractandrun ExtractAndRun]
      * [extractallfiles ExtractAllFiles]
      * [extractallfilesifnotexist ExtractAllFilesIfNotExist]
      * [encode Encode]
-   * Text Files
+   * [wbscriptsyntax#Text_Files  Text Files]
      * [txtaddline TxtAddline]
      * [txtreplace TxtReplace]
      * [txtdelline TxtDelLine]
      * [txtdelspaces TxtDelSpaces]
      * [txtdelemptylines TxtDelEmptyLines]
-   * IF / Else Clauses
+   * [wbscriptsyntax#IF_Clauses_and_Command_Blocks If / Else]
      * [if If / Else Overview]
      * [ifBlock Begin / End Block]
      * [ifExist Exist / NotExist]
@@ -82,7 +82,7 @@
      * [ifQuestion Question]
      * [ifExistMacro Existmacro]
      * [ifExistRegMulti ExistRegMulti]
-   * Retrieve Functions
+   * [wbscriptsyntax#Retrieve_Functions Retrieve Functions]
      * [retrieve Overview]
      * [retrieveFolderSize FolderSize]
      * [retrieveFileSize FileSize]
@@ -90,7 +90,7 @@
      * [retrieveDir Dir]
      * [retrieveMD5 MD5]
      * [retrieveFileVersion FileVersion]
-   * String Formating
+   * [wbscriptsyntax#String_Formatting String Formating]
      * [strformat#INC/DEC/MULT/DIV  INC / DEC / MULT / DIV ]
      * [strformat#FILENAME/PATH/EXT    FILENAME / PATH / EXT ]
      * [strformat#BYTES    BYTES ]
@@ -104,10 +104,10 @@
      * [strformat#CHARTOOEM/OEMTOCHAR    CHARTOOEM / OEMTOCHAR]
      * [strformat#LEN    LEN]
      * [strformat#POS    POS]
-   * Network Tools
+   * [wbscriptsyntax#Network_Tools Network Tools]
      * [webget WebGet]
      * [webgetifnotexist WebGetIfNotExist]
-   * Miscellaneous Commands
+   * [wbscriptsyntax#Miscellaneous_Commands Miscellaneous Commands]
      * [run Run / Exec]
      * [getparam GetParam]
      * [packparam PackParam]
