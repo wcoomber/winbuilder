@@ -9,7 +9,7 @@ Winbuilder will process scripts in the following order:
  # Folder Name
  # Script Name
 
-File and folder names are processed in alpha numeric order.  This information is used to build the "TREE" oriented view in the !WinBuilder interface.  While it might appear that this is just a simple folder/script view of the project - *IT IS NOT*.  Folders may be duplicated if there are script files of different levels inside the same folder. In the example below, notice how the "Shared_Custom" folder is listed many times.  This is because there are scripts in (or below) that folder level on disk that are at different levels.  Visually, this "Tree" view gives you a graphical representation of how !WinBuilder will process your scripts.
+File and folder names are processed in alpha numeric order.  This information is used to build the "TREE" oriented view in the !WinBuilder interface.  While it might appear that this is just a simple folder/script view of the project - *IT IS NOT*.  Folders may be duplicated if there are script files of different levels inside the same folder. In the example below, notice how the "`Shared_Custom`" folder is listed many times.  This is because there are scripts in (or below) that folder level on disk that are at different levels.  Visually, this "Tree" view gives you a graphical representation of how !WinBuilder will process your scripts.
 
 [http://winbuilder.googlecode.com/svn/wiki/images/levels.gif]
 
