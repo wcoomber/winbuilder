@@ -1,4 +1,4 @@
-==String Formatting==
+=String Formatting=
 !WinBuilder has the following string formatting capabilities :
 
  * [strformat#INC/DEC/MULT/DIV INC / DEC / MULT / DIV]
