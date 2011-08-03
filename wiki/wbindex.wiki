@@ -57,7 +57,8 @@
      * [filerename FileRename]
      * [getparam GetParam]
      * [halt Halt]
-     * [if If Clauses]
+     * [wbscriptIF_Clauses_and_Command_Blocks IF Clauses and Command Blocks 
+      * [if If Clauses]
       * [ifBlock Begin / End Block]
       * [ifComparison Comparison Operations]
       * [ifExist Exist / NotExist]
