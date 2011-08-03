@@ -1,25 +1,20 @@
 ==Miscellaneous Commands ==
 
 Under this category you find the commands which aren't grouped under any specific category but are still quite used on most scripting tasks.
- * [run run / exec - runs a section from a script file]
+ * [run run / exec] - runs a section from a script file
  * [getparam GetParam]
  * [packparam PackParam]
- * [shellexecute ShellExecute - launches an external file]
-   * [shellexecutedelete ShellExecuteDelete ]
-   * [shellexecuteex ShellExecuteEx ] 
- * [beep beep - uses the system speaker]
- * [message message - outputs a message window]
- * [system system - used to refresh values on the program itself]
- * [echo echo - outputs a message (viewable on the log)]
- * [wait wait - "sleeps" the script for specified time]
- * [exit exit - stops processing current script]
- * [halt halt - stops building the whole project]
- * [set set - changes the value of a variable]
- * [addvariables addvariables - adds all variables listed inside a section]
-
+ * [shellexecute ShellExecute] - launches an external file
+   * [shellexecutedelete ShellExecuteDelete]
+   * [shellexecuteex ShellExecuteEx]
+ * [beep beep] - uses the system speaker
+ * [message message] - outputs a message window
+ * [system system] - used to refresh values on the program itself
+ * [echo echo] - outputs a message (viewable on the log)
+ * [wait wait] - "sleeps" the script for specified time
+ * [exit exit] - stops processing current script
+ * [halt halt] - stops building the whole project
+ * [set set] - changes the value of a variable
+ * [addvariables addvariables] - adds all variables listed inside a section
 WB076 added:
-
  * [loop Loop]
-
-<br>
-----
