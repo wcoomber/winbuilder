@@ -80,7 +80,7 @@
      * [ifLicense License]
      * [ifNot Not]
      * [ifQuestion Question]
-     * [ifExistMacro Existmacro]
+     * [ifExistMacro ExistMacro]
      * [ifExistRegMulti ExistRegMulti]
    * [wbscriptsyntax#Retrieve_Functions Retrieve Functions]
      * [retrieve Overview]
