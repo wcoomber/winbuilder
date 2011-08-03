@@ -1,7 +1,7 @@
-#summary If Exist/NotExist
+#summary If Exist
 
 =Exist...=
-=!NotExist...=
+
 You can use these tests to determine if a file, directory, script section, or variable does or does not exist. If this test is true, then a Command is executed. 
  Avaialable tests include:
 || *FILE:* || !ExistFile || !NotExistFile||
@@ -15,14 +15,14 @@ You can use these tests to determine if a file, directory, script section, or va
 {{{
 If,EXISTFILE,TestFile,Command
 If,EXISTDIR,Directory,Command
-If,EXISTSECTION,TestFile,Section,Command
+If,Not,EXISTSECTION,TestFile,Section,Command
 If,EXISTVAR,%Var%,Command
 }}}
 
 == Example: ==
 In this given example we are testing if `c:\myFile.txt` does not exist. If this condition is true, then `FileCreateBlank,c:\myFile.txt` will be executed
 {{{
-If,NotExistFile,c:\myFile.txt,FileCreateBlank,c:\myFile.txt
+If,Not,ExistFile,c:\myFile.txt,FileCreateBlank,c:\myFile.txt
 }}}
 This command will read the value of `HKLM\SOFTWARE\Classes\xyz,Language`, if `RegSection HKLM\SOFTWARE\Classes\xyz`  does exist.
 {{{
