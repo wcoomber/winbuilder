@@ -1,0 +1,20 @@
+==String Formatting==
+!WinBuilder has the following string formatting capabilities :
+
+ * [strformat#INC/DEC/MULT/DIV  INC / DEC / MULT / DIV ]
+ * [strformat#FILENAME/PATH/EXT    FILENAME / PATH / EXT ]
+ * [strformat#BYTES    BYTES ]
+ * [strformat#DATE    DATE ]
+ * [strformat#CEIL/FLOOR    CEIL / FLOOR ]
+ * [strformat#LTRIM/RTRIM/CTRIM/NTRIM    LTRIM / RTRIM / CTRIM / NTRIM ]
+ * [strformat#LEFT/RIGHT    LEFT / RIGHT ]
+ * [strformat#REPLACE/REPLACEX    REPLACE / REPLACEX ]
+ * [strformat#SPLIT    SPLIT]
+ * [strformat#SHORTPATH/LONGPATH    SHORTPATH / LONGPATH]
+ * [strformat#CHARTOOEM/OEMTOCHAR    CHARTOOEM / OEMTOCHAR]
+ * [strformat#LEN    LEN]
+ * [strformat#POS    POS]
+
+
+<br>
+----
