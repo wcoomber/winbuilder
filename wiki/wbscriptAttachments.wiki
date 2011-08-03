@@ -1,4 +1,4 @@
-==Attachments ==
+=Attachments=
 
 Attachments are files that can be included inside your script.
 
