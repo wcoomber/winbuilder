@@ -1,0 +1,178 @@
+=Script Command Categories=
+
+All available commands are described on a single page so that you can later print that page to use as a reference. 
+ * Usually all command which compare etc. are case insensitive.
+ * There are some commands having a "X" at the end. These commands work like that ones without the "X", but case sensitive.
+ 
+  * [wbscriptsyntax#File_Operations File Operations]
+  * [wbscriptsyntax#Registry_Handling Registry Handling]
+  * [wbscriptsyntax#INI_Manipulation INI Manipulation]
+  * [wbscriptsyntax#Attachments Attachments]
+  * [wbscriptsyntax#Text_Files  Text Files]
+  * [wbscriptsyntax#IF_Clauses_and_Command_Blocks If / Else]
+  * [wbscriptsyntax#Retrieve_Functions Retrieve Functions]
+  * [wbscriptsyntax#String_Formatting String Formating]
+  * [wbscriptsyntax#Network_Tools Network Tools]
+  * [wbscriptsyntax#Miscellaneous_Commands Miscellaneous Commands]
+<br>
+----
+==File Operations==
+Commands under this category were designed to handle files and are particularly useful to create the base structure of your project or add additional features that you need.
+
+List of available functions
+ * [filecopy FileCopy]
+ * [filedelete FileDelete]
+ * [filerename FileRename]
+ * [filecreateblank FileCreateBlank]
+ * [filebyteextract FileByteExtract]
+ * [dircopy DirCopy]
+ * [dirdelete DirDelete]
+ * [dirmove DirMove]
+ * [dirmake DirMake]
+ * [copyorexpand CopyOrExpand]
+ * [expand Expand]
+
+<br>
+----
+==Registry Handling==
+
+These commands are written to write and read values from the local registry on your windows machine. You can also load the hives from the projects being built at any given time.
+
+These registry operations are valid for any Windows Platform, you should however note that Vista (and later versions of windows) restricts the specific operation to load/unload hives - it is necessary to disable the UAC (User Account Control) before running projects that need this support.
+
+List of available functions
+ * [regwrite RegWrite]
+ * [regread RegRead]
+ * [regdelete RegDelete]
+ * [reghiveload RegHiveLoad]
+ * [reghiveunload RegHiveUnload]
+ * [regimport RegImport]
+
+<br>
+----
+
+==INI Manipulation==
+
+This category contains commands that were created to work with INI based text files. INI files group information using a few rules, it is also very easy to understand and edit when needed.
+
+We use INI files to exchange information between scripts or store data whenever needed. In most cases INI language files use extension .ini - but our commands are not limited to just this type of extension and can be used on any text file that uses a INI derivated language like .script language.
+
+Quick explaintion of some INI concepts:
+ * A group of data (section) is always contained between [] (e.g. [MySection] ) and will only finish whenever another section is found or when the file has no more lines to read.
+ * Each entry has a Title and is followed by it's respective data. Both are separated by an equal sign (e.g. Color=Blue)
+
+Available INI functions
+ * [iniwrite IniWrite]
+ * [iniread IniRead]
+ * [inidelete IniDelete]
+ * [iniaddsection IniAddSection]
+ * [inideletesection IniDeleteSection]
+ * [iniwritetextline IniWriteTextLine]
+ * [inimerge IniMerge]
+
+<br>
+----
+==Attachments ==
+
+Attachments are files that can be included inside your script.
+
+Since script files are meant to be edited by any text editor, these files are encoded into ascii text. This method allows you to add small files along with your scripts in order to keep everything together.
+
+While a script is running you can use some of the following commands to best take advantage of this feature.
+
+List of related commands
+ * [extractfile ExtractFile]
+ * [extractandrun ExtractAndRun]
+ * [extractallfiles ExtractAllFiles]
+ * [extractallfilesifnotexist ExtractAllFilesIfNotExist]
+ * [encode Encode]
+
+<br>
+----
+==Text Files==
+
+With this set of commands we can handle text files and modify them as needed. All these commands can be applied to either a single or multiple file using wildcards.
+
+Description of commands
+ * [txtaddline TxtAddline]
+ * [txtreplace TxtReplace]
+ * [txtdelline TxtDelLine]
+ * [txtdelspaces TxtDelSpaces]
+ * [txtdelemptylines TxtDelEmptyLines]
+
+
+<br>
+----
+==IF Clauses and Command Blocks==
+If the evaluation of an If condition is 'True', the command following the condition is processed. If the evaluation of an If condition is 'False', the command of the Else command (if present), is processed.
+In both cases, instead of a command, there can also be a command block.
+
+ * [if If / Else Clauses]
+ * [begin_end Begin / End]
+
+<br>
+----
+==Retrieve Functions== 
+
+These commands will querry the OS and return variuos types of information about files and folders (or directories)  The available sub-commands are:
+
+ * [retrieveFolderSize FolderSize]
+ * [retrieveFileSize FileSize]
+ * [retrieveFile File]
+ * [retrieveDir Dir]
+ * [retrieveMD5 MD5]
+ * [retrieveFileVersion FileVersion]
+
+<br>
+----
+==String Formatting==
+!WinBuilder has the following string formatting capabilities :
+
+ * [strformat#INC/DEC/MULT/DIV  INC / DEC / MULT / DIV ]
+ * [strformat#FILENAME/PATH/EXT    FILENAME / PATH / EXT ]
+ * [strformat#BYTES    BYTES ]
+ * [strformat#DATE    DATE ]
+ * [strformat#CEIL/FLOOR    CEIL / FLOOR ]
+ * [strformat#LTRIM/RTRIM/CTRIM/NTRIM    LTRIM / RTRIM / CTRIM / NTRIM ]
+ * [strformat#LEFT/RIGHT    LEFT / RIGHT ]
+ * [strformat#REPLACE/REPLACEX    REPLACE / REPLACEX ]
+ * [strformat#SPLIT    SPLIT]
+ * [strformat#SHORTPATH/LONGPATH    SHORTPATH / LONGPATH]
+ * [strformat#CHARTOOEM/OEMTOCHAR    CHARTOOEM / OEMTOCHAR]
+ * [strformat#LEN    LEN]
+ * [strformat#POS    POS]
+
+
+<br>
+----
+==Network Tools==
+
+Functions on this category allow you to work with the network environment whenever available.
+ * [webget WebGet]
+ * [webgetifnotexist WebGetIfNotExist]
+
+
+<br>
+----
+==Miscellaneous Commands ==
+
+Under this category you find the commands which aren't grouped under any specific category but are still quite used on most scripting tasks.
+ * [run run / exec - runs a section from a script file]
+ * [getparam GetParam]
+ * [packparam PackParam]
+ * [shellexecute ShellExecute - launches an external file]
+   * [shellexecutedelete ShellExecuteDelete ]
+   * [shellexecuteex ShellExecuteEx ] 
+ * [beep beep - uses the system speaker]
+ * [message message - outputs a message window]
+ * [system system - used to refresh values on the program itself]
+ * [echo echo - outputs a message (viewable on the log)]
+ * [wait wait - "sleeps" the script for specified time]
+ * [exit exit - stops processing current script]
+ * [halt halt - stops building the whole project]
+ * [set set - changes the value of a variable]
+ * [addvariables addvariables - adds all variables listed inside a section]
+
+WB076 added:
+
+ * [loop Loop]
