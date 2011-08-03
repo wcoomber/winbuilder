@@ -5,7 +5,7 @@ In both cases, instead of a command, there can also be a command block.
      * [if If Clauses]
      * [ifBlock Begin / End Block]
      * [ifExist Exist / NotExist]
-     * [ifComparison Comparison Operations]
+     * [ifComparison Comparison Operations (Equal / NotEqual / Smaller / Bigger)]
      * [ifPing Ping]
      * [ifOnline Online]
      * [ifLicense License]
