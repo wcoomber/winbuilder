@@ -12,7 +12,7 @@ If command is 'Run' as parameter #1 the 'type' of the exit is passed
  * COMMAND - the script has been finished because of a System,Halt or System,Exit command
  * EXCEPTION - a system exception occurred during process, e.g. 'index out of bounds'
 
-=== Example: ===
+== Example: ==
 {{{
 System,ONSCRIPTEXIT,Message,"Everything Done!",INFORMATION 
 }}}
