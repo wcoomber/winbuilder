@@ -7,32 +7,32 @@ System,<Action>
 This command is used to perform some program internal actions and refresh values that were modified during the script execution. 
 It can also set a flag that reminds the program to perform the specified action once the project is completed. Action can have of the following values
 
- * [system#ReScanScripts ReScanScripts]
- * [system#RefreshInterface RefreshInterface] 
- * [system#RefreshVars RefreshVars] 
+ * [systemReScanScripts ReScanScripts]
+ * [systemRefreshInterface RefreshInterface] 
+ * [systemRefreshVars RefreshVars] 
 
 *WB076 added:*
 
- * [system#FileRedirect FileRedirect] - processed in 64bit systems only
- * [system#RegRedirect RegRedirect] - processed in 64bit systems only
- * [system#GetFreeSpace GetFreeSpace]
- * [system#GetFreeDrive GetFreeDrive]
- * [system#ErrorOff ErrorOff]
- * [system#OnScriptExit OnScriptExit]
- * [system#OnBuildExit OnBuildExit]
- * [system#RebuildVars RebuildVars]
- * [system#GetEnv GetEnv]
- * [system#IsAdmin IsAdmin]
- * [system#Cursor Cursor]
- * [system#SaveLog SaveLog]
- * [system#SplitParameters SplitParameters]
+ * [systemFileRedirect FileRedirect] - processed in 64bit systems only
+ * [systemRegRedirect RegRedirect] - processed in 64bit systems only
+ * [systemGetFreeSpace GetFreeSpace]
+ * [systemGetFreeDrive GetFreeDrive]
+ * [systemErrorOff ErrorOff]
+ * [systemOnScriptExit OnScriptExit]
+ * [systemOnBuildExit OnBuildExit]
+ * [systemRebuildVars RebuildVars]
+ * [systemGetEnv GetEnv]
+ * [systemIsAdmin IsAdmin]
+ * [systemCursor Cursor]
+ * [systemSaveLog SaveLog]
+ * [systemSplitParameters SplitParameters]
 
 *WB076 added:*
 
- * [system#Comp80 Comp80]
- * [system#HasUAC HasUAC]
- * [system#IsTerminal IsTerminal]
- * [system#Log Log]
+ * [systemComp80 Comp80]
+ * [systemHasUAC HasUAC]
+ * [systemIsTerminal IsTerminal]
+ * [systemLog Log]
 
 =Parameters / Sub Commands=
 
