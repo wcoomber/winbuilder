@@ -1,0 +1,13 @@
+=System,!GetFreeSpace==
+{{{
+System,GETFREESPACE,<Path>,<%var%>
+}}}
+Returns the free space of Path's drive in megabytes and puts result into %var%
+(megaybtes = free bytes / 1024 * 1024)
+
+=== Example: === 
+{{{
+System,GETFREESPACE,%BaseDir%,%var%
+System,GETFREESPACE,C:,%var%
+System,GETFREESPACE,C,%var% Result:
+}}}
