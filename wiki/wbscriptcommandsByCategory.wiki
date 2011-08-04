@@ -11,4 +11,4 @@ The available scripting commands are grouped here according to their functionali
   * [wbscriptRetrieve_Functions Retrieve Functions]
   * [wbscriptString_Formatting String Formating]
   * [wbscriptNetwork_Tools Network Tools]
-  * [wbscriptMiscellaneous_Commands Miscellaneous Command]
+  * [wbscriptMiscellaneous_Commands Miscellaneous Commands]
