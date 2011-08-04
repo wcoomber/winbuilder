@@ -4,7 +4,7 @@ System,HasUAC,<%var%>
 }}}
 This command will set the variable to true if Vista / Win 7 UAC ( User Account Control ) is enabled. This can cause problems to some projects.
 
-===Example: ===
+==Example: ==
 {{{
 System,HasUAC,%var%
 If,%var%,Equal,True,begin
