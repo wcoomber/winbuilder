@@ -2,7 +2,7 @@
 {{{
 System,REBUILDVARS
 }}}
-This is a successor of [ystemRefreshVars System,RefreshVars], which since WB076 in most cases is no longer necessary (or supported)
+This is a successor of [systemRefreshVars System,RefreshVars], which since WB076 in most cases is no longer necessary (or supported)
 
 === Example: === 
 {{{
