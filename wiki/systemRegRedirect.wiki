@@ -1,0 +1,17 @@
+=System,!RegRedirect==
+{{{
+System,REGREDIRECT,{64|32|OFF}
+}}}
+Maybe necessary when !WinBuilder is running on a 64bit system. Some registry calls are getting redirected by the OS to avoid possible conflicts.
+ * 64 causes next accesses to the 64 bit entries.
+ * 32 causes next accesses to the 32 bit node.
+ * OFF causes Host OS decision
+Every definition is valid from "now" to "ever"
+Using a 32bit system this command is without effect. 
+
+=== Example: === 
+{{{
+System,REGREDIRECT,64
+RegRead,HKLM,SOFTWARE\Sun\xVM VirtualBox",InstallDir,%VBPath%
+System,REGREDIRECT,OFF
+}}}
