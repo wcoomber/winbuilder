@@ -16,7 +16,7 @@ Under this category you find the commands which aren't grouped under any specifi
  * [shellexecute ShellExecute] - launches an external file
    * [shellexecutedelete ShellExecuteDelete]
    * [shellexecuteex ShellExecuteEx]
- * [system system] - used to refresh values on the program itself
+ * [system System] - used to refresh values on the program itself
    * [systemComp80 System,Comp80]
    * [systemCursor System,Cursor]
    * [systemErrorOff System,ErrorOff]
