@@ -1,0 +1,8 @@
+=System,!OnBuildExit=
+{{{
+System,OnBuildEXIT,Command
+}}}
+This statement can be written anywhere inside the running part of a script. Always the last executed statement is valid.
+So different scripts can define different actions or deactivate with {{{System,ONBUILDEXIT}}}
+
+It will be executed after the last script in the project has been processed. More examples in [systemONSCRIPTEXIT System,ONSCRIPTEXIT]
