@@ -1,0 +1,13 @@
+=System,Log=
+{{{
+System,Log,{on|off}
+}}}
+When in your project a certain function is used many, many times, it usually expands inside the log.html into many unnecessary lines.
+This command stops / restarts logging to log.html
+
+*It is only in effect for the remainder of the current script!*
+
+==Example: ==
+{{{
+System,Log,off
+}}}
