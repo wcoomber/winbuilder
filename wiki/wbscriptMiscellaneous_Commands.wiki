@@ -1,19 +1,26 @@
 =Miscellaneous Commands=
 
 Under this category you find the commands which aren't grouped under any specific category but are still quite used on most scripting tasks.
+
+ * [addvariables addvariables] - adds all variables listed inside a section
+ * [beep beep] - uses the system speaker
+ * [echo echo] - outputs a message (viewable on the log)
+ * [exit exit] - stops processing current script
+ * [getparam GetParam] - get the parameters passed to a script section
+ * [halt halt] - stops building the whole project
+ * [loop Loop] - provides a simple looping construct
+ * [message message] - outputs a message window
+ * [packparam PackParam] - pack the parameters to be passed to another section
  * [run run / exec] - runs a section from a script file
- * [getparam GetParam]
- * [packparam PackParam]
+ * [set set] - changes the value of a variable
  * [shellexecute ShellExecute] - launches an external file
    * [shellexecutedelete ShellExecuteDelete]
    * [shellexecuteex ShellExecuteEx]
- * [beep beep] - uses the system speaker
- * [message message] - outputs a message window
  * [system system] - used to refresh values on the program itself
    * [systemComp80 System,Comp80]
    * [systemCursor System,Cursor]
    * [systemErrorOff System,ErrorOff]
-   * [systemFileRedirect System,FileRedirect] - processed in 64bit systems only
+   * [systemFileRedirect System,FileRedirect]  ^processed in 64bit systems only^
    * [systemGetEnv System,GetEnv]
    * [systemGetFreeDrive System,GetFreeDrive]
    * [systemGetFreeSpace System,GetFreeSpace]
@@ -26,15 +33,8 @@ Under this category you find the commands which aren't grouped under any specifi
    * [systemRebuildVars System,RebuildVars]
    * [systemRefreshInterface System,RefreshInterface] 
    * [systemRefreshVars System,RefreshVars] 
-   * [systemRegRedirect System,RegRedirect] - processed in 64bit systems only
+   * [systemRegRedirect System,RegRedirect] ^processed in 64bit systems only^
    * [systemReScanScripts System,ReScanScripts]
    * [systemSaveLog System,SaveLog]
    * [systemSplitParameters System,SplitParameters]
- * [echo echo] - outputs a message (viewable on the log)
  * [wait wait] - "sleeps" the script for specified time
- * [exit exit] - stops processing current script
- * [halt halt] - stops building the whole project
- * [set set] - changes the value of a variable
- * [addvariables addvariables] - adds all variables listed inside a section
-WB076 added:
- * [loop Loop]
