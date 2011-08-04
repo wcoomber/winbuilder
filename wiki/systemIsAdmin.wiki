@@ -1,0 +1,5 @@
+=System,!IsAdmin=
+{{{
+System,ISADMIN,%var%
+}}}
+Sets %var% to True or False, depending on whether !WinBuilder has been started by an admin.
