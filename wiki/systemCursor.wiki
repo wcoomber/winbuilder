@@ -1,0 +1,5 @@
+=System,Cursor=
+{{{
+System,CURSOR,{WAIT|NORMAL}
+}}}
+Sets the system cursor as hourglass or the default cursor.
