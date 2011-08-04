@@ -10,6 +10,26 @@ Under this category you find the commands which aren't grouped under any specifi
  * [beep beep] - uses the system speaker
  * [message message] - outputs a message window
  * [system system] - used to refresh values on the program itself
+   * [systemComp80 System,Comp80]
+   * [systemCursor System,Cursor]
+   * [systemErrorOff System,ErrorOff]
+   * [systemFileRedirect System,FileRedirect] - processed in 64bit systems only
+   * [systemGetEnv System,GetEnv]
+   * [systemGetFreeDrive System,GetFreeDrive]
+   * [systemGetFreeSpace System,GetFreeSpace]
+   * [systemHasUAC System,HasUAC]
+   * [systemIsAdmin System,IsAdmin]
+   * [systemIsTerminal System,IsTerminal]
+   * [systemLog System,Log]
+   * [systemOnBuildExit System,OnBuildExit]
+   * [systemOnScriptExit System,OnScriptExit]
+   * [systemRebuildVars System,RebuildVars]
+   * [systemRefreshInterface System,RefreshInterface] 
+   * [systemRefreshVars System,RefreshVars] 
+   * [systemRegRedirect System,RegRedirect] - processed in 64bit systems only
+   * [systemReScanScripts System,ReScanScripts]
+   * [systemSaveLog System,SaveLog]
+   * [systemSplitParameters System,SplitParameters]
  * [echo echo] - outputs a message (viewable on the log)
  * [wait wait] - "sleeps" the script for specified time
  * [exit exit] - stops processing current script
