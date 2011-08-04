@@ -16,11 +16,11 @@ Under this category you find the commands which aren't grouped under any specifi
  * [shellexecute ShellExecute] - launches an external file
    * [shellexecutedelete ShellExecuteDelete]
    * [shellexecuteex ShellExecuteEx]
- * [system System] - used to refresh values on the program itself
+ * [system System]
    * [systemComp80 System,Comp80]
    * [systemCursor System,Cursor]
    * [systemErrorOff System,ErrorOff]
-   * [systemFileRedirect System,FileRedirect]  ^processed in 64bit systems only^
+   * [systemFileRedirect System,FileRedirect]  ^64bit systems only^
    * [systemGetEnv System,GetEnv]
    * [systemGetFreeDrive System,GetFreeDrive]
    * [systemGetFreeSpace System,GetFreeSpace]
@@ -33,7 +33,7 @@ Under this category you find the commands which aren't grouped under any specifi
    * [systemRebuildVars System,RebuildVars]
    * [systemRefreshInterface System,RefreshInterface] 
    * [systemRefreshVars System,RefreshVars] 
-   * [systemRegRedirect System,RegRedirect] ^processed in 64bit systems only^
+   * [systemRegRedirect System,RegRedirect] ^64bit systems only^
    * [systemReScanScripts System,ReScanScripts]
    * [systemSaveLog System,SaveLog]
    * [systemSplitParameters System,SplitParameters]
