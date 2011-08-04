@@ -4,3 +4,4 @@ System,RefreshVars
 }}}
 If a variable is changed this action performs updating needed for variables that are dependent upon other variables 
 ===(unnecessary and removed since WB076)===
+===Instead, use the functionality provided by [systemRebuildVars System,RebuildVars]===
