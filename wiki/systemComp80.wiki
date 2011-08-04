@@ -7,7 +7,7 @@ System,Comp80,{on|off}
  * If compatability is set to off then scripts are processed 2 to 3 times faster.
  * *When starting WB 082, by default the compatibility is switched off.*
 
-===Example: ===
+==Example: ==
 {{{
 System,Comp80,off
 }}}
