@@ -1,0 +1,43 @@
+=System,!SplitParameters=
+{{{
+System,SPLITPARAMETERS,{ON|OFF}
+}}}
+Splits in a 'Run' or 'Exec' command a single parameter which contains commas, into several parameters.
+
+The {{{System,SPLITPARAMETERS,ON}}} command can be given once in the project, e.g. in [Process] of script.project, and is then valid for the complete project (or until it is switched off by a {{{System,SPLITPARAMETERS,OFF}}} command.  It can then be switched on again later, and off, and so on ....) 
+
+== Example: == 
+{{{
+[process]
+Set,%List%,"a,b,c"
+Run,%ScriptFile%,Test,%List%
+System,SPLITPARAMETERS,ON
+Run,%ScriptFile%,Test,%List%
+System,SPLITPARAMETERS,OFF
+
+[Test]
+Echo,#1
+Echo,#2
+Echo,#3
+}}}
+
+This creates a log file result:
+{{{
+Processing section: [process] 
+File [%BaseDir%\Projects\win7_pe\CodeBox.txt] Version [1]
+SetVar - Sucessfuly changed the value of [%List%] to: [a#$cb#$cc]
+Run - Processing section: [Test] From file: [%BaseDir%\Projects\win7_pe\CodeBox.txt]
+with parameters: [a,b,c]
+a,b,c
+
+
+Run - Processed section [Test] in file: [%BaseDir%\Projects\win7_pe\CodeBox.txt]
+System,SplitParameters,ON
+Run - Processing section: [Test] From file: [%BaseDir%\Projects\win7_pe\CodeBox.txt]
+with parameters: [a],[b],[c]
+a
+b
+c
+Run - Processed section [Test] in file: [%BaseDir%\Projects\win7_pe\CodeBox.txt]
+System,SplitParameters,OFF
+}}}
