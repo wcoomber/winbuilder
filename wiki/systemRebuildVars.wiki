@@ -1,0 +1,19 @@
+=System,!RebuildVars=
+{{{
+System,REBUILDVARS
+}}}
+This is a successor of [ystemRefreshVars System,RefreshVars], which since WB076 in most cases is no longer necessary (or supported)
+
+=== Example: === 
+{{{
+Set,%First%,first
+Set,%Result%,"Here is %first%"
+Echo,Value of #$pResult#$p is: %Result%
+// >> Here is first
+Set,%First%,second
+Echo,Value of #$pResult#$p is: %Result%
+// >> Here is first
+System,RebuildVars
+Echo,Value of #$pResult#$p is: %Result%
+// >> Here is second 
+}}}
