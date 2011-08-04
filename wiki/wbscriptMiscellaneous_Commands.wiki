@@ -2,17 +2,17 @@
 
 Under this category you find the commands which aren't grouped under any specific category but are still quite used on most scripting tasks.
 
- * [addvariables addvariables] - adds all variables listed inside a section
- * [beep beep] - uses the system speaker
- * [echo echo] - outputs a message (viewable on the log)
- * [exit exit] - stops processing current script
+ * [addvariables Addvariables] - adds all variables listed inside a section
+ * [beep Beep] - uses the system speaker
+ * [echo Echo] - outputs a message (viewable on the log)
+ * [exit Exit] - stops processing current script
  * [getparam GetParam] - get the parameters passed to a script section
- * [halt halt] - stops building the whole project
+ * [halt Halt] - stops building the whole project
  * [loop Loop] - provides a simple looping construct
- * [message message] - outputs a message window
+ * [message Message] - outputs a message window
  * [packparam PackParam] - pack the parameters to be passed to another section
- * [run run / exec] - runs a section from a script file
- * [set set] - changes the value of a variable
+ * [run Run / Exec] - runs a section from a script file
+ * [set Set] - changes the value of a variable
  * [shellexecute ShellExecute] - launches an external file
    * [shellexecutedelete ShellExecuteDelete]
    * [shellexecuteex ShellExecuteEx]
@@ -37,4 +37,4 @@ Under this category you find the commands which aren't grouped under any specifi
    * [systemReScanScripts System,ReScanScripts]
    * [systemSaveLog System,SaveLog]
    * [systemSplitParameters System,SplitParameters]
- * [wait wait] - "sleeps" the script for specified time
+ * [wait Wait] - "sleeps" the script for specified time
