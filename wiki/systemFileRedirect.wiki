@@ -1,0 +1,12 @@
+=System,!FileRedirect=
+{{{
+System,FILEREDIRECT,{ON|OFF}
+}}}
+Maybe necessary when !WinBuilder is running on a 64bit system. Some directory calls are getting redirected by the OS to avoid possible conflicts. Using a 32bit system this command is without effect. 
+
+=== Example: ===
+{{{
+System,FILEREDIRECT,OFF
+ShellExecute,Hide,"cmd.exe","/c imdisk -d -m %FreeLetter%"
+System,FILEREDIRECT,ON 
+}}}
