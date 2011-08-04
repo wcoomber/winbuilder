@@ -5,7 +5,7 @@ System,<Action>
 }}} 
 
 This command is used to perform some program internal actions and refresh values that were modified during the script execution. 
-It can also set a flag that reminds the program to perform the specified action once the project is completed. Action can have of the following values
+It can also set a flag that reminds the program to perform the specified action once the project is completed. `<Action>` can have of the following values
 
    * [systemComp80 System,Comp80]
    * [systemCursor System,Cursor]
