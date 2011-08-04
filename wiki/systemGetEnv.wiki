@@ -1,0 +1,11 @@
+=System,!GetEnv=
+{{{
+System,GETENV,<EnvironmentVariable>,%var%
+}}}
+Gets the value of a *system* Environment(a.k.a.ENV) variable - NOTE, the name of the {{{<EnvironmentVariable>}}} *must not* be enclosed in percent signs (`%`).
+
+== Example: == 
+{{{
+System,GETENV,Temp,%var%
+Echo,%var%
+}}}
