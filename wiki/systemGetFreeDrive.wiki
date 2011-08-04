@@ -1,0 +1,5 @@
+=System,!GetFreeDrive==
+{{{
+System,GetFreeDrive,<%var%>
+}}}
+This command returns the highest available free drive letter, Usually the "Z:" drive
