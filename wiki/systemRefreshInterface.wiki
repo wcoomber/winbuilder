@@ -1,0 +1,5 @@
+=System,!RefreshInterface==
+{{{
+System,RefreshInterface
+}}}
+Mostly used on buttons to refresh the script interface with changes, avoiding to make the user re-select again to refresh values.
