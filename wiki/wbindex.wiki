@@ -1,7 +1,7 @@
 =[wbwelcome WinBuilder]=
  * [wbwelcome WinBuilder]
    * [wbwelcome Welcome and Overview]
-   * [wbtools Tools]
+   * [wbtools WinBuilder Tools]
    * [wbscripts  Script Files]
      * [wbscriptsyntax Syntax Rules and Escape Characters]
      * [wbfilestructure File Structure]
