@@ -1,5 +1,3 @@
-#summary If Exist
-
 =Exist...=
 
 You can use these tests to determine if a file, directory, script section, or variable does or does not exist. If this test is true, then a Command is executed. 
