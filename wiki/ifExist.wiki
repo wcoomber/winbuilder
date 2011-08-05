@@ -3,13 +3,13 @@
 =Exist...=
 
 You can use these tests to determine if a file, directory, script section, or variable does or does not exist. If this test is true, then a Command is executed. 
- Avaialable tests include:
-|| *FILE:* || !ExistFile || !NotExistFile||
-|| *DIRECTORY:* || !ExistDir || !NotExistDir||
-|| *SECTION:* || !ExistSection || !NotExistSection||
-|| *REGISTRY:* || !ExistRegSection || !NotExistRegSection ||
-|| || !ExistRegKey || !ExistRegKey||
-|| *VARIABLE:* || !ExistVar || !ExistVar ||
+Based on the specific test selected, one or more additional arguements may be needed. Avaialable tests include:
+|| !ExistFile || Not,!ExistFile || Check to see if a file does/doesn't exist||
+|| !ExistDir || Not,!ExistDir || Check to see if a directory does/doesn't exist||
+|| !ExistSection || Not,!ExistSection || Check to see if a given section does/doesn't exist inside the specified file||
+|| !ExistRegSection || Not,!ExistRegSection || Check to see if a given section does/doesn't exist in the specified registry||
+|| !ExistRegKey|| Not,!ExistRegKey || Check to see if a specific key does/doesn't exist inside the specified registry||
+|| !ExistVar || Not,!ExistVar || Check to see if a specific variable does/doesn't exist - i.e. has it been defined||
 
 ==Syntax==
 {{{
