@@ -1,8 +1,6 @@
-#summary Checks whether the macro is defined in the {{{[}}} [wbscriptvariables Variables] {{{]}}} section
-
 ==!ExistMacro==
 
-The command checks whether the macro is defined in the [Variables] section.
+The command checks whether the macro is defined in the `[`[wbscriptvariables Variables]`]` section.
 
 ===Syntax===
 {{{
