@@ -9,6 +9,6 @@ The available scripting commands are grouped here according to their functionali
   * [wbscriptText_Files  Text Files]
   * [wbscriptIF_Clauses_and_Command_Blocks IF Clauses and Command Blocks]
   * [wbscriptRetrieve_Functions Retrieve Functions]
-  * [wbscriptString_Formatting String Formating]
+  * [strformat String Formating]
   * [wbscriptNetwork_Tools Network Tools]
   * [wbscriptMiscellaneous_Commands Miscellaneous Commands]
