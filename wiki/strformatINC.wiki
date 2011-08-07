@@ -1,4 +1,4 @@
-=StrFormat,`[`INC/DEC/MULT/DIV`]`=
+=!StrFormat,`[`INC/DEC/MULT/DIV`]`=
 ==Syntax==
 {{{
 StrFormat,<Action>,<%var%>,<n>
