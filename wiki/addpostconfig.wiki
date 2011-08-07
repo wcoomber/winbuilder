@@ -11,7 +11,7 @@ AddPostConfig,[Title],[FileName],[Parameters],[StartMode]
 ||3||Parameters||Command line parameters for the program being run.||
 ||4||!StartMode||Used to specify if the program is run hidden and / or if the autorun program waits for the program to finish running.||
 || || ||*1* = Wait for the program to finish running but show any window used by the program. This is the default start mode.||
-|| || ||*2* = Don't wait for the program to run but show any window used by the program||.
+|| || ||*2* = Don't wait for the program to run but show any window used by the program||
 || || ||*3* = Run the program hidden and wait for the program to finish running.||
 || || ||*4* = Run the program hidden and don't wait for the program to finish running.||
 
