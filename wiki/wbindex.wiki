@@ -1,4 +1,3 @@
-=[wbwelcome WinBuilder]=
  * [wbwelcome WinBuilder]
    * [wbwelcome Welcome and Overview]
    * [wbtools WinBuilder Tools]
