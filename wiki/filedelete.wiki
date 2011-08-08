@@ -25,3 +25,6 @@ FileDelete,c:\MyPath\*.txt
 FileDelete,c:\MyPath\*.txt,NoWarn,Norec
 }}}
 In this example !FileDelete will delete all text files (`*`.txt) from the !MyPath directory only. Any .txt files in any sub directories of !MyPath will NOT be deleted. If no files are found a warning will not be added to the log file.
+
+===Note:===
+The Nowarn and Norec parameters were added in Winbuilder 082. They will not work with older versions.
