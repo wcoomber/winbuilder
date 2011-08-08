@@ -1,6 +1,6 @@
-<h1>The Common API</h1>
+<h1>The !WinBuilder API</h1>
 
- ===The "common" API is a means to extend and add functionality to a !WinBuilder project. It's purpose was to make application (and other) scripts more compatible across multiple projects.===
+ ===The !WinBuilder API (a.k.a. the "common" API) is a means to extend and add functionality to a !WinBuilder project. It's purpose was to make application (and other) scripts more compatible across multiple projects, and also provide a means to integrate these "macros" into the internal editor help system, etc.===
 
  ===The current API project is still in a bit of "flux", however most commands have been around for some time and will continue to be supported in future versions.===
 
@@ -11,14 +11,17 @@
 ----
 =How It works=
 
-The Common Api (Capi) is a set of macros, nothing more nothing lesss.  What makes it an API is that the !WinBuilder community has decided to use the same macro definitions across many projects.  This allows the individual scripts to be more easily used in different projects. 
- Note: Not all !WinBuilder projects need to be a CAPI based project, there are some projects that may not use the API, or use their own API definition.
- It is also important to note that the API just defines the Macro names and interface conventions.  Individual projects may need to use a different internal implementation of the API, and that is perfectly OK - *as long as the API follows the syntax and functionality defined*.
+The !WinBuilder API is a set of macros, nothing more nothing less.  
 
-If you know how to create a macro in a script, than you can easily figure out how the API is used. What makes this different than ordinary macros is how it is "hooked into" the !WinBuilder process.
+What makes it valuable is that the !WinBuilder community has decided to use these same macro _*definitions*_ across many projects.  This allows individual scripts, especially for Applications, to be more easily used in different projects. If you know how to create a macro in a script, than you can easily figure out how the API is used. What makes this API process different than a script file containing ordinary macros is how it is "hooked into" the !WinBuilder process.
 
-=Hooking in the API to your project=
-We will start by looking at what makes the Common API "turn on". If you look in *script.project* file you will see the following lines and Variables being defined.  This first variable
+ Note: A !WinBuilder projects does not *need* to use the API to be a valuable project. In fact, there are some projects that may not use ANY API, or may use the  the API process to implement their own API definition.
+
+ It is also important to note that the API just defines the Macro names and interface conventions.  Individual projects may need to use a different internal implementation of the API, *and that is perfectly OK - as long as the API follows the syntax and functionality defined*.
+
+
+=Hooking the API into your project=
+We will start by looking at what makes the API "turn on". If you look in *script.project* file you will see the following lines and Variables being defined.  This first variable
 {{{
 //-- API File and Some Api project settings
 %API%=%ProjectDir%\Build\Common_Api.script
