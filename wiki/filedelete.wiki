@@ -2,14 +2,26 @@
 
 ==Syntax==
 {{{
-FileDelete,<FileToDelete> 
+FileDelete,<FileToDelete> [,Nowarn,Norec]
 }}}
 This command will delete files. It uses Win32 API as a silent operation deleting all files that match the search criteria. You can view the result of this operation on the respective log entry. Beware that all deleted files are immediately removed instead of moved to the recycle bin.
 
 Note: !FileDelete supports using wildcards ( {{{*. *}}} ) 
+ * If wild cards are specified then, unless Norec is specified, any files matching the wild card will also be deleted _*in subdirectories*_ of the specified directory. 
+ * If Norec is specified then only matching files in the specified directory will be deleted.
+ * By default if the specified file does not exist or if no files match the wild card then a warning will be put into the log file. 
+ * If NoWarn is specified then this warning log is suppressed.
+ * The optional Nowarn and Norec parameters can be specified in any order.
 
-== Example: ==
+
+== Example 1: ==
 In this example !FileDelete will delete all text files ({{{*.txt}}}) from {{{c:\MyPath}}}
 {{{
 FileDelete,c:\MyPath\*.txt
 }}}
+
+=== Example 2: ===
+{{{
+FileDelete,c:\MyPath\*.txt,NoWarn,Norec
+}}}
+In this example !FileDelete will delete all text files (`*`.txt) from the !MyPath directory only. Any .txt files in any sub directories of !MyPath will NOT be deleted. If no files are found a warning will not be added to the log file.
