@@ -2,4 +2,6 @@
 
 The available scripting commands are listed here in roughly alphabetical order. 
 
+====To access Script Commands grouped by functionality, see [wbscriptcommandsByCategory  Script Commands By Category]====
+
 Usually all command which compare etc. are case insensitive. But, there are some commands having a "X" at the end. These commands work like that ones without the "X", but case sensitive.
