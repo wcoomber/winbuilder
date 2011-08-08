@@ -1,4 +1,4 @@
-=Script Commands=
+=Script Commands (Alphabetical)=
 
 The available scripting commands are listed here in roughly alphabetical order. 
 
