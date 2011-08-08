@@ -1,17 +1,17 @@
-<h1>The !WinBuilder API</h1>
+<h1>!WinBuilder's Scripting "API"</h1>
 
- ===The !WinBuilder API (a.k.a. the "common" API) is a means to extend and add functionality to a !WinBuilder project. It's purpose was to make application (and other) scripts more compatible across multiple projects, and also provide a means to integrate these "macros" into the internal editor help system, etc.===
-
- ===The current API project is still in a bit of "flux", however most commands have been around for some time and will continue to be supported in future versions.===
-
- ===A process to better manage the API and put it under tighter version control is *_under development._*===
+The !WinBuilder Scripting API (a.k.a. the "common" API) is a means to extend and add functionality to a !WinBuilder project and to make application (and other) scripts more compatible across multiple projects. !WinBuilder also provides a means to integrate these "macros" into the internal editor help system, and make them act and "feel" just like internal !WinBuilder Commands
 
 <wiki:toc max_depth="2" />
 <br>
 ----
+ ===The current API project is still in a bit of "flux", however most commands have been around for some time and will continue to be supported in future versions.===
+ ===A process to better manage the API is also *_under development._*===
+----
+<br>
 =How It works=
 
-The !WinBuilder API is a set of macros, nothing more nothing less.  
+The !WinBuilder Scripting API is a set of macros, _*nothing more nothing less.*_
 
 What makes it valuable is that the !WinBuilder community has decided to use these same macro _*definitions*_ across many projects.  This allows individual scripts, especially for Applications, to be more easily used in different projects. If you know how to create a macro in a script, than you can easily figure out how the API is used. What makes this API process different than a script file containing ordinary macros is how it is "hooked into" the !WinBuilder process.
 
@@ -57,7 +57,7 @@ AddVariables,%API%,ApiVar,GLOBAL
 }}}
 This command loads all commands in the common_api.script from the `[ApiVar]` section we mentioned above as `GLOBAL` variables. We will get into this a bit more later, but know that this needs to happen in order for scripts to use the Common API commands.
 
-=The Common_API.script file=
+=The `Common_API.script` file=
 
 Ok now on to Common_API.script. As mentioned above, we have defined several variables, and there is typically an `[Api_Def]` section in the script file.  For example:
 {{{
