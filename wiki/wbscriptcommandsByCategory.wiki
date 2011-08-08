@@ -13,4 +13,4 @@ The available scripting commands are grouped here according to their functionali
   * [wbscriptNetwork_Tools Network Tools]
   * [wbscriptMiscellaneous_Commands Miscellaneous Commands]
 
-To access the list of all script commands in alphabetical order, see the [wbscriptcommands Script Commands] page
+To access the list of all script commands in alphabetical order, see the [wbscriptcommand Script Commands] page
