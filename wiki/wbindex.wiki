@@ -131,7 +131,7 @@
    * [wait Wait]
    * [webget WebGet]
    * [webgetifnotexist WebGetIfNotExist]
- * [wbcommonapi The WinBuilder API]
+ * [wbcommonapi API Commands]
   * [calculate _Calculate]
   * [add_asso Add_Asso]
   * [add_pin Add_Pin]
