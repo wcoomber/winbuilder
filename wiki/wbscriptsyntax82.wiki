@@ -4,44 +4,4 @@
 This page describes new functionality introduced with !WinBuilder 082.
 Older !WinBuilder versions cannot work with this functionality.
 
-<br>
-----
-=File Handling=
-==!FileDelete==
-{{{
-FileDelete,<FileToDelete> [,Nowarn,Norec]
-}}}
-*New optional Nowarn, Norec parameter added*
-
-This command will delete files. It uses Win32 API as a silent operation deleting all files that match the search criteria. You can view the result of this operation on the respective log entry. Beware that all deleted files are *immediately removed* instead of being moved to the recycle bin.
-
-FileDelete supports wildcards ( *.* )
- * If wild cards are specified then, unless Norec is specified, any files matching the wild card will also be deleted _*in subdirectories*_ of the specified directory. 
- * If Norec is specified then only matching files in the specified directory will be deleted.
- * By default if the specified file does not exist or if no files match the wild card then a warning will be put into the log file. 
- * If NoWarn is specified then this warning log is suppressed.
- * The optional Nowarn and Norec parameters can be specified in any order.
-
-=== Example: ===
-{{{
-FileDelete,c:\MyPath\*.txt,NoWarn,Norec
-}}}
-In this example !FileDelete will delete all text files (`*`.txt) from the !MyPath directory only. If no files are found no warning will be added to the log file.
-
-<br>
-----
-=Miscellaneous Commands=
-* Exit - optional Nowarn parameter added 
-* System,Comp80 - sets winbuilder 80 compatibility
-* System,HasUAC - sets a variable indicating if Vista / Win7 UAC is enabled
-* System,IsTerminal - sets a variable indicating if running under terminal server ( remote desktop ) 
-* System,Log - controls logging to log file
-
-==Exit==
-{{{
-Exit,<exit message>[,Nowarn]
-}}}
-Since there are conditions, where the exit is intended, and a warning icon would confuse the user, the `NOWARN` parameter was added. If the NOWARN option is specified then an information icon is associated with the message in the log.
-
-===Example: ===
-Exit,"Script is disabled for this source",Nowarn
+=All commands have been moved to the appropriate section. this page can be removed.
