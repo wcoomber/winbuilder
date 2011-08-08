@@ -169,4 +169,3 @@
   * [unpack Unpack]
  * [wbadditionalsyntax Additional Syntax]
    * [wbscriptsyntax80 Winbuilder 080]
-   * [wbscriptsyntax82 Winbuilder 082]
