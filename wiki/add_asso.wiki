@@ -1,3 +1,5 @@
+=This command has been superseded by [associate_file  associate_file]=
+
 =!Add_Asso=
 
 ==Syntax==
