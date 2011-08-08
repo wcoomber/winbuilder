@@ -20,7 +20,7 @@ In this example !FileDelete will delete all text files ({{{*.txt}}}) from {{{c:\
 FileDelete,c:\MyPath\*.txt
 }}}
 
-=== Example 2: ===
+== Example 2: ==
 {{{
 FileDelete,c:\MyPath\*.txt,NoWarn,Norec
 }}}
