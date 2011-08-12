@@ -1,10 +1,10 @@
 =!AddVariables=
 
+Import the contents of the `[Variables]` section from another script into the current script.
+
 {{{
 AddVariables,<%ScriptFile%>,<Section>,[GLOBAL]
 }}}
-
-Use this command to add more variables to the script based on the entries found inside another section from any script file.
 
 ==Tips==
  * When a script is started it will read the `[variables]` section, but using this command during the script processing, you can repeat this procedure and read the variables found inside any section you wish to use.
