@@ -66,7 +66,7 @@ Download_Level=2 (i.e. Recommended)
 }}}
 
 ===Added in 2009 (WB78?)===
- * *Certification* - To identify if a script has been "changed", the concept of script certification was added. When a project 'owner' uploads a script, he can give a 'stamp' to the script which is unique. Every change of the script can then be detected.  It was enhanced to be smart enough to allow some changes, but not changes to the logic or functionality.
+ * *Certification* - To identify if a script has been "changed", the concept of script certification was added. When a project 'owner' uploads a script, he can give a 'stamp' to the script which is unique. Every change of the script can then be detected.  It was enhanced to be smart enough to allow some GUI options changes, but not changes to the logic or functionality.
 
  In the log it is easy to be seen when the script has been changed in core areas.
 {{{
@@ -80,7 +80,7 @@ Download_Level=2 (i.e. Recommended)
 {{{
 [Main]
 ...
-CertifiedBy=psc
+CertifiedBy=xxx
 Certification=cd55abf6082298a0044f110479f98b7e
 }}}
  In addition to the information shown above, !WinBuilder will show who issues the certification, or give a warning if there is no certification information in the script.
