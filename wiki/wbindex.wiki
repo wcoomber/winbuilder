@@ -131,7 +131,7 @@
    * [strformat String Formating]
    * [wbscriptNetwork_Tools Network Tools]
    * [wbscriptMiscellaneous_Commands Miscellaneous Commands]
- * [wbcommonapi API Commands]
+ * [wbcommonapi API Commands (Alphabetical)]
   * [calculate _Calculate]
   * [add_asso Add_Asso]
   * [add_pin Add_Pin]
