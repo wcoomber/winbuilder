@@ -2,7 +2,7 @@
 
 First some rules: 
  # !WinBuilder Script Line Parameters are separated by a comma. If a comma is inside an argument, it must be 'escaped' by `#$c` 
- # Besides some special cases (e.g. parameters in ShellExecute?) generally enclosing quotes are not needed. 
+ # Besides some special cases (e.g. parameters in [shellexecute ShellExecute]) generally enclosing quotes are not needed. 
  # Enclosing quotes MUST be used if the !WinBuilder Script Line Parameters contain spaces. 
 
 Since there are times when the comma or quote need to be used inside a string or parameter, !WinBuilder has a character escape mechanisim. The following are the available escape characters: 
