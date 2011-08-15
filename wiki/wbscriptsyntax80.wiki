@@ -4,11 +4,6 @@
 This page describes new functionalty introduced with WinBuilder 080.
 Older WinBuilder versions cannot work with this functionality.
 
-There are new commands in the following categories
- * Registry handling
- * IF Clauses
- * Miscellaneous commands
-
 <br>
 ----
 =Registry Handling =
@@ -17,16 +12,16 @@ These commands are written to write and read values from the local registry on y
 
 These registry operations are valid for any Windows Platform, you should however note that Vista restricts the specific operation to load/unload hives - it is necessary to disable the UAC (User Account Control) before running projects that need this support.
 
-==!RegWriteBin / !RegWriteBinEx==
+==RegWriteBin / !RegWriteBinEx==
 {{{
 RegWriteBin,<HKEY>,<KeyType>,<Section>,<Keyname>,<Value> 
 }}}
 This command will create a new or overwrite an existing registry entry as specified. The command is used to write Wide Strings (e.g. Unicode) into the registry. The wide string is defined by a series of hexadecimal values, separated by comma.
 
 !RegWriteBinEx has the same syntax, but writes every value of every type unchecked into the registry.
-It is in the responsibility of the script's author to make shure� that only valid registry entries are created. 
+It is in the responsibility of the script's author to make sure that only valid registry entries are created. 
 
-HKEY is the "Hive Key" where the key is to be placed. These hives are files that are loaded by your machine when booting and compose the registry structure. By default, most scripts use�HKLM as the work hive.
+HKEY is the "Hive Key" where the key is to be placed. These hives are files that are loaded by your machine when booting and compose the registry structure. By default, most scripts use HKLM as the work hive.
 
 Valid HKEY values
  * HKLM
@@ -54,7 +49,7 @@ Set,%Value%,25#$c00#$c53#$c00#$c79#$c00#$c73#$c00#$c74#$c00#$c65#$c00#$c6d#$c00#
 RegWriteBin,HKLM,0x2,WB-Software\SOFTWARE\Classes\.bfc\ShellNew,Command,%Value%
 }}}
 
-==!RegReadBin==
+==RegReadBin==
 {{{
 RegRead,<HKEY>,<Section>,<Key>,<%Variable%> 
 }}}
@@ -73,7 +68,7 @@ RegReadBin,HKLM,WB-Software\SOFTWARE\Classes\.bfc\ShellNew,Command,%Value%
 }}}
 In this example the variable %Value% will store the value of the mentioned key 
 
-==!RegMulti==
+==RegMulti==
 
 These commands uses the same components as described above.
  * Writes a string at the specified place. If the string already exists in the current value, a warning is written and the current value is left unchanged.
