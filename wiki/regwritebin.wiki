@@ -15,7 +15,7 @@ It is in the responsibility of the script's author to make sure that only valid 
  * HKEY_USERS
  * HKEY_CURRENT_CONFIG
 
-*KeyType* will specify how the data in the registry key should be interpreted. Valid key type values for RegWriteBin are:
+*!KeyType* will specify how the data in the registry key should be interpreted. Valid key type values for RegWriteBin are:
  * 0x1 - String - writes a text value
  * 0x2 - Expanded String - will expand any variable value contained inside %%. (e.g. %temp%)
  * 0x7 - Writes multiple NULL separated strings
