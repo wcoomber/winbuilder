@@ -1,4 +1,4 @@
-==RegWriteBin / !RegWriteBinEx==
+==!RegWriteBin / !RegWriteBinEx==
 =Syntax=
 {{{
 RegWriteBin,<HKEY>,<KeyType>,<Section>,<Keyname>,<Value> 
