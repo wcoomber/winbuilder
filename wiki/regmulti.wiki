@@ -1,7 +1,7 @@
 ==!RegMulti==
 ==Syntax==
 {{{
-RegMulti,<HKEY>,<Section>,<Key>,<Action>,`[`<Other Parameters>`]`
+RegMulti,<HKEY>,<Section>,<Key>,<Action>,[<Other Parameters>]
 }}}
 This command may modify a multi string registry entry, and based on the action specified, may require one or more additional parameters
 
