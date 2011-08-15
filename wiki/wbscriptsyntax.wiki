@@ -11,7 +11,7 @@ Since there are times when the comma or quote need to be used inside a string or
  * `#$q` - Double quotes (`"`)
  * `#$s` - Space (` `)
  * `#$x` - Newline (`<cr/lf>`)
- * `#$z` - String separator (i.e. the unicode 0 which is only used by the [ regwritebin RegWriteBin] command )
+ * `#$z` - String separator (i.e. the unicode 0 which is only used by the [regwritebin RegWriteBin] command )
 
 Here is a short explanation of what can be done and what cannot be done and when the escaped characters should be used.
    * If the spaces are replaced by the escape #$s, the enclosing quotes should be omitted. 
