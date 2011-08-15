@@ -11,3 +11,6 @@ List of available functions
  * [reghiveload RegHiveLoad]
  * [reghiveunload RegHiveUnload]
  * [regimport RegImport]
+ * [regwritebin RegWriteBin]
+ * [regreadbin RegReadBin]
+ * [regmulti RegMulti]
