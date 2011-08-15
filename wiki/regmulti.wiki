@@ -1,4 +1,4 @@
-==RegMulti==
+==!RegMulti==
 ==Syntax==
 {{{
 RegMulti,<HKEY>,<Section>,<Key>,<Action>,`[`<Other Parameters>`]`
