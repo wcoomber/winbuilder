@@ -2,6 +2,7 @@
 <wiki:toc max_depth="4" />
 <br>
 ----
+=!WinBuilder Releases=
 ==`[082]` stable (2011-06-15)==
 
  * changed - comp80 default from ON to OFF
@@ -1573,4 +1574,3 @@ this is where most GNU tools will be placed in order to save space on multiple p
  * Added the keyboard script to the standard distro
  * Fixed the refresh button (to properly search all scripts in folders)
  * Fixed the lock edit mode button in the source window
-
