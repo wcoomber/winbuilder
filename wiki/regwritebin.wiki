@@ -19,7 +19,8 @@ It is in the responsibility of the script's author to make sure that only valid 
  * 0x1 - String - writes a text value
  * 0x2 - Expanded String - will expand any variable value contained inside %%. (e.g. %temp%)
  * 0x7 - Writes multiple NULL separated strings
-Section is the complete path to the section where the key is supposed to be written
+
+*Section* is the complete path to the section where the key is supposed to be written
 
 *Keyname* is the name of the name of one of the 'child keys' of a section. Value can be
  * an explicitelly written list of hexadecimal values, separated by comma
