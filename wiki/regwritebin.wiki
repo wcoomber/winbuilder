@@ -1,0 +1,35 @@
+==RegWriteBin / !RegWriteBinEx==
+=Syntax=
+{{{
+RegWriteBin,<HKEY>,<KeyType>,<Section>,<Keyname>,<Value> 
+}}}
+This command will create a new or overwrite an existing registry entry as specified. The command is used to write Wide Strings (e.g. Unicode) into the registry. The wide string is defined by a series of hexadecimal values, separated by comma.
+
+!RegWriteBinEx has the same syntax, but writes every value of every type unchecked into the registry.
+It is in the responsibility of the script's author to make sure that only valid registry entries are created. 
+
+*HKEY* is the "Hive Key" where the key is to be placed. These hives are files that are loaded by your machine when booting and compose the registry structure. By default, most scripts use HKLM as the work hive.  Valid HKEY values are:
+ * HKLM
+ * HKCU
+ * HKCR
+ * HKEY_USERS
+ * HKEY_CURRENT_CONFIG
+
+*KeyType* will specify how the data in the registry key should be interpreted. Valid key type values for RegWriteBin are:
+ * 0x1 - String - writes a text value
+ * 0x2 - Expanded String - will expand any variable value contained inside %%. (e.g. %temp%)
+ * 0x7 - Writes multiple NULL separated strings
+Section is the complete path to the section where the key is supposed to be written
+
+*Keyname* is the name of the name of one of the 'child keys' of a section. Value can be
+ * an explicitelly written list of hexadecimal values, separated by comma
+ * a variable containing the list. Instead of the comma the variable must contain the escape #$c
+
+The substrings of a 0x7 entry can be divided by ",00,00" bytes (without the quotes) or by the [wbscriptsyntax  special character escape string #$z.]
+
+===Examples:===
+{{{
+RegWriteBin,HKLM,0x2,WB-Software\SOFTWARE\Classes\.bfc\ShellNew,Command,25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,00,00 
+Set,%Value%,25#$c00#$c53#$c00#$c79#$c00#$c73#$c00#$c74#$c00#$c65#$c00#$c6d#$c00#$c52#$c00#$c6f#$c00#$c6f#$c00#$c00#$c00
+RegWriteBin,HKLM,0x2,WB-Software\SOFTWARE\Classes\.bfc\ShellNew,Command,%Value%
+}}}
