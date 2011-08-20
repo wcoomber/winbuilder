@@ -65,7 +65,7 @@ You can also list more than one script on this text box, just split each script 
 
 This tab allows you to edit the source code of your script. It's the place where you can view and add your commands. 
 
-There is a built in syntax help system. To use it, either use the "magic wand" icon, or just press the right-click (context) button of your mouse to view a menu that contains all available commands.  Once you select a command it will be added in the place where your cursor is placed.
+One of the main benefits of using this editor is that there is a built in syntax help system. To use it, either use the "magic wand" icon, or just press the right-click (context) button of your mouse to view a menu that contains all available commands.  Once you select a command it will be added in the place where your cursor is placed.
 
   http://winbuilder.googlecode.com/svn/wiki/images/script_source-code_menu.png
 
