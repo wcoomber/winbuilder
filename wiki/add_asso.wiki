@@ -1,4 +1,4 @@
-=This command has been superseded by [associate_file  associate_file]=
+=This command has been superseded by [associate_file  Associate_File]=
 
 =!Add_Asso=
 
