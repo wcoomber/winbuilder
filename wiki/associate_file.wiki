@@ -1,4 +1,4 @@
-=associate_file=
+=Associate_File=
 
 ==Syntax==
 {{{
