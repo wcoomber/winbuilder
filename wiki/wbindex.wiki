@@ -148,7 +148,7 @@
   * [addtopeshell AddToPEShell]
   * [arch Arch]
   * [ask_license Ask_License]
-  * [associate_file associate_file]
+  * [associate_file Associate_File]
   * [copyprogram CopyProgram]
   * [hive_load Hive_Load]
   * [hive_unload Hive_Unload]
