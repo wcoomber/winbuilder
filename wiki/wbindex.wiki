@@ -132,7 +132,7 @@
    * [wbscriptMiscellaneous_Commands Miscellaneous Commands]
    * [wbscriptNetwork_Tools Network Tools]
    * [wbscriptRegistry_Handling Registry Handling]
-   * [wbscriptRetrieve_Functions Retrieve Functions]
+   * [retrieve Retrieve Functions]
    * [strformat String Formating]
    * [wbscriptText_Files  Text Files]
  * [wbcommonapi API Commands (Alphabetical)]
