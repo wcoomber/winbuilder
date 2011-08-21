@@ -1,6 +1,4 @@
-#summary Display a dialog box asking the user to select a filename
-
-=File=
+=Retrieve,File=
 
 ==Syntax==
 {{{
