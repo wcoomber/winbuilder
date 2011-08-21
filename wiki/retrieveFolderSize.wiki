@@ -1,6 +1,4 @@
-#summary Calculate the size of a folder
-
-=!FolderSize=
+=Retrieve,!FolderSize=
 ==Syntax==
 {{{
 Retrieve,FolderSize,<Directory>,<%var%> 
