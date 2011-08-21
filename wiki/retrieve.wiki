@@ -5,5 +5,5 @@ The "Retrieve" command will return various information about files and folders f
  * [retrieveFile Retrieve,File] - Display a dialog box asking the user to select a fil[ename	 
  * [retrieveFileSize Retrieve,FileSize] - Calculate the size of a file 
  * [retrieveFileVersion Retrieve,FileVersion] - Retrieves version info from a specified file
- * [retrieveFolderSize Retrieve,FolderSize] 	Calculate the size of a folder
+ * [retrieveFolderSize Retrieve,FolderSize] - Calculate the size of a folder
  * [retrieveMD5 Retrieve,MD5] - Calculate the MD5 hash of a particular file 
