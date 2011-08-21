@@ -164,25 +164,60 @@
      * [iniwritetextline IniWriteTextLine]
      * [inimerge IniMerge]
    * [wbscriptMiscellaneous_Commands Miscellaneous Commands]
-     * [addvariables Addvariables] - adds all variables listed inside a section
-     * [beep Beep] - uses the system speaker
-     * [echo Echo] - outputs a message (viewable on the log)
-     * [exit Exit] - stops processing current script
-     * [getparam GetParam] - get the parameters passed to a script section
-     * [halt Halt] - stops building the whole project
-     * [loop Loop] - provides a simple looping construct
-     * [message Message] - outputs a message window
-     * [packparam PackParam] - pack the parameters to be passed to another     section
-     * [run Run / Exec] - runs a section from a script file
-     * [set Set] - changes the value of a variable
-     * [shellexecute ShellExecute] - launches an external file
+     * [addvariables Addvariables]
+     * [beep Beep]
+     * [echo Echo]
+     * [exit Exit]
+     * [getparam GetParam]
+     * [halt Halt]
+     * [loop Loop]
+     * [message Message]
+     * [packparam PackParam]
+     * [run Run / Exec] 
+     * [set Set] 
+     * [shellexecute ShellExecute] 
      * [system System]
-     * [wait Wait] - "sleeps" the script for specified time
+     * [wait Wait]
    * [wbscriptNetwork_Tools Network Tools]
+     * [webget WebGet]
+     * [webgetifnotexist WebGetIfNotExist]
    * [wbscriptRegistry_Handling Registry Handling]
+     * [regwrite RegWrite]
+     * [regread RegRead]
+     * [regdelete RegDelete]
+     * [reghiveload RegHiveLoad]
+     * [reghiveunload RegHiveUnload]
+     * [regimport RegImport]
+     * [regwritebin RegWriteBin]
+     * [regreadbin RegReadBin]
+     * [regmulti RegMulti]
    * [retrieve Retrieve Functions]
+     * [retrieveDir Retrieve,Dir]
+     * [retrieveFile Retrieve,File]
+     * [retrieveFileSize Retrieve,FileSize]
+     * [retrieveFileVersion Retrieve,FileVersion] 
+     * [retrieveFolderSize Retrieve,FolderSize] 
+     * [retrieveMD5 Retrieve,MD5] 
    * [strformat String Formating]
+     * [strformatBYTES BYTES]
+     * [strformatCEIL [CEIL / FLOOR] 
+     * [strformatCHARTOOEM [CHARTOOEM / OEMTOCHAR] ]
+     * [strformatDATE DATE]
+     * [strformatFILENAME FILENAME / PATH / EXT] 
+     * [strformatINC INC / DEC / MULT / DIV]
+     * [strformatLEFT LEFT / RIGHT]
+     * [strformatLEN LEN]
+     * [strformatLTRIM LTRIM / RTRIM / CTRIM / NTRIM] 
+     * [strformatPOS POS]
+     * [strformatREPLACE REPLACE / REPLACEX]
+     * [strformatSHORTPATH SHORTPATH / LONGPATH]
+     * [strformatSPLIT SPLIT]
    * [wbscriptText_Files  Text Files]
+     * [txtaddline TxtAddline]
+     * [txtreplace TxtReplace]
+     * [txtdelline TxtDelLine]
+     * [txtdelspaces TxtDelSpaces]
+     * [txtdelemptylines TxtDelEmptyLines]
  * [wbcommonapi API Commands (Alphabetical)]
   * [calculate _Calculate]
   * [add_asso Add_Asso]
