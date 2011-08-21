@@ -1,4 +1,4 @@
-=!StrFormat,<CEIL / FLOOR>=
+=!StrFormat,`[`CEIL / FLOOR`]`=
 ==Syntax==
 {{{
 StrFormat,<Action>,<%var%>,<%size%>
