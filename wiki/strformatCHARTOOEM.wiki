@@ -1,4 +1,4 @@
-=!StrFormat,<CHARTOOEM / OEMTOCHAR>=
+=!StrFormat,`[`CHARTOOEM / OEMTOCHAR`]`=
 ==Syntax==
 {{{
 StrFormat,<Action>,<%string%>,<%VarResult%>
