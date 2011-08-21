@@ -2,8 +2,8 @@
 !WinBuilder has the following string formatting capabilities :
 
  * [strformatBYTES BYTES]
- * [strformatCEIL [CEIL / FLOOR] 
- * [strformatCHARTOOEM [CHARTOOEM / OEMTOCHAR] ]
+ * [strformatCEIL CEIL / FLOOR] 
+ * [strformatCHARTOOEM CHARTOOEM / OEMTOCHAR ]
  * [strformatDATE DATE]
  * [strformatFILENAME FILENAME / PATH / EXT] 
  * [strformatINC INC / DEC / MULT / DIV]
