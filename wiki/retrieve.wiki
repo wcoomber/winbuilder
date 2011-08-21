@@ -1,9 +1,9 @@
 =Retrieve=
 
 The "Retrieve" command will return various information about files and folders from the operating system.  For specifics, see the following:
- * [retrieveDir] - Display a dialog box asking the user to select a folder	 
- * [retrieveFile] - Display a dialog box asking the user to select a fil[ename	 
- * [retrieveFileSize] - Calculate the size of a file 
- * [retrieveFileVersion] - Retrieves version info from a specified file
- * [retrieveFolderSize] 	Calculate the size of a folder
- * [retrieveMD5] - Calculate the MD5 hash of a particular file 
+ * [retrieveDir Retrieve,Dir] - Display a dialog box asking the user to select a folder	 
+ * [retrieveFile Retrieve,File] - Display a dialog box asking the user to select a fil[ename	 
+ * [retrieveFileSize Retrieve,FileSize] - Calculate the size of a file 
+ * [retrieveFileVersion Retrieve,FileVersion] - Retrieves version info from a specified file
+ * [retrieveFolderSize Retrieve,FolderSize] 	Calculate the size of a folder
+ * [retrieveMD5 Retrieve,MD5] - Calculate the MD5 hash of a particular file 
