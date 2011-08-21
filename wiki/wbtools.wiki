@@ -73,7 +73,7 @@ This command will also contain a quick template of the proper syntax as an examp
 
 In the template that is inserted into the code, the items or values used in the command should be self-explanatory.  In addition, the following conventions are used:
  * `[` ... `]` means that this parameter or value is optional
- * `{` ... `|` ... `|` ... ... `}` means that it requires one of the items between the separator (`|`)
+ * `{` ... `|` ... `|` ... ... `}` means that it requires only one of the items between the separators (`|`)
 
 <br>
 ----
