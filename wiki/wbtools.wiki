@@ -71,6 +71,9 @@ One of the main benefits of using this editor is that there is a built in syntax
 
 This command will also contain a quick template of the proper syntax as an example to show how to use it. With this menu you won't need to memorize all functions.
 
+In the template that is inserted into the code, the items or values used in the command should be self-explanatory.  In addition, the following conventions are used:
+ * `[` ... `]` means that this parameter or value is optional
+ * `{` ... `|` ... `|` ... ... `}` means that it requires one of the items between the separator (`|`)
 
 <br>
 ----
