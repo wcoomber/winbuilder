@@ -1,4 +1,4 @@
-=!StrFormat,`[`REPLACE/REPLACEX`]`=
+=!StrFormat,`[`REPLACE / REPLACEX`]`=
 ==Syntax==
 {{{
 StrFormat,REPLACE,<%string%>,<CharsToReplace>,<ReplacementChars>,
