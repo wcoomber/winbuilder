@@ -1,4 +1,4 @@
-=!StrFormat,`[`FILENAME/PATH/EXT`]`=
+=!StrFormat,`[`FILENAME / PATH / EXT`]`=
 ==Syntax==
 {{{
 StrFormat,<Action>,<Filename>,<%VarResult%> 
