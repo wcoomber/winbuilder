@@ -1,6 +1,5 @@
-#summary Calculate the size of a file
 
-=!FileSize=
+=Retrieve,!FileSize=
 
 ==Syntax==
 {{{
