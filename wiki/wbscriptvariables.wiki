@@ -49,6 +49,13 @@ These variables are created by default just before a project start to run.
    * %!UserProfile% - contains the path to the User Profile folder
    * %!WindowsDir% - path to your Windows directory
    * %!WindowsSystemDir% - in most cases pointing to your windows system32 folder
+   * %HostOS% - string representing the OS of the host running !WinBuilder
+     * if majorVersion <= 4 then HostOS = NT
+     * if majorVersion = 5 and minorVersion = 0 then HostOS = W2000
+     * if majorVersion = 5 and minorVersion = 1 then HostOS = XP
+     * if majorVersion = 5 and minorVersion = 2 then HostOS = W2003
+     * if majorVersion = 6 and minorVersion = 0 then HostOS = Vista
+     * if majorVersion = 6 and minorVersion = 1 then HostOS = Win7
 
  * !WinBuilder specific
    * %!BaseDir% - folder from where !WinBuilder.exe is running
