@@ -1,4 +1,4 @@
-=!StrFormat,`[`LTRIM/RTRIM/CTRIM/NTRIM`]`=
+=!StrFormat,`[`LTRIM / RTRIM / CTRIM / NTRIM`]`=
 ==Syntax==
 {{{
 StrFormat,<Action>,<%string%>,<CharsToTrim>,<%var%>
