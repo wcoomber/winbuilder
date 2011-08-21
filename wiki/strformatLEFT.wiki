@@ -1,4 +1,4 @@
-=!StrFormat,`[`LEFT/RIGHT`]`=
+=!StrFormat,`[`LEFT / RIGHT`]`=
 ==Syntax==
 {{{
 StrFormat,<Action>,<%string%>,<CharsToObtain>,<%var%>
