@@ -1,4 +1,4 @@
-=!StrFormat,`[`SHORTPATH/LONGPATH`]`=
+=!StrFormat,`[`SHORTPATH / LONGPATH`]`=
 ==Syntax==
 {{{
 StrFormat,<Action>,<%string%>,<%VarResult%>
