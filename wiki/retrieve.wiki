@@ -1,6 +1,7 @@
 =Retrieve=
 
-The "Retrieve" command will return various information about files and folders from the operating system.  For specifics, see the following:
+These commands will querry the OS and return variuos types of information about files and folders (or directories) The available sub-commands are: 
+
  * [retrieveDir Retrieve,Dir] - Display a dialog box asking the user to select a folder	 
  * [retrieveFile Retrieve,File] - Display a dialog box asking the user to select a fil[ename	 
  * [retrieveFileSize Retrieve,FileSize] - Calculate the size of a file 
