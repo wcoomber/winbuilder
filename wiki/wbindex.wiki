@@ -126,10 +126,58 @@
    * [webgetifnotexist WebGetIfNotExist]
  * [wbscriptcommandsByCategory Script Commands (By Category)]
    * [wbscriptAttachments Attachments]
+     * [extractfile ExtractFile]
+     * [extractandrun ExtractAndRun]
+     * [extractallfiles ExtractAllFiles]
+     * [extractallfilesifnotexist ExtractAllFilesIfNotExist]
+     * [encode Encode]
    * [wbscriptFile_Operations File Operations]
+     * [copyorexpand CopyOrExpand]
+     * [dircopy DirCopy]
+     * [dirdelete DirDelete]
+     * [dirmove DirMove]
+     * [dirmake DirMake]
+     * [expand Expand]
+     * [filecopy FileCopy]
+     * [filedelete FileDelete]
+     * [filerename FileRename]
+     * [filecreateblank FileCreateBlank]
+     * [filebyteextract FileByteExtract]
    * [wbscriptIF_Clauses_and_Command_Blocks IF Clauses and Command Blocks]
+     * [if If Clauses]
+     * [ifBlock Begin / End Block]
+     * [ifExist Exist / NotExist]
+     * [ifComparison Comparison Operations (Equal / NotEqual / Smaller / Bigger)]
+     * [ifPing Ping]
+     * [ifOnline Online]
+     * [ifLicense License]
+     * [ifNot Not]
+     * [ifQuestion Question]
+     * [ifExistMacro ExistMacro]
+     * [ifExistRegMulti ExistRegMulti]
    * [wbscriptINI_Manipulation INI Manipulation]
+     * [iniwrite IniWrite]
+     * [iniread IniRead]
+     * [inidelete IniDelete]
+     * [iniaddsection IniAddSection]
+     * [inideletesection IniDeleteSection]
+     * [iniwritetextline IniWriteTextLine]
+     * [inimerge IniMerge]
    * [wbscriptMiscellaneous_Commands Miscellaneous Commands]
+     * [addvariables Addvariables] - adds all variables listed inside a section
+     * [beep Beep] - uses the system speaker
+     * [echo Echo] - outputs a message (viewable on the log)
+     * [exit Exit] - stops processing current script
+     * [getparam GetParam] - get the parameters passed to a script section
+     * [halt Halt] - stops building the whole project
+     * [loop Loop] - provides a simple looping construct
+     * [message Message] - outputs a message window
+     * [packparam PackParam] - pack the parameters to be passed to another     section
+     * [run Run / Exec] - runs a section from a script file
+     * [set Set] - changes the value of a variable
+     * [shellexecute ShellExecute] - launches an external file
+     * [system System]
+     * [wait Wait] - "sleeps" the script for specified time
    * [wbscriptNetwork_Tools Network Tools]
    * [wbscriptRegistry_Handling Registry Handling]
    * [retrieve Retrieve Functions]
