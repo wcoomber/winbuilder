@@ -4,7 +4,7 @@
 
 ==Syntax==
 {{{
-Retrieve,File/Dir,<DirectoryOrFilename>,<%var%> 
+Retrieve,Dir,<DirectoryOrFilename>,<%var%> 
 }}}
 This function will display a dialog box asking the user to select a folder. Once a value is selected and the user clicks "Ok" to close the box, this value will be stored inside %var%
  * You can specify where the initially selected folder is placed.
