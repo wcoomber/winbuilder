@@ -1,4 +1,7 @@
 =!Not_Compatible=
+
+Generate an error message if the script is used in a none compatible project.
+
 ==Syntax==
 {{{
 Not_Compatible,OSType
@@ -8,9 +11,6 @@ Not_Compatible,OSType
 || || *LiveXP* ||Script is not compatible with the LiveXP project||
 || || *VistaPE* ||Script is not compatible with the VistaPE project||
 || || *Win7PE* ||Script is not compatible with the Win7PE project||
-
-==Remarks==
-Tihs function is used to generate an error message if the script is used in a none compatible project.
 
 ==Example==
 This will generate an error message at build time if the script is built in the LiveXP project.
