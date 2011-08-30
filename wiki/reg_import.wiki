@@ -1,5 +1,7 @@
 =!Reg_Import=
 
+Import a .reg file
+
 ==Syntax==
 {{{
 Reg_Import,RegFile
