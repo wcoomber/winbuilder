@@ -1,10 +1,11 @@
 =!FileRename=
 
+Rename a single file.
+
 ==Syntax==
 {{{
 FileRename,<OldFilename>,<NewFilename> 
 }}}
-This command will rename a single file
 
 == Example: ==
 {{{
