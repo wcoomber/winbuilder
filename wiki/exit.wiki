@@ -1,6 +1,6 @@
 =Exit=
 
-Force the current script to terminate and continue on to the next script.
+Force the current script to terminate and continue processing with the next script.
 
 ==Syntax==
 {{{
