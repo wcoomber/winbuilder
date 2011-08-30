@@ -1,6 +1,6 @@
 =!Hive_Load=
 
-This command will mount an external registry hive into your local registry system. 
+This command will load an external registry hive into your local registry system. 
 
 ==Syntax==
 {{{
