@@ -1,11 +1,13 @@
 =!FileByteExtract=
 
+Extract a files matching the search criteria for a specific byte signature.
+
 ==Syntax==
 {{{
 FileByteExtract,<FilesToSearch>,<OutputFile>,<ByteSignature>,<BytesLength> 
 }}}
-This is a command with a very specific function. It will look inside all files that match the search criteria for a specific byte signature.
 
+==Remarks==
 Byte signatures are specified in groups of two digits that are expressed in hexadecimal format. Possible value range from combinations starting at 00 and ending at FF
 
 If this byte sequence is found, then it will copy a specific number of bytes and save them as a new file.
