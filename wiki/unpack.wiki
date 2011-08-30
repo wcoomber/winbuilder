@@ -1,5 +1,7 @@
 =Unpack=
 
+Extract files from inside your script, and archive or a URL to a program folder in your project.
+
 ==Syntax 1==
 {{{
 Unpack,[Section],[Archive],[Option],[Target],[ProgramFolder],[Filename]
@@ -55,8 +57,6 @@ Unpack,[Filename],Action,[Param3],[Param4],[Param5]
 
 
 ==Remarks==
-Unpack is an API command that is used to extract the program files from your script onto a program folder on your Winbuilder project.
-
 The Unpack command will use the folder called "Folder" as default place to keep all files that you attached using the "Create script" tool
  * All parameters are optional, so when you wrote :
 {{{
