@@ -1,5 +1,7 @@
 =!Add_Pin ( Win 7 Projects Only )=
 
+"Pin" a program to the Windows 7 taskbar or start menu.
+
 ==Syntax==
 {{{
 Add_Pin,Type,[Order],Path,[Title],[WorkFolder],[Parameters],[Icon],[StartMode],[ToolTipText] 
