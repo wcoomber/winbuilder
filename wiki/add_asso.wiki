@@ -2,6 +2,8 @@
 
 =!Add_Asso=
 
+This function is called to associate a file extension with an application.
+
 ==Syntax==
 {{{
 Add_Asso,Extension,[Type],[Title],[Filename],[Option],[UseRegAddBoot]
@@ -18,9 +20,6 @@ Add_Asso,Extension,[Type],[Title],[Filename],[Option],[UseRegAddBoot]
 ||4||Filename||File to be associated. May be defaulted or may be a file name or full path. If it's not specified then it defaults to: {{{%PE_Programs%\%programFolder%\%programExe%}}} If only the file name is specified then the path is assumed to be: {{{%PE_Programs%\%programFolder%}}}||
 ||5||Option||This is optionally used to specify the !DefaultIcon index. If the icon is contained with the program exe then this can be used with Open or Edit. Otherwise the Icon type can be used to specify an external !DefaultIcon.||
 ||6||!UseRegAddBoot||Defaults to False. If set to True then !RegAddBoot is used to create the association.||
-
-==Remarks==
-This function is called to associate a file extension with an application.
 
 ==Tips==
 This function assumes the appropriate registry hive is loaded before the function is called. This is more efficient than [associate_file Associate_File] if many associations are being created.
