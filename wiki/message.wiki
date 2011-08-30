@@ -1,18 +1,22 @@
 =Message=
+
+Display a small popup window with contents of your message.
+
 ==Syntax==
 {{{
-Message,<message>,<Action> 
+Message,<message>,<Action>[,Timeout] 
 }}}
 
-This command will pop a small text window displaying the contents of your message. The additional action parameter will allow you to customize the icon displayed along with the message box.
+==Parameters==
+||1||Message||Text to display to the user||
+||2||Action ||Defines the icon to display. It must be one of the following values||
+|| || || *Information* - Displays a Information Icon||
+|| || || *Confirmation* - Displays a Question Icon||
+|| || || *Error* - Displays a Error Icon||
+|| || || *Warning* - Displays a Warning Icon||
+||3||Timeout _(Optional)_||Time in seconds before the window automatically closes.||
 
-Action can have of the following values
- * Information
- * Confirmation
- * Error
- * Warning
-*WB076 added:*
- Usually the message dialog waits for ever for the user's ok. You can cause to close it after a timeout, by adding the timeout (in seconds) as last argument.
+Icons displayed may vary depending on your operating system configuration.
 
 == Example: == 
 {{{
