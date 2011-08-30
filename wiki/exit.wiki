@@ -1,11 +1,11 @@
 =Exit=
 
+Force the current script to terminate and continue on to the next script.
+
 ==Syntax==
 {{{
 Exit,<exit message>[,NOWARN] 
 }}}
-
-This command will force the script to be finished and will make the process continue to the next script on the list.
 
 The "Exit message" is a small text message that is displayed on the log where you can specify the reason why Exit was called.
 
