@@ -7,8 +7,6 @@ Repeatedly execute a particular section in a script with a counter value that in
 Loop,%ScriptFile%,<Section>,<start>,<end>,<optional parameters.
 }}}
 
-The specified section in %Scripfile% is repeatedly executed with a counter value that increments each time through the loop between the specified start and end values. Any additional parameters are passed to the script section.
-
 The loop can be prematurely exited by using the following command
 {{{
 Loop,BREAK 
