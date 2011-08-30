@@ -1,5 +1,7 @@
 =!RunFromRam=
 
+Force the current script program to run directly from memory, either from a RAM drive or from a .wim file. This allows the program directory to be writable if your booting from a CD/DVD.
+
 ==Syntax==
 {{{
 RunFromRam,[True]
