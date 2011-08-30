@@ -1,6 +1,6 @@
 =Message=
 
-Display a small popup window with contents of your message.
+Displays a simple message box with optional timeout.
 
 ==Syntax==
 {{{
