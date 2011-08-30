@@ -1,4 +1,7 @@
 =!PackParam=
+
+Packs parameters into a user defined variable, each enclosed in quotes into a comma separated list.
+
 ==Syntax==
 {{{
 PackParam,Start,%Var%[,%Num%]
