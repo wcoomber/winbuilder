@@ -1,4 +1,7 @@
 =!Add_Shortcut=
+
+Create shortcuts on the desktop, quicklaunch bar or start menu.
+
 ==Syntax==
 {{{
 Add_Shortcut,[Type],[StartMenuFolder],[FullFileName],[Title],[Work Folder],
