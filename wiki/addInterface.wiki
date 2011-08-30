@@ -2,12 +2,15 @@
 
 =!AddInterface=
 
+
+Allows interface components from another interface to be accessed locally in a script
+
 ==Syntax===
 {{{
 AddInterface,<Script>[,<Interface>],<prefix>
 }}}
 
-Use this command to add the values of an interface to the variables List. The optional `<Interface>` is used to read alternative interfaces, e.g. Interface-Language? The default value is to use the standard interface ([Interface]).
+The optional `<Interface>` is used to read alternative interfaces, e.g. Interface-Language? The default value is to use the standard interface ([Interface]).
 
 The prefix is used to distinguish to already existing interface values of the same name. The generated variables can be used as %`<prefix>`_<original name>%. If prefix is omitted, also the underline in the name of the generated variables is omitted.
 
