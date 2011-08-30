@@ -1,5 +1,7 @@
 =!RegAddBoot=
 
+Write to the registry at boot time.
+
 ==Syntax==
 {{{
 RegAddBoot,Hive,ValueType,KeyName,ValueName,Value
