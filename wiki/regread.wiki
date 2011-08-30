@@ -1,20 +1,36 @@
 =!RegRead=
 
+Reads a value from the registry.
+
 ==Syntax ==
 {{{
 RegRead,<HKEY>,<Section>,<Key>,<%Variable%> 
 }}}
-This command will read a value from the key you specify.
 
-It uses the same components as described in the other registry commands with the difference that it will read the value of a key and write it into a variable.
+ * HKEY is the "Hive Key" where the key is to be placed. These hives are files that are loaded by your machine when booting and compose the registry structure. By default, most scripts use HKLM as the work hive.
 
-This command will only retrieve values from the following keytypes:
- * 0x1 - String
- * 0x3 - Integer
- * 0x4 - Binary
+ Valid HKEY values
+  * HKLM
+  * HKCU
+  * HKCR
+  * HKEY_USERS
+  * HKEY_CURRENT_CONFIG
 
-==WB078 added:==
-All key types are supported now.
+ Details on the functions of each hive can be found at the Microsoft Site.
+
+ * Keytype will specify how the data in the registry key should be interpreted.
+
+ Valid key type values
+  * 0x0 - Empty key
+  * 0x1 - String - writes a text value
+  * 0x2 - Expanded String - will expand any variable value contained inside %%. (e.g. %temp%)
+  * 0x3 - Binary data - adds data in binary format. Each byte is specified by groups of two digits splitting each value with commas
+  * 0x4 - Dword - writes a numeric value
+  * 0x7 - Writes multiple NULL separated strings
+
+ * Section is the complete path to the section where the key is supposed to be read.
+
+ * Keyname and value are similar to the method for INI files, please ensure that the value you use is compatible with the key type.
 
 == Example: ==
 {{{
