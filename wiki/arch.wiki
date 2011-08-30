@@ -1,5 +1,7 @@
 =Arch=
 
+Specify the source architecture supported by the script. 
+
 ==Syntax==
 {{{
 Arch,SourceType
@@ -12,7 +14,7 @@ Arch,SourceType
 || || ||*x86|x64* = Script supports either the x86 or x64 architecture.||
 
 ==Remarks==
-This function should be the first function called by a script in the process section. It is used to specify the source architecture supported by the script. 
+This function should be the first function called by a script in the process section.
 
 ==Tips==
 If the source type is x86 then the only source architecture that is supported is x86. If the source type is x64 then, depending on if wow64 support is available, then the source architecture may be x86 or x64. If wow64 support is not available when using x64 source then only x64 source architecture will be supported.
