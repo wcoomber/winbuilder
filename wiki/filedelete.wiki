@@ -14,7 +14,7 @@ FileDelete,<FileToDelete> [,Nowarn][,Norec]
 || ||NOREC _(Optional)_||Only matching files in the specified directory will be deleted. Sub-directories will be ignored.||
 
  * The optional Nowarn and Norec parameters can be specified in any order.
-* All deleted files are immediately removed. You cannot recover them from the recycle bin.
+ * *All deleted files are immediately removed. You cannot recover them from the recycle bin.
 
 == Example 1: ==
 In this example !FileDelete will delete all text files ({{{*.txt}}}) from {{{c:\MyPath}}}
