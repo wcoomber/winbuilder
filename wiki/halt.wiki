@@ -1,12 +1,14 @@
 =Halt=
 
+Force the overall project building to terminate. 
+
 ==Syntax ==
 {{{
 Halt,<reason>
 }}}
-This command will force the overall project to terminate. 
 
-{{{<reason>}}} is a small text message that will be displayed in the log where you can specify the reason why Halt was called.
+==Parameters==
+||1||!Reason|| A small text message that will be displayed in the log where you can explain why the build was canceled.||
 
 == Example: == 
 {{{
