@@ -1,6 +1,6 @@
 =Unpack=
 
-Extract files from inside your script, and archive or a URL to a program folder in your project.
+Extract files from inside your script, an archive or a URL to a program folder in your project.
 
 ==Syntax 1==
 {{{
