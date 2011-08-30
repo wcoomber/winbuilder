@@ -7,6 +7,10 @@ Writes the parameter at the given index position into *%var%*. This is needed wh
 GetParam,Index,%Var%
 }}}
 
+==Parameters==
+||1||Index||The position of the passed argument to read||
+||2||%Variable%||The Variable to write the value to||
+
 ==Remarks==
 Parameters are accessible by only a single digit following the "#" (hash mark) character.  Given the "fixed formatting", a different process was needed to access the values of any greater parameter.
 
