@@ -8,7 +8,7 @@ DirCopy,<FromDir>,<ToDir>[,SHOW]
 }}}
 
 ==Remarks==
-  * DirCopy will overwrite any previously existing folder.  
+  * !DirCopy will overwrite any previously existing folder.  
   * The optional SHOW parameter will show the OS internal progress window.
 
 ==Example ==
