@@ -1,9 +1,13 @@
 ==!RegMulti==
+
+Modify a multi-string registry entry.
+
 ==Syntax==
 {{{
 RegMulti,<HKEY>,<Section>,<Key>,<Action>,[<Other Parameters>]
 }}}
-This command may modify a multi string registry entry, and based on the action specified, may require one or more additional parameters
+
+Based on the action specified, you may require one or more additional parameters
 
 *HKEY* is the "Hive Key" where the key is to be placed. These hives are files that are loaded by your machine when booting and compose the registry structure. By default, most scripts use HKLM as the work hive.  Valid HKEY values are:
  * HKLM
