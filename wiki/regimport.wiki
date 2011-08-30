@@ -1,12 +1,11 @@
 =!RegImport=
 
+This command will import an external registry file (`*.reg`) to your local registry system.
+
 == Syntax ==
 {{{
 RegImport,<RegFileToImport> 
 }}}
-This command will import an external registry file (`*.reg`) to your local registry system.
-
-It will use as parameter the specified filename to read values from.
 
 == Example: ==
 {{{
@@ -14,4 +13,4 @@ RegImport,c:\myFile.reg
 }}}
 
 =Warning=
-As stated above, this adds information to the CURRENT systems registry.  You should be careful and use this only with sections mounted using the proper commands to mount hives otherwise you might corrupt the current systems registry
+As stated above, this adds information to the CURRENT systems registry.  You should be careful and use this only with sections mounted using the proper commands to mount hives otherwise you might corrupt the current systems registry!
