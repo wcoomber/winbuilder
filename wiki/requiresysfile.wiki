@@ -1,5 +1,7 @@
 =!RequireSysFile (Vista / Win7 Projects only )=
 
+Copy a source file from the %!SystemFiles% source folder to the %!TargetDir% target folder.
+
 ==Syntax==
 {{{
 RequireSysFile,SourceFile,[NOWARN],[PRESERVE]
@@ -10,7 +12,7 @@ RequireSysFile,SourceFile,[NOWARN],[PRESERVE]
 ||3||PRESERVE||By default if the target file exists it will be overwritten. This parameter is used to not copy the file if it already exists in the target folder. A warning will be generated in the log file if the target file exists. The optional NOWARN parameter can be used to suppress this warning.||
 
 ==Remarks==
- * This function is used to copy a source file from the %!SystemFiles% source folder to the %!TargetDir% target folder ( the copy will always be from the mounted install.wim ). 
+ * The copy will always be from the mounted install.wim ). 
  * It will in addition copy any language resource files associated with the file. 
 
 ==Tips==
