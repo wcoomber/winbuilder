@@ -1,5 +1,7 @@
 =!Hive_Unload=
 
+Unload an external registry hive that was previously loaded into your local registry system with [hive_load].
+
 ==Syntax==
 {{{
 Hive_Unload,Hive
@@ -9,9 +11,6 @@ Hive_Unload,Hive
 || ||*Default* - This is the current user hive ( HKCU ). Can also use *HKCU* or *User*.||
 || ||*Software* - This is the software hive ( HKLM\Software ). Can also use *HKU* or *Machine*.||
 || ||*System* - This is the system hive ( HKLM\System ). Can also use *HKLM*.||
-
-==Remarks==
-This command will unload an external registry hive that was previously loaded into your local registry system with [hive_load Hive_Load]. 
 
 ==Example==
 This installs the snapman filter driver.
