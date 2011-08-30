@@ -1,10 +1,11 @@
 =!DirMake=
 
+Create a new folder.
+
 ==Syntax==
 {{{
 DirMake,<NewDir> 
 }}}
-This command will create a new folder as you specify.
 
 == Example: ==
 {{{
