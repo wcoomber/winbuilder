@@ -1,5 +1,7 @@
 =!Hive_Load=
 
+This command will mount an external registry hive into your local registry system. 
+
 ==Syntax==
 {{{
 Hive_Load,Hive
@@ -10,9 +12,6 @@ Hive_Load,Hive
 || ||*Default* - This is the current user hive ( HKCU ). Can also use *HKCU* or *User*.||
 || ||*Software* - This is the software hive ( HKLM\Software ). Can also use *HKU* or *Machine*.||
 || ||*System* - This is the system hive ( HKLM\System ). Can also use *HKLM*.||
-
-==Remarks==
-This command will load an external registry hive into your local registry system. 
 
 ==Tips==
  * The user should always place a [hive_unload Hive_Unload] call after all the other registry calls for this hive.
