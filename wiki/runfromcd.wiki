@@ -1,5 +1,7 @@
 =RunFromCD ( LiveXP / !NativeEx Projects Only )=
 
+Force the current script program to run directly from the boot media. 
+
 ==Syntax==
 {{{
 RunFromCD,[BuildType]
@@ -10,8 +12,6 @@ RunFromCD,[BuildType]
 || || || *!FolderName* - Force the current script programs to run from the boot media at the specified folder||
 
 ==Remarks==
-Typically used in a build where the build model is run from ram and you want to force the current script program to run directly from the boot media 
-
 See also [runfromram RunFromRam]
 
 ==Example==
