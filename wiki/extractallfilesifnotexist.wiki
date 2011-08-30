@@ -6,3 +6,6 @@ Extract all files from a given folder inside a script. Only files that don't exi
 {{{
 ExtractAllFilesIfNotExist,<%ScriptFile%>,<Folder>,<DirToExtract> 
 }}}
+
+===See Also===
+ExtractAllFiles
