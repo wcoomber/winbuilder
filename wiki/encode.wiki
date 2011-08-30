@@ -1,12 +1,14 @@
 =Encode=
 
+Embed files inside a script.
+
 ==Syntax==
 {{{
 Encode,<%ScriptFile%>,<Folder>,<Filenames> 
 }}}
-Winbuilder hs the ability to contain binary and other files inside the script files. These are stored in an ASCII encoded format so that they can be handled as text files.
 
-This command will encode and add files inside a given folder (internal to the way Winbuilder organizes the files) to a script.
+==Remarks==
+Winbuilder hs the ability to contain binary and other files inside the script files. These are stored in an ASCII encoded format so that they can be handled as text files.
 
 You can either specify a single filename or use wildcards that match a file criteria. If the folder doesn't exist, it is created otherwise files are added to the already available folder.
 
