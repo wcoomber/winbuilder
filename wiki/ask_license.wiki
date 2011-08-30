@@ -1,5 +1,7 @@
 =!Ask_License=
 
+Prompt the user to accept a license agreement before continuing.
+
 ==Syntax==
 {{{
 Ask_License,FullFilename,ID,SectionToRunBeforeExit
