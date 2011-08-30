@@ -1,5 +1,7 @@
 =Require_FileQ=
 
+This function is used to copy or expand a single file to %target_sys% based on app script architecture.
+
 ==Syntax==
 {{{
 Require_FileQ,SourceFile
@@ -10,7 +12,7 @@ Require_FileQ,SourceFile
 
 
 ==Remarks==
-This function is used to copy or expand a single file to %target_sys% based on app script architecture. It is a simplified and much faster to execute version of [require_file Require_File]. Wildcards are not supported.
+This is a simplified and much faster to execute version of [require_file Require_File]. Wildcards are not supported.
 
  * For 32 bit source the 32 bit version of the system file will always be copied. For 64 bit source the default will be to copy the 64 bit version of the system dll. If a script only supports 32 bit then copying of the 32bit system can be forced by setting the %!CapiScriptArch% variable.
 
