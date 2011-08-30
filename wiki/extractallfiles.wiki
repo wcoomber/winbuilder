@@ -14,3 +14,8 @@ Using this example we will extract all files found inside a folder in a given sc
 {{{
 ExtractAllFiles,C:\myFile.script,Folder,c:\ 
 }}}
+
+===See Also===
+[extractfile ExtractFile]
+[extractallfiles ExtractAllFiles]
+[extractallfilesifnotexist ExtractAllFilesIfNotExist]
