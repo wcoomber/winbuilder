@@ -1,11 +1,11 @@
 =!Process_Log=
 
+Log version info and current time a script is run into the project.info file
+
 ==Syntax==
 {{{
 Process_Log
 }}}
-
-Used to log version info and current time a script is run into the project.info file
 
 ==Example==
 {{{
