@@ -1,6 +1,6 @@
 =!CopyOrExpand=
 
-Copying files from Install CD's where a file can be present either in normal or compressed format.
+Copy files from Install CD's where a file can be present either in normal or compressed format.
 
 ==Syntax==
 {{{
