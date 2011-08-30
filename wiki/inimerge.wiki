@@ -1,9 +1,11 @@
 =!IniMerge=
+
+Update all values from a INI file based on the contents from another INI file.
+
 ==Syntax ==
 {{{
 IniMerge,<UpdatedINIfile>,<INIfileToUpdate> 
 }}}
-This command will update all values from a INI file based on the contents from another INI file.
 
 All Sections are compared inside both files and newer keys or items with different values are added to INIfileToUpdate
 
