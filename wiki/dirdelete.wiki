@@ -1,11 +1,11 @@
 =!DirDelete=
 
+Delete the entire contents of a directory. Deleted folders are not recoverable from the recycle bin.
+
 ==Syntax==
 {{{
 DirDelete,<DirToDelete>[,FAST]
 }}}
-
-This command will delete a folder and respective files and folders inside. It uses Win32 API as a silent operation to delete the specified folder. Beware that deleted folders are not recoverable from the recycle bin.
 
 == Example: ==
 {{{
