@@ -1,10 +1,11 @@
 =!ExtractAndRun=
 
+Extract a file that is attached (encoded) inside a script to a temporary location, run the file, and then delete it. 
+
 ==Syntax==
 {{{
 ExtractAndRun,<%ScriptFile%>,<Folder>,<Filename>[,<parameters>] 
 }}}
-This command will extract and then run a file that is attached (encoded) inside a script file.
 
 Optional run parameters can be defined. They must not contain spaces, quotes or commas. Use the escaped form of these characters (i.e. {{{ #$s, #$q, #$c}}} ) instead.
 
