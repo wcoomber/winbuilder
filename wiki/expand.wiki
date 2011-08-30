@@ -1,21 +1,12 @@
 =Expand=
+
+Decompress all files inside the specified cabinet (.cab) file to the folder you specify.
+
 ==Syntax==
 {{{
 Expand,<CABfile>,<DirToDecompress>,<Optional Parameters> 
 }}}
 
-This command will decompress all files inside CABfile to the folder you specify.
-
-Cabinet files usually use extension .CAB
-
-== Example ==
-In this example Expand will try to expand all files found inside {{{c:\MyPath\MyFile.cab}}} to the folder {{{c:\MyNewPath}}}
-{{{
-Expand,c:\MyPath\MyFile.cab,c:\MyNewPath
-}}}
-
-
-==WB078 added:==
 A single file can be extracted from the cab file, by giving it's name as third parameter
 {{{
 Expand,c:\MyPath\MyFile.cab,c:\MyNewPath,YourFile.dll
@@ -28,4 +19,9 @@ Expand,c:\MyPath\MyFile.cab,c:\MyNewPath,YourFile.dll
 The warning can be suppressed by an additional parameter NOWARN
  * The parameters PRESERVE, and NOWARN can be used simultaneously. The order does not matter.
 
+== Example ==
+In this example Expand will try to expand all files found inside {{{c:\MyPath\MyFile.cab}}} to the folder {{{c:\MyNewPath}}}
+{{{
+Expand,c:\MyPath\MyFile.cab,c:\MyNewPath
+}}}
 
