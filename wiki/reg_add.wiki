@@ -1,6 +1,6 @@
 =!Reg_Add=
 
-Add a value to the registry hive loaded by [Hive_Load].
+Add a value to the registry hive loaded by Hive_Load.
 
 ==Syntax==
 {{{
