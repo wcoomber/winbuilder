@@ -1,6 +1,9 @@
 =!ScriptInterface,Read=
 
+Read the value of an interface element from a different script than the currently executing one.
+
 =WARNING! May not be correctly documented=
+
 ==Syntax==
 {{{
 ScriptInterface,Read,%VarResult%,Filename,ComponentName,[Position][,Interface]
@@ -12,9 +15,6 @@ ScriptInterface,Read,%VarResult%,Filename,ComponentName,[Position][,Interface]
 ||3||!ComponentName||Name of interface element being accessed||
 ||4||Position||Optional value specifying the position in the element from which the data will be accessed. It you do not specify this option the "value" of the element will be read.||
 ||5||Interface||Optional value specifying the interface section inside the script. This option allows you to read elements from scripts having multiple interfaces.||
-
-==Remarks==
-This command can be used to read the value of an interface element from a different script than the currently executing one.
 
 ==Example==
 Read the value of the pTextBox1 textbox from the Hijackthis script to a variable named %Result%
