@@ -1,5 +1,7 @@
 =!ScriptInterface,Write=
 
+Change an element in the script interface.
+
 =WARNING MAY NOT BE CORRECTLY DOCUMENTED=
 
 ==Syntax==
@@ -12,10 +14,6 @@ ScriptInterface,Write,NewValue,Filename,ComponentName[,Position][,Interface]
 ||3||!ComponentName||Name of interface element being accessed||
 ||4||Position||Optional value specifying the position in the element to which the data will be written. If you do not specify this option the "value" will be written.||
 ||5||Interface||Optional value specifying the interface section inside the script. This option allows you to read elements from scripts having multiple interfaces.||
-
-==Remarks==
-
-This function is used to update an element in the script interface.
 
 ==Example==
 Write the value "Interface Write Test" to the pTextBox1 textbox interface element in the Hijackthis script.
