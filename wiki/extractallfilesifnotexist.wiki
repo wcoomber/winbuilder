@@ -8,4 +8,5 @@ ExtractAllFilesIfNotExist,<%ScriptFile%>,<Folder>,<DirToExtract>
 }}}
 
 ===See Also===
+[extractfiles ExtractFiles]
 [extractallfiles ExtractAllFiles]
