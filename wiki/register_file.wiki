@@ -1,5 +1,7 @@
 =!Register_File ( LiveXP / !NativeEx Projects Only )=
 
+Registers a COM or ActiveX object.
+
 ==Syntax==
 {{{
 Register_File,FileName,RegType
