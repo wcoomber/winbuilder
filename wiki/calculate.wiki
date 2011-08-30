@@ -1,5 +1,7 @@
 ={{{_}}}Calculate=
 
+Execute an AutoIT command that returns a value.
+
 ==Syntax==
 {{{
 _Calculate,AutoIT Command(expression),ReturnVar
@@ -10,7 +12,7 @@ _Calculate,AutoIT Command(expression),ReturnVar
 ||2||!ReturnVar||This is the name of the variable to receive the return value of the !AutoIt command. It must be specified without the %||
 
 ==Remarks==
-This API function is called to execute an !AutoIT command that returns a value. It will download sCalculate to the winbuilder tools directory if it does not already exist and use it to execute the !AutoIT command. 
+This command uses a program called sCalculate to execute the AutoIt command. This program will be automatically downloaded to the winbuilder tools directory if it does not exist.
 
 ==Tips==
  * Always use simple quote in the command expression - i.e. use {{{[#$c]}}} in place of {{{[,]}}} 
