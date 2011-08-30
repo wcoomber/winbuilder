@@ -1,6 +1,6 @@
 =!FileByteExtract=
 
-Extract a files matching the search criteria for a specific byte signature.
+Extract a file matching the search criteria for a specific byte signature.
 
 ==Syntax==
 {{{
