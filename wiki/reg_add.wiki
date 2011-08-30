@@ -1,5 +1,7 @@
 =!Reg_Add=
 
+Add a value to the registry hive loaded by !Hive_Load.
+
 ==Syntax==
 {{{
 Reg_Add,ValueType,%reg%\KeyName,[ValueName],[Value],[PRESERVE],[NOWARN]
@@ -19,7 +21,6 @@ Reg_Add,ValueType,%reg%\KeyName,[ValueName],[Value],[PRESERVE],[NOWARN]
 ||6||NOWARN||Suppress the warning in the log file. The optional PRESERVE / NOWARN parameters can be specified in any order. One or both can be specified.||
 
 ==Remarks==
-This function is used to add a value to the registry hive loaded by !Hive_Load.
  * WB 77 RC2 or later: !RegWrite gives a warning in the log, if the destination value already exists. The warning can be suppressed by specifying the NOWARN parameter.
 
 ==Tips==
