@@ -1,5 +1,7 @@
 =!Select_Case=
 
+Run a statement depending on the value of an expression.
+
 ==Syntax==
 {{{
 Select_Case,Var,ListVar1,[ListVar2],[Separator]
