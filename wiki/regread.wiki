@@ -26,7 +26,7 @@ RegRead,<HKEY>,<Section>,<Key>,<%Variable%>
   * 0x2 - Expanded String - will expand any variable value contained inside %%. (e.g. %temp%)
   * 0x3 - Binary data - adds data in binary format. Each byte is specified by groups of two digits splitting each value with commas
   * 0x4 - Dword - writes a numeric value
-  * 0x7 - Writes multiple NULL separated strings
+  * 0x7 - Multiple NULL separated strings
 
  * Section is the complete path to the section where the key is supposed to be read.
 
