@@ -1,14 +1,19 @@
 =!CopyOrExpand=
 
+Copying files from Install CD's where a file can be present either in normal or compressed format.
+
 ==Syntax==
 {{{
 CopyOrExpand,<FileToCopyOrExpand>,<DestinationFolderOrFilename>[,PRESERVE, NOWARN]
 }}}
-This is a very flexible command that is designed for cases where we either need to Copy or Expand a file.
 
-It was implemented to ease the task of copying files from Install CD's where often a specified can be present either in normal or compressed format.
+==Remarks==
+Compressed files often use the cabinet archiving method and usually have an identifiable character _ as the last character of their extensions. (e.g. myFile.Tx`_` ). Windows XP often uses this method to compress files on the install CD.
 
-These compressed files often use the cabinet archiving method and usually have an identifiable character _ as the last character of their extensions. (e.g. myFile.Tx_ ). When this file is expanded a new file with a full extension is retrieved.
+ * If the destination file already exists, !CopyOrExpand gives a warning in the log, and will overwrite the existing file. 
+ * If the optional *PRESERVE* parameter added, !CopyOrExpand _of a single file_ will not overwrite an existing file _*however*_ a warning is still given.
+ * The warning can be suppressed by an additional parameter *NOWARN*.
+ * The parameters *PRESERVE*, and *NOWARN* can be used simultaneously. The order does not matter.
 
 *{{{DestinationFolderOrFilename}}}* means that you can either specify a folder where this file will be placed with the original (expanded) filename or new filename that you prefer. 
 
@@ -17,10 +22,3 @@ In this example !CopyOrExpand will first try to find a file {{{c:\MyPath\myTextF
 {{{
 CopyOrExpand,c:\MyPath\myTextFile.txt,c:\MyPath\myNewerTextFile.txt
 }}}
-
-==Remarks==
-WB078 added:
- * If the destination file already exists, !CopyOrExpand gives a warning in the log, and will overwrite the existing file. 
- * If the optional *PRESERVE* parameter added, !CopyOrExpand _of a single file_ will not overwrite an existing file _*however*_ a warning is still given.
- * The warning can be suppressed by an additional parameter *NOWARN*.
- * The parameters *PRESERVE*, and *NOWARN* can be used simultaneously. The order does not matter.
