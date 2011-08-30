@@ -3,6 +3,8 @@
 =Ping=
 
 Ping will test if a given IP is valid and run a command if this test is true.
+
+==Syntax==
 {{{
 If,ping,<xxx.xxx.xxx.xxx>,<Command> 
 }}}
