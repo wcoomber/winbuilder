@@ -1,6 +1,6 @@
 =!FileCopy=
 
-Copy a single source file to a specified destination.
+Copy source file(s) to a specified destination.
 
 ==Syntax==
 {{{
