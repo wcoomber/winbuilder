@@ -3,6 +3,8 @@
 
 This syntax was introduced to simplify the addition of future conditions.  It basically changes the "sense" of the check from true to false. 
 In other words, the statement `If,Not,%var1%,EQUAL,%var2%,command` is equivalent to `If,%var1%,NOTEQUAL,%var2%,command`.
+
+==Syntax==
 {{{
 If,Not,<Condition>,<Command>
 }}}
