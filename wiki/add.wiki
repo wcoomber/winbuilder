@@ -7,6 +7,8 @@
 <br>
 =Add,!DesktopIni=
 
+Create a desktop.ini file in the selected folder allowing you to specify how a file system folder is viewed.
+
 ==Syntax==
 {{{
 Add,DesktopIni,Type,[Folder],[Section],Value,Data
@@ -33,7 +35,7 @@ Add,DesktopIni,Type,[Folder],[Section],Value,Data
 ||6||Data||The value data.||
 
 ==Remarks==
-This function is used to create a desktop.ini file in the selected folder. The Desktop.ini file is a text file that allows you to specify how a file system folder is viewed. The !ShellClassInfo section, allows you to customize the folder's view by assigning values to the appropriate entries.
+The Desktop.ini file is a text file that allows you to specify how a file system folder is viewed. The !ShellClassInfo section, allows you to customize the folder's view by assigning values to the appropriate entries.
  
 File system folders are commonly displayed with a standard icon and set of properties, which specify, for instance, whether or not the folder is shared. You can customize the appearance and behavior of an individual folder by creating a Desktop.ini file for that folder.
  
@@ -56,6 +58,8 @@ Add,DesktopIni,Path,%Target_PE%\AFolder,.ShellClassInfo,IconIndex,25
 <br>
 =Add,URL=
 
+Creates URL file links for default browser.
+
 ==Syntax==
 {{{
 Add,Url,[Type],<FileName>,<WebAddress>,[IconFile],[IconIndex],[HotKey]
@@ -75,9 +79,6 @@ Add,Url,[Type],<FileName>,<WebAddress>,[IconFile],[IconIndex],[HotKey]
 ||5||!IconFile||Optional parameter specifying full path of icon file to be associated with the URL link file. Can be specified as UrlDLL to reference the url.dll system file.||
 ||6||!IconIndex||Optional parameter specifying the icon index from the !IconFile. If not specified then the first icon in the specified file will be used.||
 ||7||!HotKey||Optional parameter specifying the hotkey used to launch the URL by the default browser. !Hotkeys are specified using the text form of the key separated by + e.g. CTRL+ALT+A.||
-
-==Remarks==
-Creates URL file links for default browser.
 
 ==Examples==
  * Create in Favorites Folder:
