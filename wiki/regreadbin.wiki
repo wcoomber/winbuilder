@@ -1,9 +1,12 @@
 ==!RegReadBin==
+
+Read a value from the key you specify.
+
 ==Syntax==
 {{{
 RegRead,<HKEY>,<Section>,<Key>,<%Variable%> 
 }}}
-This command will read a value from the key you specify. *NOTE: This command will only retrieve values from the following keytypes:*
+*This command will only retrieve values from the following keytypes:*
  * 0x1 - String - i.e. a text value
  * 0x2 - Expanded String - will expand any system variable value contained inside %%. (e.g. %temp%)
  * 0x7 - Multiple NULL separated strings
@@ -14,8 +17,6 @@ This command will read a value from the key you specify. *NOTE: This command wil
  * HKCR
  * HKEY_USERS
  * HKEY_CURRENT_CONFIG
-
-
 
 *Section* is the complete path to the section where the key is to be read from
 
