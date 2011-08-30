@@ -1,5 +1,7 @@
 =!AddAutoRun=
 
+Configure a program to automatically run on startup.
+
 ==Syntax==
 {{{
 AddAutoRun,[Title],[FileName],[Parameters],[StartMode]
@@ -16,8 +18,6 @@ AddAutoRun,[Title],[FileName],[Parameters],[StartMode]
 || || ||*4* = Run the program hidden and don't wait for the program to finish running.||
 
 ==Remarks==
-This is used to configure a program to automatically run when PE boots. 
-
 In PE1 projects the API calls [addshortcut AddShortcut,Autostart] to create the run entry in the registry.
 
 In PE2+ projects AddAutoRun will create an entry in the autorun section in the %PE_CFG% configuration file. 
