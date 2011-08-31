@@ -1,12 +1,15 @@
 =Retrieve,File=
 
+Display a dialog box asking the user to select a file.
+
 ==Syntax==
 {{{
 Retrieve,File,<Filename>,<%var%> 
 }}}
-This function will display a dialog box asking the user to select a filename. Once a value is selected and the user clicks "Ok" to close the box, this value will be stored inside %var%
- * You can specify the path to use and filter the accepted extensions or filenames to be accepted
- * %var% is a user defined variable containing the full path of the selected filename
+
+==Parameters==
+||1||!FileName||The initially selected folder and filter||
+||2||%var%||A user defined variable that will contain the full path of the selected file||
 
 == Example: ==
  This example will open a dialog box asking the user to select a file. This box will start in `c:\` and will only display files that match the filter criteria which is `*.txt` in this example. Once a file is selected, the %var% will contain the full filename of this selected file. 
