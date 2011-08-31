@@ -1,9 +1,12 @@
 =Retrieve,!FolderSize=
+
+Calculate the size of a folder in bytes.
+
 ==Syntax==
 {{{
 Retrieve,FolderSize,<Directory>,<%var%> 
 }}}
 
-This function is used to calculate the size of a folder and store it inside a variable.
- * Directory is the target directory
- * %var% is a user defined variable used to store the size of the folder (in bytes)
+==Parameters==
+||1||Directory||The target directory||
+||2||%var%||A user defined variable used to store the size of the folder.||
