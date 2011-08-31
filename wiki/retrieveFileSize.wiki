@@ -8,7 +8,7 @@ Retrieve,FileSize,<Filename>,<%var%>
 }}}
 
 ==Parameters==
-||1||!Filename||The full path to the file||
+||1||Filename||The full path to the file||
 ||2||%var%||A user defined variable that will contain the size of the file||
 
 == Syntax example: ==
