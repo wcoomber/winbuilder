@@ -1,12 +1,15 @@
 =Retrieve,!FileSize=
 
+Calculate the size of a file in bytes.
+
 ==Syntax==
 {{{
 Retrieve,FileSize,<Filename>,<%var%> 
 }}}
-This function is used to calculate the size of a file and store it inside a variable.
- * Filename is the target file
- * %var% is a user defined variable used to store the size of the file (in bytes) 
+
+==Parameters==
+||1||!Filename||The full path to the file||
+||2||%var%||A user defined variable that will contain the size of the file||
 
 == Syntax example: ==
 {{{
