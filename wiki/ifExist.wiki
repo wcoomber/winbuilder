@@ -9,8 +9,7 @@ Based on the specific test selected, one or more additional arguments may be nee
 || !ExistRegKey|| Not,!ExistRegKey || Check to see if a specific key does/doesn't exist inside the specified registry||
 || !ExistVar || Not,!ExistVar || Check to see if a specific variable does/doesn't exist - i.e. has it been defined||
 
-*Note: You can _NOT_ use wildcards in this existence checking.
-I.E. trying to use `*.*` would always fail, since there is no file with the astrix as a file name or extension*
+*Note: Wildcards may _only_ be used in the File and Directory existence checks. _BUT_, they may not give expected results.  <br>For example, checking to see if `*.*` exists may return TRUE even if no file is in that directory.*
 
 ==Syntax==
 {{{
