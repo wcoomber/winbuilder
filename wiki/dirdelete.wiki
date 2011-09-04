@@ -12,7 +12,6 @@ DirDelete,<DirToDelete>[,FAST]
 DirDelete,c:\MyPath
 }}}
 
-==WB076==
-Added the optional *`FAST`* parameter. When used, Winbuilder will rename the directory to a random name, and then execute the delete process in the background.  This can improve performance when removing directories that have a large number of files in them.
-
-*REMEMBER* - The background RD (remove direcotry) is a child of WinBuiler. When ( or *IF* ) WinBuilder is exited before the delete is finished, the background RD is exited, too, and may leave a directory with a name like `~<???>.tmp` left behind.  If this happens, just manually delete this directory.
+==Remarks==
+As of WB076, the optional *`FAST`* parameter was added. When this parameter is used, !WinBuilder will rename the directory to a random name, and then execute the delete process in the background.  This can improve performance when removing directories that have a large number of files in them. 
+ * *Note:* This background process (i.e. the remove directory command) is a child of !WinBuiler. When ( or *IF* ) !WinBuilder is exited before the delete is finished, the background process is also terminated, and may leave a directory with a name like `~<???>.tmp` left behind.  If this happens, just manually delete this directory.
