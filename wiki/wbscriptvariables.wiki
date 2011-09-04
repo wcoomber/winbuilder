@@ -98,7 +98,7 @@ Set,%Proj-Variable%,"NewValue,PERMANENT
 
 =Macros =
 
-Macros are also defined in the [Variables] section. But, unlike Variables they do not have the percent signs (%). This is how the internal processing knows that they are *not* variables.
+Macros are also defined in the `[Variables]` section. But, unlike Variables they do not have the percent signs (%). This is how the internal processing knows that they are *not* variables.
 
 When used inside a script file, they can only be used at the begin of a  line. They are used to substitute often used script command lines. Notice in the example below that if you are going to use any sort of parameter substitution, you would also need to create a separate section of code to be executed with the parameters being passed to that section.
 
