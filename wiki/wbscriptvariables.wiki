@@ -27,10 +27,12 @@ These explanations may seem complicated now but it's simple to understand once y
 
 ==Scope==
 
-The `[variables]` section can be placed in 3 different files, each one with a different scale of availability. 
- * System - variables placed inside !WinBuilder.ini are available for all projects and scripts
- * Project - variables inside script.project are available for all scripts
- * Script - placed inside the script that is running (also called as "local variables") are valid until the script is concluded.
+The `[variables]` section can be placed in 3 different files. Where a variable is defined will determine it's "scope" or availability.
+ * System - variables defined inside !WinBuilder.ini are available to all projects and scripts
+ * Project - variables defined inside script.project are available to all scripts inside the current project
+ * Script - variables defined inside the script that is running (also called "local variables") are valid until the script is concluded.
+
+Variables may also be created or defined as the result of various commands that are executed, and many of them have optional parameters that may change the scope of a give variable - for example the [set Set] or [addvariables AddVariables] commands can add variables to the script.project file (giving them a more permanent scope, or to the internal table that is active for the remainder of the current run (something between the project and script levels defined above).
 
 =Fixed Variables =
 These variables are created by default just before a project start to run.
@@ -71,22 +73,36 @@ These variables are created by default just before a project start to run.
 
 =Custom Variables =
 
-These are additional variables that can be added by script authors. To create them, place a section called `[variables]` into your script and write your variables in INI style. It is obligatory to use the percentage (%) for labeling it as a variable.
+These are additional variables that can be added by script authors. To create them, place a section called `[variables]` into your script and write your variables in INI style. Remember that since you are creating a variable, you need to use the percent sign (%) to make sure it is identified as a variable.
 
-==Example==
- For this example we are creating two variables, available while the script is running, which can be used inside script commands.
+==Examples==
+1. For this example we are creating two variables, available while the script is running, which can be used inside script commands.
 {{{
 [variables]
 %workdir%=c:\myPath
 %project_title%="My Boot Disk"
 }}}
 
+2. In this example, we will create one local variable, as well as a second section that when the script is run, will be added to the variables for the remainder of this run, as well as a third variable that will be added to the script.project as a project level variable for all future runs of this project.
+{{{
+[variables]
+%workdir%=c:\myPath
+
+[Global-variables]
+%global_variable%="some value"
+
+[process]
+AddVariables,%ScriptFile%,Global-variables,GLOBAL
+Set,%Proj-Variable%,"NewValue,PERMANENT
+}}}
 
 =Macros =
 
-Macros are defined in the [Variables] section, too. Unlike Variables they do not have the percentage (%) as label. And they can only be used at the begin of a script command line. They are used to substitute often used script command line starts.
+Macros are also defined in the [Variables] section. But, unlike Variables they do not have the percent signs (%). This is how the internal processing knows that they are *not* variables.
 
-==Example==
+When used inside a script file, they can only be used at the begin of a  line. They are used to substitute often used script command lines. Notice in the example below that if you are going to use any sort of parameter substitution, you would also need to create a separate section of code to be executed with the parameters being passed to that section.
+
+For example, the code
 {{{
 [Process]
 FileCopy,%source_sys%\aclui.dll,%target_sys%
@@ -94,7 +110,7 @@ FileCopy,%source_sys%\user32.dll,%target_sys%
 ...
 FileCopy,%source_sys%\kernel.dll,%target_sys%
 }}}
-Can be replaced by:
+could be replaced by defining a macro to call a separate section of code that would execute the file copy command.
 {{{
 [variables]
 Copy=Run,%ScriptFile%,DoCopy,%source_sys%,%target_sys%
@@ -108,34 +124,46 @@ Copy,user32.dll
 ...
 Copy,kernel.dll
 }}}
+It could also be simplified in this particular case, since we don't really need to pass in the directories.  This means we could embed them directly in the secion of code to be processed
+{{{
+[variables]
+Copy=Run,%ScriptFile%,DoCopy
 
+[DoCopy]
+FileCopy,%source_sys%\#1,%target_sys%
+
+[Process]
+Copy,aclui.dll
+Copy,user32.dll
+...
+Copy,kernel.dll
+}}}
+Both sets of code would produce the same results!
 
 =Runtime Variables =
 
-These are the type of variables that are created while the script is running. This means that you can create your own local variables whenever needed.
-
-To specifically create new variables you can use these script commands:
+In addition to the variables explicitly defined, and as mentioned above, additional variables may be created while the script is running. To specifically create new variables you can use these script commands:
  * [set set]
  * [addvariables addvariables]
 
+In addition to these commands, other commands also use variables to store or return the results of their processing. This means that whenever you use any command that uses a variable to store a result, a new variable may be created if it didn't exist before. 
 
-There's a small trick that you can also use to create new runtime variables. Whenever you use any command that uses a variable to store the result a new variable will be added to the list if it didn't existed before. This applies to:
- * strformat 
- * if
- * retrieve
- * iniread
- * regread.
+Some examples of commands that may do this are:
+ * [strformat StrFormat]
+ * [retrieve Retrieve]
+ * [iniread IniRead]
+ * [regread RegRead]
 
+and even the [if If] command (for some of it's various checks).  Mostly of this will only be local in scope, but it is always something to watch out for when creating variables to hold temporary results.
 
-One last detail - the run command also uses runtime variables that we can use to pass parameters to another section. These variables use numbers from #1 to #9. You should always check the values that are being used in each of these variables to ensure that everything works as you expect.
-
+One last detail - the run command also uses a form of runtime variables to pass parameters to another section. These variables are of a special format, and use the hash character (`#`) followed by a single digit (1-9). You should always validate the values that are being passed in each of these variables to ensure that everything works as you expect. And if you need more than 9 parameters, use the available commands to [packparam pack] and [getparam access] the parameters.
 
 
 =Bugs =
 
-There are a few known issues with variables that you should be aware.
- * Adding too many variables on the list will start decreasing performance of the script processing because of the quantity of text to analyse and translate - recommended to keep variables list on local scripts and projects as minimum as possible.
- * If the value of a variable A depends on the value of variable B and you decide to change the value of variable B - your variable A will not be updated and will still use the original value of variable B. This was a quick method done to improve speed and should be corrected soon. In the meantime you can call system,refreshvars to refresh all variables and use updated values.
+There are a few known issues with variables that you should be aware of.
+ * Adding too many global or project variables on the list could start decreasing performance - recommended to keep variables list on local scripts and projects as minimum as possible. *This also helps avoid unnecessary collisions in application scripts*
+ * If the value of a variable A depends on the value of variable B and you decide to change the value of variable B - your variable A will not be updated and will still use the original value of variable B. If necessary, you can call [systemRebuildVars  system,RebuildVars].
 
 Please let us know if this page is not complete or if you still haven't found needed information.
 
