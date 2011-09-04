@@ -7,13 +7,11 @@ Extract a file that is attached (encoded) inside a script to a temporary locatio
 ExtractAndRun,<%ScriptFile%>,<Folder>,<Filename>[,<parameters>] 
 }}}
 
-Optional run parameters can be defined. They must not contain spaces, quotes or commas. Use the escaped form of these characters (i.e. {{{ #$s, #$q, #$c}}} ) instead.
+Optional run parameters can be defined. They must not contain spaces, quotes or commas. Use the escaped form of these characters (i.e. {{{ #$s, #$q, #$c}}} ) instead. It is useful when you only wish to run a file for a very specific purpose and this way avoid having to add extra commands to 
+ # extract the file
+ # execute the file extracted
+ # clean up (i.e. delete the extracted file)
 
-It is useful when you only wish to run a file for a very specific purpose and this way avoid having to add extra commands to 
- # extract
- # run and then 
- # delete 
-the file from a temporary location when it is no longer needed.
 
 == Example: ==
 
