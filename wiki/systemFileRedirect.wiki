@@ -1,8 +1,11 @@
 =System,!FileRedirect=
+Redirect some of the OS directory calls to avoid possible conflicts.
+==Syntax==
 {{{
 System,FILEREDIRECT,{ON|OFF}
 }}}
-Maybe necessary when !WinBuilder is running on a 64bit system. Some directory calls are getting redirected by the OS to avoid possible conflicts. Using a 32bit system this command is without effect. 
+==Remarks==
+Only necessary when !WinBuilder is running on a 64bit system.  On a 32bit system, this command has no effect. 
 
 === Example: ===
 {{{
