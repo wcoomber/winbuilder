@@ -1,13 +1,18 @@
 =System,Comp80=
+
+To improve processing speed, the way variables are treated internally was changed. In some situations, this may cause incompatible results.  This setting allows the project to force compatible processing to occur.
+==Syntax==
 {{{
-System,Comp80,{on|off}
+System,Comp80,{On|Off}
 }}}
- * Use this command to force compatability with winbuilder version 80. WB 082 is in some situations incompatible with WB 080 because of the way that variables are treated internally.
- * With System,Comp80,ON or System,Comp80,OFF you can make the current WB script processing (mostly) compatible to the processing of WB 080.
- * If compatability is set to off then scripts are processed 2 to 3 times faster.
- * *When starting WB 082, by default the compatibility is switched off.*
+
+==Remarks==
+ * By using `System,Comp80,OFF` you can make the current !WinBuilder script processing (mostly) compatible to the processing of !WinBuilder 080.
+ * When compatibility is set to off, scripts are processed 2 to 3 times faster.
+ * *By default the compatibility is switched off (starting with version 082).* 
 
 ==Example: ==
+In this example, we want to go back to the slower, but compatible way of processing variables.
 {{{
-System,Comp80,off
+System,Comp80,On
 }}}
