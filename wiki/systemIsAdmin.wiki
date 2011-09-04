@@ -1,4 +1,7 @@
 =System,!IsAdmin=
+Check to see if !WinBuilder was started by an account with "Admin" privileges.
+
+==Syntax==
 {{{
 System,ISADMIN,%var%
 }}}
