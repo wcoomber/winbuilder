@@ -1,9 +1,12 @@
 =System,!GetFreeSpace==
+
+Returns the free space of Path's drive in megabytes 
+
+==Syntax==
 {{{
 System,GETFREESPACE,<Path>,<%var%>
 }}}
-Returns the free space of Path's drive in megabytes and puts result into %var%
-(megaybtes = free bytes / 1024 * 1024)
+This command computes the free disk space on the drive specifice, and puts result into %var%. Note: megaybtes = free bytes / (1024 * 1024)
 
 === Example: === 
 {{{
