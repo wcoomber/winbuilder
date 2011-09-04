@@ -1,5 +1,6 @@
 =System,!IsTerminal=
-
+Check to see if !WinBUilder has been started on a remote desktop
+==Syntax==
 {{{
 System,IsTerminal,<%var%>
 }}}
