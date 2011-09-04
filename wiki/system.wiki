@@ -22,7 +22,6 @@ It can also set a flag that reminds the program to perform the specified action 
    * [systemOnScriptExit OnScriptExit]
    * [systemRebuildVars RebuildVars]
    * [systemRefreshInterface RefreshInterface] 
-   * [systemRefreshVars RefreshVars] 
    * [systemRegRedirect RegRedirect] ^64bit systems only^
    * [systemReScanScripts ReScanScripts]
    * [systemSaveLog SaveLog]
