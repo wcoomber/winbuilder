@@ -1,8 +1,8 @@
-==!RegWriteBin / !RegWriteBinEx==
+=!RegWriteBin / !RegWriteBinEx=
 
 Write Wide Strings (e.g. Unicode) into the registry. The wide string is defined by a series of hexadecimal values, separated by comma.
 
-=Syntax=
+==Syntax==
 {{{
 RegWriteBin,<HKEY>,<KeyType>,<Section>,<Keyname>,<Value> 
 }}}
