@@ -4,7 +4,7 @@ Rebuild the system variable table
 {{{
 System,REBUILDVARS
 }}}
-This is a successor of [systemRefreshVars System,RefreshVars], which since WB076 in most cases is no longer necessary (or supported)
+This is the successor of `System,RefreshVars`, which was deprecated as of WB076. In most cases it is no longer necessary (*or supported*).
 
 === Example: === 
 {{{
