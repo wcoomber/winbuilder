@@ -32,7 +32,6 @@ Under this category you find the commands which aren't grouped under any specifi
    * [systemOnScriptExit System,OnScriptExit]
    * [systemRebuildVars System,RebuildVars]
    * [systemRefreshInterface System,RefreshInterface] 
-   * [systemRefreshVars System,RefreshVars] 
    * [systemRegRedirect System,RegRedirect] ^64bit systems only^
    * [systemReScanScripts System,ReScanScripts]
    * [systemSaveLog System,SaveLog]
