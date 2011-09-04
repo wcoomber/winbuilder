@@ -1,4 +1,4 @@
-==System,!ReScanScripts==
+=System,!ReScanScripts=
 
 Find and categorize scripts displayed on the main window.
 
