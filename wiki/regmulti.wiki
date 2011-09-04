@@ -1,4 +1,4 @@
-==!RegMulti==
+=!RegMulti=
 
 Modify a multi-string registry entry.
 
