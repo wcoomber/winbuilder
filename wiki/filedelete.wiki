@@ -8,12 +8,11 @@ FileDelete,<FileToDelete> [,Nowarn][,Norec]
 }}}
 
 ==Parameters==
-||1||!FileToDelete||The full path to the file(s) including sub-directories to delete. Wildcards are supported.||
-|| || ||If the file does not exist or no files match the wildcard a warning will be logged.||
-|| ||NOWARN _(Optional)_||Do not log a warning if files don't exist||
-|| ||NOREC _(Optional)_||Only matching files in the specified directory will be deleted. Sub-directories will be ignored.||
+||1||!FileToDelete||The full path to the file(s) including sub-directories to delete. Wildcards are supported. If the file does not exist or no files match the wildcard a warning will be logged.||
+||-||NOWARN _(Optional)_||Do not log a warning if the files don't exist||
+||-||NOREC _(Optional)_||Only matching files in the specified directory will be deleted. Sub-directories will be ignored.||
 
- * The optional Nowarn and Norec parameters can be specified in any order.
+ * The optional parameters Nowarn and Norec can be specified in any order.
  * *All deleted files are immediately removed. You cannot recover them from the recycle bin.*
 
 == Example 1: ==
