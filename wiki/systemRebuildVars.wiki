@@ -1,4 +1,6 @@
 =System,!RebuildVars=
+Rebuild the system variable table
+==Syntax==
 {{{
 System,REBUILDVARS
 }}}
