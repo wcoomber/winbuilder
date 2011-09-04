@@ -175,13 +175,13 @@ A: Look inside a project folder and open up the script.project file with notepad
 ----
 Q: I'm doing my own script - how can I know if the value of my variables is right?
 
-A: Use commands to output show the variables on the log. Echo,%myVar% is a good example to help in this case.
+A: Use commands to output show the variables on the log. Echo,%myVar% is a good example to help in this case. Another good choice is the [message message] command, since it can be made to wait until you click "OK" before processing continues.
 ----
-Q: I know that we don't need to %% on each variable we create - are there any restrictions about what I can and cannot use?
+Q: I know that we need to use the percent sign (%) to indicate something is a a variable, so it can *not* be used as a part of the variable name. Are there any other restrictions about what I can and cannot use?
 
-A: You should only be careful to choose titles that aren't confused with other commands or variables, try using distinct titles that identify the variable purpose.
+A: You should only be careful to choose titles that aren't confused with other commands or variables, try using distinct titles that identify the variable purpose or use a unique prefex to ensure a project variable doesn't clash with any other scripts variables.
 ----
 Q: Also heard that variables can replace commands, is this true?
 
-A: Variables can't directly replace commands but can be used to run sections with new specific functions. Look on the script applications page for details about this sort of use.
+A: Variables can't directly replace commands but can be used to run sections either within the current script, or any other available script. This is used to implement the [wbcommonapi API] functionality. Also see the section on [wbscriptvariables#Macros Macros] above. 
 ----
