@@ -1,4 +1,4 @@
-==!RegReadBin==
+=!RegReadBin=
 
 Read a value from the key you specify.
 
