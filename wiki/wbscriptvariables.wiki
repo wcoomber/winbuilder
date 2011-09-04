@@ -166,7 +166,7 @@ There are a few known issues with variables that you should be aware of.
 
 Please let us know if this page is not complete or if you still haven't found needed information.
 
-=Variables FAQ =
+=FAQ (on variables)=
 ----
 Q: I'm still a bit confused, how can I understand this better?
 
