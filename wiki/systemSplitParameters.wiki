@@ -25,22 +25,5 @@ Echo,#3
 }}}
 
 This creates a log file result:
-{{{
-Processing section: [process] 
-File [%BaseDir%\Projects\win7_pe\CodeBox.txt] Version [1]
-SetVar - Sucessfuly changed the value of [%List%] to: [a#$cb#$cc]
-Run - Processing section: [Test] From file: [%BaseDir%\Projects\win7_pe\CodeBox.txt]
-with parameters: [a,b,c]
-a,b,c
 
-
-Run - Processed section [Test] in file: [%BaseDir%\Projects\win7_pe\CodeBox.txt]
-System,SplitParameters,ON
-Run - Processing section: [Test] From file: [%BaseDir%\Projects\win7_pe\CodeBox.txt]
-with parameters: [a],[b],[c]
-a
-b
-c
-Run - Processed section [Test] in file: [%BaseDir%\Projects\win7_pe\CodeBox.txt]
-System,SplitParameters,OFF
-}}}
+http://winbuilder.googlecode.com/svn/wiki/images/SplitParameters.png
