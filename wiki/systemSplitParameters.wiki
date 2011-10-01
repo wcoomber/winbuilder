@@ -7,7 +7,7 @@ Splits in a 'Run' or 'Exec' command a single parameter which contains commas, in
 System,SPLITPARAMETERS,{ON|OFF}
 }}}
 
-The {{{System,SPLITPARAMETERS,ON}}} command can be given once in the project, e.g. in [Process] of script.project, and is then valid for the complete project (or until it is switched off by a {{{System,SPLITPARAMETERS,OFF}}} command.  It can then be switched on again later, and off, and so on ....) 
+The {{{System,SPLITPARAMETERS,ON}}} command can be given once in the project, e.g. in the `[Process]` section of script.project, and is then valid for the complete project (or until it is switched off by a {{{System,SPLITPARAMETERS,OFF}}} command.  It can then be switched on again later, and off, and so on ....) 
 
 == Example: == 
 {{{
