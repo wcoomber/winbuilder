@@ -12,5 +12,12 @@ This is a list of issues/quirks/oddities with Winbuilder.exe that cannot be fixe
 
 *Workaround:* the Winbuilder engine itself is quite happy to read beyond the limit when processing the script so processing is not affected. One must just use another text editor such as notepad to modify the script. 
 
-*Remarks:* Unfortunatelly the code editor is a third party addon, and cannot be changed.
+*Remarks:* Unfortunately the code editor is a third party addon, and cannot be changed.
+----
+
+*Issue:* Sometimes text labels do not show up when using themes other than "Windows Classic" [http://reboot.pro/14856/page__hl__%2Bdisable+%2Bvisual+%2Bthemes__fromsearch__1 [Development Topic]]
+
+*Workaround:* Use the windows classic them or disable Visual Styles in the Compatibility options for Winbuilder.exe
+
+*Remarks:* This is a known issue with the current Delphi 7 compiler.
 ----
