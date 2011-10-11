@@ -12,6 +12,7 @@
    * [wbprojects Projects]
    * [wbscriptfaq  WinBuilder F.A.Q. and other Information]
      * [wbcompat Compatibility]
+     * [wbknownissues Known Issues]
      * [wbtrouble Troubleshootings]
      * [wbbugs Reporting Bugs]
      * [wblicense License]
