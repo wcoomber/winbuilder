@@ -50,7 +50,7 @@ These settings control the web sites listed in the download center.  See [wbtool
 ==Register Extensions==
 ||!RegisterExtensionsWith|| Register !WinBuilder extentions (i.e. `*.script`) to an external editor.||
 ||!RegisterExtensionsDouble|| Set the *_Double click_* syntax||
-||RegisterExtensionsRight|| Set the *_Right click_* syntax||
+||!RegisterExtensionsRight|| Set the *_Right click_* syntax||
 
 ==Log File Options==
 ||!ForceWarning|| Switches "Debug Log" on / off||
