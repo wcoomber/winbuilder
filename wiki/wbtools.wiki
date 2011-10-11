@@ -171,7 +171,7 @@ You can also add commands using the right click menu in the same way as the inte
 
 The code you add inside the Code Box is automatically saved inside a file called CodeBox.txt which can be found on the root of each project where you use it - this way we ensure that you can have a Code Box specific to a single project.
 
-===Download===
+==Download Center==
 
 The Download interface was added to help people keep in touch with the community. From this page you can quickly view the latest discussed topics from our forums.
 
