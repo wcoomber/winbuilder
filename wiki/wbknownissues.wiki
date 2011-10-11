@@ -8,7 +8,7 @@ This is a list of issues/quirks/oddities with Winbuilder.exe that cannot be fixe
 
 ----
 
-*Issue:* The code editor has a column limit of 1024 characters. [http://reboot.pro/15569/page__pid__138997#entry138997 `[`Bug Report`]`]
+*Issue:* The code editor has a column limit of 1024 characters. [http://reboot.pro/15569/page__pid__138997#entry138997 [Bug Report]]
 
 *Workaround:* the Winbuilder engine itself is quite happy to read beyond the limit when processing the script so processing is not affected. One must just use another text editor such as notepad to modify the script. 
 
