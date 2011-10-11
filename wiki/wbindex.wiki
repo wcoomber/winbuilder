@@ -274,4 +274,4 @@
   * [select_case Select_Case]
   * [unpack Unpack]
  * [wbadditionalsyntax Additional Syntax]
-   * [wb_ini_settings WinBuilde.ini ]
+   * [wb_ini_settings WinBuilder.ini ]
