@@ -6,7 +6,7 @@ First some rules:
  # Enclosing quotes MUST be used if the !WinBuilder Script Line Parameters contain spaces. 
 
 Since there are times when the comma or quote need to be used inside a string or parameter, !WinBuilder has a character escape mechanisim. The following are the available escape characters: 
- * `#$c` - Comma (`'`)
+ * `#$c` - Comma (`,`)
  * `#$p` - Percent (`%`) 
  * `#$q` - Double quotes (`"`)
  * `#$s` - Space (` `)
