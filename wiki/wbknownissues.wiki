@@ -12,7 +12,7 @@ This is a list of issues/quirks/oddities with Winbuilder.exe that cannot be fixe
 
 *Workaround:* the Winbuilder engine itself is quite happy to read beyond the limit when processing the script so processing is not affected. One must just use another text editor such as notepad to modify the script. 
 
-*Remarks:* Unfortunately the code editor is a third party addon, and cannot be changed.
+*Remarks:* This limit will be raised to 10240 in the next release (WB83-WB84)
 ----
 
 *Issue:* Sometimes text labels do not show up or check boxes disappear when using themes other than "Windows Classic" [http://reboot.pro/14856/page__hl__%2Bdisable+%2Bvisual+%2Bthemes__fromsearch__1 [Development Topic]]
