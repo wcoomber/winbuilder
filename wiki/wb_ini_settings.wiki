@@ -8,9 +8,9 @@ Certain aspects of !WinBuilder's exe are stored or can be controlled using varia
 
 == General Appearance / Information==
 ||X|| Stores the *_Left side_* coordinate used to create the !WinBuilder window. It is updated when exiting !WinBuilder||
-||XX|| Stores the *_Right_* side coordinate used to create the !WinBuilder window. It is updated when exiting !WinBuilder||
+||XX|| Stores the *_Width_* used to create the !WinBuilder window. It is updated when exiting !WinBuilder||
 ||Y|| Stores the *_Top_* coordinates used to create the !WinBuilder window. It is updated when exiting !WinBuilder||
-||YY|| Stores the *_Bottom_* coordinate used to create the !WinBuilder window. It is updated when exiting !WinBuilder||
+||YY|| Stores the *_Height_* used to create the !WinBuilder window. It is updated when exiting !WinBuilder||
 ||SP|| Sets the *_Width_* of the script tree pane inside the Main Window. It is updated when exiting !WinBuilder||
 ||!InterfaceGrid|| Sets the number of pixels used for the Grid inside the interface editor. Set this to *_0_* if no grid is desired||
 ||!Last_Project|| Name of the *_last project_* used by !WinBuilder. It is updated when exiting !WinBuilder||
@@ -18,7 +18,7 @@ Certain aspects of !WinBuilder's exe are stored or can be controlled using varia
 ||!Enable_RefreshButton|| Set this to *_True_* to show the "Refresh" option on the main window.  Can also be managed using the Advanced setting on the [wbtools#The_Tools_Tab "Tools"] Tab||
 ||Language|| Language of the string translation file(%Tools%\Language\????.txt)   See also [wbtools#Language_Support Language Support]||
 ||!FileVersion|| Contains the version of the !WinBuilder.exe last used||
-||!!RunExternal|| *HAVE NO IDEA*||
+||!RunExternal|| *HAVE NO IDEA*||
 
 ==Download Window==
 ||!DisableNetwork|| If set to *_1_* will disable the network, which switches the download functionality generally off. When set to *_0_* or not supplied, the network is enabled||
@@ -65,5 +65,5 @@ These settings control the web sites listed in the download center.  See [wbtool
 ||!noIconLog|| Put strings ( i.e. "`[Success]`" etc.) into logs rather than using pointers to icons||
 ||!noTimeOutput|| Do not output time in log (This can make it easier to compare two different log files)||
 ||!SyntaxWarn|| Produce a *_Warning_* on unresolved (misspelled) commands||
-||!ShowVariables|| Add a list of variables to top of log - default is "True")||
+||!ShowVariables|| Add a list of variables to top of log - default is "True"||
 ||!ViewLogInBrowser|| Automatically show log in browser after generating log.html||
