@@ -110,7 +110,7 @@ Some examples of commands that may do this are:
  * [iniread IniRead]
  * [regread RegRead]
 
-and even the [if If] command (for some of it's various checks).  Mostly these variables will only be local in [wbscriptvariables#scope scope], but it is always something to watch out for when creating variables to hold temporary results.
+and even the [if If] command (for some of it's various checks).  Mostly these variables will only be local in [wbscriptvariables#Scope scope], but it is always something to watch out for when creating variables to hold temporary results.
 
 One last detail - the run command also uses a form of runtime variables to pass parameters to another section. These variables are of a special format, and use the hash character (`#`) followed by a single digit (1-9). You should always validate the values that are being passed in each of these variables to ensure that everything works as you expect. And if you need more than nine parameters, use the available commands to [packparam pack] and [getparam access] the parameters.
 
