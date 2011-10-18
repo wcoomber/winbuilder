@@ -48,7 +48,7 @@ List of available keys
  * Selected - using True/False will make your be checked or not for being processed. These are usually set (checked or not) using the !WinBUilder GUI. To completely remove any checkbox, set the value to "None". eg. *`Selected=None`*
  * Locked - use True/False to allows the users to edit the script interface 
  * Level - very important setting to allow your script to be placed on the correct sequence when the project is running (see [wbscriptlevels#Script_Levels Script Levels] for more details on this)
- * Interface - Can be used in complex script to select a specific section of the script file to become the interface. If not specified, the displayed interface will be driven by the `[Interface]` section. See *[wbinterface_gui this page] for more information
+ * Interface - Can be used in complex script to select a specific section of the script file to become the interface. If not specified, the displayed interface will be driven by the `[Interface]` section. See [wbinterface_gui this page] for more information
 
 While some of the keys can be manipulated using the !WinBuilder GUI, All of these keys can be edited easily using !WinBuilder's internal source code editor. And while these keys are optional, it is recommended to place at least a few keys to better describe your script to others (i.e. `Title` and `Description`).  
 
