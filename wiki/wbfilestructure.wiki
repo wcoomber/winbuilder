@@ -99,7 +99,7 @@ The result of each operation is written on the log window - which you can later 
 
 
 ==The `[Interface]` section==
-While this is important to scripts it is described in more detail *[wbscriptgui-interface on a separate page]*.
+While this is important to scripts it is described in more detail *[wbinterface_gui on a separate page]*.
 
 
 ==The `[OnProcessEntry]` section==
