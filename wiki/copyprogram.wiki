@@ -1,6 +1,6 @@
 =!CopyProgram=
 
-Copy all files from a specified directory to %ProgramFolder%
+Copy all files from a specified directory to `%ProgramFolder%`
 
 ==Syntax==
 {{{
