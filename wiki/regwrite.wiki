@@ -32,7 +32,7 @@ This command will create a new registry entry as specified.
  * Keyname and value are similar to the method for INI files, please ensure that the value you use is compatible with the key type.
 
 ==Tips==
-To create an empty section: Write a key using keytype as 0x1 and omit the entries for key and value - this will create a new section at the location you specify.
+To create an empty section: Write a key using keytype as 0x0 and omit the entries for key and value - this will create a new section at the location you specify.
 
 
 == Example: ==
