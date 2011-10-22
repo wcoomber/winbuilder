@@ -31,4 +31,4 @@ ShellExecute,open,cmd.exe
 == See Also ==
  * [shellexecutedelete ShellExecuteDelete] - has a similar behavior but will delete the application after it has been finished.
 
- * [shellexecuteex ShellExecuteEx] - has a similar behavior but won't wait for the application to be finished and will continue with the script processing right after launching the target filename. Since it does not wait for any executable to finish, no !%ExitCode% will be returned.
+ * [shellexecuteex ShellExecuteEx] - has a similar behavior but won't wait for the application to be finished and will continue with the script processing right after launching the target filename. Since it does not wait for any executable to finish, no %!ExitCode% will be returned.
