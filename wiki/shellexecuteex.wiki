@@ -28,4 +28,4 @@ ShellExecuteEx,Open,explorer.exe,/e#$c#$q%OpenFolder%#$q,%OpenFolder%
 
 == See Also ==
 
- * [shellexecute ShellExecute] - has a similar behavior but will wait for the application to be finished and will continue with the script processing right after launching the target filename.
+ * [shellexecute ShellExecute] - has a similar behavior but will wait for the application to be finished *before* it will continue with the script processing.
