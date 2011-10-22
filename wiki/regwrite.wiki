@@ -41,7 +41,7 @@ RegWrite,HKLM,0x4,Build\ControlSet001\Services\VgaSave\Device0,DefaultSettings.X
 }}}
 
 ==WB078 added:==
- * RegWrite gives a warning in the log, if the destination value already exists.
- * If there is a parameter PRESERVE added, RegWrite does not overwrite an existing value. A warning is still given
+ * !RegWrite gives a warning in the log, if the destination value already exists.
+ * If there is a parameter PRESERVE added, !RegWrite does not overwrite an existing value. A warning is still given
  * The warning can be suppressed by an additional parameterNOWARN
  * The parameters PRESERVE, and NOWARN can be used simultaniously. The order does not matter.
