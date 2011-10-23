@@ -46,20 +46,29 @@ Use this tool to add files inside your scripts.
 
 To allow your script to properly include binary files and still be editable with any text editor - these files will be encoded into an text form. These files can later be extracted while the script is running to the location you wish. 
 
-===When adding your files, please be careful not to include very large files or software that are not authorized to be freely distributed inside scripts.====
+ * *When adding your files, please be careful not to include very large files or software that are not authorized to be freely distributed inside scripts.*
 
 ==Options==
 
-On this tab you can change the behavior of the script when it is enabled from the main window. It was added to ensure that other required scripts or even other scripts that are incompatible get disabled or enabled to automatically to help users.
- * Dependencies - all scripts listed here will be enabled whenever possible
- * Disable - the scripts on this list will be disabled if they are enabled on your project.
+On this tab you can change the behavior of the script when it is enabled (i.e. Selected to be run) from the main window. It was added to ensure that other required scripts or even other scripts that are incompatible get disabled or enabled (i.e. selected or deselected) automatically.
 
 In each box you can specify the path to the scripts you wish to control. To avoid using static paths you can use these variables to make the path dynamic
  * %!ProjectDir% - is the full path to your project folder
  * %!ScriptDir% - it's the path where this script is located
  * %!BaseDir% - is the path where !WinBuilder.exe was executed from (base)
 
-You can also list more than one script on this text box, just split each script with a comma.
+You can also list more than one script on this text box, just split each script with a comma. Be careful of any spaces in the data you enter, which is why it is best to use the variables mentioned above to help isolate problems that might be caused by the location of the project.
+
+ * Dependencies - If this script is "enabled" (i.e. goes from an un-selected state to selected, all the scripts listed here will be enabled (if possible), and all the files listed will be checked to make sure that they exist. *Notes:* 
+    # This means that if you select a script that has dependencies, !WinBuilder will try to find those dependencies and if it is a script, will mark that script as "enabled" - i.e. mark it with a checkbox so it will be executed.
+    # This functionality can only "enable" dependent scripts.  It will *NOT* turn them off (or deselect them) if this script is later un-selected.
+    # The user could still decide *not* to run these scripts by manually "un-selecting" them later.
+
+ * Disable - Only scripts should be listed here. When this particular script is "enabled", !WinBuilder will search for the listed script files, and try to disable them (i.e. make sure they are not currently "selected" to be executed. *Notes:* 
+    # This functionality can only "disable" scripts.  It will *NOT* turn them back on (or select them) if this script is later un-selected.
+    # The user could still decide to run these scripts by manually "selecting" them later.
+
+_Finally, a note for script writers...If you change these settings, be sure to do a "refresh" of the scripts, since !WinBuilder loads this information as it is parsing the scripts in the project - i.e. It is not dynamically reloaded as an individual script file is modified._
 
 ==Source Code==
 
