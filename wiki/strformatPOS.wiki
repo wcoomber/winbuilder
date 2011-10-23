@@ -3,7 +3,7 @@
 {{{
 StrFormat,POS,<String>,<SubString>,<%VarResult%>
 }}}
-find the position of the given SubString inside the specified String and return the result in %VarResult%
+find the position of the given !SubString inside the specified String and return the result in %!VarResult%
 
 ==Example: == 
 In this example we verify the position of (case insensitive) 'orl' in 'Hello World' with result 8.
