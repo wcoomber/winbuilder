@@ -7,7 +7,7 @@ These commands will trim off characters from the specified sting (or variable th
  * LTrim - trim from the left
  * RTrim - trim from the right
  * CTrim - trim a matching character
- * NTrim - trim any numbers from the string
+ * NTrim - trim any numbers from the *end* of the string
 
 == Example: == 
 In this example we have a given string tomorrow and we trim 3 chars from the left. The remaining rest is filled into %var% with value orrow.
