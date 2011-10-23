@@ -46,7 +46,7 @@ Use this tool to add files inside your scripts.
 
 To allow your script to properly include binary files and still be editable with any text editor - these files will be encoded into an text form. These files can later be extracted while the script is running to the location you wish. 
 
- *When adding your files, please be careful not to include very large files or software that is not authorized to be freely distributed inside scripts.*
+===When adding your files, please be careful not to include very large files or software that are not authorized to be freely distributed inside scripts.====
 
 ==Options==
 
