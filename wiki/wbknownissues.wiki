@@ -7,6 +7,7 @@ This is a list of issues/quirks/oddities with Winbuilder.exe that cannot be fixe
 = Known issues: =
 
 ----
+==1==
 
 *Issue:* The code editor has a column limit of 1024 characters. [http://reboot.pro/15569/page__pid__138997#entry138997 [Bug Report]]
 
@@ -17,6 +18,7 @@ This is a list of issues/quirks/oddities with Winbuilder.exe that cannot be fixe
 *Remarks:* This limit will be raised to 10240 in the next release (WB83-WB84)
 
 ----
+==2==
 
 *Issue:* Bug with [getparam  GetParam] [http://reboot.pro/15223/page__view__findpost__p__135483 [Forum Topic]]
 
@@ -34,6 +36,7 @@ Echo,%Value%
 
 *Remarks:* Fixed in a future WB release (WB83-WB84)
 ----
+==3==
 
 *Issue:* Sometimes text labels do not show up or check boxes disappear when using themes other than "Windows Classic" [http://reboot.pro/14856/page__hl__%2Bdisable+%2Bvisual+%2Bthemes__fromsearch__1 [Development Topic]]
 
