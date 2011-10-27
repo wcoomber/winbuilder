@@ -89,7 +89,7 @@ In the template that is inserted into the code, the items or values used in the 
 =The Tools Tab=
 There are many optional settings and tools available by selecting the tools function 
 
-==WinBuilder Options ==
+==!WinBuilder Options==
 
 The options tab allows to change some of the !WinBuilder executable settings to work as you prefer.
 
