@@ -11,6 +11,7 @@
    * [wbscriptapplication Application Scripts]
    * [wbprojects Projects]
    * [wbscriptfaq  WinBuilder F.A.Q. and other Information]
+     * [wb_ini_settings WinBuilder.ini Settings ]
      * [wbcompat Compatibility]
      * [wbknownissues Known Issues]
      * [wbtrouble Troubleshootings]
@@ -274,4 +275,3 @@
   * [select_case Select_Case]
   * [unpack Unpack]
  * [wbadditionalsyntax Additional Syntax]
-   * [wb_ini_settings WinBuilder.ini ]
