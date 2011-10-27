@@ -48,7 +48,7 @@ To allow your script to properly include binary files and still be editable with
 
  * *When adding your files, please be careful not to include very large files or software that are not authorized to be freely distributed inside scripts.*
 
-==Options==
+==Script File Options==
 
 On this tab you can change the behavior of the script when it is enabled (i.e. Selected to be run) from the main window. It was added to ensure that other required scripts or even other scripts that are incompatible get disabled or enabled (i.e. selected or deselected) automatically.
 
@@ -87,24 +87,28 @@ In the template that is inserted into the code, the items or values used in the 
 <br>
 ----
 =The Tools Tab=
-There are many options and tools available by selecting the tools function 
+There are many optional settings and tools available by selecting the tools function 
 
-==Options ==
+==WinBuilder Options ==
 
-The options tab allows to change some settings to work as you prefer or read more informations about wb.
+The options tab allows to change some of the !WinBuilder executable settings to work as you prefer.
 
  * Local Registry 
- This box contains settings that allow you to write associate !WinBuilder related files to open with your favourite text editor. You have the option to add the file association on your registry and later removed if needed.
+ This box contains settings that allow you to associate !WinBuilder related files to open with your favorite text editor. You have the option to add the file association to your registry and later remove it if needed.
 
- You can also make wb ensure that these script files are predefined to your text editor when the program is starting up.
+ You can also make sure that !WinBuilder assigns script files to be handled by your favorite text editor when it is started.
 
  * Log Options
- Control the behavior of your log window after a project is concluded. The first option "View in browser after saving" means that when you press the Save log button inside the log window your log.html file will be created and opened using you favorite browser.
+ Control the behavior of your log window after a project is concluded. 
 
- The option "Open log window after process" will show you the contents of the log window when your project has finished running all scripts. This is an useful option when debugging your projects and scripts.
+   # The option "View in browser after saving" means that when you press the Save log button inside the log window your log.html file will be created and opened using you favorite browser.
+
+   # The option "Open log window after process" will automatically show you the contents of the log window when your project has finished running all scripts. This is an useful option when debugging your projects and scripts.
+
+   # The other options control the amount and types of information put into the log file.  They are provided here as an easy way to change the settings stored in the [wb_ini_settings WinBuilder.ini Settings file].
 
  * Network support 
- You can enable or disable network support inside !WinBuilder. This applies to
+ You can enable or disable network support inside !WinBuilder. This affects the following:
   * Web tab
   * Download Center
   * FTP client
