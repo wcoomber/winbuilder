@@ -18,7 +18,7 @@ This is a list of issues/quirks/oddities with Winbuilder.exe that cannot be fixe
 
 ----
 
-*Issue:* Bug with GetParm [http://reboot.pro/15223/page__view__findpost__p__135483 [Topic]]
+*Issue:* Bug with [getparam  GetParam] [http://reboot.pro/15223/page__view__findpost__p__135483 [Forum Topic]]
 
 *Workaround:* Use string format 
 {{{
