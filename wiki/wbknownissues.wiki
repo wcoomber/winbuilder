@@ -46,9 +46,9 @@ Echo,%Value%
 ----
 ==4==
 
-*Issue:* When using [regimport RegImport],Path\*reg binary values are written incorrectly. [http://reboot.pro/15828/page__pid__141850#entry141850 [Bug Report]]
+*Issue:* When using [regimport RegImport] reg binary values are written incorrectly. [http://reboot.pro/15828/page__pid__141850#entry141850 [Bug Report]]
 
-*Workaround:* Convert the .reg file to WB script using [http://reboot.pro/files/file/48-reg2wbs/ [Reg2Wbs]] or [http://theoven.org/index.php?topic=106.0 [RegCPE]. You can also use shellexecute to merge the .reg into the hive {{{ShellExecute,hide,regedit.exe,"/s #$qMyRegFile.reg#$q"}}}
+*Workaround:* Convert the .reg file to WB script using [http://reboot.pro/files/file/48-reg2wbs/ Reg2Wbs] or [http://theoven.org/index.php?topic=106.0 RegCPE]. You can also use shellexecute to merge the .reg into the hive {{{ShellExecute,hide,regedit.exe,"/s #$qMyRegFile.reg#$q"}}}
 
 *Remarks:* This is an issue with the Delphi7 function
 {{{TRegFile.LoadFromFile(<filepath>);}}} and cannot be corrected without updating the compiler to a newer version ($$$).
