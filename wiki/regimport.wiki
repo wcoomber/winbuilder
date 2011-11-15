@@ -9,7 +9,7 @@ RegImport,<RegFileToImport>
 
 =Warning=
  # *As stated above, this adds information to the CURRENT systems registry.  You should be careful and use this only with sections mounted using the proper commands to mount hives otherwise you might corrupt the current systems registry!*
- # *In addition, there is a known issue with binary data.  See [http://reboot.pro/15828 this posting] on reboot.pro*
+ # *In addition, there is a known issue with binary data.  See [http://reboot.pro/15828/ this posting] on reboot.pro*
 
 == Example: ==
 {{{
