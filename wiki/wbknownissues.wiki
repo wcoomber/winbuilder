@@ -44,14 +44,14 @@ Echo,%Value%
 
 *Remarks:* This is a known issue with the current Delphi 7 compiler.
 ----
-==3==
+==4==
 
 *Issue:* When using RegImport,Path\*reg binary values are written incorrectly.
 
 *Workaround:* Convert the .reg file to WB script using [http://reboot.pro/files/file/48-reg2wbs/ [Reg2Wbs]] or [http://theoven.org/index.php?topic=106.0 [RegCPE]. You can also use shellexecute to merge the .reg into the hive {{{ShellExecute,hide,regedit.exe,"/s #$qMyRegFile.reg#$q"}}}
 
 *Remarks:* This is an issue with the Delphi7 function
-TRegFile.LoadFromFile(<filepath>); and cannot be corrected without updating the compiler to a newer version ($$$).
+{{{TRegFile.LoadFromFile(<filepath>);}}} and cannot be corrected without updating the compiler to a newer version ($$$).
 ----
 
 
