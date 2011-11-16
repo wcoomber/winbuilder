@@ -44,7 +44,7 @@ List of available keys
  * Date - date of changes, any text is accepted - recommended to use "Year-Month-Day" all written in numeric format
  * Version - scripts support version and they are important to mark new updated scripts on the download center
  * Website / topic discussion - place a link here to help users to find their way to a site with more informations
- * Download_level - used by download center to categorize scripts under download profiles (1..4)
+ * Download_level - used by download center to categorize scripts under download profiles (1..4) See the documentation on the [wbtools#Download_Center Download Center] for more information.
  * Selected - using True/False will make your be checked or not for being processed. These are usually set (checked or not) using the !WinBUilder GUI. To completely remove any checkbox, set the value to "None". eg. *`Selected=None`*
  * Locked - use True/False to allows the users to edit the script interface 
  * Level - very important setting to allow your script to be placed on the correct sequence when the project is running (see [wbscriptlevels#Script_Levels Script Levels] for more details on this)
