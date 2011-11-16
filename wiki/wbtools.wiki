@@ -100,11 +100,8 @@ The options tab allows to change some of the !WinBuilder executable settings to 
 
  * Log Options
  Control the behavior of your log window after a project is concluded. 
-
    # The option "View in browser after saving" means that when you press the Save log button inside the log window your log.html file will be created and opened using you favorite browser.
-
    # The option "Open log window after process" will automatically show you the contents of the log window when your project has finished running all scripts. This is an useful option when debugging your projects and scripts.
-
    # The other options control the amount and types of information put into the log file.  They are provided here as an easy way to change the settings stored in the [wb_ini_settings WinBuilder.ini Settings file].
 
  * Network support 
