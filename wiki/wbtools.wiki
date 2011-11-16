@@ -182,13 +182,13 @@ It will create a small template script that will be executed whenever you press 
 
 You can also add commands using the right click menu in the same way as the internal source code editor. Each code box script runs exactly under the same conditions as any other script inside your selected project, making this a good tool for debugging variables and commands.
 
-The code you add inside the Code Box is automatically saved inside a file called CodeBox.txt which can be found on the root of each project where you use it - this way we ensure that you can have a Code Box specific to a single project.
+The code you add inside the Code Box is automatically saved inside a file called !CodeBox.txt which can be found on the root of each project where you use it - this way we ensure that you can have a Code Box specific to a single project.
 
 ==Download Center==
 
 The Download interface was added to help people keep in touch with the community. From this page you can quickly view the latest discussed topics from our forums.
 
-It also may allow you (if supported by the project) to update your scripts without having to download the entire project. Scripts may be marked with specific "Download level" in [wbfilestructure#The_[Main]_section the `[MAIN]` section] of the script file. This allows you to focus on checking the project according to the level specified.
+It also may allow you (if supported by the project) to update your scripts without having to download the entire project. Scripts may be marked with specific "Download level" in the `[MAIN]` section of the script file. This allows you to focus on checking the project according to the level specified.
 
 The intention is that the script writer or project owner would mark scripts starting from the most important/critical to the least ones.
 So:
