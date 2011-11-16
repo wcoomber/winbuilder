@@ -188,9 +188,32 @@ The code you add inside the Code Box is automatically saved inside a file called
 
 The Download interface was added to help people keep in touch with the community. From this page you can quickly view the latest discussed topics from our forums.
 
+It also may allow you (if supported by the project) to update your scripts without having to download the entire project. Scripts may be marked with specific "Download level" in [wbfilestructure#The_[Main]_section the `[MAIN]` section] of the script file. This allows you to focus on checking the project according to the level specified.
+
+The intention is that the script writer or project owner would mark scripts starting from the most important/critical to the least ones.
+So:
+ * Level 1 stands for core scripts that the project cannot be built without.
+ * Level 2 includes the core scripts and scripts that add a normal environment without much fluff
+ * Level 3 adds up all the scripts in the previous levels and scripts on this level add fluff and special features
+ * Level 4 is intended to specifically mark scripts available as beta to interested testers, was never used by developers. I am not sure if it will includes all scripts marked in previous levels.
+
+These levels are displayed as 
+ * Minimum (i.e. Download_level=1)
+ * Recomended (i.e. Download_level=2)
+ * Complete (i.e. Download_level=3)
+ * Beta (i.e. Download_level=4)
+
+The script on the project server will be process if the value selected is greater than or equal to the value included in the script.  This means that if the value is equal to zero (or is not specified), the script will always be processed.
+
+Scripts are compared based on the version number in the script's `[MAIN]` section by default.  
+
+http://winbuilder.googlecode.com/svn/wiki/images/downctr.gif
+
+This check can be changed as one of the options (in the options tab) on this screen. In addition to the Options tab, the different servers that are checked can also be managed on this screen as well. These are stored in the [wb_ini_settings WinBuilder INI file], but the graphical controls on the lower right side of the screen are provided to allow you to add new links, cause !WinBuilder to refresh the script checks with the selected servers or to remove the selected links.
+
 ==!WinBuilder.ini==
 
-The !Winbuilder.ini settings are documented [wb_ini_settings here]
+The !WinBuilder.ini settings are documented [wb_ini_settings here]
 <br>
 ----
 =Frequently Asked Questions =
