@@ -23,7 +23,7 @@ RegAddBoot,Hive,ValueType,KeyName,ValueName,Value
 ||5||Value||Value. Format depends on the !ValueType.||
 
 ==Remarks==
-Some programs don't correctly support expanding of environment variables in registry values. For those cases the registry updates have to be delayed till PE boot time. [regaddboot RegAddBoot] allows registry values to be applied at boot time instead of build time.
+Some programs don't correctly support expanding of environment variables in registry values. For those cases the registry updates can  be delayed till PE boot time when the value of the variable is known. This allows the fully expanded value to be written to the registry instead of the %variable%.
 
 ==Example==
 {{{
