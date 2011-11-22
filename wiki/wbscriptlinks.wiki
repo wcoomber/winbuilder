@@ -13,14 +13,28 @@ An example folder.project is:
 Projects\Gena-Complete\*.* 
 }}}
 
-==`<script>.link`==
-The second mechanism uses a file with an extension of `.link` to link a particular script file into the same directory as the link file. If the script is disabled in the link file then this only affects the script in the project containing the link file. 
+This links to another folder in the same projects directory (i.e. is is not an absolute path, but is relative the the !WinBuilder %!BaseDir%.  On the other hand, this example links to a completely specified path (which may be on another drive).
+{{{
+[Links]
+D:\MyScripts\*.* 
+}}}
 
-In other words, the original source script is left unchanged. Of course if interface options are changed this affects both projects. 
+==`<script>.link`==
+The second mechanism uses a file with an extension of `.link` to link to a particular script file. If the script is disabled in the link file then this only affects the project containing the link file. In other words, the link file and the original script are independently able to be selected.  
+
+In other words, the original source script is left unchanged. The other settings are always stored in the original script, so if the settings are changed, it affects both the original and the linked project.
 
 An example link file is:
 {{{
 [Main]
 link=Projects\Addons\AccessGainDrivers.script
+Selected=True
+}}}
+
+This links to another script in the same projects directory (i.e. is is not an absolute path, but is relative the the !WinBuilder %!BaseDir%.  On the other hand, this example file links to a completely specified path (which may be on another drive).
+
+{{{
+[Main]
+link=C:\MyScripts\Addons\AccessGainDrivers.script
 Selected=True
 }}}
