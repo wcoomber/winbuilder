@@ -21,7 +21,7 @@ There are 15 different types, internally represented by a number between 0 and 1
  * cmpComboBox = 4,
  * cmpImage = 5,
  * cmpTextFile = 6,
- * cmpEditValues = 7, ( *// not implemented*)
+ * cmpEditValues = 7, ( *not implemented*)^1^
  * cmpButton = 8,
  * cmpCheckList = 9,
  * cmpWebLabel = 10,
@@ -29,6 +29,8 @@ There are 15 different types, internally represented by a number between 0 and 1
  * cmpBevel = 12,
  * cmpFileBox = 13,
  * cmpRadioGroup = 14 
+
+^1^ This capability wasn't implemented due to a lack of perceived value.  See [http://reboot.pro/8099/ this post] for more information
 
 =Component description=
 These first 7 fields are common to all implemented components:
@@ -41,6 +43,7 @@ These first 7 fields are common to all implemented components:
   * cmpImage: `<File name>`
   * cmpTextFile: `<File name>`
   * cmpButton: Caption
+  * cmpCheckList: Name of section in scriptfile that contains the list^2^
   * cmpWebLabel: Caption
   * cmpRadioButton: Caption
   * cmpBevel: `<Component name>`
@@ -65,6 +68,7 @@ Fields 8 and higher (if present) depend on the component type:
  * cmpFileBox: The word 'FILE' in the case of file, nothing in case of directory
  * cmpRadioGroup: `<Caption 1>, ... ,<Caption n>,<Selected index, starting with 0>`
 
+^2^ The `cmpCheckList` function will display whatever is listed  in the particular section up to an "=" sign, which is then followed by a either a 1 or a 0 (checked/unchecked).  This status value can be retrieved using the existing "INI" file capability of !WinBuilder.  See [http://reboot.pro/15276/page__view__findpost__p__142561 this post] for more information and a sample "test" script.
 
 ==Added in !WinBuilder 077 RC 2 ==
 
