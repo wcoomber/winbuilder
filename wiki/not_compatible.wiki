@@ -1,4 +1,4 @@
-=!Not_Compatible=
+=!Not_Compatible [Removed as of CAPI 25rev61] =
 
 Generate an error message if the script is used in a none compatible project.
 
