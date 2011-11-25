@@ -16,9 +16,9 @@ Based on the action specified, you may require one or more additional parameters
  * HKEY_USERS
  * HKEY_CURRENT_CONFIG
 
-*Section* is the complete path to the section where the key is to be read from
+*Section* is the complete path to the section where the key is to be read from. *Note: The Section (i.e path to the Key) specified here _MUST_ exist or an error will occur.*^1^
 
-*Key* is the name of the 'child key' in that section to be read. *Note: Th KEY specified here _MUST_ exist or an error will occur.*^1^
+*Key* is the name of the 'child key' in that section to be read. *Note: The KEY specified here _MUST_ exist or an error will occur.*^1^
 
 *Action* may be one of the following keywords:
  * APPEND - Writes a string at the end of the specified key. 
