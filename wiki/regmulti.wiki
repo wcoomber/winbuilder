@@ -18,7 +18,7 @@ Based on the action specified, you may require one or more additional parameters
 
 *Section* is the complete path to the section where the key is to be read from
 
-*Key* is the name of the 'child key' in that section to be read. 
+*Key* is the name of the 'child key' in that section to be read. *Note: Th KEY specified here _MUST_ exist or an error will occur.*^1^
 
 *Action* may be one of the following keywords:
  * APPEND - Writes a string at the end of the specified key. 
@@ -55,3 +55,5 @@ RegMulti,<HKEY>,<Section>,<Key>,DELETE,<SubString>
 {{{
 RegMulti,<HKEY>,<Section>,<Key>,INDEX,<SubString>,%Index%
 }}}
+
+^1^ For more information on this and example, see [http://reboot.pro/15891/ this post].
