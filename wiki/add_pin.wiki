@@ -9,12 +9,13 @@ Add_Pin,Type,[Order],Path,[Title],[WorkFolder],[Parameters],[Icon],[StartMode],[
 
 ==Parameters==
 ||1||Type||Defines the type of the pin i.e. where the pin appears.||
-|| || ||*!StartMenu* = Pinned item will appear in the start menu||
-|| || ||*!TaskBar* = Pinned item will appear on the taskbar||
-||2||Order||Specifies the order of the icons in the specified pinning area. If a script overwrites a previously defined Type with the same Order, than you will get a warning in log. _*Note:* most Windows 7 projects use a separate script to define all the items to be pinned so this is not a problem in practice._||
+|| || || *!StartMenu* = Pinned item will appear in the start menu.||
+|| || || *!TaskBar* = Pinned item will appear on the taskbar.||
+|| || || *!RecentPrograms * = Pinned item (which is a link already in the start menu or on the desktop) will be "pinned" to the Start Menu's "recent programs" area. <br> _ *Note:* When Type = !RecentPrograms, only parameter number three (i.e. Path) is used. Others are not applicable and should be left unspecified._ <p> *{{{***}}}Added as a provisional part of the API Jan 2012.*||
+||2||Order||Specifies the order of the icons in the specified pinning area. If a script overwrites a previously defined Type with the same Order, than you will get a warning in log. <br>_*Note:* Many Windows 7 projects use a separate script to define all the items to be pinned so this is not a problem in practice._ ||
 || || ||*0-9* = This defines the initial order of the icons that are shown in the selected area. It can be changed at run time by drag and drop.||
 || || ||*Auto* = The first available place in the selected area is automaticaly found. This is the default action if the parameter is not specified.||
-||3||Path||This should either be left blank or the full path to the item to be pinned should be specified. This can either be the installed path of the file or the installed path of a shortcut file ( .lnk file ) in the user profile. Logical names can be used to reference areas in the user profile i.e. {{{$Start_Menu, $Quick_Launch, $Desktop}}}. If blank it defaults to {{{%PE_Programs%\%ProgramFolder%\%ProgramEXE%}}}.<br><br>Examples:<br>{{{%SystemRoot%\calc.exe}}}<br>{{{$Start_Menu\Programs\Network\PENetwork.lnk}}}<br>{{{$Quick_Launch\PENetwork.lnk<br>$Desktop\My Computer.lnk}}}<br>||
+||3||Path||This should either be left blank or the full path to the item to be pinned should be specified. This can either be the installed path of the file or the installed path of a shortcut file ( .lnk file ) in the user profile. Logical names can be used to reference areas in the user profile i.e. {{{$Start_Menu, $Quick_Launch, $Desktop}}}. If blank it defaults to {{{%PE_Programs%\%ProgramFolder%\%ProgramEXE%}}}.<br><br>Examples:<br>{{{%SystemRoot%\calc.exe}}}<br>{{{$Start_Menu\Programs\Network\PENetwork.lnk}}}<br>{{{$Quick_Launch\PENetwork.lnk<br>$Desktop\My Computer.lnk}}}<p>_*Note:* When Type = !RecentPrograms, the path must refer toan existing link in the $Start_Menu\Programs or $Desktop areas.||
 ||4||Title||This specifies the title to associate with the shortcut created by the pinning process. If not specified then {{{%ProgramTitle%}}} is used.||
 ||5||!WorkFolder||Optional parameter defining the current directory for the pinned program (default value = same Folder as the program set in parameter 3)||
 ||6||Parameters||Optional parameter defining any command line parameters for the pinned program.||
