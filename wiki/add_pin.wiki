@@ -28,7 +28,7 @@ Add_Pin,Type,[Order],Path,[Title],[WorkFolder],[Parameters],[Icon],[StartMode],[
 || || ||*3* = Program is shown maximized.||
 ||9||!ToolTipText||Text to display when cursor is on the pinned icon of the program.||
 
-==Remarks==
+==Limitations==
  # Not all files can be pinned
  # Links (.lnk) pointing to .cpl files can not be pinned
  # Files located on removable devices (CD UFD etc.) can not be pinned.
