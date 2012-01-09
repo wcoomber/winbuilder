@@ -43,4 +43,5 @@ Add_Pin,Taskbar
 Add_Pin,Taskbar,,#$pSystemRoot#$p\calc.exe
 Add_Pin,StartMenu,,"$Desktop\My Computer.lnk"
 Add_Pin,StartMenu,,%PE_Programs%\%ProgramFolder%\MyTool_To_Pin.exe,"My Pinned Tool"
+Add_Pin,RecentPrograms,,$Start_Menu\Programs\Accessories\Notepad.lnk
 }}}
