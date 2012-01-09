@@ -37,7 +37,6 @@ Add_Pin,Type,[Order],Path,[Title],[WorkFolder],[Parameters],[Icon],[StartMode],[
 
 ==Example==
 {{{
-Add_Pin
 Add_Pin,StartMenu
 Add_Pin,Taskbar
 Add_Pin,Taskbar,,#$pSystemRoot#$p\calc.exe
