@@ -136,7 +136,18 @@ Please note that the bartPE plugins does not completely translates all code and 
 
 ==Upload ==
 
-This is a very important tool for everyone who wishes to create a new Download Server or upload their updated scripts. *_NEEDS MORE DETAIL_*
+This is a very important tool for anyone who wishes to create a new Download Server. Imagine you are a project author who wants to make his project available via the !WinBuilder [wbtools#Download_Center download functionality].
+
+What you have to do is:
+
+ # In a !WinBuilder project folder containing ONLY your project, click the "Tools button, then the navigate to the "Upload" tab.
+ # Fill in the two text fields and click "Create".
+ # Upload (preferred FTP) your complete project folder to your server.
+
+The first field on this form is the name of the project as it will appear in the download tab, so you should probably use the name of the project.  The second field is used to specify the name of a default web page that will be displayed next to the project folder when in the download view. Use this to give an overview of the project and to provide other links that might be useful.
+ * Note: You might just want to put the html file inside the project folder so it will already be uploaded to the web server.
+
+When you click the "Create" button, !WinBuilder will generate the following two files (updates.ini and index.html) in your project folder. The first is used by winbuilder to manage the update/download process.  At this point, you have a complete set of files that can be accessed over the web through the !WinBuilder download interface, including a very good HTML formatted "index" for the project which has the names, versions, sizes, descriptions and authors of all the script files that are part of the project.
 
 ==License Agreement ==
 
