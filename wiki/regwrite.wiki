@@ -26,6 +26,7 @@ This command will create a new registry entry as specified.
   * 0x3 - Binary data - adds data in binary format. Each byte is specified by groups of two digits splitting each value with commas
   * 0x4 - Dword - writes a numeric value
   * 0x7 - Writes multiple NULL separated strings
+    * *Note:  See below for other types*
 
  * Section is the complete path to the section where the key is supposed to be written
 
@@ -45,3 +46,17 @@ RegWrite,HKLM,0x4,Build\ControlSet001\Services\VgaSave\Device0,DefaultSettings.X
  * If there is a parameter PRESERVE added, !RegWrite does not overwrite an existing value. A warning is still given
  * The warning can be suppressed by an additional parameterNOWARN
  * The parameters PRESERVE, and NOWARN can be used simultaniously. The order does not matter.
+
+==Note:==
+This function can also take a decimal value for the registry type.  This can be used to write newer types by translating the normal "hex" value to a decimal number.  See [http://reboot.pro/16333/ this posting]. As an example, there are double dword (aka "qword") registry values, designated type 0xb, as seen in the following exported value.
+{{{
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\HotStart]
+"LastTimeStamp"=hex(b ) :00,00,00,00,00,00,00,00
+}}}
+Values like this can can be written to the registry using a decimal value of "11" instead of the equivalent hex value of "0xb", as shown in the following example.
+{{{
+RegHiveLoad,WB-Software,"%target_sys%\config\software"
+//transalate 0xb to integer 11
+RegWriteBinEx,HKLM,11,WB-Software,MyKey,53,00,55,00,01,08,a1,cc
+RegHiveUnLoad,WB-Software
+}}}
