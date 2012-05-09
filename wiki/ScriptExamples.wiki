@@ -1,5 +1,3 @@
-#Script Examples and Templates.
+# Script Examples and Templates.
 
-= Basic Script Template. =
-
-
+= Basic Script Template =
