@@ -5,7 +5,7 @@ A !WinBuilder project is a collection of [wbscripts scripts] that are typically 
  ===You should always read the information page of each project you intend to use before you start building a project.===
 
 If you still have any doubts about how to proceed that are not covered here, you're invited to ask for help. 
-For more on the currently supported projects, visit the : *[http://reboot.pro/forum/22/ WinBuilder Project Forum]* area.
+For more on the currently supported projects, visit the *[http://reboot.pro/forum/22/ WinBuilder Project Forum]* area.
 
 ==Special project settings==
 
