@@ -44,7 +44,6 @@ The following settings are stored under the `[Proxy]` section. As the login info
 ||DNS||DNS Server||
 ||PingType||Ping Type (0=ICMP 1=HTTP - use if your firewall blocks ICMP)||
 
-
 ==Download Center==
 These settings control the web sites listed in the download center.  See [wbtools#Download_Center this page] for more information, including how to use the included interface to manage the list of servers being used
 ||!WebServer|| A comma separated list of all the servers you may check for updates.||
@@ -90,3 +89,55 @@ The following are used to control download center preferences.
 These settings are stored in the `[Custom]` section of the .ini file and allow you to "Brand" Winbuilder for your project.
 ||Title||This text will be added to the Winbuilder title bar||
 ||Logo||Path to an image file (gif/jpg/bmp) that will be used in place of the Winbuilder logo on the main screen.||
+
+==Syntax Highlighting==
+You can configure the syntax highlighting of winbuilders internal code editor to a user defined color theme. At this time only styles and colors may be changed. You can not define commands or categories to be highlighted.
+
+You may configure the following properties:
+  * Font Style (font: bold, italic, strike-through, underline)
+  * Foreground (color of the text)
+  * Background (color of the background)
+
+===Font Style===
+|| *Value* || *Description* ||
+||fsItalic||Italics||
+||fsBold||Bold||
+||fsUnderline||Underline||
+||fsStrikeOut||StrikeOut||
+
+You may specify multiple font styles by using a bracketed comma separated list.
+
+{{{Example: Style:[fsBold,fsItalic]}}}
+
+Each colors/styles are defined using the following format:
+
+===Valid categories are===:
+||Comment||Script comments starting with // or ##||
+||String||Strings enclosed in quotes||
+||Variable||script Variables||
+||Number||Numbers||
+||CommandItems||Internal commands||
+||IfCommandItems||Conditional commands||
+||StrFormatItems||String Format sub commands||
+||SystemCommandItems||System commands||
+||OtherItems||Other command items||
+||BooleanItems||Boolean Operatiors||
+||Params||Command parameters||
+||Escapes|| Escape characters||
+
+===Defaults===
+{{{
+[HighLighter]
+Comment=Style:[fsItalic]|Foreground:clGray
+String=Foreground:clRed
+Variable=Foreground:clGreen
+Number=ForeGround:clBlue
+CommandItems=Style:[fsBold]
+IfCommandItems=Foreground:clMaroon|Style:[fsBold]
+StrFormatItems=Foreground:clMaroon|Style:[fsItalic]
+SystemCommandItems=Foreground:clTeal|Style:[fsBold,fsItalic]
+OtherItems=Foreground:clTeal
+BooleanItems=Foreground:clNavy|Style:[fsBold]
+Params=Foreground:clTeal
+Escapes=Foreground:clTeal
+}}}
