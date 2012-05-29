@@ -57,7 +57,7 @@ These settings control the web sites listed in the download center.  See [wbtool
 ||!VerboseWarning|| Shows more warnings in Debug Log||
 ||!LastLog|| Path of active log.html||
 ||!LogAuto|| Show log after build, even if it is error-free||
-||!LogComment|| Show / supress comments in soutce code||
+||!LogComment|| Show / suppress comments in source code||
 ||!LogEnglish|| Generate English log file, independent of String translation language||
 ||!LogOriginal|| Add original script lines to log||
 ||!LogStop|| Generate log.html when user clicked the blue "Stop" button||
@@ -67,3 +67,8 @@ These settings control the web sites listed in the download center.  See [wbtool
 ||!SyntaxWarn|| Produce a *_Warning_* on unresolved (misspelled) commands||
 ||!ShowVariables|| Add a list of variables to top of log - default is "True"||
 ||!ViewLogInBrowser|| Automatically show log in browser after generating log.html||
+
+==Custom==
+These settings are stored in the `[Custom]` section of the .ini file and allow you to "Brand" Winbuilder for your project.
+||Title||This text will be added to the Winbuilder title bar||
+||Logo||Path to an image file (gif/jpg/bmp) that will be used in place of the Winbuilder logo on the main screen.||
