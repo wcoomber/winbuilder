@@ -98,6 +98,10 @@ You may configure the following properties:
   * Foreground (color of the text)
   * Background (color of the background)
 
+===Formatting===
+Configuration is defined by a series of keywords seperated by the pipe `|` operator.
+{{{Foreground:<color>|Background:<color>|Style:<font style>}}}
+
 ===Font Style===
 || *Value* || *Description* ||
 ||fsItalic||Italics||
@@ -109,9 +113,22 @@ You may specify multiple font styles by using a bracketed comma separated list.
 
 {{{Example: Style:[fsBold,fsItalic]}}}
 
-Each colors/styles are defined using the following format:
+===Colors===
+|| *Value* || *Description* || || *Value* || *Description* ||
+||clAqua||Aqua|| ||clBlack||Black||
+||clBlue||Blue|| ||clCream||Cream||
+||clDkGray||Dark Gray|| ||clFuchsia||Fuchsia||
+||clGray||Gray|| ||clGreen||Green||
+||clLime||Lime|| ||clLtGray||Light Gray||
+||clMaroon||Maroon|| ||clMedGray||Medium Gray||
+||clMoneyGreen||Money Green|| ||clNavy||Navy||
+||clOlive||Olive|| ||clPurple||Purple||
+||clRed||Red|| ||clSilver||Silver||
+||clSkyBlue||Sky Blue|| ||clTeal||Teal||
+||clWhite||White|| ||clYellow||Yellow||
 
-===Valid categories are===:
+===Syntax Groups===
+Syntax highlighting is separated into groups, with each group having its own style. The following groups are defined internally by winbuilder. Currently you can not change these groups or define new ones.
 ||Comment||Script comments starting with // or ##||
 ||String||Strings enclosed in quotes||
 ||Variable||script Variables||
@@ -125,7 +142,7 @@ Each colors/styles are defined using the following format:
 ||Params||Command parameters||
 ||Escapes|| Escape characters||
 
-===Defaults===
+=== Defaults ===
 {{{
 [HighLighter]
 Comment=Style:[fsItalic]|Foreground:clGray
