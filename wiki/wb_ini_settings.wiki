@@ -100,6 +100,7 @@ You may configure the following properties:
 
 ===Formatting===
 Configuration is defined by a series of keywords seperated by the pipe `|` operator.
+
 {{{Foreground:<color>|Background:<color>|Style:<font style>}}}
 
 ===Font Style===
@@ -126,6 +127,15 @@ You may specify multiple font styles by using a bracketed comma separated list.
 ||clRed||Red|| ||clSilver||Silver||
 ||clSkyBlue||Sky Blue|| ||clTeal||Teal||
 ||clWhite||White|| ||clYellow||Yellow||
+
+Example 1 - Only Define Foreground Color:
+{{{
+Foreground:clMaroon
+}}}
+Example 2 - Define both Foreground and Background color:
+{{{
+Foreground:clMaroon|Background:clGray
+}}}
 
 ===Syntax Groups===
 Syntax highlighting is separated into groups, with each group having its own style. The following groups are defined internally by winbuilder. Currently you can not change these groups or define new ones.
