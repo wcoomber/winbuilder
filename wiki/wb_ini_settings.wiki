@@ -22,6 +22,7 @@ Certain aspects of !WinBuilder's exe are stored or can be controlled using varia
 
 ==Download Window==
 ||!DisableNetwork|| If set to *_1_* will disable the network, which switches the download functionality generally off. When set to *_0_* or not supplied, the network is enabled||
+||!WebCheckDomain|| Winbuilder will query this domain to determine if web access is available.||
 ||!Last_Download_Level|| Last level used in download center (*0_*=minimum *_1_*= recommended *_2_*=complete *_3_*=beta)||
 ||DN|| Sets the *_Width_* of the script tree in Download Window||
 ||!AskForDownload|| Ask user before downloading any file.||
@@ -34,7 +35,6 @@ Certain aspects of !WinBuilder's exe are stored or can be controlled using varia
 
 ==Download Center==
 These settings control the web sites listed in the download center.  See [wbtools#Download_Center this page] for more information, including how to use the included interface to manage the list of servers being used
-||!WebCheckDomain|| Central repository used to hold a list of servers for possible download.||
 ||!WebServer|| A comma separated list of all the servers you may check for updates.||
 ||!WebServer_Selected|| A list of the servers actually selected for download processing||
 
