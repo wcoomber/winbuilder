@@ -20,24 +20,42 @@ Certain aspects of !WinBuilder's exe are stored or can be controlled using varia
 ||!FileVersion|| Contains the version of the !WinBuilder.exe last used||
 ||!RunExternal|| *HAVE NO IDEA*||
 
-==Download Window==
+==Network Settings==
+The following are global network settings.
 ||!DisableNetwork|| If set to *_1_* will disable the network, which switches the download functionality generally off. When set to *_0_* or not supplied, the network is enabled||
 ||!WebCheckDomain|| Winbuilder will query this domain to determine if web access is available.||
-||!Last_Download_Level|| Last level used in download center (*0_*=minimum *_1_*= recommended *_2_*=complete *_3_*=beta)||
-||DN|| Sets the *_Width_* of the script tree in Download Window||
-||!AskForDownload|| Ask user before downloading any file.||
-||!UseTimeout|| Continue with download after timeout.||
-||!ValueTimeout|| Sets the *_Timeout_* value in seconds||
-||!Allow_Beta|| Allow use of the *_beta_* level download (i.e. level 3)||
-||!AutoDownloadTree|| Rebuild the download tree only when the user clicks on the green arrow (i.e. a value of *_True_* makes green arrow visible)||
-||!StopDownloadTree|| Allows user to interupt a build of the download tree (i.e. a value of *_1_* makes the red stop square visible)||
-||!RenameCurrent|| If set to *_True_*, !WinBuilder will rename an existing (i.e. current) script file rather than overwrite it. If set to *_False_* (or not specified), !WinBuilder will overwrite any existing script when downloading new content||
+||!AskForDownload|| Ask user before downloading any file requested by scripts via the [WebGet] or [WebGetIfNotExist] commands.||
+||!UseTimeout|| If AskForDownload is specified continue with download after this timeout period.||
+||!ValueTimeout|| Sets the *_Timeout_* value in seconds.||
+
+The following settings are stored under the `[Proxy]` section. As the login information is encrypted you should only configure these setting from inside the winbuilder download center.
+||useHTTPProxy||Use web proxy (True/False)||
+||HTTPhost||Host address for web proxy||
+||HTTPport||Port number of web proxy||
+||HTTPuser||Encrypted User Name for web proxy||
+||HTTPpwd||Encrypted Password for web proxy||
+||HTTPRFC2617||Use Basic Authentication for web proxy (True/False)||
+||useFTPProxy||Use FTP proxy (True/False)||
+||FTPhost||Host address for FTP proxy||
+||FTPport||Port number of FTP proxy||
+||FTPuser||Encrypted User Name for FTP proxy||
+||FTPpwd||Encrypted Password for FTP proxy||
+||FTPRFC2617||Use Basic Authentication for FTP proxy (True/False)||
+||DNS||DNS Server||
+||PingType||Ping Type (0=ICMP 1=HTTP - use if your firewall blocks ICMP)||
+
 
 ==Download Center==
 These settings control the web sites listed in the download center.  See [wbtools#Download_Center this page] for more information, including how to use the included interface to manage the list of servers being used
 ||!WebServer|| A comma separated list of all the servers you may check for updates.||
 ||!WebServer_Selected|| A list of the servers actually selected for download processing||
-
+The following are used to control download center preferences.
+||!Last_Download_Level|| Last level used in download center (*0_*=minimum *_1_*= recommended *_2_*=complete *_3_*=beta)||
+||DN|| Sets the *_Width_* of the script tree in Download Window||
+||!Allow_Beta|| Allow use of the *_beta_* level download (i.e. level 3)||
+||!AutoDownloadTree|| Rebuild the download tree only when the user clicks on the green arrow (i.e. a value of *_True_* makes green arrow visible)||
+||!StopDownloadTree|| Allows user to interupt a build of the download tree (i.e. a value of *_1_* makes the red stop square visible)||
+||!RenameCurrent|| If set to *_True_*, !WinBuilder will rename an existing (i.e. current) script file rather than overwrite it. If set to *_False_* (or not specified), !WinBuilder will overwrite any existing script when downloading new content||
 
 ==General Behaviour==
 ||!ErrorStop|| If set to *_True_*, !WinBuilder will stop the build when an error occurs.||
