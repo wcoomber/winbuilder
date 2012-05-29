@@ -1,8 +1,10 @@
 =[http://reboot.pro/forum/22/ Projects]=
 
-Projects are a collection of scripts that are used to build a specific boot disk. Specific details are included to help you use compatible sources and learn how to debug some common issues that might sometimes appear. 
+A !WinBuilder project is a collection of [wbscripts scripts] that are typically used to build a specific boot disk. Specific instructions and/or details are normally included to help you specify a compatible source and how to debug some common issues that might sometimes appear. 
+
  ===You should always read the information page of each project you intend to use before you start building a project.===
-If you still have any doubts about how to proceed that are not covered in this manual, you're invited to ask for help. 
+
+If you still have any doubts about how to proceed that are not covered here, you're invited to ask for help. 
 For more on the currently supported projects, visit the : *[http://reboot.pro/forum/22/ WinBuilder Project Forum]* area.
 
 ==Special project settings==
