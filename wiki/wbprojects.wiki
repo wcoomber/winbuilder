@@ -1,4 +1,4 @@
-=[http://reboot.pro/forum/22/ Projects]=
+=[http://reboot.pro/forum/22/ WinBuilder Projects]=
 
 A !WinBuilder project is a collection of [wbscripts scripts] that are typically used to build a specific boot disk. Specific instructions and/or details are normally included to help you specify a compatible source and how to debug some common issues that might sometimes appear. 
 
