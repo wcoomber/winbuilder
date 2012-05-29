@@ -15,3 +15,33 @@ Click on the root item of each project to view how it should be used.
 In most projects you just need to click the Play button (blue triangle) and a wizard will ask you for the project source files location and continue the project build. Whenever you need to change this default location, you can click on the "Paths" tab and modify as needed.
 
 Also, check to see if there are any [http://reboot.pro/forum/112/ tutorials] for your chosen project by looking in the forums.
+
+==Creating a new project==
+You can create your own personal project as well by following these simple steps.
+
+  # Create a folder for your project in the Winbuilder\Projects directory.
+{{{ 
+  Example: C:\Winbuilder\Projects\MyProject
+}}}
+  # Create an empty file called `script.project` in this new directory.
+  # Place the following code in the `script.project` file you just created.
+{{{
+[Main]
+Title=My Project
+Type=script
+Author=Myself
+Description=My New Project
+Credits=
+Version=1
+Download_Level=0
+Level=1
+Contact=
+Date=
+Depend=
+TargetDir=C:\Winbuilder\Target\MyProject
+ISOfile=C:\Winbuilder\ISO\MyProject.iso
+SourceDir=
+}}}
+  # Refresh your build tree by clicking the "Refresh" button or restarting Winbuilder.
+
+Congratulations! You now have a skeleton project that you can start adding scripts to!
