@@ -115,6 +115,8 @@ You may specify multiple font styles by using a bracketed comma separated list.
 {{{Example: Style:[fsBold,fsItalic]}}}
 
 ===Colors===
+Both Foreground and Background color can be configured using the following color table.
+
 || *Value* || *Description* || || *Value* || *Description* ||
 ||clAqua||Aqua|| ||clBlack||Black||
 ||clBlue||Blue|| ||clCream||Cream||
@@ -128,11 +130,11 @@ You may specify multiple font styles by using a bracketed comma separated list.
 ||clSkyBlue||Sky Blue|| ||clTeal||Teal||
 ||clWhite||White|| ||clYellow||Yellow||
 
-Example 1 - Only Define Foreground Color:
+*Example 1* - Only Define Foreground Color:
 {{{
 Foreground:clMaroon
 }}}
-Example 2 - Define both Foreground and Background color:
+*Example 2* - Define both Foreground and Background color:
 {{{
 Foreground:clMaroon|Background:clGray
 }}}
