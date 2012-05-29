@@ -101,7 +101,9 @@ You may configure the following properties:
 ===Formatting===
 Configuration is defined by a series of keywords seperated by the pipe `|` operator.
 
-{{{Foreground:<color>|Background:<color>|Style:<font style>}}}
+{{{
+Foreground:<color>|Background:<color>|Style:<font style>
+}}}
 
 ===Font Style===
 || *Value* || *Description* ||
@@ -112,7 +114,9 @@ Configuration is defined by a series of keywords seperated by the pipe `|` opera
 
 You may specify multiple font styles by using a bracketed comma separated list.
 
-{{{Example: Style:[fsBold,fsItalic]}}}
+{{{
+Example: Style:[fsBold,fsItalic]
+}}}
 
 ===Colors===
 Both Foreground and Background color can be configured using the following color table.
