@@ -26,3 +26,6 @@
 ==== Note:====
  * The learning curve to make your own script is very simple and acessible. 
  * You can use other scripts as example to create your own scripts and then share them in the forums to help others if you wish - also a good place to ask for scripts that support the programs you like.
+
+==How can I use !WinBuilder from the command line? (for example to automate a build)==
+See this posting over in the forums: *[http://reboot.pro/2200/ How To use WinBuilder command line]*
