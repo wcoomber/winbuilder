@@ -3,9 +3,17 @@
 *Documentation In Progress*
 
 =Syntax=
-Winbuilder.exe /run="%Project%" /title="My Project" /x=10 /y=50 /target="%tg%%index%" /ISO="%iso%%index%.iso" /log="BuildLog.html" /source="C:\Images\Win7"
+{{{Winbuilder.exe /run="%Project%" /title="My Project" /x=10 /y=50 /target="%tg%%index%" /ISO="%iso%%index%.iso" /log="BuildLog.html" /source="C:\Images\Win7"{{{
 
-|| Option || Description ||
+|| Option  || Description                                          ||
+|| /run=   || Path to the project dir. (Ex. C:\WB\Projects\Win7PE) ||
+|| /title= || Project Title                                        ||
+|| /x=     || Window width                                         ||
+|| /y=     || Window Height                                        ||
+|| /target=|| Target Directory                                     ||
+|| /ISO=   || Path to ISO that will be created                     ||
+|| /log=   || Path to log file that will be saved                  ||
+|| /source=|| Path to the source used for building                 ||
 
 =Example=
 This *advanced* example uses a batch script to set some options and build the project.
