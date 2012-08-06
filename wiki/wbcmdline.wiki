@@ -1,7 +1,5 @@
 #summary Command Line Usage
 
-*Documentation In Progress*
-
 =Syntax=
 {{{
 Winbuilder.exe /run="C:\WB\Projects\Win7PE" /title="Win7PE" /x=10 /y=50 /target="C:\WB\Target\Win7PE" /ISO="C:\WB\ISO\Win7PE_x86.iso" /log="BuildLog.html" /source="C:\Images\Win7"
