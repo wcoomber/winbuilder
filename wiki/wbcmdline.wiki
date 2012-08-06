@@ -1,6 +1,6 @@
 #summary Command Line Usage
 
-=Command Line Options=
+=Command Line Options:=
 
 || *Option*|| *Description*                                        ||
 || /run=   || Path to the project dir. (Ex. C:\WB\Projects\Win7PE) ||
@@ -12,7 +12,7 @@
 || /log=   || Path to log file that will be saved                  ||
 || /source=|| Path to the source used for building                 ||
 
-=Examples=
+=Examples:=
 
 *Example 1*
 
