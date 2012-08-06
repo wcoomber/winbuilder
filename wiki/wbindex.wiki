@@ -10,6 +10,7 @@
    * [wbtools WinBuilder Tools]
    * [wbscriptfaq  WinBuilder F.A.Q. and other Information]
      * [wb_ini_settings WinBuilder.ini Settings ]
+     * [wbcmdline Command line usage ]
      * [wbcompat Compatibility]
      * [wbknownissues Known Issues]
      * [wbtrouble Troubleshootings]
