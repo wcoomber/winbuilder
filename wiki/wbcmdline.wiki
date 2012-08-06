@@ -2,6 +2,8 @@
 
 =Command Line Options:=
 
+The following command line options can be used to automate the building of one or more projects.
+
 || *Option*|| *Description*                                        ||
 || /run=   || Path to the project dir. (Ex. C:\WB\Projects\Win7PE) ||
 || /title= || Project Title                                        ||
