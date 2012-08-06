@@ -1,9 +1,6 @@
 #summary Command Line Usage
 
-=Syntax=
-{{{
-Winbuilder.exe /run="C:\WB\Projects\Win7PE" /title="Win7PE" /x=10 /y=50 /target="C:\WB\Target\Win7PE" /ISO="C:\WB\ISO\Win7PE_x86.iso" /log="BuildLog.html" /source="C:\Images\Win7"
-}}}
+=Command Line Options=
 
 || *Option*|| *Description*                                        ||
 || /run=   || Path to the project dir. (Ex. C:\WB\Projects\Win7PE) ||
@@ -15,7 +12,15 @@ Winbuilder.exe /run="C:\WB\Projects\Win7PE" /title="Win7PE" /x=10 /y=50 /target=
 || /log=   || Path to log file that will be saved                  ||
 || /source=|| Path to the source used for building                 ||
 
-=Example=
+=Examples=
+
+===Exmaple 1====
+Simple Command Line Usage to build a project.
+{{{
+Winbuilder.exe /run="C:\WB\Projects\Win7PE" /title="Win7PE" /x=10 /y=50 /target="C:\WB\Target\Win7PE" /ISO="C:\WB\ISO\Win7PE_x86.iso" /log="BuildLog.html" /source="C:\Images\Win7"
+}}}
+
+===Example 2===
 This *advanced* example uses a batch script to set some options and build the project.
 
 {{{
