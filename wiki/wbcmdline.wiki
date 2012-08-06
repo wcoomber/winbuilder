@@ -1,11 +1,14 @@
 #summary Command Line Usage
 
+*Documentation In Progress*
+
 =Syntax=
+Winbuilder.exe /run="%Project%" /title="My Project" /x=10 /y=50 /target="%tg%%index%" /ISO="%iso%%index%.iso" /log="BuildLog.html" /source="C:\Images\Win7"
 
-
+|| Option || Description ||
 
 =Example=
-This advanced example uses a batch script to set some options and build the project.
+This *advanced* example uses a batch script to set some options and build the project.
 
 {{{
 REM ******* The next 4 lines must be defined individually
