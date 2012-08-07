@@ -17,7 +17,7 @@
      * [wbbugs Reporting Bugs]
      * [wblicense License]
      * [wbVersionHistory Version History] 
- * [wbprojects WinBilder Projects]
+ * [wbprojects WinBuilder Projects]
  * [wbscriptapplication Application Scripts]
  * [wbscriptcommandsByCategory Script Commands (By Category)]
    * [wbscriptAttachments Attachments]
