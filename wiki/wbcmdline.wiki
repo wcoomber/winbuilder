@@ -13,7 +13,7 @@ The following command line options can be used to automate the building of one o
 || /ISO=   || Path to ISO that will be created                     ||
 || /log=   || Path to log file that will be saved                  ||
 || /source=|| Path to the source used for building                 ||
-|| /showlog|| Display the log once building is finished            ||
+|| /showlog|| Display the log when building is finished            ||
 || /debug  || ||
 || /beep   || Beep when building is finished                       ||
 
