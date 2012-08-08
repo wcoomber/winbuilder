@@ -19,6 +19,7 @@
      * [wbVersionHistory Version History] 
  * [wbprojects WinBuilder Projects]
  * [wbscriptapplication Application Scripts]
+   * [ScriptExamples Script Examples & Templates]
  * [wbscriptcommandsByCategory Script Commands (By Category)]
    * [wbscriptAttachments Attachments]
      * [extractfile ExtractFile]
@@ -278,4 +279,3 @@
   * [select_case Select_Case]
   * [unpack Unpack]
  * [wbadditionalsyntax Additional Syntax]
-* [ScriptExamples Script Examples & Templates]
