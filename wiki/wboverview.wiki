@@ -11,3 +11,10 @@ Some of the features to expect from !WinBuilder include:
  * Most scripts already come included with freeware applications
  * Scripting Language and API specially targeted at Windows PE challenges.
  * Last but not least - A very active community 
+
+=Getting Started=
+Starting up is easy and you can do it in 3 steps. After downloading a project:
+ # Start !WinBuilder.exe 
+ # Select the project you want to build 
+ # Adjust any configuration options, and then
+ # And then just click play (the big Blue Arrow)
