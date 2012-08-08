@@ -1,5 +1,5 @@
  * [wbwelcome WinBuilder]
-   * [wbwelcome Welcome and Overview]
+   * [wboverview Welcome and Overview]
    * [wbscripts The WinBuilder Scripting Language]
      * [wbscriptsyntax Syntax Rules and Escape Characters]
      * [wbfilestructure File Structure]
