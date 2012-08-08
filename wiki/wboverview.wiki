@@ -12,4 +12,4 @@ Some of the features to expect from !WinBuilder include:
  * Scripting Language and API specially targeted at Windows PE challenges.
  * Last but not least - A very active community 
 
-To get started with !WinBuilder jump over to the is easy, since there are many projects that have done most of the work for you. Jump over to the  of this documentation for more details.
+Getting started with !WinBuilder  is easy, since there are many projects that have done most of the work for you. Jump over to the [wbprojects projects section] of this documentation or [http://reboot.pro/forum/22/ directly to the !WinBuilder Project fforums] for more details.
