@@ -19,7 +19,7 @@
      * [wbVersionHistory Version History] 
  * [wbprojects WinBuilder Projects]
  * [wbscriptapplication Application Scripts]
-   * [ScriptExamples Script Examples & Templates]
+ * [ScriptExamples Script Examples & Templates]
  * [wbscriptcommandsByCategory Script Commands (By Category)]
    * [wbscriptAttachments Attachments]
      * [extractfile ExtractFile]
