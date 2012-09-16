@@ -25,7 +25,7 @@ The following are global network settings.
 ||!DisableNetwork|| If set to *_1_* will disable the network, which switches the download functionality generally off. When set to *_0_* or not supplied, the network is enabled||
 ||!WebCheckDomain|| Winbuilder will query this domain to determine if web access is available.||
 ||!AskForDownload|| Ask user before downloading any file requested by scripts via the *_!WebGet_* or *_!WebGetIfNotExist_* commands.||
-||!UseTimeout|| If !AskForDownload is specified continue with download after this timeout period.||
+||!UseTimeout|| If *_!AskForDownload_* is specified continue with download after this timeout period.||
 ||!ValueTimeout|| Sets the *_Timeout_* value in seconds.||
 
 The following settings are stored under the `[Proxy]` section. As the login information is encrypted you should only configure these setting from inside the winbuilder download center.
