@@ -149,12 +149,12 @@ Syntax highlighting is separated into groups, with each group having its own sty
 ||String||Strings enclosed in quotes||
 ||Variable||script Variables||
 ||Number||Numbers||
-||CommandItems||Internal commands||
-||IfCommandItems||Conditional commands||
-||StrFormatItems||String Format sub commands||
-||SystemCommandItems||System commands||
-||OtherItems||Other command items||
-||BooleanItems||Boolean Operatiors||
+||!CommandItems||Internal commands||
+||!IfCommandItems||Conditional commands||
+||!StrFormatItems||String Format sub commands||
+||!SystemCommandItems||System commands||
+||!OtherItems||Other command items||
+||!BooleanItems||Boolean Operatiors||
 ||Params||Command parameters||
 ||Escapes|| Escape characters||
 
