@@ -16,7 +16,9 @@ Inside each section that is called by the `Run` command, you can use the respect
 {{{
 Run,%scriptfile%,mysection,"Hello World!"
 }}}
-and inside the `[mysection]` of the same script you could use a command like `echo,#1` to display "Hello World!" on your log. All variables are "passed by value".  That means that they are usually read only.  If you want to return an updated variable after the section has been completed, prefix it with `OUT:` to indicate that it should be updated.  *Note:The "OUT" mechanism is not supported by EXEC.*
+and inside the `[mysection]` of the same script you could use a command like `echo,#1` to display "Hello World!" on your log. All variables are "passed by value".  That means that they are usually read only.  If you want to return an updated variable after the section has been completed, prefix it with `OUT:` to indicate that it should be updated.  
+*Note:The "OUT" mechanism is not supported by EXEC.*
+
 *Note:The "OUT" tag is case sensitive. "Out" will not work.*
 
 If a 'Run' has more than 9 parameters, they can be accessed using two new commands added in WB078
